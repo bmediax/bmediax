@@ -7784,6 +7784,26 @@ header {
 	background:url("../portfolio/graphic-design/illustration.png");
 }
 
+.overlay-tedxpcc {
+   background:url("../portfolio/tedxpcc2018/cover.jpg");
+}
+
+.overlay-chicanxapparel {
+   background:url("../portfolio/chicanxapparel/cover.jpg");
+}
+
+.overlay-alexforpcc {
+   background:url("../portfolio/alexforpcc/cover.jpg");
+}
+
+.overlay-bensonhs {
+   background:url("../portfolio/bensonhs/cover.jpg");
+}
+
+.overlay-chicanoalliance {
+   background:url("../portfolio/chicanoalliance/cover.jpg");
+}
+
 
       .owl-carousel.home-slider .slider-item .slider-text {
         color: #fff;
