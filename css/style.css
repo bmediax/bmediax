@@ -7273,9 +7273,6 @@ a.text-dark:hover, a.text-dark:focus {
   .table-bordered td {
     border: 1px solid #dee2e6 !important; } }
 
-.sub p {
-   color: #8c8c8c !important;
-}
 body {
   font-family: "Poppins", Arial, sans-serif;
   background: #000;
@@ -8956,3 +8953,7 @@ textarea.form-control {
 .services-logo:hover {color:#007bff;}
 .services-photo:hover {color:#6f42c1;}
 .services-sm:hover {color:#20c997;}
+
+.sub p {
+   color: #8c8c8c !important;
+}
