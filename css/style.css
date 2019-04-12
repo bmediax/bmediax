@@ -62,7 +62,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff; }
+  background-color: #495867; }
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
@@ -396,7 +396,9 @@ mark,
 
 .img-fluid {
   max-width: 100%;
-  height: auto; }
+  height: auto;
+	width:100%
+}
 
 .img-thumbnail {
   padding: 0.25rem;
@@ -7276,13 +7278,14 @@ a.text-dark:hover, a.text-dark:focus {
 }
 body {
   font-family: "Poppins", Arial, sans-serif;
-  background: #121212;
+  background: #000;
   font-size: 18px;
   line-height: 1.8;
   font-weight: 400;
   /* color: #8c8c8c; */
   color:#FFF;
   position: relative; }
+/*
   body:after {
     position: fixed;
     top: -150px;
@@ -7298,6 +7301,8 @@ body {
     -ms-transform: rotate(-30deg);
     -o-transform: rotate(-30deg);
     transform: rotate(-30deg); }
+*/
+/*
   body:before {
     position: fixed;
     top: 500px;
@@ -7313,6 +7318,7 @@ body {
     -ms-transform: rotate(20deg);
     -o-transform: rotate(20deg);
     transform: rotate(20deg); }
+*/
   body.menu-show {
     overflow: hidden;
     position: fixed;
@@ -7326,7 +7332,7 @@ body {
     position: fixed;
     top: 0px;
     overflow: hidden;
-    background-color: #121212;
+    background-color: transparent;
     content: "";
     display: table;
     table-layout: fixed;
@@ -7727,6 +7733,9 @@ header {
       height: calc(100vh - 0);
       min-height: 700px;
       position: relative; }
+
+
+
       .owl-carousel.home-slider .slider-item .overlay {
         position: absolute;
         top: 0;
@@ -7734,8 +7743,48 @@ header {
         right: 0;
         bottom: 0;
         content: '';
-        background: #2f89fc;
-        opacity: 0; }
+		  background-size:cover;
+		  background-position: center center;
+/*        background: #2f89fc;*/
+        opacity: 1; }
+
+		.overlay:after {
+			position: absolute;
+        	top: 0;
+        	left: 0;
+        	right: 0;
+        	bottom: 0;
+        	content: '';
+			background:-webkit-linear-gradient(rgba(0, 0, 0, 0.5), #000);
+			background:-o-linear-gradient(rgba(0, 0, 0, 0.5), #000);
+			background:linear-gradient(rgba(0, 0, 0, 0.5), #000);
+		}
+
+		.overlay-1 {
+			background:url("../portfolio/me/mirrorme.jpg");
+		}
+
+.overlay-contact {
+	background:url("../portfolio/me/mesitting.jpg");
+}
+
+.overlay-about {
+	background:url("../portfolio/photography/creative/native.jpg");
+}
+
+.overlay-2 {
+	background:url("../portfolio/photography/event/wedding.jpg");
+		background-position:left left;
+}
+.overlay-services {
+	background:url("../portfolio/photography/creative/chicanxapparel.jpg");
+}
+
+.overlay-portfolio {
+	background:url("../portfolio/graphic-design/illustration.png");
+}
+
+
       .owl-carousel.home-slider .slider-item .slider-text {
         color: #fff;
         height: calc(100vh - 117px);
@@ -7882,6 +7931,10 @@ header {
       background: #fff;
       border-color: #fff;
       color: #121212; }
+
+.about-section {
+	background:#000;
+}
 
 .about-section h2 {
   font-weight: 300;
@@ -8109,7 +8162,7 @@ textarea.form-control {
 
 .ftco-footer {
   font-size: 16px;
-  background: #121212;
+  background: #000;
   padding: 8em 0; }
   .ftco-footer .ftco-footer-logo {
     text-transform: uppercase;
@@ -8796,4 +8849,46 @@ textarea.form-control {
 
 .mb-4 {
    font-weight:bold !important;
+}
+
+.projects {
+	padding:0px;
+}
+
+.project-base {
+	background: #fff;
+	display:block;
+    color: #000 !important;
+    padding: 90px 0px;
+}
+
+.project-base .row {
+	padding:90px 0px;
+}
+
+.project-base h2, .project-base h3 {
+	color:#000;
+}
+
+.title-projected {
+	padding:0 0 90px 0px !important;
+	margin:0 !important;
+}
+
+@media (max-width:576px) {
+.container.project-base {
+    max-width: 100%;
+}
+	.project-base .row {
+		padding:50px 30px;
+	}
+}
+
+@media (max-width: 768px) {
+	.container.project-base {
+    max-width: 100% !important;
+	}
+	.project-base .row {
+		padding:90px 30px;
+	}
 }
