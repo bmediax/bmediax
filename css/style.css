@@ -8863,7 +8863,7 @@ textarea.form-control {
 }
 
 .project-base .row {
-	padding:90px 0px;
+	padding:90px 0px 0px 0px;
 }
 
 .project-base h2, .project-base h3 {
@@ -8891,4 +8891,12 @@ textarea.form-control {
 	.project-base .row {
 		padding:90px 30px;
 	}
+}
+
+.project-works {
+    padding: 0 0 30px 0px !important;
+}
+
+.project-works p {
+   color:#000;
 }
