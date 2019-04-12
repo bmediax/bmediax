@@ -508,8 +508,8 @@ pre {
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 30px;
-  padding-left: 30px; }
+  padding-right: 15px;
+  padding-left: 15px; }
 
 .col {
   -ms-flex-preferred-size: 0;
@@ -8893,6 +8893,12 @@ textarea.form-control {
 	}
 }
 
+@media (max-width:990px) {
+   .project-base .row {
+		padding:50px 30px 0px 30px;
+	}
+}
+
 .project-works {
     padding: 0 0 30px 0px !important;
 }
@@ -8900,3 +8906,33 @@ textarea.form-control {
 .project-works p {
    color:#000;
 }
+
+.project-works ul {
+   list-style: none;
+   padding:0;
+   margin-bottom:1.5rem;
+}
+
+.project-works ul li {
+   display:block;
+   text-align:left;
+   padding:5px 0px;
+}
+
+.view-project {
+   color: #fff;
+   display: block;
+   background: #000;
+   padding: 7px 0px;
+   width: 100%;
+   text-align: center;
+}
+
+.view-project:hover {
+   background:darkblue;
+   color:#FFF;
+}
+
+.services-logo:hover {color:#007bff;}
+.services-photo:hover {color:#6f42c1;}
+.services-sm:hover {color:#20c997;}

@@ -4,7 +4,6 @@
  });
 
 $(document).ready(function($) {
-
 	"use strict";
 
 	$(window).stellar({
@@ -15,14 +14,48 @@ $(document).ready(function($) {
     hideDistantElements: false,
     scrollProperty: 'scroll'
   });
-
+  $('.project-slider').slick({
+     // centerMode: true,
+     // variableWidth: true,
+     slidesToShow: 2,
+     slidesToScroll: 2,
+     autoplay: true,
+     autoplaySpeed: 2000,
+     speed: 300,
+     dots: true,
+     arrows: true,
+     // fade: true,
+     pauseOnHover: true,
+     // infinite: true,
+     responsive: [
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+     // slidesToShow: 1,
+     // adaptiveHeight: true
+ });
 	// Scrollax
   $.Scrollax();
 
 
 	// loader
 	var loader = function() {
-		setTimeout(function() { 
+		setTimeout(function() {
 			if($('#ftco-loader').length > 0) {
 				$('#ftco-loader').removeClass('show');
 			}
@@ -87,9 +120,9 @@ $(document).ready(function($) {
 		})
 	};
 	burgerMenu();
-	
+
 	var counter = function() {
-		
+
 		$('#section-counter').waypoint( function( direction ) {
 
 			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
@@ -106,7 +139,7 @@ $(document).ready(function($) {
 					  }, 7000
 					);
 				});
-				
+
 			}
 
 		} , { offset: '95%' } );
@@ -119,7 +152,7 @@ $(document).ready(function($) {
 		$('.ftco-animate').waypoint( function( direction ) {
 
 			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
-				
+
 				i++;
 
 				$(this.element).addClass('item-animate');
@@ -141,9 +174,9 @@ $(document).ready(function($) {
 							el.removeClass('item-animate');
 						},  k * 50, 'easeInOutExpo' );
 					});
-					
+
 				}, 100);
-				
+
 			}
 
 		} , { offset: '95%' } );
@@ -182,7 +215,7 @@ $(document).ready(function($) {
     fixedContentPos: false
   });
 
-   
+
    $('#appointment_date').datepicker({
 	  'format': 'm/d/yyyy',
 	  'autoclose': true
@@ -200,7 +233,4 @@ $(document).ready(function($) {
 
 	};
 	pageProgress();
-
-
 });
-
