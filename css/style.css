@@ -8873,10 +8873,10 @@ textarea.form-control {
 }
 
 .project-base {
-	background: #fff;
+	background: rgb(25, 25, 25);
 	display:block;
-    color: #000 !important;
-    padding: 90px 0px;
+   color: #fff !important;
+   padding:0 0 90px 0;
 }
 
 .project-base .row {
@@ -8884,7 +8884,7 @@ textarea.form-control {
 }
 
 .project-base h2, .project-base h3 {
-	color:#000;
+	color:#fff;
 }
 
 .title-projected {
@@ -8921,7 +8921,7 @@ textarea.form-control {
 }
 
 .project-works p {
-   color:#000;
+   color:#fff;
 }
 
 .project-works ul {
@@ -8937,16 +8937,17 @@ textarea.form-control {
 }
 
 .view-project {
-   color: #fff;
-   display: block;
-   background: #000;
+   color: #2f89fc;
+   border: 2px solid rgb(40, 40, 40);
    padding: 7px 0px;
+   display: block;
    width: 100%;
    text-align: center;
 }
 
 .view-project:hover {
-   background:darkblue;
+   background:#2f89fc;
+   border:2px solid #2f89fc;
    color:#FFF;
 }
 
@@ -8961,4 +8962,20 @@ textarea.form-control {
 .body-base {
   background:rgb(25, 25, 25);
   padding-top:90px;
+}
+
+.btn-transp {
+   margin-top:1rem;
+}
+
+.btn-transp a {
+   color: #2f89fc;
+   border: 2px solid rgb(40, 40, 40);
+   padding: 7px 30px;
+}
+
+.btn-transp a:hover {
+   background:#2f89fc;
+   border:2px solid #2f89fc;
+   color:#FFF;
 }

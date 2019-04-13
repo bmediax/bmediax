@@ -5,7 +5,7 @@ $(document).ready(function() {
    slidesToShow: 2,
    slidesToScroll: 1,
    // centerMode: true,
-   infinite: true,
+   // infinite: true,
    autoplay: true,
    autoplaySpeed: 2000,
    speed: 300,
@@ -18,8 +18,8 @@ $(document).ready(function() {
   {
     breakpoint: 600,
     settings: {
-      slidesToShow: 2,
-      slidesToScroll: 2
+      slidesToShow: 1,
+      slidesToScroll: 1
     }
   },
   {
@@ -29,11 +29,48 @@ $(document).ready(function() {
       slidesToScroll: 1
     }
   }
-  // You can unslick at a given breakpoint now by adding:
-  // settings: "unslick"
-  // instead of a settings object
    ]
       // slidesToShow: 1,
       // adaptiveHeight: true
+   });
+   $('.project-slider-full').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '.project-slider-nav'
+   });
+   $('.project-slider-nav').slick({
+      centerMode: true,
+      centerPadding: '70px',
+      autoplay: true,
+      autoplaySpeed: 2000,
+      speed: 300,
+      pauseOnHover: true,
+      arrows: true,
+      // variableWidth: true,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      asNavFor: '.project-slider-full',
+      dots: true,
+      focusOnSelect: true,
+      responsive: [
+         {
+            breakpoint: 600,
+            settings: {
+               slidesToShow: 2,
+               slidesToScroll: 1,
+               centerPadding: '30px',
+            }
+         },
+         {
+            breakpoint: 480,
+            settings: {
+               slidesToShow: 1,
+               slidesToScroll: 1,
+               centerPadding: '45px',
+            }
+         }
+      ]
    });
 });
