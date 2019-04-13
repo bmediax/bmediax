@@ -1,9 +1,11 @@
 $(document).ready(function() {
    $('.project-slider').slick({
    // centerMode: true,
-   // variableWidth: true,
+   variableWidth: true,
    slidesToShow: 2,
-   slidesToScroll: 2,
+   slidesToScroll: 1,
+   // centerMode: true,
+   infinite: true,
    autoplay: true,
    autoplaySpeed: 2000,
    speed: 300,
