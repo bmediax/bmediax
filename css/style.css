@@ -508,8 +508,9 @@ pre {
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px; }
+  padding-right: 20px;
+  padding-left: 20px;
+}
 
 .col {
   -ms-flex-preferred-size: 0;
@@ -926,9 +927,9 @@ pre {
     max-width: 75%; }
   .col-md-10 {
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 83.33333%;
-    flex: 0 0 83.33333%;
-    max-width: 83.33333%; }
+    -ms-flex: 0 0 90%;
+    flex: 0 0 90%;
+    max-width: 90%; }
   .col-md-11 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 91.66667%;
@@ -7095,6 +7096,10 @@ button.bg-dark:focus {
 .text-center {
   text-align: center !important; }
 
+.nav-pad {
+   padding:0px 40px;
+}
+
 @media (min-width: 576px) {
   .text-sm-left {
     text-align: left !important; }
@@ -8904,16 +8909,24 @@ textarea.form-control {
 @media (max-width: 768px) {
 	.container.project-base {
     max-width: 100% !important;
+    margin-top:82px !important;
 	}
 	.project-base .row {
 		padding:90px 30px;
 	}
 }
 
-@media (max-width:990px) {
+@media (max-width:991px) {
    .project-base .row {
-		padding:50px 30px 0px 30px;
+		padding:50px 0px 0px 0px;
+      margin:0;
 	}
+   .col-md-10 {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 95%;
+      flex: 0 0 95%;
+      max-width: 95%;
+   }
 }
 
 .project-works {
@@ -8977,5 +8990,34 @@ textarea.form-control {
 .btn-transp a:hover {
    background:#2f89fc;
    border:2px solid #2f89fc;
+   color:#FFF;
+}
+
+.image-source-head {
+
+}
+
+#next-view {
+   padding:45px 0px;
+   width:100%;
+   background:rgb(0, 180, 170);
+}
+
+#next-view:hover {
+   background:rgb(0, 180, 170) !important;
+}
+
+.next-view-outsides {
+   width:85% !important;
+   background:rgb(25, 25, 25) !important;
+   margin-bottom:30px !important;
+   margin:auto;
+}
+
+#next-view p {
+   margin:0;
+   padding:0px;
+   text-align: center;
+   font-size:1.5em;
    color:#FFF;
 }
