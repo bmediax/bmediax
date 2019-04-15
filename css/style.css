@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 :root {
+  --MainColor:#00CBBA;
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -140,7 +141,7 @@ sup {
   top: -.5em; }
 
 a {
-  color: #79efb4;
+  color:#00CBBA !important;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
@@ -7345,7 +7346,7 @@ body {
     height: 100%;
     z-index: 99;
     max-width: 100%;
-    background-color: #2f89fc;
+    background-color: #00CBBA;
     -webkit-transition: width .6s ease;
     -o-transition: width .6s ease;
     transition: width .6s ease; }
@@ -7518,7 +7519,7 @@ h1, h2, h3, h4, h5,
             -o-transform: scaleX(1);
             transform: scaleX(1); }
       #colorlib-main-nav ul li.active a span {
-        color: #2f89fc; }
+        color: #00CBBA; }
         #colorlib-main-nav ul li.active a span:before {
           background: #2f89fc;
           visibility: visible;
@@ -8062,15 +8063,15 @@ header {
     right: 0;
     color: #6c757d; }
   .progress-bar.color-1 {
-    background: #2f89fc; }
+    background: #00CBBA; }
     .progress-bar.color-1:after {
-      background: #2f89fc; }
+      background: #00CBBA; }
 
 .services {
   position: relative; }
   .services .icon span {
     position: relative;
-    color: #2f89fc;
+    color: #00CBBA;
     font-size: 40px;
     z-index: 0;
     line-height: 1.5; }
@@ -8573,7 +8574,7 @@ textarea.form-control {
   .block-3 .image .icon {
     width: 100px;
     height: 100px;
-    background: #2f89fc;
+    background: #00CBBA;
     border-radius: 50%;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
@@ -8956,12 +8957,13 @@ textarea.form-control {
    display: block;
    width: 100%;
    text-align: center;
+   border-radius:4px;
 }
 
 .view-project:hover {
-   background:#2f89fc;
-   border:2px solid #2f89fc;
-   color:#FFF;
+   background:#00CBBA;
+   border:2px solid #00CBBA;
+   color:#FFF !important;
 }
 
 .services-logo:hover {color:#007bff;}
@@ -8982,15 +8984,16 @@ textarea.form-control {
 }
 
 .btn-transp a {
-   color: #2f89fc;
+   color: #00CBBA;
    border: 2px solid rgb(40, 40, 40);
    padding: 7px 30px;
+   border-radius:4px;
 }
 
 .btn-transp a:hover {
-   background:#2f89fc;
-   border:2px solid #2f89fc;
-   color:#FFF;
+   background:#00CBBA;
+   border:2px solid #00CBBA;
+   color:#FFF !important;
 }
 
 .image-source-head {
@@ -9001,10 +9004,14 @@ textarea.form-control {
    padding:45px 0px;
    width:100%;
    background:rgb(0, 180, 170);
+   -webkit-transition:all 0.2s ease-in-out;
+   -moz-transition:All 0.2s ease-in-out;
+   -o-transition:all 0.2s ease-in-out;
+   transition:all 0.2s ease-in-out;
 }
 
 #next-view:hover {
-   background:rgb(0, 180, 170) !important;
+   background:#00CBBA !important;
 }
 
 .next-view-outsides {
