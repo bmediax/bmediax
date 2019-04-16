@@ -9048,6 +9048,10 @@ textarea.form-control {
   background: #ED2;
 }
 
+.flickity-viewport {
+   top:20%;
+}
+
 /* external css: flickity.css */
 /*
 .carousel {
@@ -9075,7 +9079,7 @@ textarea.form-control {
 
 .flickity-viewport {
    top:20%;
-} */
+}
 
 /* .carousel {
   margin-bottom: 40px;
