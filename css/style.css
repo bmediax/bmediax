@@ -9039,3 +9039,54 @@ textarea.form-control {
    font-size:1.5em;
    color:#FFF;
 }
+
+.flickity-viewport {
+  transition: height 0.2s;
+}
+
+.carousel-nav .carousel-cell.is-nav-selected {
+  background: #ED2;
+}
+
+/* external css: flickity.css */
+/*
+.carousel {
+  background: #EEE;
+}
+
+.carousel-cell {
+  overflow: hidden;
+}
+
+.carousel-cell img {
+  display: block;
+  height: 200px;
+}
+
+@media screen and ( min-width: 768px ) {
+  .carousel-cell img {
+    height: 400px;
+  }
+}
+
+.carousel.is-fullscreen .carousel-cell {
+  height: 100%;
+}
+
+.flickity-viewport {
+   top:20%;
+} */
+
+/* .carousel {
+  margin-bottom: 40px;
+}
+
+.carousel-cell {
+  height: 200px;
+  counter-increment: carousel-cell;
+}
+
+.carousel-nav .carousel-cell {
+  height: 80px;
+  width: 100px;
+} */
