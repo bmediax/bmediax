@@ -9094,3 +9094,9 @@ textarea.form-control {
   height: 80px;
   width: 100px;
 } */
+
+@media (max-width:530px) {
+   .exp-wrap .desc {
+      width:auto !important;
+   }
+}
