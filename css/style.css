@@ -8579,7 +8579,8 @@ textarea.form-control {
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
-    opacity: 0; }
+    opacity: 0;
+    box-shadow:0px 0px 40px rgba(0, 0, 0, 0.5);}
     @media screen and (prefers-reduced-motion: reduce) {
       .block-3 .image .icon {
         -webkit-transition: none;
