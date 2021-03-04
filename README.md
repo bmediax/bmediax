@@ -10,6 +10,6 @@ While I am not designing interfaces and building amazing things, I'm out and abo
 | bmediax.com |
 | ＿＿＿＿＿＿＿|
 (\__/)  ||
-(•ㅅ•) ||
+(•ㅅ•)  ||
 / 　 づ
 ```
