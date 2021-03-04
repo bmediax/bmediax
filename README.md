@@ -5,9 +5,8 @@ While I am not designing interfaces and building amazing things, I'm out and abo
 
 ### :email: Contact Me
 [hello(at)bmediax.dev](mailto:hello@bmediax.dev)
-
 |￣￣￣￣￣￣￣ |
-| bmediax.com |
+|   bmediax.com   |
 | ＿＿＿＿＿＿＿|
 (\__/)  ||
 (•ㅅ•) ||
