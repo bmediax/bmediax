@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "bmediax",
-    siteUrl: "bmediax.dev"
+    siteUrl: "https://bmediax.dev"
   },
   plugins: [
     "gatsby-plugin-sass",
