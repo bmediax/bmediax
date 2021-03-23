@@ -10,8 +10,10 @@ const IndexPage = () => {
         <title> Bmediax </title>
       </Helmet>
       <div className="container">
-        <h1> Website Under Construction </h1>
-        <button> View Portfolio </button>
+        <div className="wrapper">
+          <h1> Website Under Construction </h1>
+          <a href="https://bmediax.com"> View Portfolio </a>
+        </div>
       </div>
     </div>
   )

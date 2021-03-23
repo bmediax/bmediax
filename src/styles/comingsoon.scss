@@ -1,50 +1,79 @@
+@use 'variables' as *;
+
 html, body {
     margin:0;
     padding:0;
     height:100%;
     width:100%;
+    background:$artic-white;
 }
 
 .container {
-    background:rgb(45, 45, 45);
     height:100vh;
     width:100vw;
+    background:$artic-white;
     display:flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    
+    .wrapper {
+        background:#FFF;
+        padding:5% 5%;
+        border-radius:1.5em;
+        box-shadow:0px 20px 30px rgba(0, 0, 0, .05);
 
-    h1 {
-        margin:0;
-        font-family:sans-serif;
-        font-size:10vmin;
-        text-align:center;
-        color:#FFF;
-    }
+        h1 {
+            margin:0;
+            font-family:sans-serif;
+            font-size:7vmin;
+            text-align:center;
+            color:$dark-blue;
+        }
+    
+        a {
+            display:block;
+            text-decoration:none;
+            color:$dark-blue;
+            background-color:$artic-white;
+            border-radius:15px;
+            margin-top:5%;
+            margin-left:auto;
+            margin-right:auto;
+            text-align:center;
+            max-width:150px;
+            padding:1em 3em;
+            font-family:sans-serif;
+            font-size:2.5vh;
+            border:none;
+            transition: background 250ms linear, color 250ms linear, box-shadow 250ms linear, transform 300ms linear;
 
-    button {
-        display:block;
-        border-radius:15px;
-        margin-top:5%;
-        padding:1em 3em;
-        font-family:sans-serif;
-        font-size:3vmin;
-        border:none;
-
-        &:focus {
-            outline:2px solid rgba(0, 0, 0, 0.2);
-            outline-offset: .5rem;
-            -webkit-outline-radius: 12px !important;
-            -moz-outline-radius: 12px !important;
+            &:hover {
+                background:$zoom-blue;
+                color:#FFF;
+                box-shadow:0px 10px 30px rgba($zoom-blue, .4);
+                transform: scale(1.05);
+            }
+    
+            &:focus {
+                outline:2px solid rgba($zoom-blue, .1);
+                outline-offset: .5rem;
+                -webkit-outline-radius: 12px !important;
+                -moz-outline-radius: 12px !important;
+            }
         }
     }
+
 }
 
 @media screen and (max-width:480px) {
-    button {
-        width:90% !important;
-        padding-top:1em !important;
-        padding-bottom:1em !important;
-        font-size:4vmin !important;
+    .wrapper {
+    margin-right:5%;
+    margin-left:5%;
+        a {
+            max-width:100% !important;
+            padding-top:1em !important;
+            padding-bottom:1em !important;
+            font-size:4vmin !important;
+        }
     }
 }
