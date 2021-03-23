@@ -45,7 +45,7 @@ html, body {
             font-family:sans-serif;
             font-size:2.5vh;
             border:none;
-            transition: background 250ms linear, color 250ms linear, box-shadow 250ms linear, transform 300ms linear;
+            transition: background 250ms linear, color 200ms linear, box-shadow 250ms linear, transform 280ms linear;
 
             &:hover {
                 background:$zoom-blue;
@@ -59,6 +59,10 @@ html, body {
                 outline-offset: .5rem;
                 -webkit-outline-radius: 12px !important;
                 -moz-outline-radius: 12px !important;
+            }
+
+            svg {
+                transform:translatey(.1em)
             }
         }
     }
