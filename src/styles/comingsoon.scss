@@ -18,7 +18,9 @@ html, body {
     
     .wrapper {
         background:#FFF;
-        padding:5% 5%;
+        max-width:750px;
+        padding:4% 5%;
+        margin:0 5%;
         border-radius:1.5em;
         box-shadow:0px 20px 30px rgba(0, 0, 0, .05);
 
@@ -29,55 +31,73 @@ html, body {
             text-align:center;
             color:$dark-blue;
         }
-    
-        a {
-            display:block;
-            text-decoration:none;
-            color:$dark-blue;
-            background-color:$artic-white;
-            border-radius:15px;
+
+        .links-media {
+            display:flex;
             margin-top:5%;
-            margin-left:auto;
-            margin-right:auto;
-            text-align:center;
-            max-width:150px;
-            padding:1em 3em;
-            font-family:sans-serif;
-            font-size:2.5vh;
-            border:none;
-            transition: background 250ms linear, color 200ms linear, box-shadow 250ms linear, transform 280ms linear;
 
-            &:hover {
-                background:$zoom-blue;
-                color:#FFF;
-                box-shadow:0px 10px 30px rgba($zoom-blue, .4);
-                transform: scale(1.05);
-            }
+            a {
+                flex:1;
+                text-decoration:none;
+                color:$dark-blue;
+                background-color:$artic-white;
+                border-radius:15px;
+                text-align:center;
+                margin-right:1em;
+                padding:1em 3em;
+                font-family:sans-serif;
+                font-size:1rem;
+                border:none;
+                transition: background 250ms linear, color 200ms linear, box-shadow 250ms linear, transform 280ms linear;
     
-            &:focus {
-                outline:2px solid rgba($zoom-blue, .1);
-                outline-offset: .5rem;
-                -webkit-outline-radius: 12px !important;
-                -moz-outline-radius: 12px !important;
-            }
-
-            svg {
-                transform:translatey(.1em)
+                &:last-child {
+                    margin-right:0em !important;
+                }
+    
+                &:hover {
+                    background:$zoom-blue;
+                    color:#FFF;
+                    box-shadow:0px 10px 30px rgba($zoom-blue, .4);
+                    transform: scale(1.05);
+                }
+        
+                &:focus {
+                    outline:2px solid rgba($zoom-blue, .1);
+                    outline-offset: .5rem;
+                    -webkit-outline-radius: 12px !important;
+                    -moz-outline-radius: 12px !important;
+                }
+    
+                svg {
+                    transform:translatey(.1em)
+                }
             }
         }
+    
     }
 
 }
 
-@media screen and (max-width:480px) {
-    .wrapper {
-    margin-right:5%;
-    margin-left:5%;
-        a {
-            max-width:100% !important;
-            padding-top:1em !important;
-            padding-bottom:1em !important;
-            font-size:4vmin !important;
+@media screen and (max-width:500px) {
+    .container {
+        align-items: flex-start;
+        
+        .wrapper { 
+            margin-top:5%;
+
+            .links-media {
+                flex-direction: column;
+
+                a {
+                    margin-bottom:.5em;
+                    margin-right:0 !important;
+                    font-size:4vmin !important;
+
+                    &:last-child {
+                        margin-bottom:0px;
+                    }
+                }
+            }
         }
     }
 }

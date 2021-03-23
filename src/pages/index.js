@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Helmet } from 'react-helmet'
 import { RiLinksLine } from 'react-icons/ri'
+import { AiOutlineCloudDownload } from 'react-icons/ai'
 import '../styles/comingsoon.scss'
 
 // markup
@@ -13,7 +14,10 @@ const IndexPage = () => {
       <div className="container">
         <div className="wrapper">
           <h1> Website Under Construction </h1>
-          <a href="https://bmediax.com"> View Portfolio <RiLinksLine /></a>
+          <div className="links-media">
+            <a href="https://bmediax.com"> View Portfolio <RiLinksLine /></a>
+            <a href="https://bmediax.com"> Download Résumé <AiOutlineCloudDownload /></a>
+          </div>
         </div>
       </div>
     </div>
