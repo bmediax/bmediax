@@ -4,10 +4,10 @@ import '../styles/_base.scss'
 
 const Layout = ({children, title}) => {
     return (
-        <React.Fragment>
+        <div>
             <Seo title={title} />
             {children}
-        </React.Fragment>
+        </div>
     )
 }
 
