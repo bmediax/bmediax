@@ -5,6 +5,11 @@ module.exports = {
     author: "Brian Moreno",
     // keywords: "Reiko Mia Williams, Reiko For PCC, Reiko, Reiko4PCC, Portland Community College, Zone 7, PCC Zone 7",
     siteUrl: "https://bmediax.dev",
+    social: {
+      instagram: 'bmediax',
+      linkedin: 'bmediax',
+      github: 'bmediax',
+    },
   },
   plugins: [
     "gatsby-plugin-sass",

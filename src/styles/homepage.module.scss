@@ -1,0 +1,12 @@
+@use './variables' as *;
+
+.cover {
+    background:getColor(lightBase);
+    min-height:60vmin;
+    width:auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:5% 5%;
+}

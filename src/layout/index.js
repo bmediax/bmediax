@@ -1,5 +1,6 @@
 import React from 'react'
 import Seo from '../components/Seo'
+import '../styles/reset.css'
 import '../styles/_base.scss'
 
 const Layout = ({children, title}) => {

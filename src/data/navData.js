@@ -5,7 +5,13 @@ export const navData = [
     },
     {
         title: 'Portfolio',
-        path: '/portfolio'
+        path: '/portfolio',
+        sub: [
+            {
+                title: 'Recent Projects',
+                path: '/recent-projects'
+            }
+        ],
     },
     {
         title: "Get In Touch",

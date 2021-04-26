@@ -10,6 +10,7 @@ $primaryFont: 'Montserrat', sans-serif;
 
 // Element Size Define
 $wrapMaxWidth: 1200px;
+$widthPadding: 5%;
 
 $masOscuro: #171926;
 $oscuro: #2D3346;
@@ -69,4 +70,15 @@ $colors-dark: (
   
 @function getColor($color-name){
     @return var(--color-#{$color-name});
+}
+
+// Object Definitions
+@mixin objectShadow($state, $color) {
+    @if $state == 'default' and $color == 'white' {
+        box-shadow:0px 5px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    @else if $state == 'default' and $color == 'azure' {
+        box-shadow:0px 5px 20px rgba($azure, .3);
+    }
 }

@@ -1,5 +1,19 @@
 @use './variables' as *;
 
+h1 {
+    font-family:$primaryFont;
+    font-size:3vmax;
+    font-weight: 700;
+    color:getColor(textTitle);
+    text-transform: capitalize;
+}
+
+p {
+    font-family:$primaryFont;
+    font-size:1rem;
+    color:getColor(normalText);
+}
+
 // Navigation
 nav {
     position:sticky;
@@ -8,18 +22,18 @@ nav {
     left:0;
     z-index:10;
     background:getColor(lightBase);
-    // padding: 5px 0px;
     transition: box-shadow 250ms linear;
     font-family:$primaryFont;
+    @include objectShadow('default', 'white');
     
     .nav-wrapper {
         display:flex;
         align-items:center;
         justify-content:center;
-        min-height:50px;
+        margin:auto;
         max-width:$wrapMaxWidth;
         height:85px;
-        margin:auto;
+        padding:0 $widthPadding;
         
         .logo-contain {
             flex:1;
@@ -29,6 +43,12 @@ nav {
             a {
                 position:relative !important;
                 top:1px !important;
+            }
+
+            #logo {
+                height:55px;
+                padding:0;
+                margin:auto;
             }
         }
         
@@ -101,9 +121,38 @@ nav {
             }
         }
 
+        // Navigation Social Media Icons
         .social-media_bar {
             flex:1;
             text-align:right;
+            
+            a {
+                display:inline-block;
+                font-size:1.1rem;
+                background:$minimal;
+                color:$midnight;
+                margin:auto;
+                height:35px;
+                width:35px;
+                border-radius:50%;
+                line-height:40px;
+                text-align:center;
+                transition: background 200ms linear, color 250ms linear, box-shadow 250ms linear;
+
+                &:hover {
+                    background:$azure;
+                    color:getColor(lightBase);
+                    @include objectShadow('default', 'azure');
+                }
+            }
+
+            & > a + a {
+                margin-left:1em;
+            }
         }
     }
+}
+
+.coverheadshot {
+    margin-bottom:50px;
 }
