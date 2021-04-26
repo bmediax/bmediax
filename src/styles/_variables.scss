@@ -2,3 +2,65 @@
 $zoom-blue: #00BFB2;
 $artic-white: #F4F4F9;
 $dark-blue: #171926;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+$masOscuro: #171926;
+$oscuro: #2D3346;
+$midnight: #383E5F;
+$mist: #B8C3D0;
+$minimal: #F4F4F8;
+$blanco: #FFF;
+$azure: #3C86A5;
+$coral: #CB5E65;
+$forest: #799884;
+$purple: #9264E9;
+
+// Light Theme
+$colors: (
+    // base
+    lightBase: $blanco,
+    lightdarkBase: $minimal,
+    darkBase:$oscuro,
+
+    // Text
+    textTitle: $azure,
+    textHeader: $midnight,
+    textHeaderDarkBG: $blanco,
+    textSubTitle: $mist,
+    normalText: $midnight,
+);
+
+// Dark Theme
+$colors-dark: (
+    // base
+    lightBase: $blanco,
+    lightdarkBase: $minimal,
+    darkBase:$oscuro,
+
+    // Text
+    textTitle: $azure,
+    textHeader: $midnight,
+    textHeaderDarkBG: $blanco,
+    textSubTitle: $mist,
+    normalText: $midnight,
+);
+
+:root {
+    @each $name, $color in $colors {
+      --color-#{$name} : #{$color};
+    }
+}
+
+// Dark Mode
+@media(prefers-color-scheme: dark) {
+    :root {
+        @each $name, $color in $colors-dark{
+        --color-#{$name} : #{$color};
+        }
+    }
+}
+  
+@function getColor($color-name){
+    @return var(--color-#{$color-name});
+}
