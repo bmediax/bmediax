@@ -1,5 +1,109 @@
 @use './variables' as *;
 
-body {
-    background:getColor(lightBase)
+// Navigation
+nav {
+    position:sticky;
+    top:0;
+    right:0;
+    left:0;
+    z-index:10;
+    background:getColor(lightBase);
+    // padding: 5px 0px;
+    transition: box-shadow 250ms linear;
+    font-family:$primaryFont;
+    
+    .nav-wrapper {
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        min-height:50px;
+        max-width:$wrapMaxWidth;
+        height:85px;
+        margin:auto;
+        
+        .logo-contain {
+            flex:1;
+            // align-self:center;
+            text-align:left;
+            
+            a {
+                position:relative !important;
+                top:1px !important;
+            }
+        }
+        
+        .nav-contain {
+            text-align:center;
+            flex:2;
+
+            .menu {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin:auto;
+                list-style: none;
+                padding:0;
+              
+                li {
+                    position: relative;
+                    
+                    &:hover > ul {
+                        display: block;
+                    }
+                    
+                    &:focus-within > ul {
+                        display:block;
+                    }
+
+                    ul {
+                        display: none;
+                        position: absolute;
+                        left: -20%;
+                        top: 100%;
+                        text-align:left;
+                        padding-top:20px;
+                        
+                        a {
+                            background:getColor(lightBase);
+                            padding:.8em 1.5em;
+                            transition: background 200ms linear, color 200ms linear;
+                            
+                            &:hover {
+                                background:getColor(darkBase);
+                            }
+                        }
+                    }
+
+                    a.nav-item {
+                        color:getColor(textHeader);
+                        text-decoration:none;
+                        margin:0px 15px;
+                        font-size:1rem;
+                        font-weight:500;
+                        transition: color 150ms linear;
+                        
+                        &:hover {
+                            color:$azure;
+                        }
+                        
+                        &:first-child {
+                            margin-left: 0 !important;
+                        }
+                        
+                        &:last-child {
+                            margin-right:0px !important;
+                        }
+                    }
+                }
+                > li + li { 
+                    margin-left: 2em;
+                }
+            }
+        }
+
+        .social-media_bar {
+            flex:1;
+            text-align:right;
+        }
+    }
 }
