@@ -2,7 +2,8 @@ import React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import { motion } from 'framer-motion'
 import { navData  } from '../data/navData'
-import logo from '../images/gfx/logo.svg'
+import Logo from '../components/Logo'
+// import logo from '../images/gfx/logo.svg'
 import { AiOutlineInstagram } from 'react-icons/ai'
 import { DiGithubAlt } from 'react-icons/di'
 import { FaLinkedinIn } from 'react-icons/fa'
@@ -29,7 +30,9 @@ const Nav = () => {
                 {/* Logo */}
                 <div className="logo-contain">
                     <Link to="/" exact="true" style={{ textDecoration: 'none' }}>
-                        <img src={logo} alt="Bmediax Logo" id="logo" /> <span className="logo-text">Bmediax</span>
+                        {/* <img src={logo} alt="Bmediax Logo" id="logo" />  */}
+                        <Logo height={50} />
+                        <span className="logo-text">Bmediax</span>
                         {/* <StaticImage src="../images/gfx/logo.png" alt="Rieko Mia Williams For PCC Logo" placeholder="blurred" height={70} align="center" /> */}
                     </Link>
                 </div>
