@@ -1,8 +1,10 @@
 @use './variables' as *;
 
+.azure { color:$azure; }
+
 h1 {
     font-family:$primaryFont;
-    font-size:3vmax;
+    font-size:5vmin;
     font-weight: 700;
     color:getColor(textTitle);
     text-transform: capitalize;
@@ -11,7 +13,75 @@ h1 {
 p {
     font-family:$primaryFont;
     font-size:1rem;
+    font-weight:500;
     color:getColor(normalText);
+}
+
+.btn {
+    padding:15px 30px;
+    font-family:$primaryFont;
+    font-weight:600;
+    border-radius:15px;
+    border:none;
+    font-size:1rem;
+    text-decoration:none;
+    transition: 
+        background 250ms ease-in-out, 
+        box-shadow 250ms ease-in-out,
+        transform 250ms ease-in-out,
+        border 250ms ease-in-out,
+        color 250ms ease-in-out;
+
+    &:hover {
+        transform:translateY(-2px);
+    }
+
+    &:active {
+        transform:translateY(0px) !important;
+    }
+}
+
+.primary {
+    background:$minimal;
+    color:$midnight;
+
+    &:hover {
+        background:$midnight;
+        color:#FFF;
+        @include objectShadow('default', 'midnight')
+    }
+
+    &:active {
+        background:$oscuro;
+        color:$minimal;
+        box-shadow:none !important;
+    }
+}
+
+.outline {
+    background:transparent;
+    color:$azure;
+    border:3px solid $azure;
+}
+
+.ghost {
+    background:#FFF;
+    color:$midnight;
+    border:2px solid $minimal;
+
+    &:hover {
+        border:2px solid #FFF;
+        @include objectShadow('default', 'snow');
+    }
+
+    &:active {
+        box-shadow:inset 0px 5px 15px rgba(0, 0, 0, 0.05);
+        color:$mist;
+    }
+}
+
+.scroll {
+    @include objectShadow('default', 'white');
 }
 
 // Navigation
@@ -24,7 +94,6 @@ nav {
     background:getColor(lightBase);
     transition: box-shadow 250ms linear;
     font-family:$primaryFont;
-    @include objectShadow('default', 'white');
     
     .nav-wrapper {
         display:flex;

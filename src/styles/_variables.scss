@@ -74,11 +74,15 @@ $colors-dark: (
 
 // Object Definitions
 @mixin objectShadow($state, $color) {
-    @if $state == 'default' and $color == 'white' {
+    @if $state == 'default' and $color == 'snow' {
         box-shadow:0px 5px 30px rgba(0, 0, 0, 0.05);
     }
 
     @else if $state == 'default' and $color == 'azure' {
         box-shadow:0px 5px 20px rgba($azure, .3);
+    }
+
+    @else if $state == 'default' and $color == 'midnight' {
+        box-shadow:0px 5px 20px rgba($midnight, .3);
     }
 }

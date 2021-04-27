@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import * as homepageStyles from '../styles/homepage.module.scss'
 
@@ -6,8 +7,17 @@ const Cover = () => {
     return (
         <div className={homepageStyles.cover}>
             <StaticImage src="../images/profile/headshot.jpg" alt="Bmediax Headshot" width={150} placeholder="blurred" className="coverheadshot" />
-            <h1>Hello there, my name is Brian!</h1>
-            <p>I am a Digital Designer and Web Developer with over 7+ years of experience designing, prototyping, developing, and deploying large scale pixel-perfect websites and web apps</p>
+
+            <div className={homepageStyles.text}>
+                <h1>Hello there, my name is Brian!</h1>
+                <p>I am a <span className="azure">Digital Designer and Web Developer</span> with over <span className="azure">7+ years</span> of experience <span className="azure">designing, prototyping, developing, and deploying</span> large scale pixel-perfect <span className="azure">websites and web apps</span></p>
+                <div className={homepageStyles.buttonWrapper}>
+                    <button className="btn primary">hello@bmediax.dev</button>
+                    <Link to="/portfolio" className="btn ghost">
+                        View Portfolio
+                    </Link>
+                </div>
+            </div>
         </div>
     );
 };
