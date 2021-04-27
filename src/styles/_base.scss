@@ -6,7 +6,7 @@ h1 {
     font-family:$primaryFont;
     font-size:5vmin;
     font-weight: 700;
-    color:getColor(textTitle);
+    color:getColor(textHeader);
     text-transform: capitalize;
 }
 
@@ -79,8 +79,8 @@ p {
 }
 
 .ghost {
-    background:#FFF;
-    color:$midnight;
+    background:getColor(lightLightBase);
+    color:getColor(lightDarkText);
 
     &:hover {
         @include objectShadow('hover', 'snow');
@@ -186,7 +186,7 @@ nav {
                     }
 
                     a.nav-item {
-                        color:getColor(textHeader);
+                        color:getColor(menuText);
                         text-decoration:none;
                         margin:0px 15px;
                         font-size:1rem;
@@ -220,8 +220,8 @@ nav {
             a {
                 display:inline-block;
                 font-size:1.1rem;
-                background:$minimal;
-                color:$midnight;
+                background:getColor(icn-lightBG);
+                color:getColor(icon-lightTXT);
                 margin:auto;
                 height:35px;
                 width:35px;

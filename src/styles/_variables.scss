@@ -23,12 +23,31 @@ $coral: #CB5E65;
 $forest: #799884;
 $purple: #9264E9;
 
+// Dark colors
+$onyx: #191C21;
+$jetBlack: #14171C;
+$raven: #262930;
+$steelBlue: #2B313C;
+$cloud: #687077;
+
+
 // Light Theme
 $colors: (
     // base
     lightBase: $blanco,
     lightdarkBase: $minimal,
+    lightLightBase: $blanco,
     darkBase:$oscuro,
+
+    // Btn Based
+    lightDarkText: $midnight,
+
+    // Nav Text
+    menuText: $midnight,
+
+    // Icon Based
+    icn-lightBG: $minimal,
+    icon-lightTXT: $midnight,
 
     // Text
     textTitle: $azure,
@@ -41,13 +60,24 @@ $colors: (
 // Dark Theme
 $colors-dark: (
     // base
-    lightBase: $blanco,
-    lightdarkBase: $minimal,
+    lightBase: $onyx,
+    lightdarkBase: $jetBlack,
+    lightLightBase: $raven,
     darkBase:$oscuro,
+
+    // Btn Based
+    lightDarkText: $minimal,
+
+    // Nav Text
+    menuText: $cloud,
+
+    // Icon Based
+    icn-lightBG: $raven,
+    icon-lightTXT: $cloud,
 
     // Text
     textTitle: $azure,
-    textHeader: $midnight,
+    textHeader: $minimal,
     textHeaderDarkBG: $blanco,
     textSubTitle: $mist,
     normalText: $midnight,
