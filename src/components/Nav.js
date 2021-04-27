@@ -31,7 +31,7 @@ const Nav = () => {
                 <div className="logo-contain">
                     <Link to="/" exact="true" style={{ textDecoration: 'none' }}>
                         {/* <img src={logo} alt="Bmediax Logo" id="logo" />  */}
-                        <Logo height={50} />
+                        <Logo height={50} width={35} />
                         <span className="logo-text">Bmediax</span>
                         {/* <StaticImage src="../images/gfx/logo.png" alt="Rieko Mia Williams For PCC Logo" placeholder="blurred" height={70} align="center" /> */}
                     </Link>

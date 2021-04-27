@@ -34,7 +34,7 @@
             flex-direction: column;
         }
 
-        & > a + a {
+        & > div + a {
             margin-left:15px;
 
             @include responsive('tablet') {

@@ -18,11 +18,11 @@ p {
 }
 
 .btn {
-    padding:18px 30px;
+    padding:18px 30px !important;
     font-family:$primaryFont;
     font-weight:600;
-    border-radius:15px;
-    border:none;
+    border-radius:15px !important;
+    border:none !important;
     font-size:1rem;
     text-decoration:none;
     transition: 
@@ -55,8 +55,8 @@ p {
     color:$midnight;
 
     &, .active {
-        background: $midnight;
-        color:$blanco;
+        background: $midnight !important;
+        color:$blanco !important;
     }
 
     &:hover {
@@ -122,7 +122,6 @@ nav {
         
         .logo-contain {
             flex:1;
-            // align-self:center;
             text-align:left;
             
             // a {
@@ -140,6 +139,7 @@ nav {
                 position:relative;
                 top:-20px;
                 left:10px;
+                color:getColor(menuText);
             }
         }
         
