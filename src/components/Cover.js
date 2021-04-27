@@ -1,7 +1,7 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image'
 
-// import { IoFileTrayStacked } from 'react-icons/io'
+// External
 import { RiInboxFill } from 'react-icons/ri'
 import { Link } from 'gatsby'
 import * as homepageStyles from '../styles/homepage.module.scss'

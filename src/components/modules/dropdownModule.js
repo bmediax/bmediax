@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import * as DropdownModuleStyles from './dropdownModule.module.scss'
+
 // External Libs
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
@@ -43,7 +45,7 @@ const DropdownModule = () => {
     // console.log(isSelect.selected.value)
 
     return (
-        <Dropdown options={options} onChange={_onSelect} placeholder="hello@bmediax.dev" controlClassName="btn primary active" />
+        <Dropdown options={options} onChange={_onSelect} placeholder="hello@bmediax.dev" controlClassName="btn primary active" menuClassName={DropdownModuleStyles.dropdownMenu} />
     );
 };
 

@@ -21,7 +21,8 @@ p {
     padding:18px 30px !important;
     font-family:$primaryFont;
     font-weight:600;
-    border-radius:15px !important;
+    @include objectCorner('default');
+    // border-radius:15px !important;
     border:none !important;
     font-size:1rem;
     text-decoration:none;
@@ -246,4 +247,8 @@ nav {
 
 .coverheadshot {
     margin-bottom:50px;
+}
+
+.Dropdown-menu {
+    background-color:getColor(lightLightBase) !important;
 }
