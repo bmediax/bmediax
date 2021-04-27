@@ -15,6 +15,6 @@ export const navData = [
     },
     {
         title: "Get In Touch",
-        path: '#get-in-touch'
+        path: '/contact'
     },
 ]

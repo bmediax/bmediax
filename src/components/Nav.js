@@ -28,10 +28,10 @@ const Nav = () => {
             <div className="nav-wrapper">
                 {/* Logo */}
                 <div className="logo-contain">
-                    {/* <Link to="/" exact="true"> */}
+                    <Link to="/" exact="true" style={{ textDecoration: 'none' }}>
                         <img src={logo} alt="Bmediax Logo" id="logo" /> <span className="logo-text">Bmediax</span>
                         {/* <StaticImage src="../images/gfx/logo.png" alt="Rieko Mia Williams For PCC Logo" placeholder="blurred" height={70} align="center" /> */}
-                    {/* </Link> */}
+                    </Link>
                 </div>
 
                 {/* Menu */}

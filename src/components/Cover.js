@@ -1,4 +1,6 @@
 import React from 'react';
+// import { IoFileTrayStacked } from 'react-icons/io'
+import { RiInboxFill } from 'react-icons/ri'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import * as homepageStyles from '../styles/homepage.module.scss'
@@ -13,7 +15,7 @@ const Cover = () => {
                 <div className={homepageStyles.buttonWrapper}>
                     <Link to="mailto:hello@bmediax.dev" className="btn primary active">hello@bmediax.dev</Link>
                     <Link to="/portfolio" className="btn ghost active">
-                        View Portfolio
+                        <RiInboxFill /> View Portfolio
                     </Link>
                 </div>
             </div>
