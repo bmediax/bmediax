@@ -30,8 +30,16 @@
         margin-top:20px;
         width:100%;
 
-        & > button + button, & > button + a {
-            margin-left:15px !important;
+        @include responsive('tablet') {
+            flex-direction: column;
+        }
+
+        & > a + a {
+            margin-left:15px;
+
+            @include responsive('tablet') {
+                margin-left:0;
+            }
         }
     }
 }

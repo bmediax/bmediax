@@ -29,7 +29,7 @@ const Nav = () => {
                 {/* Logo */}
                 <div className="logo-contain">
                     {/* <Link to="/" exact="true"> */}
-                        <img src={logo} alt="Bmediax Logo" id="logo" />
+                        <img src={logo} alt="Bmediax Logo" id="logo" /> <span className="logo-text">Bmediax</span>
                         {/* <StaticImage src="../images/gfx/logo.png" alt="Rieko Mia Williams For PCC Logo" placeholder="blurred" height={70} align="center" /> */}
                     {/* </Link> */}
                 </div>

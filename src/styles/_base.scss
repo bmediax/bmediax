@@ -39,15 +39,29 @@ p {
     &:active {
         transform:translateY(0px) !important;
     }
+
+    @include responsive('tablet') {
+        display:block;
+        padding:20px 0px;
+
+        &:first-child {
+            margin-bottom:2%;
+        }
+    }
 }
 
 .primary {
     background:$minimal;
     color:$midnight;
 
+    &, .active {
+        background: $midnight;
+        color:$blanco;
+    }
+
     &:hover {
         background:$midnight;
-        color:#FFF;
+        color:$blanco;
         @include objectShadow('default', 'midnight')
     }
 
@@ -67,16 +81,18 @@ p {
 .ghost {
     background:#FFF;
     color:$midnight;
-    border:2px solid $minimal;
 
     &:hover {
-        border:2px solid #FFF;
-        @include objectShadow('default', 'snow');
+        @include objectShadow('hover', 'snow');
     }
 
     &:active {
         box-shadow:inset 0px 5px 15px rgba(0, 0, 0, 0.05);
         color:$mist;
+    }
+
+    &, .active {
+        @include objectShadow('default', 'snow');
     }
 }
 
@@ -109,15 +125,21 @@ nav {
             // align-self:center;
             text-align:left;
             
-            a {
-                position:relative !important;
-                top:1px !important;
-            }
+            // a {
+            //     position:relative !important;
+            //     top:1px !important;
+            // }
 
             #logo {
                 height:55px;
                 padding:0;
                 margin:auto;
+            }
+
+            .logo-text {
+                position:relative;
+                top:-20px;
+                left:10px;
             }
         }
         

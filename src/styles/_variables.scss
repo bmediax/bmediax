@@ -72,10 +72,23 @@ $colors-dark: (
     @return var(--color-#{$color-name});
 }
 
+// Responsive
+@mixin responsive($size) {
+    @if $size == 'tablet' {
+        @media screen and (max-width:760px) {
+            @content;
+        }
+    }
+}
+
 // Object Definitions
 @mixin objectShadow($state, $color) {
-    @if $state == 'default' and $color == 'snow' {
-        box-shadow:0px 5px 30px rgba(0, 0, 0, 0.05);
+    @if $color == 'snow' {
+        @if $state == 'default' {
+            box-shadow:0px 5px 30px rgba(0, 0, 0, 0.05);
+        } @else if $state == 'hover' {
+            box-shadow:0px 5px 30px rgba(0, 0, 0, 0.1);
+        }
     }
 
     @else if $state == 'default' and $color == 'azure' {
