@@ -1,4 +1,4 @@
-@use './variables' as *;
+@use './variables.module' as *;
 
 .cover {
     background:getColor(lightBase);
@@ -48,4 +48,20 @@
             margin-right:5px;
         }
     }
+}
+
+.recentProjects {
+    background:getColor(lightdarkBase);
+}
+
+.awards {
+    background:getColor(lightdarkBase);
+}
+
+.letsFriends {
+    background:getColor(lightdarkBase);
+}
+
+.letsWork {
+    background:$masOscuro;
 }

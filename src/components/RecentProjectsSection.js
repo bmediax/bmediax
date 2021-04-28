@@ -1,11 +1,14 @@
 import React from 'react';
 import SectionLayout from '../layout/SectionLayout';
+import * as styles from '../styles/homepage.module.scss'
 
 const RecentProjectsSection = () => {
     return (
-        <SectionLayout ide="recent-projects">
-            <h4>Portfolio</h4>
-            <h2>Recent Projects</h2>
+        <SectionLayout label={styles.recentProjects}>
+            <div className="section-title">
+                <h4>Portfolio</h4>
+                <h2>Recent Projects</h2>
+            </div>
         </SectionLayout>
     );
 };

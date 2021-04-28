@@ -1,4 +1,4 @@
-@use './variables' as *;
+@use './variables.module' as *;
 
 .azure { color:$azure; }
 
@@ -12,6 +12,25 @@ h1 {
     font-weight: 700;
     color:getColor(textHeader);
     text-transform: capitalize;
+}
+
+h2 {
+    font-family:$primaryFont;
+    font-size:2.25rem;
+    font-weight: 700;
+    color:getColor(textHeader);
+    text-transform: capitalize;
+}
+
+h2 {
+    text-transform: capitalize;
+}
+
+h4 {
+    letter-spacing:1px;
+    text-transform: uppercase;
+    font-weight:600;
+    color:getColor(textSubTitle);
 }
 
 p {
@@ -102,12 +121,22 @@ p {
     }
 }
 
-.scroll {
-    @include objectShadow('default', 'white');
+.navScroll {
+    @include objectShadow('default', 'snow');
 }
 
 section {
-    padding:100px 0px;
+    padding:100px 5%;
+
+    .section-title {
+        line-height:2em;
+        margin-bottom:15px;
+
+        h4, h2 {
+            font-family: $primaryFont;
+            text-align:center;
+        }
+    }
 }
 
 // Navigation

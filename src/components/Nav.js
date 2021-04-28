@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import { motion } from 'framer-motion'
 import { navData  } from '../data/navData'
@@ -24,8 +24,21 @@ const Nav = () => {
     }`)
     const siteSocial = data.site.siteMetadata.social
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                document.querySelector(".navBar").className = "navBar navScroll";
+            } else {
+                document.querySelector(".navBar").className = "navBar";
+            }
+        };
+        
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return (
-        <nav>
+        <nav className="navBar">
             <div className="nav-wrapper">
                 {/* Logo */}
                 <div className="logo-contain">

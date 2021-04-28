@@ -1,8 +1,8 @@
 import React from 'react';
 
-const SectionLayout = ({ children, ide }) => {
+const SectionLayout = ({ children, label, bgColor }) => {
     return (
-        <section id={ide}>
+        <section className={label} style={{ backgroundColor: bgColor }}>
             {children}
         </section>
     );

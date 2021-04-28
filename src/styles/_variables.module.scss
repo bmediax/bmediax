@@ -32,6 +32,26 @@ $raven: #262930;
 $steelBlue: #2B313C;
 $cloud: #687077;
 
+:export {
+    masOscuro: $masOscuro;
+    oscuro: $oscuro;
+    midnight: $midnight;
+    mist: $mist;
+    minimal: $minimal;
+    blanco: $blanco;
+    azure: $azure;
+    coral: $coral;
+    forest: $forest;
+    purple: $purple;
+    onyx: $onyx;
+    jetBlack: $jetBlack;
+    raven: $raven;
+    steelBlue: $steelBlue;
+    cloud: $cloud;
+    lightBase: getColor(lightBase);
+    lightdarkBase: getColor(lightdarkBase);
+}
+
 
 // Light Theme
 $colors: (
@@ -119,7 +139,7 @@ $colors-dark: (
 @mixin objectShadow($state, $color) {
     @if $color == 'snow' {
         @if $state == 'default' {
-            box-shadow:0px 10px 30px rgba($midnight, .1) !important;
+            box-shadow:0px 10px 30px rgba(0, 0, 0, .08) !important;
         } @else if $state == 'hover' {
             box-shadow:0px 10px 30px rgba($midnight, .2) !important;
         }
