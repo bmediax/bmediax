@@ -18,9 +18,13 @@
         background:getColor(lightLightBase);
         transition: background 200ms linear, color 200ms linear;
 
+        &, .is-selected {
+            background:getColor(lightLightBase) !important;
+        }
+
         &:hover {
-            color:$mist;
-            background:getColor(lightLightBase2);
+            color:getColor(lightDarkText) !important;
+            background:getColor(lightLightBase2) !important;
         }
     }
 }

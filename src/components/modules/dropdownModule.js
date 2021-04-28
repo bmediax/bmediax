@@ -12,7 +12,16 @@ const DropdownModule = () => {
     })
 
     const options = [
-        'Copy to Clipboard', 'Open your Mail App'
+        {
+            value: 'Copy to Clipboard',
+            label: 'Copy to Clipboard',
+            className: 'success',
+        }, 
+        {
+            value: 'Open your Mail App',
+            label: 'Open your Mail App',
+            className: 'success',
+        },
     ]
     
     const _onSelect = (option) => {

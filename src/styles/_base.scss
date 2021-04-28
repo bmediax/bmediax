@@ -2,6 +2,10 @@
 
 .azure { color:$azure; }
 
+.success {
+    background:$azure !important;
+}
+
 h1 {
     font-family:$primaryFont;
     font-size:5vmin;
@@ -28,13 +32,14 @@ p {
     text-decoration:none;
     transition: 
         background 250ms ease-in-out, 
-        box-shadow 250ms ease-in-out,
-        transform 250ms ease-in-out,
-        border 250ms ease-in-out,
+        box-shadow 200ms ease-in-out,
+        transform 150ms ease-in-out,
+        border 200ms ease-in-out,
         color 250ms ease-in-out;
 
     &:hover {
         transform:translateY(-2px);
+        cursor:pointer;
     }
 
     &:active {
@@ -88,7 +93,7 @@ p {
     }
 
     &:active {
-        box-shadow:inset 0px 5px 15px rgba(0, 0, 0, 0.05);
+        box-shadow:inset 0px 5px 15px rgba(0, 0, 0, 0.05) !important;
         color:$mist;
     }
 

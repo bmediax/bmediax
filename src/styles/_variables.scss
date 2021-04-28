@@ -39,7 +39,7 @@ $colors: (
     lightBase: $blanco,
     lightdarkBase: $minimal,
     lightLightBase: $blanco,
-    lightLightBase2: $blanco,
+    lightLightBase2: $minimal,
     darkBase:$oscuro,
 
     // Btn Based
@@ -119,9 +119,9 @@ $colors-dark: (
 @mixin objectShadow($state, $color) {
     @if $color == 'snow' {
         @if $state == 'default' {
-            box-shadow:0px 5px 30px rgba(0, 0, 0, 0.05) !important;
+            box-shadow:0px 10px 30px rgba($midnight, .1) !important;
         } @else if $state == 'hover' {
-            box-shadow:0px 5px 30px rgba(0, 0, 0, 0.1);
+            box-shadow:0px 10px 30px rgba($midnight, .2) !important;
         }
     }
 
@@ -130,7 +130,7 @@ $colors-dark: (
     }
 
     @else if $state == 'default' and $color == 'midnight' {
-        box-shadow:0px 5px 20px rgba($midnight, .3);
+        box-shadow:0px 10px 20px rgba($midnight, .2) !important;
     }
 }
 
