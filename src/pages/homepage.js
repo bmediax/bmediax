@@ -1,12 +1,13 @@
 import React from 'react'
 import Layout from '../layout/index.js'
 import Cover from '../components/Cover'
+import RecentProjectsSection from '../components/RecentProjectsSection.js'
 
 const homepage = () => {
     return (
         <Layout title="Homepage">
             <Cover />
-            <h1> Homepage </h1>
+            <RecentProjectsSection />
         </Layout>
     )
 }

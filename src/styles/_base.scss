@@ -106,6 +106,10 @@ p {
     @include objectShadow('default', 'white');
 }
 
+section {
+    padding:100px 0px;
+}
+
 // Navigation
 nav {
     position:sticky;
