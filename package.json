@@ -12,7 +12,7 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
   },
   "dependencies": {
     "framer-motion": "^4.1.11",
@@ -35,6 +35,5 @@
   },
   "devDependencies": {
     "@babel/core": "^7.14.0",
-    "babel-loader": "^8.2.2"
   }
 }
