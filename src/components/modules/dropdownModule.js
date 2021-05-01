@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import ToastModule from './ToastModule'
+// import ToastModule from './ToastModule'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import * as DropdownModuleStyles from './dropdownModule.module.scss'
 
 // External Libs
@@ -32,7 +34,7 @@ const DropdownModule = () => {
     
     function selectAction(selectedAction) {
         if (selectedAction.label === 'Copy to Clipboard') {
-            console.log("It's copied now!")
+            const notify = () => toast(`Copied to Clipboard`);
 
             const emailData = document.createElement('textarea');
             emailData.value = 'hello@bmediax.dev';
@@ -43,21 +45,24 @@ const DropdownModule = () => {
             emailData.select();
             document.execCommand('copy');
             document.body.removeChild(emailData);
+            // () => toast(selectAction.label)
+            notify()
         }
         
         else if (selectedAction.label === 'Open your Mail App') {
+            const notify = () => toast(`Opened your Mail app`);
             window.location.href = "mailto:hello@bmediax.dev";
             console.log("It's on the email app now")
+            notify()
         }
         return null
     }
 
     return (
         <>
-        {/* <motion.div initial={{ scale:0 }} animate={{ scale: 1 }}> */}
-        <ToastModule message="Copied to Clipboard" type="yes" />
+        <ToastContainer />
+        <span>{isSelect.label}</span>
         <Dropdown options={options} onChange={_onSelect} placeholder="hello@bmediax.dev" controlClassName="btn primary active" menuClassName={DropdownModuleStyles.dropdownMenu} arrowClassName={DropdownModuleStyles.arrowDrop} />
-        {/* </motion.div> */}
         </>
     );
 };

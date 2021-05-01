@@ -21,6 +21,7 @@
 
         &, .is-selected {
             background:getColor(lightLightBase) !important;
+            color:getColor(normalText) !important;
         }
 
         &:hover {

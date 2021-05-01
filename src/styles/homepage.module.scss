@@ -2,13 +2,13 @@
 
 div.cover {
     background:getColor(lightBase);
-    min-height:80vmin;
+    // min-height:30vmin;
     width:auto;
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    // @include sectionPadding('desktop');
+    @include sectionPadding('desktop');
     // padding:30px 5%;
 
     @include responsive('tablet') {

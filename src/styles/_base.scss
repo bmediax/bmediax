@@ -2,7 +2,6 @@
 
 // Desktop: 1 rem = 10px
 // Mobile: 1rem - 9.6px
-
 html {
     // 16px
     font-size:62.5%;
@@ -316,4 +315,15 @@ nav {
 
 .Dropdown-menu {
     background-color:getColor(lightLightBase) !important;
+}
+
+.Toastify__toast {
+    background:getColor(lightLightBase) !important;
+}
+
+.Toastify__toast-body {
+    font-size:1.6rem;
+    font-family:$primaryFont;
+    color:getColor(azureToMist);
+    font-weight:600;
 }
