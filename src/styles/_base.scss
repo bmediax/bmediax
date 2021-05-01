@@ -1,5 +1,18 @@
 @use './variables.module' as *;
 
+// Desktop: 1 rem = 10px
+// Mobile: 1rem - 9.6px
+
+html {
+    // 16px
+    font-size:62.5%;
+
+    @include responsive('tablet') {
+        //15.36px
+        font-size:60%;
+    }
+}
+
 .azure { color:$azure; }
 
 .success {
@@ -16,8 +29,8 @@ h1 {
 
 h2 {
     font-family:$primaryFont;
-    font-size:2.25rem;
-    font-weight: 700;
+    font-size:3.6rem;
+    font-weight: 700; 
     color:getColor(textHeader);
     text-transform: capitalize;
 }
@@ -30,12 +43,13 @@ h4 {
     letter-spacing:1px;
     text-transform: uppercase;
     font-weight:600;
+    font-size:1.8rem;
     color:getColor(textSubTitle);
 }
 
 p {
     font-family:$primaryFont;
-    font-size:1rem;
+    font-size:1.6rem;
     font-weight:500;
     color:getColor(normalText);
 }
@@ -47,7 +61,7 @@ p {
     @include objectCorner('default');
     // border-radius:15px !important;
     border:none !important;
-    font-size:1rem;
+    font-size:1.6rem;
     text-decoration:none;
     transition: 
         background 250ms ease-in-out, 
@@ -126,15 +140,27 @@ p {
 }
 
 section {
-    padding:100px 5%;
+    @include sectionPadding('desktop');
 
     .section-title {
-        line-height:2em;
         margin-bottom:15px;
+
+        h4 {
+            margin-bottom:15px;
+        }
 
         h4, h2 {
             font-family: $primaryFont;
             text-align:center;
+        }
+    }
+
+    // Responsive
+    @include responsive('tablet') {
+        @include sectionPadding('mobile');
+
+        .section-title h4 {
+            margin-bottom:10px;
         }
     }
 }
@@ -178,6 +204,7 @@ nav {
                 position:relative;
                 top:-20px;
                 left:10px;
+                font-size:1.6rem;
                 color:getColor(menuText);
             }
         }
@@ -228,7 +255,7 @@ nav {
                         color:getColor(menuText);
                         text-decoration:none;
                         margin:0px 15px;
-                        font-size:1rem;
+                        font-size:1.6rem;
                         font-weight:500;
                         transition: color 150ms linear;
                         
@@ -258,7 +285,7 @@ nav {
             
             a {
                 display:inline-block;
-                font-size:1.1rem;
+                font-size:1.7rem;
                 background:getColor(icn-lightBG);
                 color:getColor(icon-lightTXT);
                 margin:auto;

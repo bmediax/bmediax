@@ -2,13 +2,17 @@
 
 .cover {
     background:getColor(lightBase);
-    min-height:60vmin;
+    min-height:50vmin;
     width:auto;
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding:5% 5%;
+    @include sectionPadding('desktop');
+
+    @include responsive('tablet') {
+        @include sectionPadding('mobile');
+    }
 
     .text {
         max-width:900px;

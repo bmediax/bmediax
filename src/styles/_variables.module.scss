@@ -8,9 +8,15 @@ $dark-blue: #171926;
 // Font Define
 $primaryFont: 'Montserrat', sans-serif;
 
+$titleSize: 2.25rem;
+$subHeader: 1.125rem;
+$paraSize: 1.375rem;
+
 // Element Size Define
 $wrapMaxWidth: 1200px;
 $widthPadding: 5%;
+$desktopPadding: 150px;
+$mobilePadding: 80px;
 
 $defaultBorder: 15px;
 
@@ -103,7 +109,7 @@ $colors-dark: (
     textTitle: $azure,
     textHeader: $minimal,
     textHeaderDarkBG: $blanco,
-    textSubTitle: $mist,
+    textSubTitle: $cloud,
     normalText: $cloud,
 );
 
@@ -132,6 +138,19 @@ $colors-dark: (
         @media screen and (max-width:760px) {
             @content;
         }
+    } @else if $size == 'desktop' {
+        @media screen and (min-width:761px) {
+            @content;
+        }
+    }
+}
+
+@mixin sectionPadding($layout) {
+    @if $layout == 'mobile' {
+        padding: $mobilePadding $widthPadding;
+    }
+    @else if $layout == 'desktop' {
+        padding: $desktopPadding $widthPadding;
     }
 }
 

@@ -51,8 +51,6 @@ const DropdownModule = () => {
         return null
     }
 
-    // console.log(isSelect.selected.value)
-
     return (
         // <motion.div initial={{ scale:0 }} animate={{ scale: 1 }}>
         <Dropdown options={options} onChange={_onSelect} placeholder="hello@bmediax.dev" controlClassName="btn primary active" menuClassName={DropdownModuleStyles.dropdownMenu} arrowClassName={DropdownModuleStyles.arrowDrop} />
