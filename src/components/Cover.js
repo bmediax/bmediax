@@ -19,7 +19,7 @@ const Cover = () => {
                     <DropdownModule />
                     {/* <Link to="mailto:hello@bmediax.dev" className="btn primary active">hello@bmediax.dev</Link> */}
                     <Link to="/portfolio" className="btn ghost active">
-                        <RiInboxFill /> View Portfolio
+                        <RiInboxFill style={{ position: "relative", top: "3px", marginRight: "5px"}} /> View Portfolio
                     </Link>
                 </div>
             </div>

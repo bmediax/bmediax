@@ -182,7 +182,7 @@ nav {
         justify-content:center;
         margin:auto;
         max-width:$wrapMaxWidth;
-        height:85px;
+        height:$navHeight;
         padding:0 $widthPadding;
         
         .logo-contain {

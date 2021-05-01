@@ -1,0 +1,42 @@
+@use '../../styles/_variables.module.scss' as *;
+
+.toastWrap {
+    position: fixed;
+    top: $navHeight + 15px;
+    right:10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background:getColor(lightLightBase);
+    padding:18px 25px;
+    @include objectCorner('default');
+    @include objectShadow('default', 'snow');
+    transition: box-shadow 200ms linear;
+    z-index:100;
+
+    &:hover {
+        @include objectShadow('hover', 'snow');
+    }
+
+    span {
+        margin-left:12px;
+        font-weight:600;
+        font-family:$primaryFont;
+        font-size:1.6rem;
+    }
+
+    .circle {
+        fill:getColor(azureToSteelBlue);
+    }
+
+    .stroke {
+        stroke:getColor(whiteToAzure);
+    }
+
+    @include responsive('tablet') {
+        width: 90%;
+        right:5%;
+        left:5%;
+        padding:15px 0px;
+    }
+}

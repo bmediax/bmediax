@@ -1,14 +1,15 @@
 @use './variables.module' as *;
 
-.cover {
+div.cover {
     background:getColor(lightBase);
-    min-height:50vmin;
+    min-height:80vmin;
     width:auto;
     display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    @include sectionPadding('desktop');
+    // @include sectionPadding('desktop');
+    // padding:30px 5%;
 
     @include responsive('tablet') {
         @include sectionPadding('mobile');
@@ -44,12 +45,6 @@
             @include responsive('tablet') {
                 margin-left:0;
             }
-        }
-
-        svg {
-            position:relative;
-            top:3px;
-            margin-right:5px;
         }
     }
 }

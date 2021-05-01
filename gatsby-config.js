@@ -1,8 +1,4 @@
 module.exports = {
-  flags: {
-    FAST_DEV: true,
-    DEV_SSR: true,
-  },
   siteMetadata: {
     title: "Bmediax",
     description: "Hi there, my name is Brian Moreno and I am a Digital Designer and Web Developer with over 7+ years of experience designing, prototyping, developing, and deploying large scale pixel-perfect websites and web applications.",

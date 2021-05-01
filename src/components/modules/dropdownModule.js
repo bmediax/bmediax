@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import ToastModule from './ToastModule'
 import * as DropdownModuleStyles from './dropdownModule.module.scss'
 
 // External Libs
@@ -29,6 +29,7 @@ const DropdownModule = () => {
         selectAction(option)
         // console.log('You selected', option.label)
     }
+    
     function selectAction(selectedAction) {
         if (selectedAction.label === 'Copy to Clipboard') {
             console.log("It's copied now!")
@@ -52,9 +53,12 @@ const DropdownModule = () => {
     }
 
     return (
-        // <motion.div initial={{ scale:0 }} animate={{ scale: 1 }}>
+        <>
+        {/* <motion.div initial={{ scale:0 }} animate={{ scale: 1 }}> */}
+        <ToastModule message="Copied to Clipboard" type="yes" />
         <Dropdown options={options} onChange={_onSelect} placeholder="hello@bmediax.dev" controlClassName="btn primary active" menuClassName={DropdownModuleStyles.dropdownMenu} arrowClassName={DropdownModuleStyles.arrowDrop} />
-        // </motion.div>
+        {/* </motion.div> */}
+        </>
     );
 };
 
