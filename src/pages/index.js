@@ -18,7 +18,7 @@ const IndexPage = () => {
           <h1> Website Under Construction </h1>
           <div className="links-media">
             <a href="https://bmediax.com" className="btn primary activePrimary"> View Portfolio <RiLinksLine /></a>
-            <a href="https://bmediax.com" className="btn ghost"> View Portfolio <RiLinksLine /></a>
+            <a href={bmediaxPortfolio} download="Bmediax_Resume" className="btn ghost"> View Portfolio <AiOutlineCloudDownload /></a>
             {/* <a href={bmediaxPortfolio} download="Bmediax_Resume"> Download Résumé <AiOutlineCloudDownload /></a> */}
           </div>
         </div>
