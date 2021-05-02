@@ -64,3 +64,18 @@ div.cover {
 .letsWork {
     background:$masOscuro;
 }
+
+.cardWrapper {
+    // background:$white;
+    display:flex;
+    justify-content:space-evenly;
+    align-items: center;
+
+    @include responsive('tablet') {
+        flex-direction: column;
+        
+        & > div + div {
+            margin-top:30px;
+        }
+    }
+}

@@ -58,6 +58,7 @@ $cloud: #687077;
     cloud: $cloud;
     lightBase: getColor(lightBase);
     lightdarkBase: getColor(lightdarkBase);
+    defaultBorder: $defaultBorder;
 }
 
 

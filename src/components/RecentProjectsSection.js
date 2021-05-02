@@ -2,6 +2,7 @@ import React from 'react';
 import SectionLayout from '../layout/SectionLayout';
 import * as styles from '../styles/homepage.module.scss'
 import CTACardModule from './modules/CTACardModule';
+import { portfolioData } from '../data/portfolioData'
 
 const RecentProjectsSection = () => {
     return (
@@ -10,9 +11,11 @@ const RecentProjectsSection = () => {
                 <h4>Portfolio</h4>
                 <h2>Recent Projects</h2>
             </div>
-            <CTACardModule />
-            <CTACardModule />
-            <CTACardModule />
+            <div className={styles.cardWrapper}>
+                {portfolioData.slice(0, 3).map((portfolio, index) => (
+                    <CTACardModule {...portfolio} key={index} />
+                ))}
+            </div>
         </SectionLayout>
     );
 };

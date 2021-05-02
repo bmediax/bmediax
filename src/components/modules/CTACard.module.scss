@@ -1,0 +1,53 @@
+@use '../../styles/variables.module' as *;
+
+.CTACard {
+    flex:1;
+    background:getColor(lightBase);
+    max-width:400px;
+    min-height:200px;
+    @include objectCorner('default');
+    transition: box-shadow 200ms linear;
+
+    &:hover {
+        @include objectShadow('default', 'snow')
+    }
+
+    &:nth-child(2) {
+        margin-right:2%;
+        margin-left:2%;
+    }
+
+    @include responsive('tablet') {
+        max-width:100%;
+
+        &:nth-child(2) {
+            margin-right:unset;
+            margin-left:unset;
+        }
+    }
+}
+
+.text {
+    padding:20px 15px;
+
+    .headerText {
+        display:block;
+        margin-bottom:5px;
+    
+        h5, h3 {
+            line-height:30px;
+        }
+    }
+
+    p {
+        line-height:25px;
+    }
+
+    a {
+        margin-top:20px;
+        display:block;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+}
