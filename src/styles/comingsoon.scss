@@ -11,25 +11,27 @@ html, body {
 .container {
     height:100vh;
     width:100vw;
-    background:$artic-white;
+    background:getColor(lightdarkBase);
     display:flex;
     justify-content: center;
     align-items: center;
     
     .wrapper {
-        background:#FFF;
+        background:getColor(lightBase);
         max-width:750px;
         padding:4% 5%;
         margin:0 5%;
         border-radius:1.5em;
-        box-shadow:0px 20px 30px rgba(0, 0, 0, .05);
+        @include objectCorner('default');
+        @include objectShadow('default', 'snow');
+        // box-shadow:0px 20px 30px rgba(0, 0, 0, .05);
 
         h1 {
             margin:0;
-            font-family:sans-serif;
-            font-size:7vmin;
+            font-family:$primaryFont;
+            font-size:5.5vmin;
             text-align:center;
-            color:$dark-blue;
+            color:getColor(textTitle);
         }
 
         .links-media {
@@ -39,14 +41,15 @@ html, body {
             a {
                 flex:1;
                 text-decoration:none;
-                color:$dark-blue;
-                background-color:$artic-white;
+                // color:getColor(textHeader);
+                // background-color:getColor(lightLightBase2);
                 border-radius:15px;
                 text-align:center;
                 margin-right:1em;
                 padding:1em 3em;
-                font-family:sans-serif;
-                font-size:1rem;
+                font-family:$primaryFont;
+                font-weight:500;
+                font-size:1.8rem;
                 border:none;
                 transition: background 250ms linear, color 200ms linear, box-shadow 250ms linear, transform 280ms linear;
     
@@ -55,10 +58,10 @@ html, body {
                 }
     
                 &:hover {
-                    background:$zoom-blue;
-                    color:#FFF;
-                    box-shadow:0px 10px 30px rgba($zoom-blue, .4);
-                    transform: scale(1.05);
+                    // background:$azure;
+                    // color:#FFF;
+                    box-shadow:0px 10px 30px rgba($azure, .4);
+                    transform: translateY(-3px);
                 }
         
                 &:focus {
@@ -84,6 +87,7 @@ html, body {
         
         .wrapper { 
             margin-top:5%;
+            @include objectCorner('mobile');
 
             .links-media {
                 flex-direction: column;
@@ -91,7 +95,6 @@ html, body {
                 a {
                     margin-bottom:.5em;
                     margin-right:0 !important;
-                    font-size:4vmin !important;
 
                     &:last-child {
                         margin-bottom:0px;
