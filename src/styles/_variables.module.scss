@@ -20,6 +20,7 @@ $desktopPadding: 150px;
 $mobilePadding: 80px;
 
 $defaultBorder: 15px;
+$mobileBorder: 25px;
 
 $masOscuro: #171926;
 $oscuro: #2D3346;
@@ -92,6 +93,9 @@ $colors: (
     azureToMist: $azure,
     azureToSteelBlue: $azure,
     whiteToAzure: $white,
+    whiteToRaven: $white,
+    midnightToRaven:$midnight,
+    mistToCloud: $mist,
 );
 
 // Dark Theme
@@ -124,6 +128,9 @@ $colors-dark: (
     azureToMist: $mist,
     azureToSteelBlue: $steelBlue,
     whiteToAzure: $azure,
+    whiteToRaven: $raven,
+    midnightToRaven:$raven,
+    mistToCloud: $cloud,
 );
 
 :root {
@@ -189,6 +196,10 @@ $colors-dark: (
 @mixin objectCorner($type) {
     @if $type == 'default' {
         border-radius:$defaultBorder !important;
+    }
+
+    @else if $type == 'mobile' {
+        border-radius:$mobileBorder !important;
     }
 
     @else if $type == 'circular' {

@@ -172,6 +172,16 @@ section {
         }
     }
 
+    .darkTitle {
+        h4 {
+            color:getColor(mistToCloud);
+        }
+
+        h2 {
+            color:#FFF;
+        }
+    }
+
     // Responsive
     @include responsive('tablet') {
         @include sectionPadding('mobile');
