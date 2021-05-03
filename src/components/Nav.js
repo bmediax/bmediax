@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby'
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 import { navData  } from '../data/navData'
 import Logo from '../components/Logo'
 // import logo from '../images/gfx/logo.svg'
 import { AiOutlineInstagram } from 'react-icons/ai'
 import { DiGithubAlt } from 'react-icons/di'
 import { FaLinkedinIn } from 'react-icons/fa'
+import MobileNav from './mobileNav';
 
 const Nav = () => {
     const data = useStaticQuery(graphql`
@@ -74,6 +75,9 @@ const Nav = () => {
                         ))}
                     </ul>
                 </div>
+
+                {/* Mobile Hamburger Menu */}
+                <MobileNav />
 
                 {/* Social Media */}
                 <div className="social-media_bar">

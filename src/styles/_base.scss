@@ -266,14 +266,28 @@ nav {
                         top: 100%;
                         text-align:left;
                         padding-top:20px;
+
+                        li:last-child {
+                            a {
+                                border-bottom-right-radius: 15px;
+                                border-bottom-left-radius: 15px;
+                            }
+                        }
                         
                         a {
-                            background:getColor(lightBase);
-                            padding:.8em 1.5em;
+                            font-family:$primaryFont;
+                            font-weight:500;
+                            font-size:1.6rem;
+                            color:getColor(menuText);
+                            text-decoration:none;
+                            background:getColor(lightLightBase);
+                            padding: .9em 1.5em;
                             transition: background 200ms linear, color 200ms linear;
+                            @include objectShadow('default', 'snow');
+                            white-space: nowrap;
                             
                             &:hover {
-                                background:getColor(darkBase);
+                                background:getColor(lightdarkBase);
                             }
                         }
                     }
@@ -299,9 +313,72 @@ nav {
                         }
                     }
                 }
+                a {
+                    display:block;
+                    padding: .8em 1.5em;
+                    // white-space: nowrap;
+                }
+
                 > li + li { 
                     margin-left: 2em;
                 }
+            }
+
+            @include responsive('tablet') {
+                // border-top:1px solid getColor(lightdarkBase);
+                position:absolute;
+                display:none;
+                top:$navHeight;
+                flex:1;
+                width:100%;
+                background:getColor(lightBase);
+
+                .menu {
+                    flex-direction: column;
+                    // background:red;
+                    @include objectShadow('default', 'snow');
+                    
+                    li {
+                        width:100%;
+                        margin-right:0 !important;
+                        margin-left:0 !important;
+                        
+                        a {
+                            // width:100%;
+                            display:block;
+                            padding:30px 0px;
+                            margin-right:0 !important;
+                            margin-left:0 !important;
+                        }
+
+                        ul {
+                            padding-top:0;
+                            position:unset;
+                            text-align:center;
+                            display:block !important;
+                            
+                            a {
+                                padding:30px 0px;
+                                box-shadow:none !important;
+                                border-radius:unset !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .mobile-nav {
+            flex:1;
+            text-align:right;
+            display:none;
+
+            svg path {
+                fill:getColor(menuText);
+            }
+
+            @include responsive('tablet') {
+                display:block;
             }
         }
 
@@ -309,6 +386,10 @@ nav {
         .social-media_bar {
             flex:1;
             text-align:right;
+
+            @include responsive('tablet') {
+                display:none;
+            }
             
             a {
                 display:inline-block;

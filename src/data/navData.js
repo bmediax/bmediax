@@ -9,8 +9,8 @@ export const navData = [
         sub: [
             {
                 title: 'Recent Projects',
-                path: '/recent-projects'
-            }
+                path: '/portfolio/recent-projects'
+            },
         ],
     },
     {
