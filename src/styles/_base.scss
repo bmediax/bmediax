@@ -366,15 +366,35 @@ nav {
                     }
                 }
             }
+
+            @include responsive('desktop') {
+                display:block !important;
+            }
         }
 
         .mobile-nav {
             flex:1;
             text-align:right;
             display:none;
+            
+            svg {
+                border-radius:$defaultBorder;
+                padding:10px;
 
-            svg path {
-                fill:getColor(menuText);
+                &:hover {
+                    path {
+                        fill:$azure;
+                    }
+                    cursor: pointer;
+                }
+                
+                &:active {
+                    background:getColor(lightdarkBase);
+                }
+
+                path {
+                    fill:getColor(menuText);
+                }
             }
 
             @include responsive('tablet') {
