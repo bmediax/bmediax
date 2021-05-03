@@ -1,0 +1,44 @@
+@use '../../styles/variables.module' as *;
+
+.wrapper {
+    text-decoration: none;
+    flex:1;
+    // width:100%;
+    min-width:290px;
+    // min-height:50px;
+    @include objectCorner('default');
+    background:getColor(lightLightBase3);
+    margin:auto;
+    display:flex;
+    justify-content: center;
+    align-items: stretch;
+    transition:background 250ms linear, box-shadow 250ms linear;
+
+    .text {
+        flex:2;
+        padding:20px 0 20px 30px;
+        align-self: center;
+
+        h3 {
+            transition:color 150ms linear;
+        }
+    }
+    
+    .icon {
+        flex:1;
+    }
+
+    &:hover {
+        background:getColor(darkBase2);
+        @include objectShadow('hover', 'snow');
+
+        .text {
+            h3 { color:$white !important; }
+        }
+    }
+
+    @include responsive('tablet') {
+        @include objectCorner('mobile');
+        width:100%;
+    }
+}

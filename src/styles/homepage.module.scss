@@ -2,7 +2,6 @@
 
 div.cover {
     background:getColor(lightBase);
-    // min-height:30vmin;
     width:auto;
     display:flex;
     justify-content: center;
@@ -57,8 +56,33 @@ div.cover {
     background:getColor(midnightToRaven);
 }
 
-.letsFriends {
-    background:getColor(lightdarkBase);
+.friends {
+    background:getColor(lightBase);
+
+    .buttonCardContainer {
+        display:flex;
+        justify-content: center;
+        align-self: center;
+        max-width: $wrapMaxWidth;
+        margin:auto;
+
+        a {
+            max-width:300px;
+        }
+
+        @include responsive('tablet') {
+            flex-direction: column;
+
+            a {
+                display:block;
+                max-width:unset;
+            }
+
+            a:not(:first-child):not(:last-child) {
+                margin:15px 0px;
+            }
+        }
+    }
 }
 
 .letsWork {
@@ -70,6 +94,8 @@ div.cover {
     display:flex;
     justify-content:space-evenly;
     align-items: center;
+    max-width:$wrapMaxWidth;
+    margin:auto;
 
     @include responsive('tablet') {
         flex-direction: column;

@@ -6,11 +6,7 @@ import { portfolioData } from '../data/portfolioData'
 
 const RecentProjectsSection = () => {
     return (
-        <SectionLayout label={styles.recentProjects}>
-            <div className="section-title">
-                <h4>Portfolio</h4>
-                <h2>Recent Projects</h2>
-            </div>
+        <SectionLayout label={styles.recentProjects} title="Recent Projects" subtitle="Portfolio">
             <div className={styles.cardWrapper}>
                 {portfolioData.slice(0, 3).map((portfolio, index) => (
                     <CTACardModule {...portfolio} key={index} />
