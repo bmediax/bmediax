@@ -11,6 +11,23 @@ module.exports = {
       linkedin: 'bmediax',
       github: 'bmediax',
     },
+    socials: [
+      {
+        platform: "Instagram",
+        subTitle: "Photography",
+        url: "https://instagram.com/bmediax",
+      },
+      {
+        platform: "LinkedIn",
+        subTitle: "Experience",
+        url: "https://linkedin.com/in/bmediax",
+      },
+      {
+        platform: "Github",
+        subTitle: "Development",
+        url: "https://github.com/bmediax",
+      },
+    ]
   },
   plugins: [
     "gatsby-plugin-sass",
