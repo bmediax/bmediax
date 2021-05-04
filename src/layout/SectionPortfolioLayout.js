@@ -1,5 +1,5 @@
 import React from 'react';
-import * as portfolioStyles from '../styles/portfolio.module.scss'
+// import * as portfolioStyles from '../styles/portfolio.module.scss'
 import { CheckMarkIcon, PaintIcon } from '../components/Icons'
 
 const SectionPortfolioLayout = ({ title, isDark, bgLightDark, icon, children, label, idLabel,  bgColor, align }) => {
