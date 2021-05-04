@@ -488,3 +488,23 @@ nav {
         stroke:getColor(lightDarkText) !important;
     }
 }
+
+.column-layout {
+    display:flex;
+
+    @include responsive('tablet') {
+        flex-direction: column;
+    }
+
+    .column {
+        flex:1;
+    }
+
+    .two-column_2-1 {
+        flex:2;
+    }
+    
+    .two-column_1-2 {
+        flex:1;
+    }
+}
