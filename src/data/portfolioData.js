@@ -2,7 +2,7 @@ export const portfolioData = [
     {
         title: 'Reiko for PCC',
         raw: "reikoforpcc",
-        path: 'portfolio/reikoforpcc',
+        url: 'portfolio/reikoforpcc',
         cover: 'https://via.placeholder.com/350x180',
         client: "Reiko Mia Williams",
         date: "April 2021",
@@ -23,7 +23,7 @@ export const portfolioData = [
     {
         title: 'Edutainment',
         raw: "edutainment",
-        path: 'portfolio/edutainment',
+        url: 'portfolio/edutainment',
         cover: 'https://via.placeholder.com/350x180',
         client: "PCC Multicultural Center",
         date: "April 2018",
@@ -44,7 +44,7 @@ export const portfolioData = [
     {
         title: 'Chicanx Shop',
         raw: "chicanxshop",
-        path: 'portfolio/chicanxshop',
+        url: 'portfolio/chicanxshop',
         cover: 'https://via.placeholder.com/350x180',
         client: "Chicanx Shop",
         date: "September 2012",
