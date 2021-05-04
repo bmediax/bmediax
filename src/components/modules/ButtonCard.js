@@ -13,12 +13,11 @@ const ButtonCard = ({ title, subtitle, url }) => {
             return <InstagramIcon />
         } else {
             console.warn("No Icon Detected")
-            console.log(icn)
             return null
         }
     }
     return (
-        <motion.a href={url} target="_blank" className={buttonCardStyles.wrapper} whileHover={{ y:-3 }}>
+        <motion.a href={url} target="_blank" className={buttonCardStyles.wrapper} whileHover={{ y:-3 }} whileTap={{ y:2 }}>
             <div className={buttonCardStyles.text}>
                 <h3>{title}</h3>
                 <h5>{subtitle}</h5>

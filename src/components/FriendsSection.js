@@ -32,8 +32,6 @@ const FriendsSection = () => {
                         subtitle={social.subTitle} 
                         url={social.url} />
                 ))}
-                {/* <ButtonCard title="LinkedIn" subtitle="Professional" icon="LinkedIn" />
-                <ButtonCard title="Github" subtitle="Development" icon="Github" /> */}
             </div>
         </SectionLayout>
     );
