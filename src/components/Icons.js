@@ -24,3 +24,22 @@ export const InstagramIcon = () => {
         </svg>
     )
 }
+
+export const PaintIcon = () => {
+    return (
+        <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle className="icnBg" cx="17.5" cy="17.5" r="17.5" fill="#FFF"/>
+            <path className="icnFill" d="M14 19.9706C12.735 19.3366 10.5 19.9706 10.5 21.9706C10.5 23.1676 11 23.9706 9 24.9706C9 24.9706 12.25 27.2206 14.5 24.9706C15.774 23.6966 15.994 20.9706 14 19.9706Z" fill="blue"/>
+            <path className="icnFill" d="M15.2705 19.4082C14.9625 19.1002 14.9625 18.601 15.2705 18.293L23.6794 9.8841C24.1675 9.39595 24.959 9.39595 25.4471 9.8841V9.8841C25.9353 10.3723 25.9353 11.1637 25.4471 11.6519L17.0382 20.0608C16.7303 20.3687 16.231 20.3687 15.9231 20.0608L15.2705 19.4082Z" fill="blue"/>
+        </svg>
+    )
+}
+
+export const CheckMarkIcon = () => {
+    return (
+        <svg width="35" height="36" viewBox="0 0 35 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle className="icnBg" cx="17.5" cy="18" r="17.5" fill="white"/>
+            <path className="icnStroke" d="M11 17.75L16.25 23L25 12.5" stroke="blue" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    )
+}

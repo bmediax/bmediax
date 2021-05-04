@@ -457,3 +457,34 @@ nav {
     color:getColor(azureToMist);
     font-weight:600;
 }
+
+.sectionPortfolioIcon svg {
+    position:relative;
+    top:6px;
+
+    .icnBg {
+        fill: getColor(lightdarkBase) !important;
+    }
+
+    .icnFill {
+        fill:getColor(lightDarkText) !important;
+    }
+    
+    .icnStroke {
+        stroke:getColor(lightDarkText) !important;
+    }
+}
+
+.lightdark svg {
+    .icnBg {
+        fill: getColor(lightBase) !important;
+    }
+
+    .icnFill {
+        fill:getColor(lightDarkText) !important;
+    }
+    
+    .icnStroke {
+        stroke:getColor(lightDarkText) !important;
+    }
+}

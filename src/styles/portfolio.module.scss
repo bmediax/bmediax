@@ -1,0 +1,32 @@
+@use './variables.module' as *;
+
+.coverTitle {
+    height:40vmin;
+    padding:$desktopPadding $widthPadding $desktopSmallPadding $widthPadding;
+    text-align:center;
+    place-items: flex-end center;
+
+    // @include responsive('tablet') {
+    //     justify-content: center;
+    //     align-items: center;
+    //     place-items: center !important;
+    // }
+}
+
+.text {
+    text-align: center;
+    padding-bottom:$desktopSmallPadding;
+
+    @include responsive('tablet') {
+        padding-bottom:0;
+    }
+    
+    h1 { 
+        color:$white; 
+        font-size:4rem;
+    }
+
+    h5 {
+        color:$minimal;
+    }
+}

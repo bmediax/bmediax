@@ -19,6 +19,7 @@ $navHeight: 85px;
 $wrapMaxWidth: 1200px;
 $widthPadding: 5%;
 $desktopPadding: 150px;
+$desktopSmallPadding: 60px;
 $mobilePadding: 80px;
 
 $defaultBorder: 15px;
@@ -207,6 +208,10 @@ $colors-dark: (
 @mixin objectCorner($type) {
     @if $type == 'default' {
         border-radius:$defaultBorder !important;
+
+        @include responsive('tablet') {
+            border-radius:$mobileBorder !important;
+        }
     }
 
     @else if $type == 'mobile' {

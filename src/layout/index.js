@@ -9,7 +9,7 @@ import '../styles/_base.scss'
 
 const Layout = ({children, title}) => {
     return (
-        <div>
+        <div id="homepage">
             <Seo title={title} />
             <Nav />
             {children}
