@@ -90,7 +90,7 @@ div.cover {
 }
 
 .letsWork {
-    background:$masOscuro;
+    background:getColor(darkestDark);
 }
 
 .cardWrapper {

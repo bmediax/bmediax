@@ -29,7 +29,6 @@ const DropdownModule = () => {
     const _onSelect = (option) => {
         SetIsSelect({selected: option})
         selectAction(option)
-        // console.log('You selected', option.label)
     }
     
     function selectAction(selectedAction) {
@@ -58,11 +57,12 @@ const DropdownModule = () => {
         return null
     }
 
+    
     return (
         <>
-        <ToastContainer />
-        <span>{isSelect.label}</span>
-        <Dropdown options={options} onChange={_onSelect} placeholder="hello@bmediax.dev" controlClassName="btn primary activePrimary" menuClassName={DropdownModuleStyles.dropdownMenu} arrowClassName={DropdownModuleStyles.arrowDrop} />
+            <ToastContainer />
+            <span>{isSelect.label}</span>
+            <Dropdown options={options} onChange={_onSelect} placeholder="hello@bmediax.dev" controlClassName="btn primary activePrimary" menuClassName={DropdownModuleStyles.dropdownMenu} arrowClassName={DropdownModuleStyles.arrowDrop} />
         </>
     );
 };
