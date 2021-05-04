@@ -67,14 +67,18 @@ div.cover {
         margin:auto;
 
         a {
-            max-width:300px;
+            max-width:350px;
+        }
+
+        a:not(:first-child):not(:last-child) {
+            margin:0px 15px;
         }
 
         @include responsive('tablet') {
             flex-direction: column;
 
             a {
-                display:block;
+                // display:block;
                 max-width:unset;
             }
 

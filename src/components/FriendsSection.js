@@ -10,9 +10,9 @@ const FriendsSection = () => {
             title="Let's Be Friends" 
             subtitle="Social Media">
             <div className={styles.buttonCardContainer}>
-                <ButtonCard title="LinkedIn" subtitle="Professional" />
-                <ButtonCard title="Instagram" subtitle="Photography" />
-                <ButtonCard title="Github" subtitle="Development" />
+                <ButtonCard title="LinkedIn" subtitle="Professional" icon="LinkedIn" />
+                <ButtonCard title="Instagram" subtitle="Photography" icon="Instagram" />
+                <ButtonCard title="Github" subtitle="Development" icon="Github" />
             </div>
         </SectionLayout>
     );
