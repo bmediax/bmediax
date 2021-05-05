@@ -1,0 +1,181 @@
+{
+  "Main" : {
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "UID"
+      }
+    },
+    "cover_title" : {
+      "type" : "Group",
+      "config" : {
+        "repeat" : false,
+        "fields" : {
+          "background_image" : {
+            "type" : "Image",
+            "config" : {
+              "constraint" : { },
+              "thumbnails" : [ ],
+              "label" : "Background Image"
+            }
+          },
+          "title" : {
+            "type" : "StructuredText",
+            "config" : {
+              "single" : "heading1",
+              "label" : "Title"
+            }
+          },
+          "client" : {
+            "type" : "StructuredText",
+            "config" : {
+              "single" : "heading5",
+              "label" : "Client"
+            }
+          },
+          "date" : {
+            "type" : "StructuredText",
+            "config" : {
+              "single" : "heading5",
+              "label" : "Date"
+            }
+          }
+        },
+        "label" : "Cover Title"
+      }
+    },
+    "overview" : {
+      "type" : "Group",
+      "config" : {
+        "repeat" : false,
+        "fields" : {
+          "description" : {
+            "type" : "StructuredText",
+            "config" : {
+              "multi" : "paragraph, strong, em, list-item, o-list-item",
+              "label" : "Description"
+            }
+          },
+          "role" : {
+            "type" : "StructuredText",
+            "config" : {
+              "multi" : "list-item",
+              "label" : "Role"
+            }
+          },
+          "work" : {
+            "type" : "StructuredText",
+            "config" : {
+              "multi" : "list-item",
+              "label" : "Work"
+            }
+          },
+          "deliverables" : {
+            "type" : "StructuredText",
+            "config" : {
+              "multi" : "list-item",
+              "label" : "Deliverables"
+            }
+          },
+          "project_link" : {
+            "type" : "Link",
+            "config" : {
+              "allowTargetBlank" : true,
+              "label" : "Project Link"
+            }
+          }
+        },
+        "label" : "Overview"
+      }
+    },
+    "design_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Design Image"
+      }
+    },
+    "design" : {
+      "type" : "Group",
+      "config" : {
+        "repeat" : false,
+        "fields" : {
+          "description" : {
+            "type" : "StructuredText",
+            "config" : {
+              "multi" : "paragraph, strong, em",
+              "label" : "Description"
+            }
+          },
+          "quote" : {
+            "type" : "StructuredText",
+            "config" : {
+              "multi" : "paragraph, strong, em",
+              "label" : "Quote"
+            }
+          }
+        },
+        "label" : "Design"
+      }
+    },
+    "Design" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "labels" : {
+          "color_palette" : [ ]
+        },
+        "choices" : {
+          "color_palette" : {
+            "type" : "Slice",
+            "fieldset" : "Color Palette",
+            "description" : "Design Color Palette View",
+            "icon" : "color_lens",
+            "display" : "grid",
+            "non-repeat" : { },
+            "repeat" : {
+              "color" : {
+                "type" : "Color",
+                "config" : {
+                  "label" : "Color"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "results_image" : {
+      "type" : "Image",
+      "config" : {
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "Results Image"
+      }
+    },
+    "results" : {
+      "type" : "Group",
+      "config" : {
+        "repeat" : false,
+        "fields" : {
+          "description" : {
+            "type" : "StructuredText",
+            "config" : {
+              "multi" : "paragraph, strong, em, list-item, o-list-item",
+              "label" : "Description"
+            }
+          }
+        },
+        "label" : "Results"
+      }
+    },
+    "next_project" : {
+      "type" : "Link",
+      "config" : {
+        "allowTargetBlank" : true,
+        "label" : "Next Project"
+      }
+    }
+  }
+}

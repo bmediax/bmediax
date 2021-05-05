@@ -37,6 +37,16 @@ module.exports = {
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    {
+      resolve: 'gatsby-source-prismic',
+      options: {
+        repositoryName: 'bmediax',
+        schemas: {
+           homepage: require("./custom_types/homepage.json"),
+           homepage: require("./custom_types/portfolio.json"),
+        },
+      },
+    },
     // {
     //   resolve: "gatsby-source-filesystem",
     //   options: {

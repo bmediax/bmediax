@@ -1,0 +1,74 @@
+{
+    "Main" : {
+      "cover" : {
+        "type" : "Group",
+        "config" : {
+          "repeat" : false,
+          "fields" : {
+            "title" : {
+              "type" : "StructuredText",
+              "config" : {
+                "single" : "heading1",
+                "label" : "Title",
+                "placeholder" : "Hello there, my name is Brian!"
+              }
+            },
+            "description" : {
+              "type" : "StructuredText",
+              "config" : {
+                "multi" : "paragraph, strong, em, embed",
+                "label" : "Description"
+              }
+            }
+          },
+          "label" : "cover"
+        }
+      },
+      "recent_projects" : {
+        "type" : "Group",
+        "config" : {
+          "repeat" : false,
+          "fields" : {
+            "sub_title" : {
+              "type" : "StructuredText",
+              "config" : {
+                "single" : "heading4",
+                "label" : "Sub Title"
+              }
+            },
+            "title" : {
+              "type" : "StructuredText",
+              "config" : {
+                "single" : "heading2",
+                "label" : "Title"
+              }
+            }
+          },
+          "label" : "Recent Projects"
+        }
+      },
+      "awards" : {
+        "type" : "Group",
+        "config" : {
+          "repeat" : false,
+          "fields" : {
+            "sub_title" : {
+              "type" : "StructuredText",
+              "config" : {
+                "single" : "heading4",
+                "label" : "Sub Title"
+              }
+            },
+            "title" : {
+              "type" : "StructuredText",
+              "config" : {
+                "single" : "heading2",
+                "label" : "Title"
+              }
+            }
+          },
+          "label" : "Awards"
+        }
+      }
+    }
+  }
