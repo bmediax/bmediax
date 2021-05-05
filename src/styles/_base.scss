@@ -12,6 +12,12 @@ html {
     }
 }
 
+blockquote {
+    font-size:3rem;
+    line-height:150%;
+    color:getColor(normalText);
+}
+
 .azure { color:$azure; }
 
 .success {
@@ -177,11 +183,17 @@ p {
     @include objectShadow('default', 'snow');
 }
 
+.sectionMaxWidth {
+    max-width:$wrapMaxWidth;
+    margin:auto;
+}
+
 section {
+    background:getColor(lightBase);
     @include sectionPadding('desktop');
 
     .section-title {
-        margin-bottom:40px;
+        margin-bottom:15px;
 
         h4 {
             margin-bottom:15px;
@@ -510,8 +522,7 @@ nav {
 }
 
 #overview  {
-    max-width:$wrapMaxWidth;
-    margin:auto;
+    background:getColor(lightdarkBase);
 
     .section-title {
         margin-bottom:20px;

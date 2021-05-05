@@ -36,6 +36,14 @@
 // Overview Section
 
 .columnLayout {
+    & + .columnLayout {
+        margin-top:50px;
+
+        h3 {
+            margin-bottom:15px;
+        }
+    }
+
     display:flex;
 
     div:not(:last-child) {
@@ -60,6 +68,10 @@
     }
     
     .twoColumn_1to2 {
+        flex:1;
+    }
+
+    .twoColumn {
         flex:1;
     }
 }

@@ -24,7 +24,7 @@ const FriendsSection = () => {
             label={styles.friends} 
             title="Let's Be Friends" 
             subtitle="Social Media">
-            <div className={styles.buttonCardContainer}>
+            <div className={`${styles.buttonCardContainer} sectionMaxWidth`}>
                 {siteSocials.map((social, index) => (
                     <ButtonCard 
                         key={index}

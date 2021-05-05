@@ -14,7 +14,8 @@ export const portfolioData = [
         overview: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies dignissim elit, ac lobortis leo fermentum pulvinar. Fusce quis hendrerit mauris, ac elementum urna. Sed vel ex vel leo fermentum ultricies et eu dolor. Aliquam id justo id nunc sagittis tincidunt nec non ante. Vestibulum auctor eget ex cursust incidunt nec non ante. Vestibulum.",
         design: {
             descr: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies dignissim elit, ac lobortis leo fermentum pulvinar. Fusce quis hendrerit mauris, ac elementum urna. Sed vel ex.",
-            colors: ["#383E5F", "#3C86A5", "#F4F4F8", "#2D3346", "#CB5E65", "#B8C3D0"],
+            colors: ['#383E5F', '#3C86A5', '#F4F4F8', '#2D3346', '#CB5E65','#B8C3D0'],
+            quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor vitae.',
         },
         results: {
             descr: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies dignissim elit, ac lobortis leo fermentum pulvinar. Fusce quis hendrerit mauris, ac elementum urna. Sed vel ex vel leo fermentum."
@@ -35,7 +36,8 @@ export const portfolioData = [
         overview: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies dignissim elit, ac lobortis leo fermentum pulvinar. Fusce quis hendrerit mauris, ac elementum urna. Sed vel ex vel leo fermentum ultricies et eu dolor. Aliquam id justo id nunc sagittis tincidunt nec non ante. Vestibulum auctor eget ex cursust incidunt nec non ante. Vestibulum.",
         design: {
             descr: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies dignissim elit, ac lobortis leo fermentum pulvinar. Fusce quis hendrerit mauris, ac elementum urna. Sed vel ex.",
-            colors: ["#383E5F", "#3C86A5", "#F4F4F8", "#2D3346", "#CB5E65", "#B8C3D0"],
+            colors: ['#383E5F', '#3C86A5', '#F4F4F8', '#2D3346', '#CB5E65','#B8C3D0'],
+            quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor vitae.',
         },
         results: {
             descr: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies dignissim elit, ac lobortis leo fermentum pulvinar. Fusce quis hendrerit mauris, ac elementum urna. Sed vel ex vel leo fermentum."
@@ -56,7 +58,8 @@ export const portfolioData = [
         overview: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies dignissim elit, ac lobortis leo fermentum pulvinar. Fusce quis hendrerit mauris, ac elementum urna. Sed vel ex vel leo fermentum ultricies et eu dolor. Aliquam id justo id nunc sagittis tincidunt nec non ante. Vestibulum auctor eget ex cursust incidunt nec non ante. Vestibulum.",
         design: {
             descr: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies dignissim elit, ac lobortis leo fermentum pulvinar. Fusce quis hendrerit mauris, ac elementum urna. Sed vel ex.",
-            colors: ["#383E5F", "#3C86A5", "#F4F4F8", "#2D3346", "#CB5E65", "#B8C3D0"],
+            colors: ['#383E5F', '#3C86A5', '#F4F4F8', '#2D3346', '#CB5E65','#B8C3D0'],
+            quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor vitae.',
         },
         results: {
             descr: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies dignissim elit, ac lobortis leo fermentum pulvinar. Fusce quis hendrerit mauris, ac elementum urna. Sed vel ex vel leo fermentum."

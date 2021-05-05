@@ -1,5 +1,6 @@
 import React from 'react';
 import CoverTitle from '../components/CoverTitle';
+import DesignSection from '../components/DesignSection';
 import LegionBar from '../components/modules/LegionBar';
 import OverviewSection from '../components/OverviewSection';
 import Layout from '../layout'
@@ -12,8 +13,8 @@ const portfolio = () => {
                 <CoverTitle />
                 <LegionBar />
                 <OverviewSection />
+                <DesignSection />
             </div>
-            {/* <h1> Portfolio </h1> */}
         </Layout>
     )
 }
