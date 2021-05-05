@@ -18,6 +18,11 @@ html {
     background:$azure !important;
 }
 
+.fullwidth {
+    width:100%;
+    // display:block;
+}
+
 body {
     font-family:$primaryFont;
 }
@@ -107,7 +112,7 @@ p {
     }
 }
 
-.activePrimary {
+.activePrimary, .primary-active {
     background: $midnight !important;
     color:$blanco !important;
 }
@@ -129,10 +134,24 @@ p {
     }
 }
 
-.outline {
+.outline, .btn-outline {
     background:transparent;
-    color:$azure;
-    border:3px solid $azure;
+    color:getColor(lightDarkText);
+    border:3px solid getColor(lightdarkBase) !important;
+
+    &:hover {
+        background:$azure;
+        border-color: $azure !important;
+        color:$blanco;
+        @include objectShadow('hover', 'snow');
+    }
+}
+
+.outline-active {
+    background:$azure;
+    border-color: $azure !important;
+    color:$blanco;
+    @include objectShadow('hover', 'snow');
 }
 
 .ghost {
@@ -489,22 +508,6 @@ nav {
     }
 }
 
-.column-layout {
-    display:flex;
-
-    @include responsive('tablet') {
-        flex-direction: column;
-    }
-
-    .column {
-        flex:1;
-    }
-
-    .two-column_2-1 {
-        flex:2;
-    }
-    
-    .two-column_1-2 {
-        flex:1;
-    }
+#overview .section-title {
+    margin-bottom:20px;
 }

@@ -32,3 +32,34 @@
         line-height:25px;
     }
 }
+
+// Overview Section
+
+.columnLayout {
+    display:flex;
+
+    div:not(:last-child) {
+        margin-right:30px;
+    }
+
+    @include responsive('tablet') {
+        flex-direction: column;
+
+        div:not(:last-child) {
+            margin-right:0;
+            margin-bottom:30px;
+        }   
+    }
+
+    p {
+        line-height:30px;
+    }
+
+    .twoColumn_2to1 {
+        flex:2;
+    }
+    
+    .twoColumn_1to2 {
+        flex:1;
+    }
+}

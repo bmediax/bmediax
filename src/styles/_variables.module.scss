@@ -190,7 +190,7 @@ $colors-dark: (
 @mixin objectShadow($state, $color) {
     @if $color == 'snow' {
         @if $state == 'default' {
-            box-shadow:0px 10px 30px rgba(0, 0, 0, .08) !important;
+            box-shadow:0px 10px 30px rgba(0, 0, 0, .04) !important;
         } @else if $state == 'hover' {
             box-shadow:0px 10px 30px rgba($midnight, .2) !important;
         }
