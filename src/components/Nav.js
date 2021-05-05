@@ -53,7 +53,7 @@ const Nav = () => {
                 {/* Logo */}
                 <div className="logo-contain">
                     <Link to="/" exact="true" style={{ textDecoration: 'none' }}>
-                        <Logo height={50} width={35} />
+                        <Logo height={60} />
                         <span className="logo-text">Bmediax</span>
                     </Link>
                 </div>
