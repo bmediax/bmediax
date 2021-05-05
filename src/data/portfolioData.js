@@ -2,7 +2,7 @@ export const portfolioData = [
     {
         title: 'Reiko for PCC',
         raw: "reikoforpcc",
-        path: 'portfolio/reikoforpcc',
+        url: 'portfolio/reikoforpcc',
         cover: 'https://via.placeholder.com/350x180',
         client: "Reiko Mia Williams",
         date: "April 2021",
@@ -14,7 +14,8 @@ export const portfolioData = [
         overview: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies dignissim elit, ac lobortis leo fermentum pulvinar. Fusce quis hendrerit mauris, ac elementum urna. Sed vel ex vel leo fermentum ultricies et eu dolor. Aliquam id justo id nunc sagittis tincidunt nec non ante. Vestibulum auctor eget ex cursust incidunt nec non ante. Vestibulum.",
         design: {
             descr: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies dignissim elit, ac lobortis leo fermentum pulvinar. Fusce quis hendrerit mauris, ac elementum urna. Sed vel ex.",
-            colors: ["#383E5F", "#3C86A5", "#F4F4F8", "#2D3346", "#CB5E65", "#B8C3D0"],
+            colors: ['#383E5F', '#3C86A5', '#F4F4F8', '#2D3346', '#CB5E65','#B8C3D0'],
+            quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor vitae.',
         },
         results: {
             descr: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies dignissim elit, ac lobortis leo fermentum pulvinar. Fusce quis hendrerit mauris, ac elementum urna. Sed vel ex vel leo fermentum."
@@ -23,7 +24,7 @@ export const portfolioData = [
     {
         title: 'Edutainment',
         raw: "edutainment",
-        path: 'portfolio/edutainment',
+        url: 'portfolio/edutainment',
         cover: 'https://via.placeholder.com/350x180',
         client: "PCC Multicultural Center",
         date: "April 2018",
@@ -35,7 +36,8 @@ export const portfolioData = [
         overview: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies dignissim elit, ac lobortis leo fermentum pulvinar. Fusce quis hendrerit mauris, ac elementum urna. Sed vel ex vel leo fermentum ultricies et eu dolor. Aliquam id justo id nunc sagittis tincidunt nec non ante. Vestibulum auctor eget ex cursust incidunt nec non ante. Vestibulum.",
         design: {
             descr: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies dignissim elit, ac lobortis leo fermentum pulvinar. Fusce quis hendrerit mauris, ac elementum urna. Sed vel ex.",
-            colors: ["#383E5F", "#3C86A5", "#F4F4F8", "#2D3346", "#CB5E65", "#B8C3D0"],
+            colors: ['#383E5F', '#3C86A5', '#F4F4F8', '#2D3346', '#CB5E65','#B8C3D0'],
+            quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor vitae.',
         },
         results: {
             descr: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies dignissim elit, ac lobortis leo fermentum pulvinar. Fusce quis hendrerit mauris, ac elementum urna. Sed vel ex vel leo fermentum."
@@ -44,7 +46,7 @@ export const portfolioData = [
     {
         title: 'Chicanx Shop',
         raw: "chicanxshop",
-        path: 'portfolio/chicanxshop',
+        url: 'portfolio/chicanxshop',
         cover: 'https://via.placeholder.com/350x180',
         client: "Chicanx Shop",
         date: "September 2012",
@@ -56,7 +58,8 @@ export const portfolioData = [
         overview: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies dignissim elit, ac lobortis leo fermentum pulvinar. Fusce quis hendrerit mauris, ac elementum urna. Sed vel ex vel leo fermentum ultricies et eu dolor. Aliquam id justo id nunc sagittis tincidunt nec non ante. Vestibulum auctor eget ex cursust incidunt nec non ante. Vestibulum.",
         design: {
             descr: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies dignissim elit, ac lobortis leo fermentum pulvinar. Fusce quis hendrerit mauris, ac elementum urna. Sed vel ex.",
-            colors: ["#383E5F", "#3C86A5", "#F4F4F8", "#2D3346", "#CB5E65", "#B8C3D0"],
+            colors: ['#383E5F', '#3C86A5', '#F4F4F8', '#2D3346', '#CB5E65','#B8C3D0'],
+            quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor vitae.',
         },
         results: {
             descr: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies dignissim elit, ac lobortis leo fermentum pulvinar. Fusce quis hendrerit mauris, ac elementum urna. Sed vel ex vel leo fermentum."

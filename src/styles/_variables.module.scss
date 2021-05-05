@@ -12,11 +12,14 @@ $titleSize: 2.25rem;
 $subHeader: 1.125rem;
 $paraSize: 1.375rem;
 
+$mobileWidth: 760px;
+
 // Element Size Define
 $navHeight: 85px;
 $wrapMaxWidth: 1200px;
 $widthPadding: 5%;
 $desktopPadding: 150px;
+$desktopSmallPadding: 60px;
 $mobilePadding: 80px;
 
 $defaultBorder: 15px;
@@ -60,6 +63,7 @@ $cloud: #687077;
     lightBase: getColor(lightBase);
     lightdarkBase: getColor(lightdarkBase);
     defaultBorder: $defaultBorder;
+    mobileWidth: $mobileWidth;
 }
 
 
@@ -70,7 +74,11 @@ $colors: (
     lightdarkBase: $minimal,
     lightLightBase: $blanco,
     lightLightBase2: $minimal,
+    lightLightBase3: $minimal,
+    darkestDark: $masOscuro,
+    darkLightBase: $mist,
     darkBase:$oscuro,
+    darkBase2:$steelBlue,
 
     // Btn Based
     lightDarkText: $midnight,
@@ -105,7 +113,11 @@ $colors-dark: (
     lightdarkBase: $jetBlack,
     lightLightBase: $raven,
     lightLightBase2: $steelBlue,
+    lightLightBase3: $raven,
+    darkLightBase: $steelBlue,
+    darkestDark: $jetBlack,
     darkBase:$oscuro,
+    darkBase2: $steelBlue,
 
     // Btn Based
     lightDarkText: $minimal,
@@ -155,7 +167,7 @@ $colors-dark: (
 // Responsive
 @mixin responsive($size) {
     @if $size == 'tablet' {
-        @media screen and (max-width:760px) {
+        @media screen and (max-width:$mobileWidth) {
             @content;
         }
     } @else if $size == 'desktop' {
@@ -178,7 +190,7 @@ $colors-dark: (
 @mixin objectShadow($state, $color) {
     @if $color == 'snow' {
         @if $state == 'default' {
-            box-shadow:0px 10px 30px rgba(0, 0, 0, .08) !important;
+            box-shadow:0px 10px 30px rgba(0, 0, 0, .04) !important;
         } @else if $state == 'hover' {
             box-shadow:0px 10px 30px rgba($midnight, .2) !important;
         }
@@ -196,6 +208,10 @@ $colors-dark: (
 @mixin objectCorner($type) {
     @if $type == 'default' {
         border-radius:$defaultBorder !important;
+
+        @include responsive('tablet') {
+            border-radius:$mobileBorder !important;
+        }
     }
 
     @else if $type == 'mobile' {

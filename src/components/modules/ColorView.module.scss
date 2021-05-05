@@ -1,0 +1,30 @@
+@use '../../styles/variables.module' as *;
+
+.colorView {
+    // background:red;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    // height:100%;
+    grid-gap: 1em;
+}
+
+.colorBlock {
+    flex:1;
+    // height:100%;
+    padding:30px 0px;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    @include objectCorner('default');
+}
+
+.colorText {
+    flex:1;
+    font-family:$primaryFont;
+    font-size:1.6rem;
+    font-weight:bold;
+    color:#FFF;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}

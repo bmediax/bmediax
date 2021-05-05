@@ -1,14 +1,20 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+// import * as variables from '../styles/_variables.module.scss'
 import { Link, useStaticQuery, graphql } from 'gatsby'
-import { motion } from 'framer-motion'
-import { navData  } from '../data/navData'
-import Logo from '../components/Logo'
-// import logo from '../images/gfx/logo.svg'
+
+import { motion } from "framer-motion";
+// import { useMediaQuery } from 'react-responsive';
 import { AiOutlineInstagram } from 'react-icons/ai'
 import { DiGithubAlt } from 'react-icons/di'
 import { FaLinkedinIn } from 'react-icons/fa'
 
+import { navData  } from '../data/navData'
+import Logo from '../components/Logo'
+// import logo from '../images/gfx/logo.svg'
+import MobileNav from './mobileNav';
+
 const Nav = () => {
+    const [ isMobileMenuOpen, SetIsMobileMenuOpen ] = useState(false)
     const data = useStaticQuery(graphql`
     query navSocial {
         site {
@@ -37,21 +43,23 @@ const Nav = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const toggleMobileMenu = () => {
+        SetIsMobileMenuOpen(!isMobileMenuOpen)
+    }
+
     return (
         <nav className="navBar">
             <div className="nav-wrapper">
                 {/* Logo */}
                 <div className="logo-contain">
                     <Link to="/" exact="true" style={{ textDecoration: 'none' }}>
-                        {/* <img src={logo} alt="Bmediax Logo" id="logo" />  */}
                         <Logo height={50} width={35} />
                         <span className="logo-text">Bmediax</span>
-                        {/* <StaticImage src="../images/gfx/logo.png" alt="Rieko Mia Williams For PCC Logo" placeholder="blurred" height={70} align="center" /> */}
                     </Link>
                 </div>
 
                 {/* Menu */}
-                <div className="nav-contain">
+                <div className='nav-contain' style={{ display: isMobileMenuOpen ? 'block' : 'none'}}>
                     <ul className="menu">
                         {navData.map((navs, index) => (
                             <li key={index}>
@@ -74,6 +82,9 @@ const Nav = () => {
                         ))}
                     </ul>
                 </div>
+
+                {/* Mobile Hamburger Menu */}
+                <MobileNav onPress={toggleMobileMenu} />
 
                 {/* Social Media */}
                 <div className="social-media_bar">

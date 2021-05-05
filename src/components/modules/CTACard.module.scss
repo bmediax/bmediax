@@ -45,8 +45,13 @@
     .headerText {
         display:block;
         margin-bottom:5px;
+
+        h5 {
+            line-height:15px;
+            margin-bottom:5px;
+        }
     
-        h5, h3 {
+        h3 {
             line-height:30px;
         }
     }
