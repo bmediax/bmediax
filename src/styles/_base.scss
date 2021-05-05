@@ -19,8 +19,9 @@ html {
 }
 
 .fullwidth {
-    width:100%;
-    // display:block;
+    // width:100%;
+    text-align: center;
+    display:block;
 }
 
 body {
@@ -508,6 +509,11 @@ nav {
     }
 }
 
-#overview .section-title {
-    margin-bottom:20px;
+#overview  {
+    max-width:$wrapMaxWidth;
+    margin:auto;
+
+    .section-title {
+        margin-bottom:20px;
+    }
 }

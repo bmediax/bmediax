@@ -29,8 +29,7 @@ const SideBar = () => {
             </div>
 
             <div className={SideBarStyles.section}>
-                {/* Deliverable */}
-                <button class="btn primary fullwidth"> View Project </button>
+                <a href="https://google.com" className="btn primary fullwidth"> View Project </a>
             </div>
         </div>
     );
