@@ -3,528 +3,533 @@
 // Desktop: 1 rem = 10px
 // Mobile: 1rem - 9.6px
 html {
-    // 16px
-    font-size:62.5%;
+  // 16px
+  font-size: 62.5%;
 
-    @include responsive('tablet') {
-        //15.36px
-        font-size:60%;
-    }
+  @include responsive("tablet") {
+    //15.36px
+    font-size: 60%;
+  }
 }
 
 blockquote {
-    font-size:3rem;
-    line-height:150%;
-    color:getColor(normalText);
+  font-size: 3rem;
+  line-height: 150%;
+  color: getColor(normalText);
 }
 
-.azure { color:$azure; }
+.azure {
+  color: $azure;
+}
 
 .success {
-    background:$azure !important;
+  background: $azure !important;
 }
 
-.fullwidth {
-    // width:100%;
-    text-align: center;
-    display:block;
+.fullwidth,
+.fullwidth-btn {
+  // width:100%;
+  text-align: center;
+  display: block;
 }
 
 body {
-    font-family:$primaryFont;
+  font-family: $primaryFont;
 }
 
 h1 {
-    font-size:5vmin;
-    font-weight: 700;
-    color:getColor(textHeader);
-    text-transform: capitalize;
+  font-size: 5vmin;
+  font-weight: 700;
+  color: getColor(textHeader);
+  text-transform: capitalize;
 }
 
 h2 {
-    font-size:3.6rem;
-    font-weight: 700; 
-    color:getColor(textHeader);
-    text-transform: capitalize;
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: getColor(textHeader);
+  text-transform: capitalize;
 }
 
 h2 {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 h3 {
-    font-size:2.5rem;
-    font-weight:700;
-    color:getColor(textHeader);
-    text-transform: capitalize;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: getColor(textHeader);
+  text-transform: capitalize;
 }
 
 h4 {
-    letter-spacing:1px;
-    text-transform: uppercase;
-    font-weight:600;
-    font-size:1.8rem;
-    color:getColor(textSubTitle);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: getColor(textSubTitle);
 }
 
 h5 {
-    // letter-spacing:1px;
-    text-transform: uppercase;
-    font-weight:600;
-    font-size:1.3rem;
-    line-height:1.6rem + .5rem;
-    // line-height:15px;
-    color:getColor(textSubTitle);
+  // letter-spacing:1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 1.6rem + 0.5rem;
+  // line-height:15px;
+  color: getColor(textSubTitle);
 }
 
 p {
-    font-family:$primaryFont;
-    font-size:1.6rem;
-    font-weight:500;
-    color:getColor(normalText);
+  font-family: $primaryFont;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: getColor(normalText);
 }
 
 .btn {
-    padding:18px 30px !important;
-    font-family:$primaryFont;
-    font-weight:600;
-    @include objectCorner('default');
-    // border-radius:15px !important;
-    border:none !important;
-    font-size:1.6rem;
-    text-decoration:none;
-    transition: 
-        background 250ms ease-in-out, 
-        box-shadow 200ms ease-in-out,
-        transform 150ms ease-in-out,
-        border 200ms ease-in-out,
-        color 250ms ease-in-out;
+  padding: 18px 30px !important;
+  font-family: $primaryFont;
+  font-weight: 600;
+  @include objectCorner("default");
+  // border-radius:15px !important;
+  border: none !important;
+  font-size: 1.6rem;
+  text-decoration: none;
+  transition: background 250ms ease-in-out, box-shadow 200ms ease-in-out,
+    transform 150ms ease-in-out, border 200ms ease-in-out,
+    color 250ms ease-in-out;
 
-    &:hover {
-        transform:translateY(-2px);
-        cursor:pointer;
+  &:hover {
+    transform: translateY(-2px);
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: translateY(0px) !important;
+  }
+
+  @include responsive("tablet") {
+    display: block;
+    padding: 20px 0px;
+
+    &:first-child {
+      margin-bottom: 2%;
     }
-
-    &:active {
-        transform:translateY(0px) !important;
-    }
-
-    @include responsive('tablet') {
-        display:block;
-        padding:20px 0px;
-
-        &:first-child {
-            margin-bottom:2%;
-        }
-    }
+  }
 }
 
-.activePrimary, .primary-active {
-    background: $midnight !important;
-    color:$blanco !important;
+.activePrimary,
+.primary-active {
+  background: $midnight !important;
+  color: $blanco !important;
 }
 
 .primary {
-    background:getColor(lightdarkBase);
-    color:getColor(menuText);
+  background: getColor(lightdarkBase);
+  color: getColor(menuText);
 
-    &:hover {
-        background:$midnight;
-        color:$blanco;
-        @include objectShadow('default', 'midnight')
-    }
+  &:hover {
+    background: $midnight;
+    color: $blanco;
+    @include objectShadow("default", "midnight");
+  }
 
-    &:active {
-        background:$oscuro;
-        color:$minimal;
-        box-shadow:none !important;
-    }
+  &:active {
+    background: $oscuro;
+    color: $minimal;
+    box-shadow: none !important;
+  }
 }
 
-.outline, .btn-outline {
-    background:transparent;
-    color:getColor(lightDarkText);
-    border:3px solid getColor(lightdarkBase) !important;
+.outline,
+.btn-outline {
+  background: transparent;
+  color: getColor(lightDarkText);
+  border: 3px solid getColor(lightdarkBase) !important;
 
-    &:hover {
-        background:$azure;
-        border-color: $azure !important;
-        color:$blanco;
-        @include objectShadow('hover', 'snow');
-    }
+  &:hover {
+    background: $azure;
+    border-color: $azure !important;
+    color: $blanco;
+    @include objectShadow("hover", "snow");
+  }
 }
 
 .outline-active {
-    background:$azure;
-    border-color: $azure !important;
-    color:$blanco;
-    @include objectShadow('hover', 'snow');
+  background: $azure;
+  border-color: $azure !important;
+  color: $blanco;
+  @include objectShadow("hover", "snow");
 }
 
 .ghost {
-    background:getColor(lightLightBase);
-    color:getColor(lightDarkText);
+  background: getColor(lightLightBase);
+  color: getColor(lightDarkText);
 
-    &:hover {
-        @include objectShadow('hover', 'snow');
-    }
+  &:hover {
+    @include objectShadow("hover", "snow");
+  }
 
-    &:active {
-        box-shadow:inset 0px 5px 15px rgba(0, 0, 0, 0.05) !important;
-        color:$mist;
-    }
+  &:active {
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.05) !important;
+    color: $mist;
+  }
 
-    &, .active {
-        @include objectShadow('default', 'snow');
-    }
+  &,
+  .active {
+    @include objectShadow("default", "snow");
+  }
 }
 
 .navScroll {
-    @include objectShadow('default', 'snow');
+  @include objectShadow("default", "snow");
 }
 
 .sectionMaxWidth {
-    max-width:$wrapMaxWidth;
-    margin:auto;
+  max-width: $wrapMaxWidth;
+  margin: auto;
 }
 
 section {
-    background:getColor(lightBase);
-    @include sectionPadding('desktop');
+  background: getColor(lightBase);
+  @include sectionPadding("desktop");
 
-    .section-title {
-        margin-bottom:15px;
+  .section-title {
+    margin-bottom: 15px;
 
-        h4 {
-            margin-bottom:15px;
-        }
-
-        h4, h2 {
-            font-family: $primaryFont;
-            text-align:center;
-        }
+    h4 {
+      margin-bottom: 15px;
     }
 
-    .darkTitle {
-        h4 {
-            color:getColor(mistToCloud);
-        }
+    h4,
+    h2 {
+      font-family: $primaryFont;
+      text-align: center;
+    }
+  }
 
-        h2 {
-            color:#FFF;
-        }
+  .darkTitle {
+    h4 {
+      color: getColor(mistToCloud);
     }
 
-    // Responsive
-    @include responsive('tablet') {
-        @include sectionPadding('mobile');
-
-        .section-title h4 {
-            margin-bottom:10px;
-        }
+    h2 {
+      color: #fff;
     }
+  }
+
+  // Responsive
+  @include responsive("tablet") {
+    @include sectionPadding("mobile");
+
+    .section-title h4 {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 // Navigation
 nav {
-    position:sticky;
-    top:0;
-    right:0;
-    left:0;
-    z-index:10;
-    background:getColor(lightBase);
-    transition: box-shadow 250ms linear;
-    font-family:$primaryFont;
-    
-    .nav-wrapper {
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        margin:auto;
-        max-width:$wrapMaxWidth;
-        height:$navHeight;
-        padding:0 $widthPadding;
-        
-        .logo-contain {
-            flex:1;
-            text-align:left;
-            
-            // a {
-            //     position:relative !important;
-            //     top:1px !important;
-            // }
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  background: getColor(lightBase);
+  transition: box-shadow 250ms linear;
+  font-family: $primaryFont;
 
-            #logo {
-                height:55px;
-                padding:0;
-                margin:auto;
-            }
+  .nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    max-width: $wrapMaxWidth;
+    height: $navHeight;
+    padding: 0 $widthPadding;
 
-            .logo-text {
-                position:relative;
-                top:-20px;
-                left:10px;
-                font-size:1.6rem;
-                color:getColor(menuText);
-            }
-        }
-        
-        .nav-contain {
-            text-align:center;
-            flex:2;
+    .logo-contain {
+      flex: 1;
+      text-align: left;
 
-            .menu {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin:auto;
-                list-style: none;
-                padding:0;
-              
-                li {
-                    position: relative;
-                    
-                    &:hover > ul {
-                        display: block;
-                    }
-                    
-                    &:focus-within > ul {
-                        display:block;
-                    }
+      // a {
+      //     position:relative !important;
+      //     top:1px !important;
+      // }
 
-                    ul {
-                        display: none;
-                        position: absolute;
-                        left: -20%;
-                        top: 100%;
-                        text-align:left;
-                        padding-top:20px;
+      #logo {
+        height: 55px;
+        padding: 0;
+        margin: auto;
+      }
 
-                        li:last-child {
-                            a {
-                                border-bottom-right-radius: 15px;
-                                border-bottom-left-radius: 15px;
-                            }
-                        }
-                        
-                        a {
-                            font-family:$primaryFont;
-                            font-weight:500;
-                            font-size:1.6rem;
-                            color:getColor(menuText);
-                            text-decoration:none;
-                            background:getColor(lightLightBase);
-                            padding: .9em 1.5em;
-                            transition: background 200ms linear, color 200ms linear;
-                            @include objectShadow('default', 'snow');
-                            white-space: nowrap;
-                            
-                            &:hover {
-                                background:getColor(lightdarkBase);
-                            }
-                        }
-                    }
-
-                    a.nav-item {
-                        color:getColor(menuText);
-                        text-decoration:none;
-                        margin:0px 15px;
-                        font-size:1.6rem;
-                        font-weight:500;
-                        transition: color 150ms linear;
-                        
-                        &:hover {
-                            color:$azure;
-                        }
-                        
-                        &:first-child {
-                            margin-left: 0 !important;
-                        }
-                        
-                        &:last-child {
-                            margin-right:0px !important;
-                        }
-                    }
-                }
-                a {
-                    display:block;
-                    padding: .8em 1.5em;
-                    // white-space: nowrap;
-                }
-
-                > li + li { 
-                    margin-left: 2em;
-                }
-            }
-
-            @include responsive('tablet') {
-                // border-top:1px solid getColor(lightdarkBase);
-                position:absolute;
-                display:none;
-                top:$navHeight;
-                flex:1;
-                width:100%;
-                background:getColor(lightBase);
-
-                .menu {
-                    flex-direction: column;
-                    // background:red;
-                    @include objectShadow('default', 'snow');
-                    
-                    li {
-                        width:100%;
-                        margin-right:0 !important;
-                        margin-left:0 !important;
-                        
-                        a {
-                            // width:100%;
-                            display:block;
-                            padding:30px 0px;
-                            margin-right:0 !important;
-                            margin-left:0 !important;
-                        }
-
-                        ul {
-                            padding-top:0;
-                            position:unset;
-                            text-align:center;
-                            display:block !important;
-                            
-                            a {
-                                padding:30px 0px;
-                                box-shadow:none !important;
-                                border-radius:unset !important;
-                            }
-                        }
-                    }
-                }
-            }
-
-            @include responsive('desktop') {
-                display:block !important;
-            }
-        }
-
-        .mobile-nav {
-            flex:1;
-            text-align:right;
-            display:none;
-            
-            svg {
-                border-radius:$defaultBorder;
-                padding:10px;
-
-                &:hover {
-                    path {
-                        fill:$azure;
-                    }
-                    cursor: pointer;
-                }
-                
-                &:active {
-                    background:getColor(lightdarkBase);
-                }
-
-                path {
-                    fill:getColor(menuText);
-                }
-            }
-
-            @include responsive('tablet') {
-                display:block;
-            }
-        }
-
-        // Navigation Social Media Icons
-        .social-media_bar {
-            flex:1;
-            text-align:right;
-
-            @include responsive('tablet') {
-                display:none;
-            }
-            
-            a {
-                display:inline-block;
-                font-size:1.7rem;
-                background:getColor(icn-lightBG);
-                color:getColor(icon-lightTXT);
-                margin:auto;
-                height:35px;
-                width:35px;
-                border-radius:50%;
-                line-height:40px;
-                text-align:center;
-                transition: background 200ms linear, color 250ms linear, box-shadow 250ms linear;
-
-                &:hover {
-                    background:$azure;
-                    color:getColor(lightBase);
-                    @include objectShadow('default', 'azure');
-                }
-            }
-
-            & > a + a {
-                margin-left:1em;
-            }
-        }
+      .logo-text {
+        position: relative;
+        top: -20px;
+        left: 10px;
+        font-size: 1.6rem;
+        color: getColor(menuText);
+      }
     }
+
+    .nav-contain {
+      text-align: center;
+      flex: 2;
+
+      .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        list-style: none;
+        padding: 0;
+
+        li {
+          position: relative;
+
+          &:hover > ul {
+            display: block;
+          }
+
+          &:focus-within > ul {
+            display: block;
+          }
+
+          ul {
+            display: none;
+            position: absolute;
+            left: -20%;
+            top: 100%;
+            text-align: left;
+            padding-top: 20px;
+
+            li:last-child {
+              a {
+                border-bottom-right-radius: 15px;
+                border-bottom-left-radius: 15px;
+              }
+            }
+
+            a {
+              font-family: $primaryFont;
+              font-weight: 500;
+              font-size: 1.6rem;
+              color: getColor(menuText);
+              text-decoration: none;
+              background: getColor(lightLightBase);
+              padding: 0.9em 1.5em;
+              transition: background 200ms linear, color 200ms linear;
+              @include objectShadow("default", "snow");
+              white-space: nowrap;
+
+              &:hover {
+                background: getColor(lightdarkBase);
+              }
+            }
+          }
+
+          a.nav-item {
+            color: getColor(menuText);
+            text-decoration: none;
+            margin: 0px 15px;
+            font-size: 1.6rem;
+            font-weight: 500;
+            transition: color 150ms linear;
+
+            &:hover {
+              color: $azure;
+            }
+
+            &:first-child {
+              margin-left: 0 !important;
+            }
+
+            &:last-child {
+              margin-right: 0px !important;
+            }
+          }
+        }
+        a {
+          display: block;
+          padding: 0.8em 1.5em;
+          // white-space: nowrap;
+        }
+
+        > li + li {
+          margin-left: 2em;
+        }
+      }
+
+      @include responsive("tablet") {
+        // border-top:1px solid getColor(lightdarkBase);
+        position: absolute;
+        display: none;
+        top: $navHeight;
+        flex: 1;
+        width: 100%;
+        background: getColor(lightBase);
+
+        .menu {
+          flex-direction: column;
+          // background:red;
+          @include objectShadow("default", "snow");
+
+          li {
+            width: 100%;
+            margin-right: 0 !important;
+            margin-left: 0 !important;
+
+            a {
+              // width:100%;
+              display: block;
+              padding: 30px 0px;
+              margin-right: 0 !important;
+              margin-left: 0 !important;
+            }
+
+            ul {
+              padding-top: 0;
+              position: unset;
+              text-align: center;
+              display: block !important;
+
+              a {
+                padding: 30px 0px;
+                box-shadow: none !important;
+                border-radius: unset !important;
+              }
+            }
+          }
+        }
+      }
+
+      @include responsive("desktop") {
+        display: block !important;
+      }
+    }
+
+    .mobile-nav {
+      flex: 1;
+      text-align: right;
+      display: none;
+
+      svg {
+        border-radius: $defaultBorder;
+        padding: 10px;
+
+        &:hover {
+          path {
+            fill: $azure;
+          }
+          cursor: pointer;
+        }
+
+        &:active {
+          background: getColor(lightdarkBase);
+        }
+
+        path {
+          fill: getColor(menuText);
+        }
+      }
+
+      @include responsive("tablet") {
+        display: block;
+      }
+    }
+
+    // Navigation Social Media Icons
+    .social-media_bar {
+      flex: 1;
+      text-align: right;
+
+      @include responsive("tablet") {
+        display: none;
+      }
+
+      a {
+        display: inline-block;
+        font-size: 1.7rem;
+        background: getColor(icn-lightBG);
+        color: getColor(icon-lightTXT);
+        margin: auto;
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        line-height: 40px;
+        text-align: center;
+        transition: background 200ms linear, color 250ms linear,
+          box-shadow 250ms linear;
+
+        &:hover {
+          background: $azure;
+          color: getColor(lightBase);
+          @include objectShadow("default", "azure");
+        }
+      }
+
+      & > a + a {
+        margin-left: 1em;
+      }
+    }
+  }
 }
 
 .coverheadshot {
-    margin-bottom:50px;
+  margin-bottom: 50px;
 }
 
 .Dropdown-menu {
-    background-color:getColor(lightLightBase) !important;
+  background-color: getColor(lightLightBase) !important;
 }
 
 .Toastify__toast {
-    background:getColor(lightLightBase) !important;
+  background: getColor(lightLightBase) !important;
 }
 
 .Toastify__toast-body {
-    font-size:1.6rem;
-    font-family:$primaryFont;
-    color:getColor(azureToMist);
-    font-weight:600;
+  font-size: 1.6rem;
+  font-family: $primaryFont;
+  color: getColor(azureToMist);
+  font-weight: 600;
 }
 
 .sectionPortfolioIcon svg {
-    position:relative;
-    top:6px;
+  position: relative;
+  top: 6px;
 
-    .icnBg {
-        fill: getColor(lightdarkBase) !important;
-    }
+  .icnBg {
+    fill: getColor(lightdarkBase) !important;
+  }
 
-    .icnFill {
-        fill:getColor(lightDarkText) !important;
-    }
-    
-    .icnStroke {
-        stroke:getColor(lightDarkText) !important;
-    }
+  .icnFill {
+    fill: getColor(lightDarkText) !important;
+  }
+
+  .icnStroke {
+    stroke: getColor(lightDarkText) !important;
+  }
 }
 
 .lightdark svg {
-    .icnBg {
-        fill: getColor(lightBase) !important;
-    }
+  .icnBg {
+    fill: getColor(lightBase) !important;
+  }
 
-    .icnFill {
-        fill:getColor(lightDarkText) !important;
-    }
-    
-    .icnStroke {
-        stroke:getColor(lightDarkText) !important;
-    }
+  .icnFill {
+    fill: getColor(lightDarkText) !important;
+  }
+
+  .icnStroke {
+    stroke: getColor(lightDarkText) !important;
+  }
 }
 
-#overview  {
-    background:getColor(lightdarkBase);
+#overview {
+  background: getColor(lightdarkBase);
 
-    .section-title {
-        margin-bottom:20px;
-    }
+  .section-title {
+    margin-bottom: 20px;
+  }
 }

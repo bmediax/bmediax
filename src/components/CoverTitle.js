@@ -15,7 +15,7 @@ const CoverTitle = () => {
         aspectRatio={3 / 1}
         alt=""
         src={
-          "https://images.unsplash.com/photo-1604975999044-188783d54fb3?w=2589"
+          "https://images.unsplash.com/photo-1588200908342-23b585c03e26?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80"
         }
         formats={["auto", "webp", "avif"]}
       />
