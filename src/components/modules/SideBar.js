@@ -21,7 +21,7 @@ const SideBar = () => {
 
             <div className={SideBarStyles.section}>
                 {/* Deliverable */}
-                <h3>Deliveriable</h3>
+                <h3>Deliverables</h3>
                 <ul>
                     <li>Gatsby SPA Website</li>
                     <li>Headless CMS Integration</li>

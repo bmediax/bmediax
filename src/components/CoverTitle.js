@@ -31,13 +31,6 @@ const CoverTitle = () => {
             </div>
       </div>
     </div>
-        // <div className={portfolioStyles.coverTitle}>
-        //     <h1> Edutainment </h1>
-        //     <span>
-        //         <h5>PCC Multicultural Center</h5>
-        //         <h5>April 2018</h5>
-        //     </span>
-        // </div>
     );
 };
 
