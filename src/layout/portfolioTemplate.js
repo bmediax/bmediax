@@ -17,7 +17,7 @@ const portfolioTemplate = ({ data }) => {
                 <LegionBar />
                 <OverviewSection overviewData={data.overview[0]}/>
                 <ImageSection />
-                <DesignSection designData={data.design[0]} />
+                <DesignSection designData={data.design[0]} colourSlice={data.body[0]} />
                 <ImageSection />
                 <ResultsSection resultsData={data.results[0]} />
             </div>
