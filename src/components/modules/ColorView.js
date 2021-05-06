@@ -4,9 +4,9 @@ import * as ColorViewStyles from './ColorView.module.scss'
 const ColorView = ({ colors }) => {
     return (
         <div className={ColorViewStyles.colorView}>
-            {colors.colour.map((color, index) => (
-                <span key={index} className={ColorViewStyles.colorBlock} style={{backgroundColor: color}}>
-                    <span className={ColorViewStyles.colorText}>{color}</span>
+            {colors.map((color, index) => (
+                <span key={index} className={ColorViewStyles.colorBlock} style={{backgroundColor: color.colour}}>
+                    <span className={ColorViewStyles.colorText}>{color.colour}</span>
                 </span>
             ))}
         </div>
