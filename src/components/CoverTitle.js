@@ -2,7 +2,7 @@ import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image'
 import * as portfolioStyles from '../styles/portfolio.module.scss'
 
-const CoverTitle = () => {
+const CoverTitle = ({ coverData }) => {
     return (
         <div style={{ display: "grid" }}>
       {/* You can use a GatsbyImage component if the image is dynamic */}
@@ -25,9 +25,9 @@ const CoverTitle = () => {
             display: "grid",
         }}>
             <div className={portfolioStyles.text}>
-                <h1>Edutainment</h1>
-                <h5>PCC Multicultural Center</h5>
-                <h5>April 2018</h5>
+                <h1>{coverData.title[0].text}</h1>
+                <h5>{coverData.client[0].text}</h5>
+                <h5>{coverData.date[0].text}</h5>
             </div>
       </div>
     </div>

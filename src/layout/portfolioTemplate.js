@@ -9,19 +9,19 @@ import ResultsSection from '../components/ResultsSection';
 import Layout from '../layout'
 // import * as portfolioStyles from '../styles/portfolio.module.scss'
 
-const portfolioTemplate = () => {
+const portfolioTemplate = ({ data }) => {
     return (
         <Layout title="Portfolio">
             <div>
-                <CoverTitle />
+                <CoverTitle coverData={data.cover_title[0]} />
                 <LegionBar />
-                <OverviewSection />
+                <OverviewSection overviewData={data.overview[0]}/>
                 <ImageSection />
-                <DesignSection />
+                <DesignSection designData={data.design[0]} />
                 <ImageSection />
-                <ResultsSection />
+                <ResultsSection resultsData={data.results[0]} />
             </div>
-            <NextProjectSection />
+            <NextProjectSection nextProjectData={data.next_project} />
         </Layout>
     )
 }

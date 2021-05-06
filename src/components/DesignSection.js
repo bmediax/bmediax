@@ -3,7 +3,7 @@ import * as portfolioStyles from '../styles/portfolio.module.scss'
 import SectionPortfolioLayout from '../layout/SectionPortfolioLayout';
 import ColorView from './modules/ColorView';
 
-const DesignSection = () => {
+const DesignSection = ({ designData }) => {
     const colorsPalette = [
         '#383E5F',
         '#3C86A5',
@@ -17,10 +17,10 @@ const DesignSection = () => {
         <SectionPortfolioLayout idLabel="design" title="Design" icon="Paint" sectionMaxWidth align>
             <div className={`${portfolioStyles.columnLayout} sectionMaxWidth`}>
                 <div className={portfolioStyles.twoColumn}>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies dignissim elit, ac lobortis leo fermentum pulvinar. Fusce quis hendrerit mauris, ac elementum urna. Sed vel ex.</p>
+                    <p>{designData.description[0].text}</p>
                 </div>
                 <div className={portfolioStyles.twoColumn}>
-                    <blockquote>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor vitae.”</blockquote>
+                    <blockquote>“{designData.quote[0].text}”</blockquote>
                 </div>
             </div>
             <div className={`${portfolioStyles.columnLayout} sectionMaxWidth`}>

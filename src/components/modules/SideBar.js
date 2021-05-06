@@ -1,21 +1,25 @@
 import React from 'react';
 import * as SideBarStyles from './SideBar.module.scss'
 
-const SideBar = () => {
+const SideBar = ({ sidebarData }) => {
     return (
         <div className={SideBarStyles.wrapper}>
             {/* Role */}
             <div className={SideBarStyles.section}>
                 <h3>Role</h3>
                 <ul>
-                    <li>Web Designer</li>
+                    {sidebarData.role.map((roles, index) => (
+                        <li key={index}>{roles.text}</li>
+                    ))}
                 </ul>
             </div>
             <div className={SideBarStyles.section}>
                 {/* Work */}
                 <h3>Work</h3>
                 <ul>
-                    <li>Web Development</li>
+                    {sidebarData.work.map((works, index) => (
+                        <li key={index}>{works.text}</li>
+                    ))}
                 </ul>
             </div>
 
@@ -23,13 +27,14 @@ const SideBar = () => {
                 {/* Deliverable */}
                 <h3>Deliverables</h3>
                 <ul>
-                    <li>Gatsby SPA Website</li>
-                    <li>Headless CMS Integration</li>
+                    {sidebarData.deliverables.map((deliver, index) => (
+                        <li key={index}>{deliver.text}</li>
+                    ))}
                 </ul>
             </div>
 
             <div className={SideBarStyles.section}>
-                <a href="https://google.com" className="btn primary fullwidth"> View Project </a>
+                <a href={sidebarData.project_link.url} rel="noreferrer" target="_blank" className="btn primary fullwidth"> View Project </a>
             </div>
         </div>
     );
