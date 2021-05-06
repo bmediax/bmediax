@@ -6,7 +6,9 @@ const ImageSection = () => {
         <StaticImage
                     style={{
                         gridArea: "1/1",
+                        padding: "30px 0px"
                     }}
+                    className="imageSection"
                     // maxHeight: 600,
                     layout="fullWidth"
                     aspectRatio={4 / 1}
