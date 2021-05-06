@@ -1,4 +1,5 @@
 import React from 'react';
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 import * as legionStyles from './LegionBar.module.scss'
 
 const LegionBar = () => {
@@ -8,9 +9,9 @@ const LegionBar = () => {
             {/* Legion Wrapper */}
             <ul className={legionStyles.wrapper}>
                 {/* Legion Options */}
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#design">Design</a></li>
-                <li><a href="#results">Results</a></li>
+                <li><AnchorLink to="reikoforpcc/#overview" title="Overview" /></li>
+                <li><AnchorLink to="#design" title="Design" /></li>
+                <li><AnchorLink to="#results" title="Results" /></li>
             </ul>
         </div>
     );

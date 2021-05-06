@@ -47,6 +47,13 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -75,
+        duration: 1500
+      }
+    }
     // {
     //   resolve: "gatsby-source-filesystem",
     //   options: {
