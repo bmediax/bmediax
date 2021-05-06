@@ -51,10 +51,10 @@ const Nav = () => {
         <nav className="navBar">
             <div className="nav-wrapper">
                 {/* Logo */}
-                <div className="logo-contain">
-                    <Link to="/" exact="true" style={{ textDecoration: 'none' }}>
+                <div className="logo-contain" >
+                    <Link to="/" exact="true" className="logoWraps" style={{ outline: "none" }}>
                         <Logo height={60} />
-                        <span className="logo-text">Bmediax</span>
+                        <span className="logo-text">mediax</span>
                     </Link>
                 </div>
 

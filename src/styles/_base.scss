@@ -260,6 +260,10 @@ nav {
       flex: 1;
       text-align: left;
 
+      .logoWraps {
+        text-decoration: none;
+        display: block;
+      }
       // a {
       //     position:relative !important;
       //     top:1px !important;

@@ -117,14 +117,14 @@
 
   div {
     flex: 2;
-    font-size: 3.3rem;
+    font-size: 3rem;
     font-weight: 700;
     color: $blanco;
     text-align: left;
 
     @include responsive("tablet") {
       text-align: center;
-      line-height: 50px;
+      line-height: 40px;
     }
   }
 
