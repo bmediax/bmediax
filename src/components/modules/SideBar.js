@@ -26,7 +26,7 @@ const SideBar = ({ sidebarData, projectLinks }) => {
 
             <div className={SideBarStyles.section}>
                 {projectLinks.map((link, index) => (
-                    <a href={link.url} 
+                    <a href={link.link.url} 
                         rel="noreferrer" 
                         target="_blank" 
                         key={index} 
