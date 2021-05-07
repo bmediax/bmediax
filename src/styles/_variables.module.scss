@@ -13,6 +13,7 @@ $subHeader: 1.125rem;
 $paraSize: 1.375rem;
 
 $mobileWidth: 760px;
+$small-mobileWidth: 360px;
 
 // Element Size Define
 $navHeight: 85px;
@@ -155,7 +156,12 @@ $colors-dark: (
 
 // Responsive
 @mixin responsive($size) {
-  @if $size == "tablet" {
+  @if $size == "small-mobile" {
+    @media screen and (max-width: $small-mobileWidth) {
+      @content;
+    }
+  }
+  @else if $size == "tablet" {
     @media screen and (max-width: $mobileWidth) {
       @content;
     }

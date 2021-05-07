@@ -43,12 +43,22 @@
     }
 
     li:not(:first-child):not(:last-child) {
-        margin:0px 50px;
+        margin:0px 10px;
     }
 
     @include responsive('tablet') {
         li:not(:first-child):not(:last-child) { 
-            margin:0px 10px;
+            margin:0px 5px;
+        }
+    }
+
+    @include responsive('small-mobile') {
+        li { 
+            padding:0px 10px;
+
+            a { 
+                font-size:1.3rem !important; 
+            }
         }
     }
 }

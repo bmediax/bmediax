@@ -9,7 +9,7 @@ const LegionBar = () => {
             {/* Legion Wrapper */}
             <ul className={legionStyles.wrapper}>
                 {/* Legion Options */}
-                <li><AnchorLink to="reikoforpcc/#overview" title="Overview" /></li>
+                <li><AnchorLink to="#overview" title="Overview" /></li>
                 <li><AnchorLink to="#design" title="Design" /></li>
                 <li><AnchorLink to="#results" title="Results" /></li>
             </ul>
