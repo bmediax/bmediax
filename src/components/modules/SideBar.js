@@ -2,7 +2,7 @@ import React from 'react';
 import { RichText } from 'prismic-reactjs'
 import * as SideBarStyles from './SideBar.module.scss'
 
-const SideBar = ({ sidebarData }) => {
+const SideBar = ({ sidebarData, projectLinks }) => {
     return (
         <div className={SideBarStyles.wrapper}>
             {/* Role */}
@@ -25,7 +25,13 @@ const SideBar = ({ sidebarData }) => {
             </div>
 
             <div className={SideBarStyles.section}>
-                <a href={sidebarData.project_link.url} rel="noreferrer" target="_blank" className="btn primary fullwidth"> View Project </a>
+                {projectLinks.map((link, index) => (
+                    <a href={link.url} 
+                        rel="noreferrer" 
+                        target="_blank" 
+                        key={index} 
+                        className="btn primary fullwidth"> {link.label.text} </a>
+                ))}
             </div>
         </div>
     );

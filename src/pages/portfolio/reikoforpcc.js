@@ -81,6 +81,14 @@ query reikoforpccPortfolioQuery {
               html
             }
           }
+          project_links {
+            label {
+              text
+            }
+            link {
+              url
+            }
+          }
           results {
             description {
               text

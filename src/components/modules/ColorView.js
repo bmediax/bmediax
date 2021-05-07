@@ -16,7 +16,7 @@ const ColorView = ({ colors }) => {
     return (
         <div className={ColorViewStyles.colorView} style={{ gridTemplateColumns: isColourBig ? 'repeat(3, 1fr)' : 'repeat(5, 1fr)' }}>
             {colors.map((color, index) => (
-                <span key={index} className={ColorViewStyles.colorBlock} style={{backgroundColor: color.colour}}>
+                <span key={index} className={ColorViewStyles.colorBlock} style={{backgroundColor: color.colour, boxShadow: `0px 30px 35px -35px ${color.colour}`}}>
                     <span className={ColorViewStyles.colorText}>{color.colour}</span>
                 </span>
             ))}

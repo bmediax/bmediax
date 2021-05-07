@@ -15,6 +15,12 @@
       margin-bottom: 20px;
     }
 
+    a {
+      &:not(:first-child) {
+        margin-top: 15px !important;
+      }
+    }
+
     h3 {
       margin-bottom: 10px;
       text-transform: uppercase;

@@ -91,6 +91,29 @@
         "label": "Overview"
       }
     },
+    "project_links": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "link": {
+            "type": "Link",
+            "config": {
+              "allowTargetBlank": true,
+              "label": "link"
+            }
+          },
+          "label": {
+            "type": "StructuredText",
+            "config": {
+              "single": "heading5",
+              "label": "Label",
+              "placeholder": "View Project"
+            }
+          }
+        },
+        "label": "Project Links"
+      }
+    },
     "design_image": {
       "type": "Image",
       "config": {

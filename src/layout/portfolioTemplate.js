@@ -12,15 +12,15 @@ import Layout from '../layout'
 const portfolioTemplate = ({ data }) => {
     return (
         <Layout title="Portfolio">
-            <div>
+            <>
                 <CoverTitle coverData={data.cover_title[0]} />
                 <LegionBar />
-                <OverviewSection overviewData={data.overview[0]}/>
+                <OverviewSection overviewData={data.overview[0]} projectLinks={data.project_links} />
                 <ImageSection image={data.design_image} />
                 <DesignSection {...data} />
                 <ImageSection image={data.results_image} />
                 <ResultsSection resultsData={data.results[0]} />
-            </div>
+            </>
             <NextProjectSection nextProjectData={data.next_project} />
         </Layout>
     )

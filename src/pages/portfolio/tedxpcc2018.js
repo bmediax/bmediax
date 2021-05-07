@@ -81,6 +81,14 @@ query tedxpcc2018PortfolioQuery {
               html
             }
           }
+          project_links {
+            label {
+              text
+            }
+            link {
+              url
+            }
+          }
           results {
             description {
               text

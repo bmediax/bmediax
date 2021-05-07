@@ -3,7 +3,7 @@ import * as portfolioStyles from '../styles/portfolio.module.scss'
 import SectionPortfolioLayout from '../layout/SectionPortfolioLayout';
 import SideBar from './modules/SideBar'
 
-const OverviewSection = ({ overviewData }) => {
+const OverviewSection = ({ overviewData, projectLinks }) => {
     return (
         <SectionPortfolioLayout idLabel="overview" label="sectionMaxWidth" title="Overview" icon="Check Mark" bgLightDark align>
             <div className={portfolioStyles.columnLayout}>
@@ -11,7 +11,7 @@ const OverviewSection = ({ overviewData }) => {
                     <p>{overviewData.description.text}</p>
                 </div>
                 <div className={portfolioStyles.twoColumn_1to2}>
-                    <SideBar sidebarData={overviewData} />
+                    <SideBar sidebarData={overviewData} projectLinks={projectLinks} />
                 </div>
             </div>
         </SectionPortfolioLayout>
