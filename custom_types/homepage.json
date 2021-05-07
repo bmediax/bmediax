@@ -1,73 +1,63 @@
 {
-  "Main" : {
-    "cover" : {
-      "type" : "Group",
-      "config" : {
-        "repeat" : false,
-        "fields" : {
-          "title" : {
-            "type" : "StructuredText",
-            "config" : {
-              "single" : "heading1",
-              "label" : "Title",
-              "placeholder" : "Hello there, my name is Brian!"
+  "Main": {
+    "cover": {
+      "type": "Group",
+      "config": {
+        "repeat": false,
+        "fields": {
+          "title": {
+            "type": "StructuredText",
+            "config": {
+              "single": "heading1",
+              "label": "Title",
+              "placeholder": "Hello there, my name is Brian!"
             }
           },
-          "description" : {
-            "type" : "StructuredText",
-            "config" : {
-              "multi" : "paragraph, strong, em, embed",
-              "label" : "Description"
+          "description": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph, strong, em, embed",
+              "label": "Description"
             }
           }
         },
-        "label" : "cover"
+        "label": "cover"
       }
     },
-    "recent_projects" : {
-      "type" : "Group",
-      "config" : {
-        "repeat" : false,
-        "fields" : {
-          "sub_title" : {
-            "type" : "StructuredText",
-            "config" : {
-              "single" : "heading4",
-              "label" : "Sub Title"
+    "body": {
+      "type": "Slices",
+      "fieldset": "Slice zone",
+      "config": {
+        "labels": {
+          "recent_projects": [
+            {
+              "name": "recent_projects",
+              "display": "Recent Projects"
             }
-          },
-          "title" : {
-            "type" : "StructuredText",
-            "config" : {
-              "single" : "heading2",
-              "label" : "Title"
+          ]
+        },
+        "choices": {
+          "recent_projects": {
+            "type": "Slice",
+            "fieldset": "Recent Projects",
+            "description": "Recent Projects Section",
+            "icon": "add_to_photos",
+            "display": "grid",
+            "non-repeat": {},
+            "repeat": {
+              "recent_project_item": {
+                "type": "Link",
+                "config": {
+                  "select": "document",
+                  "customtypes": [
+                    "portfolio"
+                  ],
+                  "label": "Recent Project Item"
+                }
+              }
             }
           }
-        },
-        "label" : "Recent Projects"
-      }
-    },
-    "awards" : {
-      "type" : "Group",
-      "config" : {
-        "repeat" : false,
-        "fields" : {
-          "sub_title" : {
-            "type" : "StructuredText",
-            "config" : {
-              "single" : "heading4",
-              "label" : "Sub Title"
-            }
-          },
-          "title" : {
-            "type" : "StructuredText",
-            "config" : {
-              "single" : "heading2",
-              "label" : "Title"
-            }
-          }
-        },
-        "label" : "Awards"
+        }
       }
     }
   }
