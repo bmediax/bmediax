@@ -7,7 +7,8 @@ const ImageSection = ({ image }) => {
         <GatsbyImage
             style={{
                 gridArea: "1/1",
-                padding: "30px 0px"
+                padding: "30px 0px",
+                display: "block"
             }}
             className="imageSection"
             // maxHeight: 600,

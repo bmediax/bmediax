@@ -94,13 +94,13 @@ query edutainmentPortfolioQuery {
             }
             alt
           }
-        #   body {
-        #     ... on PrismicPortfolioBodyDesignColorPalette {
-        #       items {
-        #         colour
-        #       }
-        #     }
-        #   }
+          body {
+            ... on PrismicPortfolioBodyDesignColorPalette {
+              items {
+                colour
+              }
+            }
+          }
         }
       }
     }
