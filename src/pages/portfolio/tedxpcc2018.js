@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby'
 import PortfolioTemplate from '../../layout/PortfolioTemplate'
 
-const chicanxshop = ({ data }) => {
+const tedxpcc2018 = ({ data }) => {
     if (!data) return null
     const document = data.allPrismicPortfolio.edges[0].node.data
     return (
@@ -10,11 +10,11 @@ const chicanxshop = ({ data }) => {
     );
 };
 
-export default chicanxshop;
+export default tedxpcc2018;
 
 export const query = graphql`
-query chicanxshopPortfolioQuery {
-  allPrismicPortfolio(filter: {uid: {eq: "chicanxshop"}}) {
+query tedxpcc2018PortfolioQuery {
+  allPrismicPortfolio(filter: {uid: {eq: "tedxpcc2018"}}) {
     edges {
       node {
         data {

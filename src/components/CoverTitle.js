@@ -1,20 +1,19 @@
 import React from 'react';
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-// import { StaticImage } from 'gatsby-plugin-image'
+import { motion } from 'framer-motion'
 import * as portfolioStyles from '../styles/portfolio.module.scss'
+import { slowSlideUp } from '../data/motionVariants'
 
 const CoverTitle = ({ coverData }) => {
     const image = getImage(coverData.background_image.localFile)
     return (
-        <div style={{ display: "grid" }}>
-      {/* You can use a GatsbyImage component if the image is dynamic */}
+      <div style={{ display: "grid" }}>
       <GatsbyImage
         style={{
           gridArea: "1/1",
         }}
         // maxHeight: 600,
         layout="fullWidth"
-        // aspectratio={3 / 1}
         alt=""
         image={image}
       />
@@ -22,14 +21,16 @@ const CoverTitle = ({ coverData }) => {
             gridArea: "1/1",
             position: "relative",
             display: "grid",
-            background: "rgba(0, 0, 0, 0.4)"
-        }}>
+            background: "rgba(0, 0, 0, 0.4)"}}>
             <div className={portfolioStyles.text}>
-                <h1>{coverData.title.text}</h1>
-                <div style={{ marginTop: "20px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+                <motion.h1 variants={slowSlideUp} initial="hidden" animate="show" transition="transition">
+                    {coverData.title.text}
+                  </motion.h1>
+                <motion.div variants={slowSlideUp} transition={{ delay:.2 }} initial="hidden" animate="show"
+                  style={{ marginTop: "20px", display: "flex", justifyContent: "center", alignItems: "center" }}>
                   <h5>{coverData.client.text}</h5>
                   <h5 style={{ marginLeft: "25px"}}>{coverData.date.text}</h5>
-                </div>
+                </motion.div>
             </div>
       </div>
     </div>
