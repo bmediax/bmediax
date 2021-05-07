@@ -4,7 +4,6 @@ import PortfolioTemplate from '../../layout/PortfolioTemplate'
 
 const edutainment = ({ data }) => {
     if (!data) return null
-    const document = data.allPrismicPortfolio.edges[0].node.data
     return (
         <PortfolioTemplate data={document} />
     );
