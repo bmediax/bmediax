@@ -26,9 +26,9 @@ const CoverTitle = ({ coverData }) => {
         }}>
             <div className={portfolioStyles.text}>
                 <h1>{coverData.title.text}</h1>
-                <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                <div style={{ marginTop: "20px", display: "flex", justifyContent: "center", alignItems: "center" }}>
                   <h5>{coverData.client.text}</h5>
-                  <h5 style={{ marginLeft: "50px"}}>{coverData.date.text}</h5>
+                  <h5 style={{ marginLeft: "25px"}}>{coverData.date.text}</h5>
                 </div>
             </div>
       </div>
