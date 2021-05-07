@@ -5,7 +5,6 @@ import PortfolioTemplate from '../../layout/PortfolioTemplate'
 const reikoforpcc = ({ data }) => {
     if (!data) return null
     const document = data.allPrismicPortfolio.edges[0].node.data
-    // console.log(document)
     return (
         <PortfolioTemplate data={document} />
     );
@@ -29,6 +28,14 @@ query reikoforpccPortfolioQuery {
             title {
               text
             }
+            background_image {
+              localFile {
+                childImageSharp {
+                  gatsbyImageData(width: 1440)
+                }
+              }
+              alt
+            }
           }
           design {
             description {
@@ -38,24 +45,40 @@ query reikoforpccPortfolioQuery {
               text
             }
           }
+          design_image {
+            alt
+            localFile {
+              childImageSharp {
+                gatsbyImageData(width: 1440)
+              }
+            }
+          }
           next_project {
             uid
           }
           overview {
             deliverables {
               text
+              raw
+              html
             }
             description {
               text
+              raw
+              html
             }
             project_link {
               url
             }
             role {
               text
+              raw
+              html
             }
             work {
               text
+              raw
+              html
             }
           }
           results {
@@ -63,10 +86,19 @@ query reikoforpccPortfolioQuery {
               text
             }
           }
+          results_image {
+            localFile {
+              childImageSharp {
+                gatsbyImageData(width: 1440)
+              }
+            }
+            alt
+          }
           body {
-            slice_type
-            items {
-              colour
+            ... on PrismicPortfolioBodyDesignColorPalette {
+              items {
+                colour
+              }
             }
           }
         }

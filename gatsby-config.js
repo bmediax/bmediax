@@ -19,7 +19,7 @@ module.exports = {
       },
       {
         platform: "LinkedIn",
-        subTitle: "Experience",
+        subTitle: "Professional",
         url: "https://linkedin.com/in/bmediax",
       },
       {
@@ -41,9 +41,10 @@ module.exports = {
       resolve: 'gatsby-source-prismic',
       options: {
         repositoryName: 'bmediax',
+        shouldDownloadImage: () => true,
         schemas: {
            homepage: require("./custom_types/homepage.json"),
-           homepage: require("./custom_types/portfolio.json"),
+           portfolio: require("./custom_types/portfolio.json"),
         },
       },
     },
@@ -53,14 +54,14 @@ module.exports = {
         offset: -75,
         duration: 1500
       }
-    }
-    // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     name: "images",
-    //     path: "./src/images/",
-    //   },
-    //   __key: "images",
-    // },
-  ],
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: "./src/images/",
+      },
+      __key: "images",
+    },
+  ]
 };

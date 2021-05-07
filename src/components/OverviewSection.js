@@ -8,7 +8,7 @@ const OverviewSection = ({ overviewData }) => {
         <SectionPortfolioLayout idLabel="overview" label="sectionMaxWidth" title="Overview" icon="Check Mark" bgLightDark align>
             <div className={portfolioStyles.columnLayout}>
                 <div className={portfolioStyles.twoColumn_2to1}>
-                    <p>{overviewData.description[0].text}</p>
+                    <p>{overviewData.description.text}</p>
                 </div>
                 <div className={portfolioStyles.twoColumn_1to2}>
                     <SideBar sidebarData={overviewData} />

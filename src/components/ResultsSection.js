@@ -7,7 +7,7 @@ const DesignSection = ({ resultsData }) => {
         <SectionPortfolioLayout idLabel="results" title="Results" icon="Check Mark" sectionMaxWidth>
             <div className={`${portfolioStyles.columnLayout} sectionMaxWidth`}>
                 <div className={portfolioStyles.twoColumn}>
-                    <p>{resultsData.description[0].text}</p>
+                    <p>{resultsData.description.text}</p>
                 </div>
             </div>
         </SectionPortfolioLayout>
