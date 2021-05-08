@@ -29,6 +29,13 @@
               "label": "Title"
             }
           },
+          "name": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "strong, em",
+              "label": "Name"
+            }
+          },
           "client": {
             "type": "StructuredText",
             "config": {
@@ -57,6 +64,20 @@
             "config": {
               "multi": "paragraph, strong, em, list-item, o-list-item",
               "label": "Description"
+            }
+          },
+          "short_description": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "strong, em, embed",
+              "label": "Short Description"
+            }
+          },
+          "short_tags": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "strong, em",
+              "label": "Short Tags"
             }
           },
           "role": {

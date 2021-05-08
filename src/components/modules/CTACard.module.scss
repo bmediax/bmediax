@@ -6,7 +6,7 @@
   max-width: 400px;
   min-height: 200px;
   @include objectCorner("default");
-  transition: box-shadow 200ms linear, transform 200ms linear;
+  transition: box-shadow 200ms linear, transform 200ms linear, background 200ms linear;
 
   .coverImage {
     border-top-right-radius: $defaultBorder;

@@ -7,7 +7,7 @@ const CTACardModule = ({ title, raw, cover, url, work, shortDescr }) => {
     const image = getImage(cover)
     return (
         <div className={CTACardStyles.CTACard}>
-            <GatsbyImage image={image} alt={`${raw} Cover`} width="100%" className={CTACardStyles.coverImage} />
+            <GatsbyImage image={image} alt={`${raw} Cover`} style={{ display: "block", padding: "30px 0px" }} className={CTACardStyles.coverImage} />
             <div className={CTACardStyles.text}>
                 <span className={CTACardStyles.headerText}>
                     <h5>{work}</h5>
