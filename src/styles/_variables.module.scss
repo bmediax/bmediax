@@ -40,8 +40,10 @@ $white: #fff;
 
 // Dark colors
 $onyx: #191c21;
+// $onyx: #1e2329;
 $jetBlack: #14171c;
-$raven: #262930;
+// $raven: #262930;
+$raven: #1e2329;
 $steelBlue: #2b313c;
 $cloud: #687077;
 
@@ -192,7 +194,7 @@ $colors-dark: (
     @if $state == "default" {
       box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.04) !important;
     } @else if $state == "hover" {
-      box-shadow: 0px 10px 30px rgba($midnight, 0.2) !important;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1) !important;
     }
   } @else if $state == "default" and $color == "azure" {
     box-shadow: 0px 5px 20px rgba($azure, 0.3);
