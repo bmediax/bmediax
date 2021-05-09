@@ -113,7 +113,6 @@ query chicanxshopPortfolioQuery {
               slice_type
               items {
                 image {
-                  url
                   alt
                   localFile {
                     childImageSharp {
@@ -122,7 +121,6 @@ query chicanxshopPortfolioQuery {
                   }
                 }
               }
-              slice_label
             }
             ... on PrismicPortfolioBodyResultsImageGallery {
               slice_type

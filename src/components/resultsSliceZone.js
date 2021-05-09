@@ -3,7 +3,7 @@ import ImageGallery from './designSlices/ImageGallery'
 
 const ResultsSliceZone = ({ sliceZone }) => {
     const sliceComponents = {
-        overview__image_gallery: ImageGallery,
+        results__image_gallery: ImageGallery,
     }
 
     const sliceZoneContent = sliceZone.map((slice, index) => {

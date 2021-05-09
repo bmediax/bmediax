@@ -222,7 +222,7 @@
           ],
           "results__image_gallery": [
             {
-              "name": "results_color_palette",
+              "name": "results_image_gallery",
               "display": "Results Color Palette"
             }
           ]
@@ -241,7 +241,8 @@
                   "label": "Colour"
                 }
               }
-            }
+            },
+            "display": "grid"
           },
           "design__image_gallery": {
             "type": "Slice",
@@ -275,7 +276,8 @@
                   "label": "image"
                 }
               }
-            }
+            },
+            "display": "grid"
           }
         }
       }
