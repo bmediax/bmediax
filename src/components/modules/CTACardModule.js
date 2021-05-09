@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as CTACardStyles from './CTACard.module.scss'
 // import * as variables from '../../styles/_variables.module.scss'
@@ -14,7 +15,7 @@ const CTACardModule = ({ title, raw, cover, url, work, shortDescr }) => {
                     <h3>{title}</h3>
                 </span>
                 <p>{shortDescr}</p>
-                <a href={`/portfolio/${url}`} className="btn primary">Learn More</a>
+                <Link to={`/portfolio/${url}`} className="btn primary">Learn More</Link>
             </div>
         </div>
     );

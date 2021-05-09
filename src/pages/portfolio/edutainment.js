@@ -104,8 +104,45 @@ query edutainmentPortfolioQuery {
           }
           body {
             ... on PrismicPortfolioBodyDesignColorPalette {
+              slice_type
               items {
                 colour
+              }
+            }
+            ... on PrismicPortfolioBodyDesignImageGallery {
+              slice_type
+              items {
+                image {
+                  alt
+                  localFile {
+                    childImageSharp {
+                      gatsbyImageData
+                    }
+                  }
+                }
+              }
+              primary {
+                title {
+                  text
+                }
+              }
+            }
+            ... on PrismicPortfolioBodyResultsImageGallery {
+              slice_type
+              items {
+                image {
+                  alt
+                  localFile {
+                    childImageSharp {
+                      gatsbyImageData
+                    }
+                  }
+                }
+              }
+              primary {
+                title {
+                  text
+                }
               }
             }
           }
