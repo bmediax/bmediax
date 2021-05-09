@@ -121,12 +121,16 @@ query chicanxshopPortfolioQuery {
                   }
                 }
               }
+              primary {
+                title {
+                  text
+                }
+              }
             }
             ... on PrismicPortfolioBodyResultsImageGallery {
               slice_type
               items {
                 image {
-                  url
                   alt
                   localFile {
                     childImageSharp {
@@ -135,7 +139,11 @@ query chicanxshopPortfolioQuery {
                   }
                 }
               }
-              slice_label
+              primary {
+                title {
+                  text
+                }
+              }
             }
           }
         }

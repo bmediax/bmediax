@@ -2,10 +2,11 @@
 
 .container {
     width:500px;
-    position:sticky !important;
-    top:$navHeight + 10px !important;
-    right:0;
-    left:0;
+    position: relative;
+    // position:sticky !important;
+    // top:$navHeight + 10px !important;
+    // right:0;
+    // left:0;
     margin:-30px auto 0px auto;
     z-index:1;
 
