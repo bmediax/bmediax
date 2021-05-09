@@ -18,8 +18,8 @@ html, body {
     
     .wrapper {
         background:getColor(lightBase);
-        max-width:750px;
-        padding:4% 5%;
+        width:$wrapMaxWidth;
+        padding:5% 3%;
         margin:0 5%;
         border-radius:1.5em;
         @include objectCorner('default');
@@ -38,24 +38,39 @@ html, body {
             display:flex;
             margin-top:5%;
 
+            .Dropdown-root {
+                flex:1;
+                text-align: center;
+            }
+
             a {
+                outline:none !important;
                 flex:1;
                 text-decoration:none;
                 // color:getColor(textHeader);
                 // background-color:getColor(lightLightBase2);
                 border-radius:15px;
                 text-align:center;
-                margin-right:1em;
                 padding:1em 3em;
                 font-family:$primaryFont;
                 font-weight:500;
                 font-size:1.8rem;
                 border:none;
                 transition: background 250ms linear, color 200ms linear, box-shadow 250ms linear, transform 280ms linear;
-    
-                &:last-child {
-                    margin-right:0em !important;
+                
+                &:not(:first-child):not(:last-child) {
+                    margin-left:1em;
+                    margin-right:1em;
                 }
+
+                &:focus {
+                    background:getColor(lightdarkBase);
+                    box-shadow:none !important;
+                }
+    
+                // &:last-child {
+                //     margin-right:0em !important;
+                // }
     
                 &:hover {
                     // background:$azure;
@@ -83,7 +98,7 @@ html, body {
 
 @media screen and (max-width:500px) {
     .container {
-        align-items: flex-start;
+        align-items: center;
         
         .wrapper { 
             margin-top:5%;
@@ -93,11 +108,8 @@ html, body {
                 flex-direction: column;
 
                 a {
-                    margin-bottom:.5em;
-                    margin-right:0 !important;
-
-                    &:last-child {
-                        margin-bottom:0px;
+                    &:not(:first-child):not(:last-child) { 
+                        margin:10px 0px;
                     }
                 }
             }
