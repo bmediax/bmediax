@@ -19,7 +19,7 @@ const portfolioTemplate = ({ data }) => {
                 <ImageSection image={data.design_image} />
                 <DesignSection {...data} />
                 <ImageSection image={data.results_image} />
-                <ResultsSection resultsData={data.results[0]} />
+                <ResultsSection {...data} />
             </>
             <NextProjectSection nextProjectData={data.next_project} />
         </Layout>

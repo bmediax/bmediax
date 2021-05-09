@@ -1,7 +1,7 @@
 @use './variables.module' as *;
 
 .coverTitle {
-  height: 40vmin;
+  height: 50vmin;
   padding: $desktopPadding $widthPadding $desktopSmallPadding $widthPadding;
   text-align: center;
   place-items: flex-end center;
@@ -18,7 +18,7 @@
   h1 {
     color: $white;
     font-size: 6rem;
-    line-height: 50px;
+    line-height: 80px;
     margin-bottom: 10px;
   }
 
@@ -30,7 +30,8 @@
 
   @include responsive("tablet") {
     h1 {
-      font-size: 3.5rem;
+      font-size: 3.3rem;
+      line-height:40px !important;
     }
 
     h5 {
@@ -49,11 +50,24 @@
       margin-bottom: 15px;
     }
   }
-
   display: flex;
 
   div:not(:last-child) {
     margin-right: 30px;
+  }
+
+  .imageGrid {
+    @include objectCorner('default');
+  }
+  
+  .imageGridWrap {
+    @include objectCorner('default');
+    transition: box-shadow 200ms linear, transform 250ms linear;
+
+    &:hover {
+      @include objectShadow('default', 'snow');
+      transform:translateY(-3px);
+    }
   }
 
   @include responsive("tablet") {

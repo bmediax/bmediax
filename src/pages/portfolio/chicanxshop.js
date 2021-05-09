@@ -104,9 +104,40 @@ query chicanxshopPortfolioQuery {
           }
           body {
             ... on PrismicPortfolioBodyDesignColorPalette {
+              slice_type
               items {
                 colour
               }
+            }
+            ... on PrismicPortfolioBodyDesignImageGallery {
+              slice_type
+              items {
+                image {
+                  url
+                  alt
+                  localFile {
+                    childImageSharp {
+                      gatsbyImageData
+                    }
+                  }
+                }
+              }
+              slice_label
+            }
+            ... on PrismicPortfolioBodyResultsImageGallery {
+              slice_type
+              items {
+                image {
+                  url
+                  alt
+                  localFile {
+                    childImageSharp {
+                      gatsbyImageData
+                    }
+                  }
+                }
+              }
+              slice_label
             }
           }
         }

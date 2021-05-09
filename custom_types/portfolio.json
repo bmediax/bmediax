@@ -208,7 +208,24 @@
       "fieldset": "Slice zone",
       "config": {
         "labels": {
-          "design__color_palette": []
+          "design__color_palette": [
+            {
+              "name": "design_color_palette",
+              "display": "Design Color Palette"
+            }
+          ],
+          "design__image_gallery": [
+            {
+              "name": "design_image_gallery",
+              "display": "Design Image Gallery"
+            }
+          ],
+          "results__image_gallery": [
+            {
+              "name": "results_color_palette",
+              "display": "Results Color Palette"
+            }
+          ]
         },
         "choices": {
           "design__color_palette": {
@@ -216,13 +233,46 @@
             "fieldset": "Design: Color Palette",
             "description": "Color Palette for Design Section",
             "icon": "color_lens",
-            "display": "grid",
             "non-repeat": {},
             "repeat": {
               "colour": {
                 "type": "Color",
                 "config": {
                   "label": "Colour"
+                }
+              }
+            }
+          },
+          "design__image_gallery": {
+            "type": "Slice",
+            "fieldset": "Design: Image Gallery",
+            "description": "Design: Image Gallery",
+            "icon": "image",
+            "display": "grid",
+            "non-repeat": {},
+            "repeat": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "thumbnails": [],
+                  "label": "image"
+                }
+              }
+            }
+          },
+          "results__image_gallery": {
+            "type": "Slice",
+            "fieldset": "Results: Image Gallery",
+            "description": "Results: Image Gallery",
+            "icon": "image",
+            "non-repeat": {},
+            "repeat": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "image"
                 }
               }
             }
