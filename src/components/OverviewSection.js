@@ -1,11 +1,11 @@
 import React from 'react';
 import * as portfolioStyles from '../styles/portfolio.module.scss'
-import SectionPortfolioLayout from '../layout/SectionPortfolioLayout';
+import SectionPageLayout from '../layout/SectionPageLayout';
 import SideBar from './modules/SideBar'
 
 const OverviewSection = ({ overviewData, projectLinks }) => {
     return (
-        <SectionPortfolioLayout idLabel="overview" label="sectionMaxWidth" title="Overview" icon="Check Mark" bgLightDark align>
+        <SectionPageLayout idLabel="overview" label="sectionMaxWidth" title="Overview" icon="Check Mark" bgLightDark align>
             <div className={portfolioStyles.columnLayout}>
                 <div className={portfolioStyles.twoColumn_2to1}>
                     <p>{overviewData.description.text}</p>
@@ -14,7 +14,7 @@ const OverviewSection = ({ overviewData, projectLinks }) => {
                     <SideBar sidebarData={overviewData} projectLinks={projectLinks} />
                 </div>
             </div>
-        </SectionPortfolioLayout>
+        </SectionPageLayout>
     );
 };
 

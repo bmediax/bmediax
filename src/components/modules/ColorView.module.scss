@@ -8,7 +8,7 @@
   // height:100%;
   grid-gap: 2em;
 
-  @include responsive("tablet") {
+  @include responsive("mobile") {
     grid-template-columns: 1fr 1fr !important;
   }
 }

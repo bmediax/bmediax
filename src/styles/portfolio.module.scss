@@ -11,7 +11,7 @@
   text-align: center;
   padding-bottom: $desktopSmallPadding;
 
-  @include responsive("tablet") {
+  @include responsive("mobile") {
     padding-bottom: 0;
   }
 
@@ -28,7 +28,7 @@
     line-height: 25px;
   }
 
-  @include responsive("tablet") {
+  @include responsive("mobile") {
     h1 {
       font-size: 3.3rem;
       line-height:40px !important;
@@ -76,7 +76,7 @@
     }
   }
 
-  @include responsive("tablet") {
+  @include responsive("mobile") {
     flex-direction: column;
 
     div:not(:last-child) {
@@ -140,7 +140,7 @@
     color: $blanco;
     text-align: left;
 
-    @include responsive("tablet") {
+    @include responsive("mobile") {
       text-align: center;
       line-height: 40px;
     }
@@ -158,7 +158,7 @@
     }
   }
 
-  @include responsive("tablet") {
+  @include responsive("mobile") {
     flex-direction: column;
 
     div,

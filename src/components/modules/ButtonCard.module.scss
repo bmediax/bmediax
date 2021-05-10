@@ -38,7 +38,7 @@
         }
     }
 
-    @include responsive('tablet') {
+    @include responsive('mobile') {
         @include objectCorner('mobile');
         width:100%;
         flex-direction:row;

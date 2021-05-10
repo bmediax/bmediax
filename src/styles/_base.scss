@@ -6,7 +6,7 @@ html {
   // 16px
   font-size: 62.5%;
 
-  @include responsive("tablet") {
+  @include responsive("mobile") {
     //15.36px
     font-size: 60%;
   }
@@ -89,7 +89,7 @@ p {
 }
 
 .imageSection {
-  @include responsive("tablet") {
+  @include responsive("mobile") {
     padding: 80px 0px !important;
   }
 }
@@ -108,7 +108,7 @@ p {
     margin-right: 30px;
   }
 
-  @include responsive("tablet") {
+  @include responsive("mobile") {
     flex-direction: column;
 
     .pageTwoColumn:not(:last-child) {
@@ -141,6 +141,22 @@ p {
   }
 }
 
+.grid-three {
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-row-gap: 2em;
+  grid-column-gap: 2em;
+
+  @include responsive('desktopish') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include responsive('mobile') {
+    grid-template-columns: 1fr;
+  }
+}
+
 .btn {
   padding: 18px 30px !important;
   font-family: $primaryFont;
@@ -163,7 +179,7 @@ p {
     transform: translateY(0px) !important;
   }
 
-  @include responsive("tablet") {
+  @include responsive("mobile") {
     display: block !important;
     padding: 20px 0px !important;
     text-align:center !important;
@@ -275,7 +291,7 @@ section {
   }
 
   // Responsive
-  @include responsive("tablet") {
+  @include responsive("mobile") {
     @include sectionPadding("mobile");
 
     .section-title h4 {
@@ -420,7 +436,7 @@ nav {
         }
       }
 
-      @include responsive("tablet") {
+      @include responsive("mobile") {
         // border-top:1px solid getColor(lightdarkBase);
         position: absolute;
         display: none;
@@ -498,7 +514,7 @@ nav {
         }
       }
 
-      @include responsive("tablet") {
+      @include responsive("mobile") {
         display: block;
       }
     }
@@ -508,7 +524,7 @@ nav {
       flex: 1;
       text-align: right;
 
-      @include responsive("tablet") {
+      @include responsive("mobile") {
         display: none;
       }
 
@@ -631,7 +647,7 @@ nav {
   grid-template-areas: 
     "masonryOne masonryThree"
     "masonryTwo masonryThree";
-  @include responsive('tablet') {
+  @include responsive('mobile') {
     grid-template-columns: 1fr;
     grid-template-areas: 
     "masonryOne"

@@ -33,7 +33,7 @@
         stroke:getColor(whiteToAzure);
     }
 
-    @include responsive('tablet') {
+    @include responsive('mobile') {
         width: 90%;
         right:5%;
         left:5%;

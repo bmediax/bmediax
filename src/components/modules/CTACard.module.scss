@@ -1,5 +1,14 @@
 @use '../../styles/variables.module' as *;
 
+.isLight {
+  @include objectShadow("default", "snow");
+  transition:box-shadow 200ms linear;
+  
+  &:hover {
+    @include objectShadow("hover", "snow");
+  }
+}
+
 .CTACard {
   flex: 1;
   background: getColor(lightBase);
@@ -24,7 +33,7 @@
     margin-left: 2%;
   }
 
-  @include responsive("tablet") {
+  @include responsive("mobile") {
     max-width: 100%;
     @include objectCorner("mobile");
 

@@ -10,7 +10,7 @@ div.cover {
     @include sectionPadding('desktop');
     // padding:30px 5%;
 
-    @include responsive('tablet') {
+    @include responsive('mobile') {
         @include sectionPadding('mobile');
     }
 
@@ -34,14 +34,14 @@ div.cover {
         margin-top:20px;
         width:100%;
 
-        @include responsive('tablet') {
+        @include responsive('mobile') {
             flex-direction: column;
         }
 
         & > div + a {
             margin-left:15px;
 
-            @include responsive('tablet') {
+            @include responsive('mobile') {
                 margin-left:0;
             }
         }
@@ -72,7 +72,7 @@ div.cover {
             margin:0px 15px;
         }
 
-        @include responsive('tablet') {
+        @include responsive('mobile') {
             flex-direction: column;
 
             a {
@@ -99,7 +99,7 @@ div.cover {
     max-width:$wrapMaxWidth;
     margin:auto;
 
-    @include responsive('tablet') {
+    @include responsive('mobile') {
         flex-direction: column;
         
         & > div + div {

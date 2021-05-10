@@ -2,7 +2,7 @@ import React from 'react';
 // import * as portfolioStyles from '../styles/portfolio.module.scss'
 import { CheckMarkIcon, PaintIcon } from '../components/Icons'
 
-const SectionPortfolioLayout = ({ title, isDark, bgLightDark, icon, children, label, idLabel,  bgColor, align, sectionMaxWidth }) => {
+const SectionPageLayout = ({ title, isDark, bgLightDark, icon, children, label, idLabel,  bgColor, align, sectionMaxWidth }) => {
     const checkIcon = (icn) => {
         if ( icn === "Check Mark" ) {
             return <CheckMarkIcon />
@@ -23,4 +23,4 @@ const SectionPortfolioLayout = ({ title, isDark, bgLightDark, icon, children, la
     );
 };
 
-export default SectionPortfolioLayout;
+export default SectionPageLayout;

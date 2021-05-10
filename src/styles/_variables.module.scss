@@ -163,12 +163,16 @@ $colors-dark: (
       @content;
     }
   }
-  @else if $size == "tablet" {
+  @else if $size == "mobile" {
     @media screen and (max-width: $mobileWidth) {
       @content;
     }
   } @else if $size == "desktop" {
     @media screen and (min-width: 761px) {
+      @content;
+    }
+  } @else if $size == "desktopish" {
+    @media screen and (max-width: 1000px) {
       @content;
     }
   }
@@ -182,7 +186,7 @@ $colors-dark: (
   } @else if $layout == "desktop-small" {
     padding: 60px $widthPadding;
 
-    @include responsive("tablet") {
+    @include responsive("mobile") {
       padding: 30px $widthPadding;
     }
   }
@@ -207,7 +211,7 @@ $colors-dark: (
   @if $type == "default" {
     border-radius: $defaultBorder !important;
 
-    @include responsive("tablet") {
+    @include responsive("mobile") {
       border-radius: $mobileBorder !important;
     }
   } @else if $type == "mobile" {

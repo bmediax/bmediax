@@ -10,7 +10,7 @@
     margin:-30px auto 0px auto;
     z-index:1;
 
-    @include responsive('tablet') {
+    @include responsive('mobile') {
         width:95%;   
     }
 }
@@ -47,7 +47,7 @@
         margin:0px 10px;
     }
 
-    @include responsive('tablet') {
+    @include responsive('mobile') {
         li:not(:first-child):not(:last-child) { 
             margin:0px 5px;
         }

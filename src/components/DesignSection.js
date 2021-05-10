@@ -1,13 +1,13 @@
 import React from 'react';
 import DesignSliceZone from '../components/designSliceZone'
 import * as portfolioStyles from '../styles/portfolio.module.scss'
-import SectionPortfolioLayout from '../layout/SectionPortfolioLayout';
+import SectionPageLayout from '../layout/SectionPageLayout';
 // import ColorView from './modules/ColorView';
 
 const DesignSection = (data) => {
     const designData = data.design[0]
     return (
-        <SectionPortfolioLayout idLabel="design" title="Design" icon="Paint" sectionMaxWidth align>
+        <SectionPageLayout idLabel="design" title="Design" icon="Paint" sectionMaxWidth align>
             <div className={`${portfolioStyles.columnLayout} sectionMaxWidth`}>
                 <div className={portfolioStyles.twoColumn}>
                     <p>{designData.description.text}</p>
@@ -24,7 +24,7 @@ const DesignSection = (data) => {
                 </div> */}
             {/* </div> */}
             <DesignSliceZone sliceZone={data.body} />
-        </SectionPortfolioLayout>
+        </SectionPageLayout>
     );
 };
 
