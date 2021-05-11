@@ -49,6 +49,18 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Bmediax`,
+        short_name: `Bmediax`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#3c86a5`,
+        display: `standalone`,
+        icon: `src/images/icon.png`,
+      },
+    },
+    {
       resolve: "gatsby-plugin-anchor-links",
       options: {
         offset: -75,
