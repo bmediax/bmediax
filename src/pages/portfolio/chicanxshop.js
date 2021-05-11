@@ -6,7 +6,7 @@ const chicanxshop = ({ data }) => {
     if (!data) return null
     const document = data.allPrismicPortfolio.edges[0].node.data
     return (
-        <PortfolioTemplate data={document} />
+        <PortfolioTemplate data={document} pageTitle="Chicanx Shop" />
     );
 };
 
@@ -74,6 +74,9 @@ query chicanxshopPortfolioQuery {
               text
               raw
               html
+            }
+            problem {
+              raw
             }
             project_link {
               url
@@ -143,6 +146,23 @@ query chicanxshopPortfolioQuery {
                   text
                 }
                 column
+              }
+            }
+            ... on PrismicPortfolioBodyDesignVideo {
+              slice_type
+              primary {
+                column
+                title {
+                  text
+                }
+              }
+              items {
+                video_url {
+                  url
+                }
+                video_height {
+                  text
+                }
               }
             }
             ... on PrismicPortfolioBodyResultsImageGallery {

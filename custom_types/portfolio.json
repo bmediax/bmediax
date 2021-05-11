@@ -232,6 +232,12 @@
               "name": "results_image_gallery",
               "display": "Results Color Palette"
             }
+          ],
+          "design_video": [
+            {
+              "name": "design_video_gallery",
+              "display": "Design Video Gallery"
+            }
           ]
         },
         "choices": {
@@ -328,6 +334,52 @@
               }
             },
             "display": "grid"
+          },
+          "design_video": {
+            "type": "Slice",
+            "fieldset": "Design Video",
+            "description": "Video Gallery",
+            "icon": "videocam",
+            "display": "grid",
+            "non-repeat": {
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+                  "label": "title"
+                }
+              },
+              "column": {
+                "type": "Select",
+                "config": {
+                  "options": [
+                    "Column 1",
+                    "Column 2",
+                    "Column 3",
+                    "Column 4",
+                    "Column 5",
+                    "Column 6"
+                  ],
+                  "default_value": "Column 1",
+                  "label": "Column"
+                }
+              }
+            },
+            "repeat": {
+              "video_url": {
+                "type": "Link",
+                "config": {
+                  "label": "Video Url"
+                }
+              },
+              "video_height": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                  "label": "Video Height"
+                }
+              }
+            }
           }
         }
       }

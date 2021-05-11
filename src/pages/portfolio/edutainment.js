@@ -6,7 +6,9 @@ const edutainment = ({ data }) => {
     if (!data) return null
     const document = data.allPrismicPortfolio.edges[0].node.data
     return (
-        <PortfolioTemplate data={document} />
+        <>
+          <PortfolioTemplate data={document} pageTitle="Edutainment" />
+        </>
     );
 };
 
@@ -146,6 +148,23 @@ query edutainmentPortfolioQuery {
                   text
                 }
                 column
+              }
+            }
+            ... on PrismicPortfolioBodyDesignVideo {
+              slice_type
+              primary {
+                column
+                title {
+                  text
+                }
+              }
+              items {
+                video_url {
+                  url
+                }
+                video_height {
+                  text
+                }
               }
             }
             ... on PrismicPortfolioBodyResultsImageGallery {

@@ -75,6 +75,9 @@ query reikoforpccPortfolioQuery {
               raw
               html
             }
+            problem {
+              raw
+            }
             project_link {
               url
             }
@@ -143,6 +146,23 @@ query reikoforpccPortfolioQuery {
                   text
                 }
                 column
+              }
+            }
+            ... on PrismicPortfolioBodyDesignVideo {
+              slice_type
+              primary {
+                column
+                title {
+                  text
+                }
+              }
+              items {
+                video_url {
+                  url
+                }
+                video_height {
+                  text
+                }
               }
             }
             ... on PrismicPortfolioBodyResultsImageGallery {

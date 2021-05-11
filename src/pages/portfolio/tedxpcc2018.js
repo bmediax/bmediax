@@ -6,7 +6,7 @@ const tedxpcc2018 = ({ data }) => {
     if (!data) return null
     const document = data.allPrismicPortfolio.edges[0].node.data
     return (
-        <PortfolioTemplate data={document} />
+        <PortfolioTemplate data={document} pageTitle="TEDxPCC 2018" />
     );
 };
 
@@ -74,6 +74,9 @@ query tedxpcc2018PortfolioQuery {
               text
               raw
               html
+            }
+            problem {
+              raw
             }
             project_link {
               url
@@ -143,6 +146,23 @@ query tedxpcc2018PortfolioQuery {
                   text
                 }
                 column
+              }
+            }
+            ... on PrismicPortfolioBodyDesignVideo {
+              slice_type
+              primary {
+                column
+                title {
+                  text
+                }
+              }
+              items {
+                video_url {
+                  url
+                }
+                video_height {
+                  text
+                }
               }
             }
             ... on PrismicPortfolioBodyResultsImageGallery {

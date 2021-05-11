@@ -16,6 +16,7 @@ const DesignSection = (data) => {
                     <blockquote>“{designData.quote.text}”</blockquote>
                 </div>
             </div>
+            
             {/* <div className={`${portfolioStyles.columnLayout} sectionMaxWidth`}> */}
                 {/* {isColourRender(data)} */}
                 {/* <div className={portfolioStyles.twoColumn}>
@@ -23,6 +24,7 @@ const DesignSection = (data) => {
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies dignissim elit, ac lobortis leo fermentum pulvinar. Fusce quis hendrerit mauris, ac elementum urna. Sed vel ex.</p>
                 </div> */}
             {/* </div> */}
+            {/* Slice Zone */}
             <DesignSliceZone sliceZone={data.body} />
         </SectionPageLayout>
     );
