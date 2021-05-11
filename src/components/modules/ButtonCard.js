@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion'
 import * as buttonCardStyles from './ButtonCard.module.scss'
-import { LinkedinIcon, GithubIcon, InstagramIcon } from '../Icons'
+import { LinkedinIcon, YoutubeIcon,  GithubIcon, InstagramIcon } from '../Icons'
 
 const ButtonCard = ({ title, subtitle, url }) => {
     const iconChoice = (icn) => {
@@ -11,6 +11,8 @@ const ButtonCard = ({ title, subtitle, url }) => {
             return <GithubIcon />
         } else if (icn === "Instagram") {
             return <InstagramIcon />
+        } else if (icn === "Youtube") {
+            return <YoutubeIcon />
         } else {
             console.warn("No Icon Detected")
             return null

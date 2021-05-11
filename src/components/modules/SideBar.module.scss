@@ -2,7 +2,7 @@
 
 .wrapper {
   position: sticky;
-  top: 0;
+  top: $navHeight + 20;
   right: 0;
   background: getColor(lightBase);
   //   padding: 40px;

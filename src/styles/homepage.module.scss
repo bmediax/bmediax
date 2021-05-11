@@ -1,109 +1,120 @@
 @use './variables.module' as *;
 
 div.cover {
-    background:getColor(lightBase);
-    width:auto;
-    display:flex;
+  background: getColor(lightBase);
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @include sectionPadding("desktop");
+  // padding:30px 5%;
+
+  @include responsive("mobile") {
+    @include sectionPadding("mobile");
+  }
+
+  .text {
+    max-width: 900px;
+    text-align: center;
+
+    h1 {
+      line-height: 40px;
+    }
+
+    p {
+      margin-top: 20px;
+      line-height: 30px;
+    }
+  }
+
+  .buttonWrapper {
+    display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    @include sectionPadding('desktop');
-    // padding:30px 5%;
+    margin-top: 20px;
+    width: 100%;
 
-    @include responsive('mobile') {
-        @include sectionPadding('mobile');
+    @include responsive("mobile") {
+      flex-direction: column;
     }
 
-    .text {
-        max-width:900px;
-        text-align:center;
+    & > div + a {
+      margin-left: 15px;
 
-        h1 {
-            line-height:40px;
-        }
-
-        p {
-            margin-top:20px;
-            line-height:30px;
-        }
+      @include responsive("mobile") {
+        margin-left: 0;
+      }
     }
-
-    .buttonWrapper {
-        display:flex;
-        justify-content: center;
-        margin-top:20px;
-        width:100%;
-
-        @include responsive('mobile') {
-            flex-direction: column;
-        }
-
-        & > div + a {
-            margin-left:15px;
-
-            @include responsive('mobile') {
-                margin-left:0;
-            }
-        }
-    }
+  }
 }
 
 .recentProjects {
-    background:getColor(lightdarkBase);
+  background: getColor(lightdarkBase);
 }
 
 .awards {
-    background:getColor(midnightToRaven);
+  background: getColor(midnightToRaven);
 }
 
 .friends {
-    background:getColor(lightBase);
+  background: getColor(lightBase);
 
-    .buttonCardContainer {
-        display:flex;
-        justify-content: center;
-        align-self: center;
+  .buttonCardContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 2em;
+    // margin: 0 !important;
+    // display: flex;
+    // justify-content: center;
+    // align-self: center;
 
-        a {
-            max-width:350px;
-        }
+    // a {
+    // //   max-width: 350px;
+    // }
 
-        a:not(:first-child):not(:last-child) {
-            margin:0px 15px;
-        }
+    // a:not(:first-child):not(:last-child) {
+    //     margin:0px 15px;
+    // }
 
-        @include responsive('mobile') {
-            flex-direction: column;
+    @include responsive("mobile") {
+      //   flex-direction: column;
+      grid-template-columns: 1fr !important;
+      grid-row-gap: 2em;
 
-            a {
-                // display:block;
-                max-width:unset;
-            }
+      a {
+        // display:block;
+        max-width: unset;
+      }
 
-            a:not(:first-child):not(:last-child) {
-                margin:15px 0px;
-            }
-        }
+      //   a:not(:first-child):not(:last-child) {
+      //     margin: 15px 0px;
+      //   }
     }
+
+    @include responsive("desktopish") {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2em;
+    }
+  }
 }
 
 .letsWork {
-    background:getColor(darkestDark);
+  background: getColor(darkestDark);
 }
 
 .cardWrapper {
-    // background:$white;
-    display:flex;
-    justify-content:space-evenly;
-    align-items: flex-start;
-    max-width:$wrapMaxWidth;
-    margin:auto;
+  // background:$white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  max-width: $wrapMaxWidth;
+  margin: auto;
 
-    @include responsive('mobile') {
-        flex-direction: column;
-        
-        & > div + div {
-            margin-top:30px;
-        }
+  @include responsive("mobile") {
+    flex-direction: column;
+
+    & > div + div {
+      margin-top: 30px;
     }
+  }
 }

@@ -75,6 +75,9 @@ query edutainmentPortfolioQuery {
               raw
               html
             }
+            problem {
+              raw
+            }
             project_link {
               url
             }

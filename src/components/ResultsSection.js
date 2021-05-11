@@ -7,7 +7,7 @@ import SectionPageLayout from '../layout/SectionPageLayout';
 const DesignSection = (data) => {
     const resultsData = data.results[0]
     return (
-        <SectionPageLayout idLabel="results" title="Results" icon="Check Mark" sectionMaxWidth>
+        <SectionPageLayout idLabel="results" title="Results & Summary" icon="Check Mark" sectionMaxWidth>
             <div className={`${portfolioStyles.columnLayout} sectionMaxWidth`}>
                 <div className={portfolioStyles.twoColumn}>
                     <RichText render={resultsData.description.raw} />

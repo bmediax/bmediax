@@ -10,6 +10,7 @@ module.exports = {
       instagram: 'bmediax',
       linkedin: 'bmediax',
       github: 'bmediax',
+      youtube: 'channel/UCPdDzUu7Mj5GCWtaJtUTQKw"'
     },
     socials: [
       {
@@ -27,6 +28,11 @@ module.exports = {
         subTitle: "Development",
         url: "https://github.com/bmediax",
       },
+      {
+        platform: "Youtube",
+        subTitle: "Video",
+        url:"https://www.youtube.com/channel/UCPdDzUu7Mj5GCWtaJtUTQKw"
+      }
     ]
   },
   plugins: [
