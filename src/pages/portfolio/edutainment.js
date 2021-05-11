@@ -54,10 +54,10 @@ query edutainmentPortfolioQuery {
             localFile {
               childImageSharp {
                 gatsbyImageData(
-                    width: 2000
-                    placeholder: DOMINANT_COLOR
-                    webpOptions: {quality: 100}
-                  )
+                  height: 550
+                  placeholder: DOMINANT_COLOR
+                  webpOptions: {quality: 100}
+                )
               }
             }
           }
@@ -100,16 +100,17 @@ query edutainmentPortfolioQuery {
           results {
             description {
               text
+              raw
             }
           }
           results_image {
             localFile {
               childImageSharp {
                 gatsbyImageData(
-                    width: 2000
-                    placeholder: DOMINANT_COLOR
-                    webpOptions: {quality: 100}
-                  )
+                  height: 550
+                  placeholder: DOMINANT_COLOR
+                  webpOptions: {quality: 100}
+                )
               }
             }
             alt
@@ -128,8 +129,8 @@ query edutainmentPortfolioQuery {
                   alt
                   localFile {
                     childImageSharp {
-                      gatsbyImageData(
-                        width: 2000
+                      gatsbyImageData (
+                        width:2000
                         placeholder: DOMINANT_COLOR
                         webpOptions: {quality: 100}
                       )
@@ -151,8 +152,8 @@ query edutainmentPortfolioQuery {
                   alt
                   localFile {
                     childImageSharp {
-                      gatsbyImageData(
-                        width: 2000
+                      gatsbyImageData (
+                        width:2000
                         placeholder: DOMINANT_COLOR
                         webpOptions: {quality: 100}
                       )

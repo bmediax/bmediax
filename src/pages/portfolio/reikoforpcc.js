@@ -31,7 +31,11 @@ query reikoforpccPortfolioQuery {
             background_image {
               localFile {
                 childImageSharp {
-                  gatsbyImageData(width: 1440)
+                  gatsbyImageData(
+                    width: 2000
+                    placeholder: DOMINANT_COLOR
+                    webpOptions: {quality: 100}
+                  )
                 }
               }
               alt
@@ -49,7 +53,11 @@ query reikoforpccPortfolioQuery {
             alt
             localFile {
               childImageSharp {
-                gatsbyImageData(width: 1440)
+                gatsbyImageData(
+                  height: 550
+                  placeholder: DOMINANT_COLOR
+                  webpOptions: {quality: 100}
+                )
               }
             }
           }
@@ -92,20 +100,71 @@ query reikoforpccPortfolioQuery {
           results {
             description {
               text
+              raw
             }
           }
           results_image {
             localFile {
               childImageSharp {
-                gatsbyImageData(width: 1440)
+                gatsbyImageData(
+                  height: 550
+                  placeholder: DOMINANT_COLOR
+                  webpOptions: {quality: 100}
+                )
               }
             }
             alt
           }
           body {
             ... on PrismicPortfolioBodyDesignColorPalette {
+              slice_type
               items {
                 colour
+              }
+            }
+            ... on PrismicPortfolioBodyDesignImageGallery {
+              slice_type
+              items {
+                image {
+                  alt
+                  localFile {
+                    childImageSharp {
+                      gatsbyImageData (
+                        width:2000
+                        placeholder: DOMINANT_COLOR
+                        webpOptions: {quality: 100}
+                      )
+                    }
+                  }
+                }
+              }
+              primary {
+                title {
+                  text
+                }
+                column
+              }
+            }
+            ... on PrismicPortfolioBodyResultsImageGallery {
+              slice_type
+              items {
+                image {
+                  alt
+                  localFile {
+                    childImageSharp {
+                      gatsbyImageData (
+                        width:2000
+                        placeholder: DOMINANT_COLOR
+                        webpOptions: {quality: 100}
+                      )
+                    }
+                  }
+                }
+              }
+              primary {
+                title {
+                  text
+                }
               }
             }
           }

@@ -54,9 +54,9 @@ query tedxpcc2018PortfolioQuery {
             localFile {
               childImageSharp {
                 gatsbyImageData(
-                  height:550
+                  height: 550
                   placeholder: DOMINANT_COLOR
-                  webpOptions: {quality: 75}
+                  webpOptions: {quality: 100}
                 )
               }
             }
@@ -100,6 +100,7 @@ query tedxpcc2018PortfolioQuery {
           results {
             description {
               text
+              raw
             }
           }
           results_image {
@@ -141,6 +142,7 @@ query tedxpcc2018PortfolioQuery {
                 title {
                   text
                 }
+                column
               }
             }
             ... on PrismicPortfolioBodyResultsImageGallery {
