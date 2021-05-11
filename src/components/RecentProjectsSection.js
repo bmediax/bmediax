@@ -25,7 +25,11 @@ const RecentProjectsSection = () => {
                             background_image {
                                 localFile {
                                     childImageSharp {
-                                        gatsbyImageData(width: 350, placeholder: DOMINANT_COLOR)
+                                        gatsbyImageData(
+                                            width: 350
+                                            placeholder: DOMINANT_COLOR
+                                            quality: 75
+                                        )
                                     }
                                 }
                             }

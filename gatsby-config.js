@@ -14,11 +14,6 @@ module.exports = {
     },
     socials: [
       {
-        platform: "Instagram",
-        subTitle: "Photography",
-        url: "https://instagram.com/bmediax",
-      },
-      {
         platform: "LinkedIn",
         subTitle: "Professional",
         url: "https://linkedin.com/in/bmediax",
@@ -29,10 +24,15 @@ module.exports = {
         url: "https://github.com/bmediax",
       },
       {
+        platform: "Instagram",
+        subTitle: "Photography",
+        url: "https://instagram.com/bmediax",
+      },
+      {
         platform: "Youtube",
         subTitle: "Video",
         url:"https://www.youtube.com/channel/UCPdDzUu7Mj5GCWtaJtUTQKw"
-      }
+      },
     ]
   },
   plugins: [

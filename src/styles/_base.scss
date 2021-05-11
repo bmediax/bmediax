@@ -142,17 +142,17 @@ p {
 }
 
 .grid-three {
-  display:grid;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
   grid-row-gap: 2em;
   grid-column-gap: 2em;
 
-  @include responsive('desktopish') {
+  @include responsive("desktopish") {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @include responsive('mobile') {
+  @include responsive("mobile") {
     grid-template-columns: 1fr;
   }
 }
@@ -182,7 +182,7 @@ p {
   @include responsive("mobile") {
     display: block !important;
     padding: 20px 0px !important;
-    text-align:center !important;
+    text-align: center !important;
 
     &:first-child {
       margin-bottom: 2%;
@@ -346,6 +346,10 @@ nav {
         font-size: 1.6rem;
         color: getColor(menuText);
       }
+
+      @include responsive("desktopish") {
+        flex: 0.6;
+      }
     }
 
     .nav-contain {
@@ -413,7 +417,7 @@ nav {
             transition: color 150ms linear;
 
             &:hover {
-              color: $azure;
+              color: getColor(azureToMist);
             }
 
             &:first-child {
@@ -422,6 +426,10 @@ nav {
 
             &:last-child {
               margin-right: 0px !important;
+            }
+
+            @include responsive("desktopish") {
+              font-size: 1.4rem;
             }
           }
         }
@@ -623,45 +631,45 @@ nav {
 }
 
 .gallery {
-  display:grid;
-  height:100%;
+  display: grid;
+  height: 100%;
   grid-gap: 1em;
 }
 
 .galleryImg {
-  @include objectCorner('default');
+  @include objectCorner("default");
 }
 .galleryImgWrap {
   transition: transform 200ms linear, box-shadow 200ms linear;
-  @include objectCorner('default');
-  
+  @include objectCorner("default");
+
   &:hover {
-    @include objectShadow('default', 'snow');
-    transform:translateY(-3px);
+    @include objectShadow("default", "snow");
+    transform: translateY(-3px);
   }
 }
 
 .gallery-masonry {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  grid-template-areas: 
+  grid-template-areas:
     "masonryOne masonryThree"
     "masonryTwo masonryThree";
-  @include responsive('mobile') {
+  @include responsive("mobile") {
     grid-template-columns: 1fr;
-    grid-template-areas: 
-    "masonryOne"
-    "masonryTwo"
-    "masonryThree";
+    grid-template-areas:
+      "masonryOne"
+      "masonryTwo"
+      "masonryThree";
   }
 }
 
 .gallery-masonry-1 {
-  grid-area:masonryOne;
+  grid-area: masonryOne;
 }
-.gallery-masonry-2{
-  grid-area:masonryTwo;
+.gallery-masonry-2 {
+  grid-area: masonryTwo;
 }
 .gallery-masonry-3 {
-  grid-area:masonryThree;
+  grid-area: masonryThree;
 }
