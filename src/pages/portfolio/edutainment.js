@@ -31,7 +31,11 @@ query edutainmentPortfolioQuery {
             background_image {
               localFile {
                 childImageSharp {
-                  gatsbyImageData(width: 1440)
+                  gatsbyImageData(
+                    width: 2000
+                    placeholder: DOMINANT_COLOR
+                    webpOptions: {quality: 100}
+                  )
                 }
               }
               alt
@@ -49,7 +53,11 @@ query edutainmentPortfolioQuery {
             alt
             localFile {
               childImageSharp {
-                gatsbyImageData(width: 1440)
+                gatsbyImageData(
+                    width: 2000
+                    placeholder: DOMINANT_COLOR
+                    webpOptions: {quality: 100}
+                  )
               }
             }
           }
@@ -97,7 +105,11 @@ query edutainmentPortfolioQuery {
           results_image {
             localFile {
               childImageSharp {
-                gatsbyImageData(width: 1440)
+                gatsbyImageData(
+                    width: 2000
+                    placeholder: DOMINANT_COLOR
+                    webpOptions: {quality: 100}
+                  )
               }
             }
             alt
@@ -116,7 +128,11 @@ query edutainmentPortfolioQuery {
                   alt
                   localFile {
                     childImageSharp {
-                      gatsbyImageData
+                      gatsbyImageData(
+                        width: 2000
+                        placeholder: DOMINANT_COLOR
+                        webpOptions: {quality: 100}
+                      )
                     }
                   }
                 }
@@ -125,6 +141,7 @@ query edutainmentPortfolioQuery {
                 title {
                   text
                 }
+                column
               }
             }
             ... on PrismicPortfolioBodyResultsImageGallery {
@@ -134,7 +151,11 @@ query edutainmentPortfolioQuery {
                   alt
                   localFile {
                     childImageSharp {
-                      gatsbyImageData
+                      gatsbyImageData(
+                        width: 2000
+                        placeholder: DOMINANT_COLOR
+                        webpOptions: {quality: 100}
+                      )
                     }
                   }
                 }

@@ -47,7 +47,11 @@ export const query = graphql`
                             background_image {
                                 localFile {
                                     childImageSharp {
-                                        gatsbyImageData(width: 350, placeholder: DOMINANT_COLOR)
+                                        gatsbyImageData(
+                                            width: 500
+                                            placeholder: DOMINANT_COLOR
+                                            webpOptions: {quality: 75}
+                                        )
                                     }
                                 }
                             }

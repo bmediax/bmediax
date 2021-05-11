@@ -7,7 +7,7 @@ import CTACardModule from './modules/CTACardModule';
 
 const RecentProjectsSection = () => {
     const data = useStaticQuery(graphql`
-    query recentProjectsQuery($filter: PrismicPortfolioFilterInput = {uid: {in: ["chicanxshop", "reikoforpcc", "edutainment"]}}) {
+    query recentProjectsQuery($filter: PrismicPortfolioFilterInput = {uid: {in: ["chicanxshop", "tedxpcc2018", "edutainment"]}}) {
         allPrismicPortfolio(filter: $filter) {
             edges {
                 node {

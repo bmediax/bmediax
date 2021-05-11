@@ -17,7 +17,7 @@ $small-mobileWidth: 360px;
 
 // Element Size Define
 $navHeight: 85px;
-$wrapMaxWidth: 1200px;
+$wrapMaxWidth: 1400px;
 $widthPadding: 5%;
 $desktopPadding: 150px;
 $desktopSmallPadding: 60px;
@@ -162,8 +162,7 @@ $colors-dark: (
     @media screen and (max-width: $small-mobileWidth) {
       @content;
     }
-  }
-  @else if $size == "mobile" {
+  } @else if $size == "mobile" {
     @media screen and (max-width: $mobileWidth) {
       @content;
     }
@@ -214,6 +213,8 @@ $colors-dark: (
     @include responsive("mobile") {
       border-radius: $mobileBorder !important;
     }
+  } @else if $type == "default-mobile" {
+    border-radius: $defaultBorder !important;
   } @else if $type == "mobile" {
     border-radius: $mobileBorder !important;
   } @else if $type == "circular" {

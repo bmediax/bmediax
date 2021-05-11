@@ -1,4 +1,5 @@
 import React from 'react';
+import { RichText } from 'prismic-reactjs'
 import ResultsSliceZone from './resultsSliceZone'
 import * as portfolioStyles from '../styles/portfolio.module.scss'
 import SectionPageLayout from '../layout/SectionPageLayout';
@@ -9,7 +10,7 @@ const DesignSection = (data) => {
         <SectionPageLayout idLabel="results" title="Results" icon="Check Mark" sectionMaxWidth>
             <div className={`${portfolioStyles.columnLayout} sectionMaxWidth`}>
                 <div className={portfolioStyles.twoColumn}>
-                    <p>{resultsData.description.text}</p>
+                    <RichText render={resultsData.description.raw} />
                 </div>
             </div>
             <ResultsSliceZone sliceZone={data.body} />

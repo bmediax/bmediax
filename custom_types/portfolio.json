@@ -15,8 +15,8 @@
             "type": "Image",
             "config": {
               "constraint": {
-                "width": 1440,
-                "height": 530
+                "width": 2000,
+                "height": 736
               },
               "thumbnails": [],
               "label": "Background Image"
@@ -139,8 +139,8 @@
       "type": "Image",
       "config": {
         "constraint": {
-          "width": 1440,
-          "height": 480
+          "width": 2000,
+          "height": 667
         },
         "thumbnails": [],
         "label": "Design Image"
@@ -173,8 +173,8 @@
       "type": "Image",
       "config": {
         "constraint": {
-          "width": 1440,
-          "height": 480
+          "width": 2000,
+          "height": 667
         },
         "thumbnails": [],
         "label": "Results Image"
@@ -256,6 +256,33 @@
                 "config": {
                   "single": "heading1, heading2, heading3, heading4, heading5, heading6",
                   "label": "title"
+                }
+              },
+              "column": {
+                "type": "Select",
+                "config": {
+                  "options": [
+                    "1 Column",
+                    "2 Column",
+                    "3 Column",
+                    "4 Column",
+                    "5 Column",
+                    "6 Column"
+                  ],
+                  "default_value": "1 Column",
+                  "label": "Column"
+                }
+              },
+              "spacing": {
+                "type": "Select",
+                "config": {
+                  "options": [
+                    "Small",
+                    "Medium",
+                    "Large"
+                  ],
+                  "default_value": "Small",
+                  "label": "Spacing"
                 }
               }
             },

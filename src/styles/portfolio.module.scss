@@ -1,7 +1,7 @@
 @use './variables.module' as *;
 
 .coverTitle {
-  height: 50vmin;
+  height: 490px;
   padding: $desktopPadding $widthPadding $desktopSmallPadding $widthPadding;
   text-align: center;
   place-items: flex-end center;
@@ -31,11 +31,11 @@
   @include responsive("mobile") {
     h1 {
       font-size: 3.3rem;
-      line-height:40px !important;
+      line-height: 40px !important;
     }
 
     h5 {
-      font-size:1.5rem;
+      font-size: 1.5rem;
     }
   }
 }
@@ -43,12 +43,28 @@
 // Overview Section
 
 .columnTop {
-  margin-top:50px;
+  margin-top: 50px;
   // margin-top:100px !important;
   // margin-bottom:100px !important;
 }
 
+.columnGallery {
+  display: grid;
+  grid-column-gap: 5em;
+  grid-row-gap: 5em;
+
+  div {
+    margin: 0 !important;
+  }
+
+  @include responsive("mobile") {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 .columnLayout {
+  display: flex;
+
   & + .columnLayout {
     margin-top: 50px;
 
@@ -56,23 +72,22 @@
       margin-bottom: 15px;
     }
   }
-  display: flex;
 
   div:not(:last-child) {
     margin-right: 30px;
   }
 
   .imageGrid {
-    @include objectCorner('default');
+    @include objectCorner("default-mobile");
   }
-  
+
   .imageGridWrap {
-    @include objectCorner('default');
+    @include objectCorner("default-mobile");
     transition: box-shadow 200ms linear, transform 250ms linear;
 
     &:hover {
-      @include objectShadow('default', 'snow');
-      transform:translateY(-3px);
+      @include objectShadow("default", "snow");
+      transform: translateY(-3px);
     }
   }
 
@@ -80,7 +95,7 @@
     flex-direction: column;
 
     div:not(:last-child) {
-      margin-right: 0;
+      margin-right: 0 !important;
       margin-bottom: 30px;
     }
   }
@@ -95,6 +110,22 @@
 
   .twoColumn_2to1 {
     flex: 2;
+
+    ul {
+      margin: 10px 0px;
+      list-style: circle;
+
+      li {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        color: var(--color-normalText);
+        font-size: 1.6rem;
+
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+      }
+    }
   }
 
   .twoColumn_1to2 {
