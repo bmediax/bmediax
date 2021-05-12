@@ -23,6 +23,7 @@ const Nav = () => {
                 github
                 instagram
                 linkedin
+                youtube
             }
             title
             }

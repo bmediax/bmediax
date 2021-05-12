@@ -31,7 +31,7 @@ module.exports = {
       {
         platform: "Youtube",
         subTitle: "Video",
-        url:"https://www.youtube.com/channel/UCPdDzUu7Mj5GCWtaJtUTQKw"
+        url:'https://www.youtube.com/channel/UCPdDzUu7Mj5GCWtaJtUTQKw'
       },
     ]
   },
