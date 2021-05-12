@@ -31,6 +31,7 @@
     ul li {
       font-size: 1.6rem;
       color: getColor(normalText);
+      line-height:20px;
 
       & + li {
         margin-top: 10px;
