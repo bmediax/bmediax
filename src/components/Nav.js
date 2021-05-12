@@ -4,7 +4,7 @@ import { Link, useStaticQuery, graphql } from 'gatsby'
 
 import { motion } from "framer-motion";
 // import { useMediaQuery } from 'react-responsive';
-import { AiOutlineInstagram } from 'react-icons/ai'
+import { AiOutlineInstagram, AiFillYoutube } from 'react-icons/ai'
 import { DiGithubAlt } from 'react-icons/di'
 import { FaLinkedinIn } from 'react-icons/fa'
 
@@ -23,6 +23,7 @@ const Nav = () => {
                 github
                 instagram
                 linkedin
+                youtube
             }
             title
             }
@@ -51,10 +52,10 @@ const Nav = () => {
         <nav className="navBar">
             <div className="nav-wrapper">
                 {/* Logo */}
-                <div className="logo-contain">
-                    <Link to="/" exact="true" style={{ textDecoration: 'none' }}>
-                        <Logo height={50} width={35} />
-                        <span className="logo-text">Bmediax</span>
+                <div className="logo-contain" >
+                    <Link to="/" exact="true" className="logoWraps" style={{ outline: "none" }}>
+                        <Logo height={60} />
+                        <span className="logo-text">mediax</span>
                     </Link>
                 </div>
 
@@ -117,6 +118,16 @@ const Nav = () => {
                         whileHover={{ scale:1.1 }}
                         whileTap={{ scale:.9 }}>
                         <FaLinkedinIn />
+                    </motion.a>
+                    <motion.a 
+                        href={`https://www.youtube.com/${siteSocial.youtube}`} 
+                        target="_blank" 
+                        rel="noreferrer"
+                        animate={{ y:0 }}
+                        initial={{ y:30 }}
+                        whileHover={{ scale:1.1 }}
+                        whileTap={{ scale:.9 }}>
+                        <AiFillYoutube />
                     </motion.a>
                 </div>
             </div>

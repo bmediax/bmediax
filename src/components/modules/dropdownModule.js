@@ -51,7 +51,6 @@ const DropdownModule = () => {
         else if (selectedAction.label === 'Open your Mail App') {
             const notify = () => toast(`Opened your Mail app`);
             window.location.href = "mailto:hello@bmediax.dev";
-            console.log("It's on the email app now")
             notify()
         }
         return null

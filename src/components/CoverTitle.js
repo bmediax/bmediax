@@ -1,33 +1,36 @@
 import React from 'react';
-import { StaticImage } from 'gatsby-plugin-image'
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { motion } from 'framer-motion'
 import * as portfolioStyles from '../styles/portfolio.module.scss'
+import { slowSlideUp } from '../data/motionVariants'
 
-const CoverTitle = () => {
+const CoverTitle = ({ coverData }) => {
+    const image = getImage(coverData.background_image.localFile)
     return (
-        <div style={{ display: "grid" }}>
-      {/* You can use a GatsbyImage component if the image is dynamic */}
-      <StaticImage
+      <div style={{ display: "grid" }}>
+      <GatsbyImage
         style={{
           gridArea: "1/1",
         }}
         // maxHeight: 600,
         layout="fullWidth"
-        aspectRatio={3 / 1}
         alt=""
-        src={
-          "https://images.unsplash.com/photo-1588200908342-23b585c03e26?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80"
-        }
-        formats={["auto", "webp", "avif"]}
+        image={image}
       />
       <div className={portfolioStyles.coverTitle} style={{
             gridArea: "1/1",
             position: "relative",
             display: "grid",
-        }}>
+            background: "rgba(0, 0, 0, 0.4)"}}>
             <div className={portfolioStyles.text}>
-                <h1>Edutainment</h1>
-                <h5>PCC Multicultural Center</h5>
-                <h5>April 2018</h5>
+                <motion.h1 variants={slowSlideUp} initial="hidden" animate="show" transition="transition">
+                    {coverData.title.text}
+                  </motion.h1>
+                <motion.div variants={slowSlideUp} transition={{ delay:.2 }} initial="hidden" animate="show"
+                  style={{ marginTop: "20px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+                  <h5>{coverData.client.text}</h5>
+                  <h5 style={{ marginLeft: "25px"}}>{coverData.date.text}</h5>
+                </motion.div>
             </div>
       </div>
     </div>

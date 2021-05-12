@@ -1,21 +1,29 @@
 import React from 'react';
+import { RichText } from 'prismic-reactjs'
 import * as portfolioStyles from '../styles/portfolio.module.scss'
-import SectionPortfolioLayout from '../layout/SectionPortfolioLayout';
+import SectionPageLayout from '../layout/SectionPageLayout';
 import SideBar from './modules/SideBar'
 
-const OverviewSection = () => {
+const OverviewSection = ({ overviewData, projectLinks }) => {
     return (
-        <SectionPortfolioLayout idLabel="overview" label="sectionMaxWidth" title="Overview" icon="Check Mark" bgLightDark align>
+        <SectionPageLayout idLabel="overview" label="sectionMaxWidth" title="Overview" icon="Check Mark" bgLightDark align>
             <div className={portfolioStyles.columnLayout}>
                 <div className={portfolioStyles.twoColumn_2to1}>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies dignissim elit, ac lobortis leo fermentum pulvinar. Fusce quis hendrerit mauris, ac elementum urna. Sed vel ex vel leo fermentum ultricies et eu dolor. Aliquam id justo id nunc sagittis tincidunt nec non ante. Vestibulum auctor eget ex cursust incidunt nec non ante. Vestibulum.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies dignissim elit, ac lobortis leo fermentum pulvinar. Fusce quis hendrerit mauris, ac elementum urna. Sed vel ex vel leo fermentum ultricies et eu dolor. Aliquam id justo id nunc sagittis tincidunt nec non ante. Vestibulum auctor eget ex cursust incidunt nec non ante. Vestibulum.</p>
+                    <RichText render={overviewData.description.raw} />
+                    <div className={portfolioStyles.textSection}>
+                        <h3>The Problem</h3>
+                        <RichText render={overviewData.problem.raw} />
+                    </div>
+                    <div className={portfolioStyles.textSection}>
+                        <h3>The Solution</h3>
+                        <RichText render={overviewData.solution.raw} />
+                    </div>
                 </div>
                 <div className={portfolioStyles.twoColumn_1to2}>
-                    <SideBar />
+                    <SideBar sidebarData={overviewData} projectLinks={projectLinks} />
                 </div>
             </div>
-        </SectionPortfolioLayout>
+        </SectionPageLayout>
     );
 };
 

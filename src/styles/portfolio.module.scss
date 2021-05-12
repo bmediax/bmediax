@@ -1,29 +1,25 @@
 @use './variables.module' as *;
 
 .coverTitle {
-  height: 40vmin;
+  height: 490px;
   padding: $desktopPadding $widthPadding $desktopSmallPadding $widthPadding;
   text-align: center;
   place-items: flex-end center;
-
-  // @include responsive('tablet') {
-  //     justify-content: center;
-  //     align-items: center;
-  //     place-items: center !important;
-  // }
 }
 
 .text {
   text-align: center;
   padding-bottom: $desktopSmallPadding;
 
-  @include responsive("tablet") {
+  @include responsive("mobile") {
     padding-bottom: 0;
   }
 
   h1 {
     color: $white;
     font-size: 6rem;
+    line-height: 80px;
+    margin-bottom: 10px;
   }
 
   h5 {
@@ -31,11 +27,52 @@
     font-size: 1.8rem;
     line-height: 25px;
   }
+
+  @include responsive("mobile") {
+    h1 {
+      font-size: 3.3rem;
+      line-height: 40px !important;
+    }
+
+    h5 {
+      font-size: 1.5rem;
+    }
+  }
 }
 
 // Overview Section
 
+.columnTop {
+  margin-top: 50px;
+  // margin-top:100px !important;
+  // margin-bottom:100px !important;
+}
+
+.columnGallery {
+  display: grid;
+  grid-column-gap: 5em;
+  grid-row-gap: 5em;
+
+  div {
+    margin: 0 !important;
+  }
+
+  @include responsive("mobile") {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 .columnLayout {
+  display: flex;
+
+  .textSection {
+    h3 {
+      margin-bottom: 10px;
+    }
+
+    margin-top: 30px;
+  }
+
   & + .columnLayout {
     margin-top: 50px;
 
@@ -44,23 +81,35 @@
     }
   }
 
-  display: flex;
-
   div:not(:last-child) {
     margin-right: 30px;
   }
 
-  @include responsive("tablet") {
+  .imageGrid {
+    @include objectCorner("default-mobile");
+  }
+
+  .imageGridWrap {
+    @include objectCorner("default-mobile");
+    transition: box-shadow 200ms linear, transform 250ms linear;
+
+    &:hover {
+      @include objectShadow("default", "snow");
+      transform: translateY(-3px);
+    }
+  }
+
+  @include responsive("mobile") {
     flex-direction: column;
 
     div:not(:last-child) {
-      margin-right: 0;
+      margin-right: 0 !important;
       margin-bottom: 30px;
     }
   }
 
   p {
-    line-height: 30px;
+    line-height: 180%;
 
     & + p {
       margin-top: 15px;
@@ -69,6 +118,24 @@
 
   .twoColumn_2to1 {
     flex: 2;
+
+    ul {
+      margin: 10px 0px;
+      list-style: disc;
+      margin-left: 20px;
+      line-height: 25px;
+
+      li {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        color: var(--color-normalText);
+        font-size: 1.6rem;
+
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+      }
+    }
   }
 
   .twoColumn_1to2 {
@@ -81,23 +148,43 @@
 }
 
 .SCA_container {
-  background: getColor(darkBase2);
-  padding: $mobilePadding $widthPadding $mobilePadding $widthPadding;
-}
-
-.SCA_wrapper {
-  max-width: $wrapMaxWidth;
+  background: getColor(lightBase);
+  // max-width: $wrapMaxWidth;
   margin: auto;
   display: flex;
   justify-content: center;
-  align-items: center;
+}
 
-  span {
+.SCA_wrapper {
+  flex: 1;
+  background: getColor(darkBase2);
+  // padding: $mobilePadding $widthPadding $mobilePadding $widthPadding;
+  max-width: $wrapMaxWidth;
+  margin: 0 $widthPadding;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  @include sectionPadding("desktop-small");
+  @include objectCorner("mobile");
+  @include objectShadow("hover", "snow");
+  transition: transform 150ms ease;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  div {
     flex: 2;
-    font-size: 3.3rem;
-    font-weight: 500;
+    font-size: 3rem;
+    font-weight: 700;
     color: $blanco;
     text-align: left;
+
+    @include responsive("mobile") {
+      text-align: center;
+      line-height: 40px;
+    }
   }
 
   button {
@@ -107,15 +194,15 @@
 
     svg {
       position: relative;
-      top: 2px;
+      top: 5px;
       font-weight: 600;
     }
   }
 
-  @include responsive("tablet") {
+  @include responsive("mobile") {
     flex-direction: column;
 
-    span,
+    div,
     button {
       flex: 1 !important;
     }
@@ -125,7 +212,7 @@
       display: block;
     }
 
-    span {
+    div {
       margin-bottom: 20px;
     }
   }

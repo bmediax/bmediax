@@ -1,22 +1,23 @@
 // Color Palette
-$zoom-blue: #00BFB2;
-$artic-white: #F4F4F9;
+$zoom-blue: #00bfb2;
+$artic-white: #f4f4f9;
 $dark-blue: #171926;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
 // Font Define
-$primaryFont: 'Montserrat', sans-serif;
+$primaryFont: "Montserrat", sans-serif;
 
 $titleSize: 2.25rem;
 $subHeader: 1.125rem;
 $paraSize: 1.375rem;
 
 $mobileWidth: 760px;
+$small-mobileWidth: 360px;
 
 // Element Size Define
 $navHeight: 85px;
-$wrapMaxWidth: 1200px;
+$wrapMaxWidth: 1400px;
 $widthPadding: 5%;
 $desktopPadding: 150px;
 $desktopSmallPadding: 60px;
@@ -26,199 +27,197 @@ $defaultBorder: 15px;
 $mobileBorder: 25px;
 
 $masOscuro: #171926;
-$oscuro: #2D3346;
-$midnight: #383E5F;
-$mist: #B8C3D0;
-$minimal: #F4F4F8;
-$blanco: #FFF;
-$azure: #3C86A5;
-$coral: #CB5E65;
+$oscuro: #2d3346;
+$midnight: #383e5f;
+$mist: #b8c3d0;
+$minimal: #f4f4f8;
+$blanco: #fff;
+$azure: #3c86a5;
+$coral: #cb5e65;
 $forest: #799884;
-$purple: #9264E9;
-$white: #FFF;
+$purple: #9264e9;
+$white: #fff;
 
 // Dark colors
-$onyx: #191C21;
-$jetBlack: #14171C;
-$raven: #262930;
-$steelBlue: #2B313C;
+$onyx: #191c21;
+// $onyx: #1e2329;
+$jetBlack: #14171c;
+// $raven: #262930;
+$raven: #1e2329;
+$steelBlue: #2b313c;
 $cloud: #687077;
 
 :export {
-    masOscuro: $masOscuro;
-    oscuro: $oscuro;
-    midnight: $midnight;
-    mist: $mist;
-    minimal: $minimal;
-    blanco: $blanco;
-    azure: $azure;
-    coral: $coral;
-    forest: $forest;
-    purple: $purple;
-    onyx: $onyx;
-    jetBlack: $jetBlack;
-    raven: $raven;
-    steelBlue: $steelBlue;
-    cloud: $cloud;
-    lightBase: getColor(lightBase);
-    lightdarkBase: getColor(lightdarkBase);
-    defaultBorder: $defaultBorder;
-    mobileWidth: $mobileWidth;
+  masOscuro: $masOscuro;
+  oscuro: $oscuro;
+  midnight: $midnight;
+  mist: $mist;
+  minimal: $minimal;
+  blanco: $blanco;
+  azure: $azure;
+  coral: $coral;
+  forest: $forest;
+  purple: $purple;
+  onyx: $onyx;
+  jetBlack: $jetBlack;
+  raven: $raven;
+  steelBlue: $steelBlue;
+  cloud: $cloud;
+  lightBase: getColor(lightBase);
+  lightdarkBase: getColor(lightdarkBase);
+  defaultBorder: $defaultBorder;
+  mobileWidth: $mobileWidth;
 }
-
 
 // Light Theme
 $colors: (
-    // base
-    lightBase: $blanco,
-    lightdarkBase: $minimal,
-    lightLightBase: $blanco,
-    lightLightBase2: $minimal,
-    lightLightBase3: $minimal,
-    darkestDark: $masOscuro,
-    darkLightBase: $mist,
-    darkBase:$oscuro,
-    darkBase2:$steelBlue,
-
-    // Btn Based
-    lightDarkText: $midnight,
-
-    // Nav Text
-    menuText: $midnight,
-
-    // Icon Based
-    icn-lightBG: $minimal,
-    icon-lightTXT: $midnight,
-
-    // Text
-    textTitle: $azure,
-    textHeader: $midnight,
-    textHeaderDarkBG: $blanco,
-    textSubTitle: $mist,
-    normalText: $midnight,
-
-    // Color Specific
-    azureToMist: $azure,
-    azureToSteelBlue: $azure,
-    whiteToAzure: $white,
-    whiteToRaven: $white,
-    midnightToRaven:$midnight,
-    mistToCloud: $mist,
+  // base
+  lightBase: $blanco,
+  lightdarkBase: $minimal,
+  lightLightBase: $blanco,
+  lightLightBase2: $minimal,
+  lightLightBase3: $minimal,
+  darkestDark: $masOscuro,
+  darkLightBase: $mist,
+  darkBase: $oscuro,
+  darkBase2: $steelBlue,
+  // Btn Based
+  lightDarkText: $midnight,
+  // Nav Text
+  menuText: $midnight,
+  // Icon Based
+  icn-lightBG: $minimal,
+  icon-lightTXT: $midnight,
+  // Text
+  textTitle: $azure,
+  textHeader: $midnight,
+  textHeaderDarkBG: $blanco,
+  textSubTitle: $mist,
+  normalText: $midnight,
+  // Color Specific
+  azureToMist: $azure,
+  azureToSteelBlue: $azure,
+  whiteToAzure: $white,
+  whiteToRaven: $white,
+  midnightToRaven: $midnight,
+  mistToCloud: $mist
 );
 
 // Dark Theme
 $colors-dark: (
-    // base
-    lightBase: $onyx,
-    lightdarkBase: $jetBlack,
-    lightLightBase: $raven,
-    lightLightBase2: $steelBlue,
-    lightLightBase3: $raven,
-    darkLightBase: $steelBlue,
-    darkestDark: $jetBlack,
-    darkBase:$oscuro,
-    darkBase2: $steelBlue,
-
-    // Btn Based
-    lightDarkText: $minimal,
-
-    // Nav Text
-    menuText: $cloud,
-
-    // Icon Based
-    icn-lightBG: $raven,
-    icon-lightTXT: $cloud,
-
-    // Text
-    textTitle: $azure,
-    textHeader: $minimal,
-    textHeaderDarkBG: $blanco,
-    textSubTitle: $cloud,
-    normalText: $cloud,
-    
-    // Color Specific
-    azureToMist: $mist,
-    azureToSteelBlue: $steelBlue,
-    whiteToAzure: $azure,
-    whiteToRaven: $raven,
-    midnightToRaven:$raven,
-    mistToCloud: $cloud,
+  // base
+  lightBase: $onyx,
+  lightdarkBase: $jetBlack,
+  lightLightBase: $raven,
+  lightLightBase2: $steelBlue,
+  lightLightBase3: $raven,
+  darkLightBase: $steelBlue,
+  darkestDark: $jetBlack,
+  darkBase: $oscuro,
+  darkBase2: $steelBlue,
+  // Btn Based
+  lightDarkText: $minimal,
+  // Nav Text
+  menuText: $cloud,
+  // Icon Based
+  icn-lightBG: $raven,
+  icon-lightTXT: $cloud,
+  // Text
+  textTitle: $azure,
+  textHeader: $minimal,
+  textHeaderDarkBG: $blanco,
+  textSubTitle: $cloud,
+  normalText: $cloud,
+  // Color Specific
+  azureToMist: $mist,
+  azureToSteelBlue: $steelBlue,
+  whiteToAzure: $azure,
+  whiteToRaven: $raven,
+  midnightToRaven: $raven,
+  mistToCloud: $cloud
 );
 
 :root {
-    @each $name, $color in $colors {
-      --color-#{$name} : #{$color};
-    }
+  @each $name, $color in $colors {
+    --color-#{$name}: #{$color};
+  }
 }
 
 // Dark Mode
-@media(prefers-color-scheme: dark) {
-    :root {
-        @each $name, $color in $colors-dark{
-        --color-#{$name} : #{$color};
-        }
+@media (prefers-color-scheme: dark) {
+  :root {
+    @each $name, $color in $colors-dark {
+      --color-#{$name}: #{$color};
     }
+  }
 }
-  
-@function getColor($color-name){
-    @return var(--color-#{$color-name});
+
+@function getColor($color-name) {
+  @return var(--color-#{$color-name});
 }
 
 // Responsive
 @mixin responsive($size) {
-    @if $size == 'tablet' {
-        @media screen and (max-width:$mobileWidth) {
-            @content;
-        }
-    } @else if $size == 'desktop' {
-        @media screen and (min-width:761px) {
-            @content;
-        }
+  @if $size == "small-mobile" {
+    @media screen and (max-width: $small-mobileWidth) {
+      @content;
     }
+  } @else if $size == "mobile" {
+    @media screen and (max-width: $mobileWidth) {
+      @content;
+    }
+  } @else if $size == "desktop" {
+    @media screen and (min-width: 761px) {
+      @content;
+    }
+  } @else if $size == "desktopish" {
+    @media screen and (max-width: 1000px) {
+      @content;
+    }
+  }
 }
 
 @mixin sectionPadding($layout) {
-    @if $layout == 'mobile' {
-        padding: $mobilePadding $widthPadding;
+  @if $layout == "mobile" {
+    padding: $mobilePadding $widthPadding;
+  } @else if $layout == "desktop" {
+    padding: $desktopPadding $widthPadding;
+  } @else if $layout == "desktop-small" {
+    padding: 60px $widthPadding;
+
+    @include responsive("mobile") {
+      padding: 30px $widthPadding;
     }
-    @else if $layout == 'desktop' {
-        padding: $desktopPadding $widthPadding;
-    }
+  }
 }
 
 // Object Definitions
 @mixin objectShadow($state, $color) {
-    @if $color == 'snow' {
-        @if $state == 'default' {
-            box-shadow:0px 10px 30px rgba(0, 0, 0, .04) !important;
-        } @else if $state == 'hover' {
-            box-shadow:0px 10px 30px rgba($midnight, .2) !important;
-        }
+  @if $color == "snow" {
+    @if $state == "default" {
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.04) !important;
+    } @else if $state == "hover" {
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1) !important;
     }
-
-    @else if $state == 'default' and $color == 'azure' {
-        box-shadow:0px 5px 20px rgba($azure, .3);
-    }
-
-    @else if $state == 'default' and $color == 'midnight' {
-        box-shadow:0px 10px 20px rgba($midnight, .2) !important;
-    }
+  } @else if $state == "default" and $color == "azure" {
+    box-shadow: 0px 5px 20px rgba($azure, 0.3);
+  } @else if $state == "default" and $color == "midnight" {
+    box-shadow: 0px 10px 20px rgba($midnight, 0.2) !important;
+  }
 }
 
 @mixin objectCorner($type) {
-    @if $type == 'default' {
-        border-radius:$defaultBorder !important;
+  @if $type == "default" {
+    border-radius: $defaultBorder !important;
 
-        @include responsive('tablet') {
-            border-radius:$mobileBorder !important;
-        }
+    @include responsive("mobile") {
+      border-radius: $mobileBorder !important;
     }
-
-    @else if $type == 'mobile' {
-        border-radius:$mobileBorder !important;
-    }
-
-    @else if $type == 'circular' {
-        border-radius:50%;
-    }
+  } @else if $type == "default-mobile" {
+    border-radius: $defaultBorder !important;
+  } @else if $type == "mobile" {
+    border-radius: $mobileBorder !important;
+  } @else if $type == "circular" {
+    border-radius: 50%;
+  }
 }

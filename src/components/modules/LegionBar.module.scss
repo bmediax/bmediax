@@ -1,54 +1,65 @@
 @use '../../styles/variables.module' as *;
 
 .container {
-    width:500px;
-    position:sticky !important;
-    top:$navHeight + 10px !important;
-    right:0;
-    left:0;
-    margin:-30px auto 0px auto;
-    z-index:1;
+  width: 500px;
+  position: relative;
+  // position:sticky !important;
+  // top:$navHeight + 10px !important;
+  // right:0;
+  // left:0;
+  margin: -30px auto 0px auto;
+  z-index: 1;
 
-    @include responsive('tablet') {
-        width:95%;   
-    }
+  @include responsive("mobile") {
+    width: 95%;
+  }
 }
 
 .wrapper {
-    background:getColor(lightLightBase);
-    list-style: none;
-    text-align: center;
-    @include objectCorner('default');
-    @include objectShadow('default', 'snow');
+  background: getColor(lightLightBase);
+  list-style: none;
+  text-align: center;
+  @include objectCorner("default");
+  @include objectShadow("default", "snow");
 
-    li {
-        display:inline-block;
-        padding:0px 20px;
+  li {
+    display: inline-block;
+    padding: 0px 20px;
 
-        a {
-            display:block;
-            text-decoration: none;
-            font-size:1.6rem;
-            padding:20px 0px 15px 0;
-            color:getColor(menuText);
-            font-weight:500;
-            border-bottom:5px solid transparent;
-            transition:color 200ms linear, border-bottom 300ms linear;
+    a {
+      display: block;
+      text-decoration: none;
+      font-size: 1.6rem;
+      padding: 20px 0px 15px 0;
+      color: getColor(menuText);
+      font-weight: 500;
+      border-bottom: 5px solid transparent;
+      transition: color 200ms linear, border-bottom 300ms linear;
 
-            &:hover {
-                color:getColor(azureToMist);
-                border-bottom: 5px solid getColor(azureToMist);
-            }
-        }
+      &:hover {
+        color: getColor(azureToMist);
+        border-bottom: 5px solid getColor(azureToMist);
+      }
     }
+  }
 
+  li:not(:first-child):not(:last-child) {
+    margin: 0px 10px;
+  }
+
+  @include responsive("mobile") {
     li:not(:first-child):not(:last-child) {
-        margin:0px 50px;
+      margin: 0px 5px;
     }
+  }
 
-    @include responsive('tablet') {
-        li:not(:first-child):not(:last-child) { 
-            margin:0px 10px;
-        }
+  @include responsive("small-mobile") {
+    li {
+      padding: 0px 10px;
+
+      a {
+        font-size: 1.3rem !important;
+      }
     }
+  }
 }

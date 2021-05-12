@@ -1,0 +1,61 @@
+{
+  "Main" : {
+    "cover" : {
+      "type" : "Group",
+      "config" : {
+        "repeat" : false,
+        "fields" : {
+          "title" : {
+            "type" : "StructuredText",
+            "config" : {
+              "single" : "heading1",
+              "label" : "Title",
+              "placeholder" : "Hello there, my name is Brian!"
+            }
+          },
+          "description" : {
+            "type" : "StructuredText",
+            "config" : {
+              "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+              "label" : "Description",
+              "labels" : [ "azure" ]
+            }
+          }
+        },
+        "label" : "cover"
+      }
+    },
+    "body" : {
+      "type" : "Slices",
+      "fieldset" : "Slice zone",
+      "config" : {
+        "labels" : {
+          "recent_projects" : [ {
+            "name" : "recent_projects",
+            "display" : "Recent Projects"
+          } ]
+        },
+        "choices" : {
+          "recent_projects" : {
+            "type" : "Slice",
+            "fieldset" : "Recent Projects",
+            "description" : "Recent Projects Section",
+            "icon" : "add_to_photos",
+            "display" : "grid",
+            "non-repeat" : { },
+            "repeat" : {
+              "recent_project_item" : {
+                "type" : "Link",
+                "config" : {
+                  "select" : "document",
+                  "customtypes" : [ "portfolio" ],
+                  "label" : "Recent Project Item"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
