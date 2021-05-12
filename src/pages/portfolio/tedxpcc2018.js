@@ -34,7 +34,7 @@ query tedxpcc2018PortfolioQuery {
                   gatsbyImageData(
                     width: 2000
                     placeholder: DOMINANT_COLOR
-                    webpOptions: {quality: 100}
+                    quality: 100
                   )
                 }
               }
@@ -56,7 +56,7 @@ query tedxpcc2018PortfolioQuery {
                 gatsbyImageData(
                   height: 550
                   placeholder: DOMINANT_COLOR
-                  webpOptions: {quality: 100}
+                  quality: 100
                 )
               }
             }
@@ -115,7 +115,7 @@ query tedxpcc2018PortfolioQuery {
                 gatsbyImageData(
                   height: 550
                   placeholder: DOMINANT_COLOR
-                  webpOptions: {quality: 100}
+                  quality: 100
                 )
               }
             }
@@ -138,7 +138,7 @@ query tedxpcc2018PortfolioQuery {
                       gatsbyImageData (
                         width:2000
                         placeholder: DOMINANT_COLOR
-                        webpOptions: {quality: 100}
+                        quality: 100
                       )
                     }
                   }
@@ -178,7 +178,7 @@ query tedxpcc2018PortfolioQuery {
                       gatsbyImageData (
                         width:2000
                         placeholder: DOMINANT_COLOR
-                        webpOptions: {quality: 100}
+                        quality: 100
                       )
                     }
                   }
