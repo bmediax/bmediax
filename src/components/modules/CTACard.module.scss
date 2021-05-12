@@ -12,7 +12,7 @@
 .CTACard {
   flex: 1;
   background: getColor(lightBase);
-  max-width: 400px;
+  // max-width: 400px;
   min-height: 200px;
   @include objectCorner("default");
   transition: box-shadow 200ms linear, transform 200ms linear, background 200ms linear;
