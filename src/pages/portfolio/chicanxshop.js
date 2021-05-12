@@ -78,6 +78,9 @@ query chicanxshopPortfolioQuery {
             problem {
               raw
             }
+            solution {
+              raw
+            }
             project_link {
               url
             }

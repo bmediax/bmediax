@@ -12,11 +12,17 @@ const SideBar = ({ sidebarData, projectLinks }) => {
                 {/* {RichText.asText(sidebarData.role.raw)} */}
                 {/* {sidebarData.role.html} */}
             </div>
+
             <div className={SideBarStyles.section}>
                 {/* Work */}
                 <h3>Work</h3>
                 <RichText render={sidebarData.work.raw} />
             </div>
+
+            {/* <div className={SideBarStyles.section}>
+                <h3>Tools</h3>
+                <RichText render={sidebarData.tools.raw} />
+            </div> */}
 
             <div className={SideBarStyles.section}>
                 {/* Deliverable */}

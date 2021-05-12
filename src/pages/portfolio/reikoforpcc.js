@@ -6,7 +6,7 @@ const reikoforpcc = ({ data }) => {
     if (!data) return null
     const document = data.allPrismicPortfolio.edges[0].node.data
     return (
-        <PortfolioTemplate data={document} />
+        <PortfolioTemplate data={document} pageTitle="Reiko for PCC" />
     );
 };
 
@@ -34,7 +34,7 @@ query reikoforpccPortfolioQuery {
                   gatsbyImageData(
                     width: 2000
                     placeholder: DOMINANT_COLOR
-                    webpOptions: {quality: 100}
+                    quality: 100
                   )
                 }
               }
@@ -56,7 +56,7 @@ query reikoforpccPortfolioQuery {
                 gatsbyImageData(
                   height: 550
                   placeholder: DOMINANT_COLOR
-                  webpOptions: {quality: 100}
+                  quality: 100
                 )
               }
             }
@@ -76,6 +76,9 @@ query reikoforpccPortfolioQuery {
               html
             }
             problem {
+              raw
+            }
+            solution {
               raw
             }
             project_link {
@@ -112,7 +115,7 @@ query reikoforpccPortfolioQuery {
                 gatsbyImageData(
                   height: 550
                   placeholder: DOMINANT_COLOR
-                  webpOptions: {quality: 100}
+                  quality: 100
                 )
               }
             }

@@ -80,6 +80,9 @@ query edutainmentPortfolioQuery {
             problem {
               raw
             }
+            solution {
+              raw
+            }
             project_link {
               url
             }

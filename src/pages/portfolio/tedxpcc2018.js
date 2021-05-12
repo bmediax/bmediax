@@ -78,6 +78,9 @@ query tedxpcc2018PortfolioQuery {
             problem {
               raw
             }
+            solution {
+              raw
+            }
             project_link {
               url
             }

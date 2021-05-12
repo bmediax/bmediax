@@ -6,15 +6,25 @@ import SectionPageLayout from '../layout/SectionPageLayout';
 
 const DesignSection = (data) => {
     const designData = data.design[0]
+
+    const isQuote = (quoteMessage) => {
+        if (quoteMessage.quote.text === undefined || quoteMessage.quote.text === "") {
+            return null
+        } else {
+            return (
+                <div className={portfolioStyles.twoColumn}>
+                    <blockquote>{designData.quote.text}</blockquote>
+                </div>
+            )
+        }
+    }
     return (
         <SectionPageLayout idLabel="design" title="Design" icon="Paint" sectionMaxWidth align>
             <div className={`${portfolioStyles.columnLayout} sectionMaxWidth`}>
                 <div className={portfolioStyles.twoColumn}>
                     <p>{designData.description.text}</p>
                 </div>
-                <div className={portfolioStyles.twoColumn}>
-                    <blockquote>“{designData.quote.text}”</blockquote>
-                </div>
+                {isQuote(designData)}
             </div>
             
             {/* <div className={`${portfolioStyles.columnLayout} sectionMaxWidth`}> */}

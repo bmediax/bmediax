@@ -9,7 +9,7 @@ const NextProjectSection = ({ nextProjectData }) => {
             <div className={portfolioStyles.SCA_wrapper}>
                 <div>View my Next Project!</div>
                 <Link to={`/portfolio/${nextProjectData.uid}`} 
-                    className="btn outline outline-active fullwidth-btn">
+                    className="btn outline outline-active fullwidth-btn" style={{ width: "100%" }}>
                         Next Project: <span style={{ textTransform: 'capitalize' }}>{nextProjectData.uid}</span> <BsArrowRight />
                 </Link>
             </div>

@@ -14,6 +14,10 @@ const OverviewSection = ({ overviewData, projectLinks }) => {
                         <h3>The Problem</h3>
                         <RichText render={overviewData.problem.raw} />
                     </div>
+                    <div className={portfolioStyles.textSection}>
+                        <h3>The Solution</h3>
+                        <RichText render={overviewData.solution.raw} />
+                    </div>
                 </div>
                 <div className={portfolioStyles.twoColumn_1to2}>
                     <SideBar sidebarData={overviewData} projectLinks={projectLinks} />
