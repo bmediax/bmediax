@@ -1,40 +1,42 @@
 import React from 'react';
+import DesignSliceZone from '../components/designSliceZone'
 import * as portfolioStyles from '../styles/portfolio.module.scss'
-import SectionPortfolioLayout from '../layout/SectionPortfolioLayout';
-import ColorView from './modules/ColorView';
+import SectionPageLayout from '../layout/SectionPageLayout';
+// import ColorView from './modules/ColorView';
 
-const DesignSection = () => {
-    const colorsPalette = [
-        '#383E5F',
-        '#3C86A5',
-        '#F4F4F8',
-        '#2D3346',
-        '#CB5E65',
-        '#B8C3D0'
-    ]
+const DesignSection = (data) => {
+    const designData = data.design[0]
 
+    const isQuote = (quoteMessage) => {
+        if (quoteMessage.quote.text === undefined || quoteMessage.quote.text === "") {
+            return null
+        } else {
+            return (
+                <div className={portfolioStyles.twoColumn}>
+                    <blockquote>{designData.quote.text}</blockquote>
+                </div>
+            )
+        }
+    }
     return (
-        <SectionPortfolioLayout idLabel="design" title="Design" icon="Paint" sectionMaxWidth align>
+        <SectionPageLayout idLabel="design" title="Design" icon="Paint" sectionMaxWidth align>
             <div className={`${portfolioStyles.columnLayout} sectionMaxWidth`}>
                 <div className={portfolioStyles.twoColumn}>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies dignissim elit, ac lobortis leo fermentum pulvinar. Fusce quis hendrerit mauris, ac elementum urna. Sed vel ex.</p>
+                    <p>{designData.description.text}</p>
                 </div>
-                <div className={portfolioStyles.twoColumn}>
-                    <blockquote>“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor vitae.”</blockquote>
-                </div>
+                {isQuote(designData)}
             </div>
-            <div className={`${portfolioStyles.columnLayout} sectionMaxWidth`}>
+            
+            {/* <div className={`${portfolioStyles.columnLayout} sectionMaxWidth`}> */}
+                {/* {isColourRender(data)} */}
                 {/* <div className={portfolioStyles.twoColumn}>
                     <h3>Typography</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies dignissim elit, ac lobortis leo fermentum pulvinar. Fusce quis hendrerit mauris, ac elementum urna. Sed vel ex.</p>
                 </div> */}
-                <div className={portfolioStyles.twoColumn}>
-                    <h3>Color Palette</h3>
-                    <ColorView 
-                        colors={colorsPalette} />
-                </div>
-            </div>
-        </SectionPortfolioLayout>
+            {/* </div> */}
+            {/* Slice Zone */}
+            <DesignSliceZone sliceZone={data.body} />
+        </SectionPageLayout>
     );
 };
 

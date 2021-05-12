@@ -1,20 +1,25 @@
 @use './variables.module' as *;
 
 .logo {
-    &:hover {
-        .cls1 { fill: $azure; }
-        .cls2 { fill: $azure; }
+  &:hover {
+    .cls1 {
+      fill: $azure;
     }
+    .cls2 {
+      fill: $azure;
+    }
+  }
 }
 
-.cls1, .cls2 {
-    transition: fill 250ms ease-in-out;
+.cls1,
+.cls2 {
+  transition: fill 250ms ease-in-out;
 }
 
 .cls1 {
-    fill: getColor(icon-lightTXT);
+  fill: getColor(icon-lightTXT);
 }
 
 .cls2 {
-    fill:  #FFF;
+  fill: #fff;
 }

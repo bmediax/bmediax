@@ -1,13 +1,17 @@
 import React from 'react';
+import { Link } from 'gatsby'
 import { BsArrowRight } from 'react-icons/bs'
 import * as portfolioStyles from '../styles/portfolio.module.scss'
 
-const NextProjectSection = () => {
+const NextProjectSection = ({ nextProjectData }) => {
     return (
         <div className={portfolioStyles.SCA_container}>
             <div className={portfolioStyles.SCA_wrapper}>
-                <span>Thanks for Watching!</span>
-                <a href="https://google.com" className="btn outline outline-active fullwidth-btn">View My Next Project <BsArrowRight /></a>
+                <div>View my Next Project!</div>
+                <Link to={`/portfolio/${nextProjectData.uid}`} 
+                    className="btn outline outline-active fullwidth-btn" style={{ width: "100%" }}>
+                        Next Project: <span style={{ textTransform: 'capitalize' }}>{nextProjectData.uid}</span> <BsArrowRight />
+                </Link>
             </div>
         </div>
     );

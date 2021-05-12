@@ -10,22 +10,28 @@ module.exports = {
       instagram: 'bmediax',
       linkedin: 'bmediax',
       github: 'bmediax',
+      youtube: 'channel/UCPdDzUu7Mj5GCWtaJtUTQKw"'
     },
     socials: [
       {
-        platform: "Instagram",
-        subTitle: "Photography",
-        url: "https://instagram.com/bmediax",
-      },
-      {
         platform: "LinkedIn",
-        subTitle: "Experience",
+        subTitle: "Professional",
         url: "https://linkedin.com/in/bmediax",
       },
       {
         platform: "Github",
         subTitle: "Development",
         url: "https://github.com/bmediax",
+      },
+      {
+        platform: "Instagram",
+        subTitle: "Photography",
+        url: "https://instagram.com/bmediax",
+      },
+      {
+        platform: "Youtube",
+        subTitle: "Video",
+        url:'https://www.youtube.com/channel/UCPdDzUu7Mj5GCWtaJtUTQKw'
       },
     ]
   },
@@ -37,13 +43,43 @@ module.exports = {
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     name: "images",
-    //     path: "./src/images/",
-    //   },
-    //   __key: "images",
-    // },
-  ],
+    {
+      resolve: 'gatsby-source-prismic',
+      options: {
+        repositoryName: 'bmediax',
+        shouldDownloadImage: () => true,
+        schemas: {
+           homepage: require("./custom_types/homepage.json"),
+           portfolio: require("./custom_types/portfolio.json"),
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Bmediax`,
+        short_name: `Bmediax`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#3c86a5`,
+        display: `standalone`,
+        icon: `src/images/icon.png`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -75,
+        duration: 1500
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: "./src/images/",
+      },
+      __key: "images",
+    },
+  ]
 };

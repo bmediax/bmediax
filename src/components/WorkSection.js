@@ -9,7 +9,7 @@ const WorkSection = () => {
             <div style={{ maxWidth: "250px", textAlign: "center", margin: "auto" }}>
                 <DropdownModule />
             </div>
-            <p style={{ textAlign: "center", paddingTop: "50px" }}>© 2021 All rights reserved - Designed and Coded by Brian Moreno</p>
+            <p style={{ lineHeight: "25px", textAlign: "center", paddingTop: "50px" }}>© 2021 All rights reserved - Designed and Coded by Brian Moreno</p>
         </SectionLayout>
     );
 };

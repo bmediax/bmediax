@@ -1,70 +1,80 @@
 @use '../../styles/variables.module' as *;
 
+.isLight {
+  @include objectShadow("default", "snow");
+  transition:box-shadow 200ms linear;
+  
+  &:hover {
+    @include objectShadow("hover", "snow");
+  }
+}
+
 .CTACard {
-    flex:1;
-    background:getColor(lightBase);
-    max-width:400px;
-    min-height:200px;
-    @include objectCorner('default');
-    transition: box-shadow 200ms linear;
+  flex: 1;
+  background: getColor(lightBase);
+  max-width: 400px;
+  min-height: 200px;
+  @include objectCorner("default");
+  transition: box-shadow 200ms linear, transform 200ms linear, background 200ms linear;
 
-    .coverImage {
-        border-top-right-radius: $defaultBorder;
-        border-top-left-radius: $defaultBorder;
-    }
+  .coverImage {
+    border-top-right-radius: $defaultBorder;
+    border-top-left-radius: $defaultBorder;
+  }
 
-    &:hover {
-        @include objectShadow('default', 'snow');
-        background:getColor(whiteToRaven);
-    }
+  &:hover {
+    @include objectShadow("default", "snow");
+    background: getColor(whiteToRaven);
+    transform: translateY(-3px);
+  }
+
+  &:nth-child(2) {
+    margin-right: 2%;
+    margin-left: 2%;
+  }
+
+  @include responsive("mobile") {
+    max-width: 100%;
+    @include objectCorner("mobile");
 
     &:nth-child(2) {
-        margin-right:2%;
-        margin-left:2%;
+      margin-right: unset;
+      margin-left: unset;
     }
 
-    @include responsive('tablet') {
-        max-width:100%;
-        @include objectCorner('mobile');
-
-        &:nth-child(2) {
-            margin-right:unset;
-            margin-left:unset;
-        }
-        
-        .coverImage {
-            border-top-right-radius: $mobileBorder;
-            border-top-left-radius: $mobileBorder;
-        }
+    .coverImage {
+      border-top-right-radius: $mobileBorder;
+      border-top-left-radius: $mobileBorder;
     }
+  }
 }
 
 .text {
-    padding:20px 15px;
+  padding: 20px 20px;
 
-    .headerText {
-        display:block;
-        margin-bottom:5px;
+  .headerText {
+    display: block;
+    margin-bottom: 5px;
 
-        h5 {
-            line-height:15px;
-            margin-bottom:5px;
-        }
-    
-        h3 {
-            line-height:30px;
-        }
+    h5 {
+      line-height: 15px;
+      margin-bottom: 5px;
     }
 
-    p {
-        line-height:25px;
+    h3 {
+      line-height: 30px;
     }
+  }
 
-    a {
-        margin-top:20px;
-        display:block;
-        text-align: center;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
+  p {
+    line-height: 25px;
+  }
+
+  a {
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
 }

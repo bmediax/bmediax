@@ -1,35 +1,43 @@
 import React from 'react';
+import { RichText } from 'prismic-reactjs'
 import * as SideBarStyles from './SideBar.module.scss'
 
-const SideBar = () => {
+const SideBar = ({ sidebarData, projectLinks }) => {
     return (
         <div className={SideBarStyles.wrapper}>
             {/* Role */}
             <div className={SideBarStyles.section}>
                 <h3>Role</h3>
-                <ul>
-                    <li>Web Designer</li>
-                </ul>
+                <RichText render={sidebarData.role.raw} />
+                {/* {RichText.asText(sidebarData.role.raw)} */}
+                {/* {sidebarData.role.html} */}
             </div>
+
             <div className={SideBarStyles.section}>
                 {/* Work */}
                 <h3>Work</h3>
-                <ul>
-                    <li>Web Development</li>
-                </ul>
+                <RichText render={sidebarData.work.raw} />
             </div>
+
+            {/* <div className={SideBarStyles.section}>
+                <h3>Tools</h3>
+                <RichText render={sidebarData.tools.raw} />
+            </div> */}
 
             <div className={SideBarStyles.section}>
                 {/* Deliverable */}
                 <h3>Deliverables</h3>
-                <ul>
-                    <li>Gatsby SPA Website</li>
-                    <li>Headless CMS Integration</li>
-                </ul>
+                <RichText render={sidebarData.deliverables.raw} />
             </div>
 
             <div className={SideBarStyles.section}>
-                <a href="https://google.com" className="btn primary fullwidth"> View Project </a>
+                {projectLinks.map((link, index) => (
+                    <a href={link.link.url} 
+                        rel="noreferrer" 
+                        target="_blank" 
+                        key={index} 
+                        className="btn primary fullwidth"> {link.label.text} </a>
+                ))}
             </div>
         </div>
     );
