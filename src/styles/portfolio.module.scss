@@ -1,8 +1,8 @@
 @use './variables.module' as *;
 
 .coverTitle {
-  height: 490px;
-  padding: $desktopPadding $widthPadding $desktopSmallPadding $widthPadding;
+  height: 80vh;
+  // padding: $desktopPadding $widthPadding $desktopSmallPadding $widthPadding;
   text-align: center;
   place-items: flex-end center;
 }
@@ -12,7 +12,7 @@
   padding-bottom: $desktopSmallPadding;
 
   @include responsive("mobile") {
-    padding-bottom: 0;
+    padding-bottom: 15%;
   }
 
   h1 {
