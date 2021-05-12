@@ -2,9 +2,9 @@ import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image'
 import { HiOutlineDocumentDownload } from 'react-icons/hi'
 import * as variables from '../styles/_variables.module.scss'
+import SectionPageLayout from '../layout/SectionPageLayout';
 import Layout from '../layout/index.js'
 import bmediaxResume from '../assets/files/Bmediax_Resume.pdf'
-import SectionPageLayout from '../layout/SectionPageLayout';
 
 const meetBrian = () => {
     return (

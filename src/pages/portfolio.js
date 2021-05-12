@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby'
 import Layout from '../layout'
-import SectionPageLayout from '../layout/SectionPageLayout';
+import SectionPageLayout from "../layout/SectionPageLayout";
 import CTACardModule from '../components/modules/CTACardModule';
 
 const portfolio = ({ data }) => {
