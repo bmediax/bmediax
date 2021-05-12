@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as CTACardStyles from './CTACard.module.scss'
-// import * as variables from '../../styles/_variables.module.scss'
 
 const CTACardModule = ({ title, raw, cover, url, work, shortDescr, isLight }) => {
     const image = getImage(cover ? cover : "https://images.unsplash.com/photo-1543872981-b148af6c5f6d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80")

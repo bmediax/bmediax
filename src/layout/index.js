@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import Nav from '../components/Nav'
 import Seo from '../components/Seo'
 import FriendsSection from '../components/FriendsSection.js'
@@ -12,7 +13,15 @@ const Layout = ({children, title}) => {
         <div id={title}>
             <Seo title={title} />
             <Nav />
-            {children}
+            <AnimatePresence>
+                <motion.div
+                    initial={{ opacity:0, y:-100 }}
+                    animate={{ opacity: 1, y:0 }}
+                    exit={{ opacity:0, y:100 }}
+                    transition={{ duration:1 }}>
+                    {children}
+                </motion.div>
+            </AnimatePresence>
             <FriendsSection />
             <WorkSection />
         </div>

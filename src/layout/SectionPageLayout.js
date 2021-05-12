@@ -1,4 +1,6 @@
 import React from 'react';
+import { motion } from 'framer-motion'
+import { titleTextFadeIn } from '../data/motionVariants'
 // import * as portfolioStyles from '../styles/portfolio.module.scss'
 import { CheckMarkIcon, PaintIcon } from '../components/Icons'
 
@@ -14,9 +16,9 @@ const SectionPageLayout = ({ title, isDark, bgLightDark, icon, children, label, 
     return (
         <section id={idLabel} className={label} style={{ backgroundColor: bgColor }}>
             <div className={`section-title ${isDark ? 'darkTitle' : '' } sectionMaxWidth ${sectionMaxWidth ? 'sectionMaxWidth' : ''}`}>
-                <h2 style={{ textAlign :  align ? 'left' : 'center'}}>
+                <motion.h2 initial="hidden" animate="show" exit="exit" variants={titleTextFadeIn} style={{ textAlign :  align ? 'left' : 'center'}}>
                     {title} <span className={`sectionPortfolioIcon ${bgLightDark ? 'lightdark' : ''}`}>{checkIcon(icon)}</span> 
-                </h2>
+                </motion.h2>
             </div>
             {children}
         </section>
