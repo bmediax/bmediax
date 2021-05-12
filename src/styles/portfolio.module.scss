@@ -1,29 +1,35 @@
 @use './variables.module' as *;
 
 .coverTitle {
-  height: 490px;
-  padding: $desktopPadding $widthPadding $desktopSmallPadding $widthPadding;
+  height: 80vh;
+  // padding: $desktopPadding $widthPadding $desktopSmallPadding $widthPadding;
   text-align: center;
   place-items: flex-end center;
 }
 
 .text {
+  background:getColor(lightBase);
+  // display:flex;
+  // align-items: center;
+  // justify-content: center;
   text-align: center;
-  padding-bottom: $desktopSmallPadding;
+  // height:60vh;
+  // padding:0;
+  padding: $desktopPadding 0;
 
   @include responsive("mobile") {
-    padding-bottom: 0;
+    padding-bottom: 15%;
   }
 
   h1 {
-    color: $white;
+    color: getColor(lightDarkText);
     font-size: 6rem;
     line-height: 80px;
     margin-bottom: 10px;
   }
 
   h5 {
-    color: $minimal;
+    color: getColor(menuText);
     font-size: 1.8rem;
     line-height: 25px;
   }

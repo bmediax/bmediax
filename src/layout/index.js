@@ -18,7 +18,7 @@ const Layout = ({children, title}) => {
                     initial={{ opacity:0, y:-100 }}
                     animate={{ opacity: 1, y:0 }}
                     exit={{ opacity:0, y:100 }}
-                    transition={{ duration:1 }}>
+                    transition={{ duration:.6 }}>
                     {children}
                 </motion.div>
             </AnimatePresence>

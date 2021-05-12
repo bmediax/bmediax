@@ -2,19 +2,19 @@ import React from 'react';
 import { graphql } from 'gatsby'
 import PortfolioTemplate from '../../layout/PortfolioTemplate'
 
-const tedxpcc2018 = ({ data }) => {
+const chicanoalliance = ({ data }) => {
     if (!data) return null
     const document = data.allPrismicPortfolio.edges[0].node.data
     return (
-        <PortfolioTemplate data={document} pageTitle="TEDxPCC 2018" />
+        <PortfolioTemplate data={document} pageTitle="Chicanx Shop" />
     );
 };
 
-export default tedxpcc2018;
+export default chicanoalliance;
 
 export const query = graphql`
-query tedxpcc2018PortfolioQuery {
-  allPrismicPortfolio(filter: {uid: {eq: "tedxpcc2018"}}) {
+query chicanoalliancePortfolioQuery {
+  allPrismicPortfolio(filter: {uid: {eq: "chicanoalliance"}}) {
     edges {
       node {
         data {
@@ -34,7 +34,7 @@ query tedxpcc2018PortfolioQuery {
                   gatsbyImageData(
                     width: 2000
                     placeholder: DOMINANT_COLOR
-                    quality: 100
+                    webpOptions: {quality: 100}
                   )
                 }
               }
@@ -56,7 +56,7 @@ query tedxpcc2018PortfolioQuery {
                 gatsbyImageData(
                   height: 550
                   placeholder: DOMINANT_COLOR
-                  quality: 100
+                  webpOptions: {quality: 100}
                 )
               }
             }
@@ -115,7 +115,7 @@ query tedxpcc2018PortfolioQuery {
                 gatsbyImageData(
                   height: 550
                   placeholder: DOMINANT_COLOR
-                  quality: 100
+                  webpOptions: {quality: 100}
                 )
               }
             }
@@ -138,7 +138,7 @@ query tedxpcc2018PortfolioQuery {
                       gatsbyImageData (
                         width:2000
                         placeholder: DOMINANT_COLOR
-                        quality: 100
+                        webpOptions: {quality: 100}
                       )
                     }
                   }
@@ -178,7 +178,7 @@ query tedxpcc2018PortfolioQuery {
                       gatsbyImageData (
                         width:2000
                         placeholder: DOMINANT_COLOR
-                        quality: 100
+                        webpOptions: {quality: 100}
                       )
                     }
                   }

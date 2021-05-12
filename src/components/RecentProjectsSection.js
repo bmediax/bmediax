@@ -26,9 +26,9 @@ const RecentProjectsSection = () => {
                                 localFile {
                                     childImageSharp {
                                         gatsbyImageData(
-                                            width: 350
+                                            width: 1000
                                             placeholder: DOMINANT_COLOR
-                                            quality: 75
+                                            quality: 100
                                         )
                                     }
                                 }
