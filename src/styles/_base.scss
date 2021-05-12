@@ -16,6 +16,18 @@ blockquote {
   font-size: 3rem;
   line-height: 150%;
   color: getColor(normalText);
+
+  &::before {
+    content: '"';
+    height:auto;
+    width:Auto;
+  }
+
+  &::after {
+    content :'"';
+    height:auto;
+    width:auto;
+  }
 }
 
 .azure {

@@ -10,7 +10,6 @@ module.exports = {
       instagram: 'bmediax',
       linkedin: 'bmediax',
       github: 'bmediax',
-      youtube: 'channel/UCPdDzUu7Mj5GCWtaJtUTQKw"'
     },
     socials: [
       {

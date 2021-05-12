@@ -168,7 +168,7 @@
           "description": {
             "type": "StructuredText",
             "config": {
-              "multi": "paragraph, strong, em",
+              "multi": "paragraph, strong, em, list-item, o-list-item",
               "label": "Description"
             }
           },
