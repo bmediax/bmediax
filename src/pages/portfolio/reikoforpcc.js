@@ -138,7 +138,7 @@ query reikoforpccPortfolioQuery {
                       gatsbyImageData (
                         width:2000
                         placeholder: DOMINANT_COLOR
-                        webpOptions: {quality: 100}
+                        quality: 100
                       )
                     }
                   }
@@ -178,7 +178,7 @@ query reikoforpccPortfolioQuery {
                       gatsbyImageData (
                         width:2000
                         placeholder: DOMINANT_COLOR
-                        webpOptions: {quality: 100}
+                        quality: 100
                       )
                     }
                   }

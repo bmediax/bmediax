@@ -12,7 +12,7 @@ import DropdownModule from './modules/dropdownModule';
 const Cover = ({ coverData }) => {
     return (
         <div className={homepageStyles.cover}>
-            <StaticImage src="../images/profile/headshot.png" alt="Bmediax Headshot" width={150} placeholder="blurred" className="coverheadshot" />
+            <StaticImage src="../images/profile/headshot.png" alt="Bmediax Headshot" width={230} placeholder="blurred" className="coverheadshot" />
             <div className={homepageStyles.text}>
                 <h1>{ coverData.title.text }</h1>
                 <RichText render={coverData.description.raw} />

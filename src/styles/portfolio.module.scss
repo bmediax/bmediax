@@ -12,22 +12,22 @@
 }
 
 .text {
-  background:getColor(lightBase);
+  background: getColor(lightBase);
   text-align: center;
-  height:35vh;
+  height: 35vh;
   // padding: $desktopPadding 0;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   // padding:0;
 
   @include responsive("mobile") {
-    height:30vh;
+    height: 30vh;
   }
 
   h1 {
     color: getColor(lightDarkText);
-    font-size: 6rem;
+    font-size: 6vmin;
     line-height: 80px;
     margin-bottom: 10px;
   }
@@ -40,8 +40,8 @@
 
   @include responsive("mobile") {
     h1 {
-      font-size: 3.3rem;
-      line-height: 40px !important;
+      // font-size: 6vmin;
+      line-height: 1.4em !important;
     }
 
     h5 {
