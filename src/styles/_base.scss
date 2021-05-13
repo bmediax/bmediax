@@ -159,6 +159,8 @@ p {
   grid-template-rows: auto;
   grid-row-gap: 2em;
   grid-column-gap: 2em;
+  justify-items: flex-start;
+  align-items: flex-start;
 
   @include responsive("desktopish") {
     grid-template-columns: repeat(2, 1fr);
