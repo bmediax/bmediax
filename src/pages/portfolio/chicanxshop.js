@@ -34,7 +34,7 @@ query chicanxshopPortfolioQuery {
                   gatsbyImageData(
                     width: 2000
                     placeholder: DOMINANT_COLOR
-                    webpOptions: {quality: 100}
+                    quality: 100
                   )
                 }
               }
@@ -56,7 +56,7 @@ query chicanxshopPortfolioQuery {
                 gatsbyImageData(
                   height: 550
                   placeholder: DOMINANT_COLOR
-                  webpOptions: {quality: 100}
+                  quality: 100
                 )
               }
             }
@@ -115,7 +115,7 @@ query chicanxshopPortfolioQuery {
                 gatsbyImageData(
                   height: 550
                   placeholder: DOMINANT_COLOR
-                  webpOptions: {quality: 100}
+                  quality: 100
                 )
               }
             }
@@ -138,7 +138,7 @@ query chicanxshopPortfolioQuery {
                       gatsbyImageData (
                         width:2000
                         placeholder: DOMINANT_COLOR
-                        webpOptions: {quality: 100}
+                        quality: 100
                       )
                     }
                   }
@@ -149,6 +149,7 @@ query chicanxshopPortfolioQuery {
                   text
                 }
                 column
+                responsive_column
               }
             }
             ... on PrismicPortfolioBodyDesignVideo {
@@ -178,7 +179,7 @@ query chicanxshopPortfolioQuery {
                       gatsbyImageData (
                         width:2000
                         placeholder: DOMINANT_COLOR
-                        webpOptions: {quality: 100}
+                        quality: 100
                       )
                     }
                   }

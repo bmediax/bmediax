@@ -1,26 +1,35 @@
 @use '../../styles/variables.module' as *;
 
 .container {
-  width: 500px;
-  position: relative;
+  width: 100%;
+  background:getColor(lightBase);
+  // position: relative;
   // position:sticky !important;
   // top:$navHeight + 10px !important;
   // right:0;
   // left:0;
-  margin: -30px auto 0px auto;
-  z-index: 1;
+  // margin: 0px auto -20px auto;
+  // z-index: 1;
 
-  @include responsive("mobile") {
-    width: 95%;
-  }
+  // @include responsive("mobile") {
+  //   width: 95%;
+  // }
 }
 
 .wrapper {
+  // position:sticky !important;
+  // top:$navHeight + 10px !important;
+  // right:0;
+  // left:0;
   background: getColor(lightLightBase);
+  width: 500px;
+  position: relative;
+  margin: 0px auto -20px auto;
+  z-index: 1;
   list-style: none;
   text-align: center;
   @include objectCorner("default");
-  @include objectShadow("default", "snow");
+  @include objectShadow("hover", "snow");
 
   li {
     display: inline-block;
@@ -48,6 +57,8 @@
   }
 
   @include responsive("mobile") {
+    width: 90%;
+
     li:not(:first-child):not(:last-child) {
       margin: 0px 5px;
     }
