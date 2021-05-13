@@ -1,10 +1,14 @@
 @use './variables.module' as *;
 
-.coverTitle {
-  // height: 20vh;
+.coverImgs {
+  height: 70vh;
   // padding: $desktopPadding $widthPadding $desktopSmallPadding $widthPadding;
-  text-align: center;
+  // text-align: center;
   // place-items: flex-end center;
+
+  @include responsive("mobile") {
+    height: 50vh;
+  }
 }
 
 .text {

@@ -1,5 +1,6 @@
 import React from 'react';
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import * as portfolioStyles from '../styles/portfolio.module.scss'
 
 const CoverTitle = ({ coverData }) => {
     const image = getImage(coverData.background_image.localFile)
@@ -10,8 +11,12 @@ const CoverTitle = ({ coverData }) => {
           style={{
             gridArea: "1/1",
           }}
+          className={portfolioStyles.coverImgs}
           // maxHeight: 600,
           layout="fullWidth"
+          objectFit="cover"
+          draggable="false"
+          loading="eager"
           alt=""
           image={image}
         />

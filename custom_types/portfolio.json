@@ -293,16 +293,17 @@
                   "label": "Column"
                 }
               },
-              "spacing": {
+              "responsive_column": {
                 "type": "Select",
                 "config": {
                   "options": [
-                    "Small",
-                    "Medium",
-                    "Large"
+                    "1 Column",
+                    "2 Column",
+                    "3 Column",
+                    "4 Column"
                   ],
-                  "default_value": "Small",
-                  "label": "Spacing"
+                  "default_value": "1 Column",
+                  "label": "Responsive Column"
                 }
               }
             },

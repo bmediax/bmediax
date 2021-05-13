@@ -14,16 +14,14 @@ const PortfolioTemplate = ({ data, pageTitle }) => {
     return (
         <>
         <Layout title={pageTitle}>
-            <>
-                <PortfolioTitle coverData={data.cover_title[0]}/>
-                <LegionBar />
-                <CoverTitle coverData={data.cover_title[0]} />
-                <OverviewSection overviewData={data.overview[0]} projectLinks={data.project_links} />
-                <ImageSection image={data.design_image} />
-                <DesignSection {...data} />
-                <ImageSection image={data.results_image} />
-                <ResultsSection {...data} />
-            </>
+            <PortfolioTitle coverData={data.cover_title[0]}/>
+            <LegionBar />
+            <CoverTitle coverData={data.cover_title[0]} />
+            <OverviewSection overviewData={data.overview[0]} projectLinks={data.project_links} />
+            <ImageSection image={data.design_image} />
+            <DesignSection {...data} />
+            <ImageSection image={data.results_image} />
+            <ResultsSection {...data} />
             <NextProjectSection nextProjectData={data.next_project} />
         </Layout>
         </>
