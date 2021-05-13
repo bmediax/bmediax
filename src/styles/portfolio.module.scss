@@ -7,28 +7,38 @@
   // place-items: flex-end center;
 
   @include responsive("mobile") {
-    height: 50vh;
+    // height: 50vh;
+    height: 40vh;
   }
 }
 
 .text {
   background: getColor(lightBase);
   text-align: center;
-  height: 35vh;
+  min-height: 35vh;
   // padding: $desktopPadding 0;
   display: flex;
   align-items: center;
   justify-content: center;
   // padding:0;
 
-  @include responsive("mobile") {
-    height: 30vh;
+  .subtexts {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include responsive("mobile") {
+      flex-direction: column;
+    }
   }
 
   h1 {
     color: getColor(lightDarkText);
-    font-size: 6vmin;
-    line-height: 80px;
+    font-size: 5vmin;
+    line-height: 70px;
     margin-bottom: 10px;
   }
 
@@ -39,8 +49,10 @@
   }
 
   @include responsive("mobile") {
+    height: 30vh;
+
     h1 {
-      // font-size: 6vmin;
+      font-size: 6vmin;
       line-height: 1.4em !important;
     }
 
