@@ -3,6 +3,8 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as portfolioStyles from '../../styles/portfolio.module.scss'
 
 const ImageGallery = ({ slice }) => {
+    console.log(slice)
+    
     const gridStyles = {
         padding: "30px !important"
     }
