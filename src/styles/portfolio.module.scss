@@ -68,7 +68,35 @@
   }
 
   @include responsive("mobile") {
+    grid-gap: 3em;
     grid-template-columns: 1fr !important;
+  }
+}
+
+.columnone {
+  grid-template-columns: 1fr;
+}
+.columntwo {
+  grid-template-columns: repeat(2, 1fr);
+}
+.columnthree {
+  grid-template-columns: repeat(3, 1fr);
+
+  @include responsive("mobile") {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+.columnfour {
+  grid-template-columns: repeat(4, 1fr);
+}
+.columnfive {
+  grid-template-columns: repeat(5, 1fr);
+}
+.columnsix {
+  grid-template-columns: repeat(6, 1fr);
+
+  @include responsive("mobile") {
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 

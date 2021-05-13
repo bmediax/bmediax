@@ -9,17 +9,17 @@ const ImageGallery = ({ slice }) => {
 
     const gridColumn = (col) => {
         if (col === "1 Column") {
-            return "1fr"
+            return `${portfolioStyles.columnone}`
         } else if (col === "2 Column") {
-            return "repeat(2, 1fr)"
+            return `${portfolioStyles.columntwo}`
         } else if (col === "3 Column") {
-            return "repeat(3, 1fr)"
+            return `${portfolioStyles.columnthree}`
         } else if (col === "4 Column") {
-            return "repeat(4, 1fr)"
+            return `${portfolioStyles.columnfour}`
         } else if (col === "5 Column") {
-            return "repeat(5, 1fr)"
+            return `${portfolioStyles.columnfive}`
         } else if (col === "6 Column") {
-            return "repeat(6, 1fr)"
+            return `${portfolioStyles.columnsix}`
         }
     }
 
@@ -41,7 +41,7 @@ const ImageGallery = ({ slice }) => {
                 <div className={portfolioStyles.twoColumn}>
                     {isTitle(slice)}
 
-                    <div className={`${portfolioStyles.columnGallery} sectionMaxWidth`} style={{ gridTemplateColumns: `${gridColumn(slice.primary.column)}`, gridStyles }}>
+                    <div className={`${portfolioStyles.columnGallery} sectionMaxWidth ${gridColumn(slice.primary.column)}`} style={{ gridStyles }}>
                     {slice.items.map((slices, index) => (
                         <React.Fragment key={index}>
                             {getImages(slices)}
