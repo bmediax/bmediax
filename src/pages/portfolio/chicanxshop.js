@@ -149,6 +149,7 @@ query chicanxshopPortfolioQuery {
                   text
                 }
                 column
+                responsive_column
               }
             }
             ... on PrismicPortfolioBodyDesignVideo {
