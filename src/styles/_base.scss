@@ -19,14 +19,14 @@ blockquote {
 
   &::before {
     content: '"';
-    height:auto;
-    width:Auto;
+    height: auto;
+    width: Auto;
   }
 
   &::after {
-    content :'"';
-    height:auto;
-    width:auto;
+    content: '"';
+    height: auto;
+    width: auto;
   }
 }
 
@@ -473,8 +473,8 @@ nav {
 
         ::after {
           content: "";
-          height:100vh;
-          width:100%;
+          height: 100vh;
+          width: 100%;
           overflow: hidden;
         }
 
