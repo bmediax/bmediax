@@ -8,11 +8,12 @@ const CoverTitle = ({ coverData }) => {
       <>
         <div style={{ display: "grid" }}>
         <GatsbyImage
-          style={{
-            gridArea: "1/1",
-          }}
+          // style={{
+          //   gridArea: "1/1",
+          // }}
           className={portfolioStyles.coverImgs}
           // maxHeight: 600,
+          // layout="fullWidth"
           layout="fullWidth"
           objectFit="cover"
           draggable="false"

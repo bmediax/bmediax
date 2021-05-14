@@ -1,0 +1,72 @@
+@use '../../styles/variables.module' as *;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5em;
+
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+
+    .text {
+      text-align: right;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 50px;
+  }
+
+  @include responsive("mobile") {
+    text-align: justify;
+    flex-direction: column;
+
+    &:nth-child(even) {
+      flex-direction: column;
+    }
+  }
+}
+
+.gfx {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  max-width: 100px;
+  @include objectCorner("mobile");
+
+  svg {
+    text-align: center;
+  }
+
+  @include responsive("mobile") {
+    flex: 2;
+
+    svg {
+      padding: 15px 25px;
+    }
+    // width: 100px;
+    // height: 100px;
+  }
+}
+
+.text {
+  //   text-align: center;
+  flex: 2;
+
+  h3 {
+    color: getColor(textHeaderDarkBG);
+  }
+
+  @include responsive("mobile") {
+    flex: 1;
+    text-align: center !important;
+
+    h3 {
+      font-size: 2rem;
+      line-height: 25px;
+    }
+  }
+}

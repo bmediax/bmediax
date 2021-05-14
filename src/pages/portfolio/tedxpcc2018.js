@@ -32,7 +32,7 @@ query tedxpcc2018PortfolioQuery {
               localFile {
                 childImageSharp {
                   gatsbyImageData(
-                    width: 2000
+                    width: 2500
                     placeholder: DOMINANT_COLOR
                     quality: 100
                   )
