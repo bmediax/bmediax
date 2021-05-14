@@ -5,7 +5,6 @@ import * as portfolioStyles from '../styles/portfolio.module.scss'
 const CoverTitle = ({ coverData }) => {
     const image = getImage(coverData.background_image.localFile)
     return (
-      <>
         <div style={{ display: "grid" }}>
         <GatsbyImage
           // style={{
@@ -37,7 +36,6 @@ const CoverTitle = ({ coverData }) => {
               </div> */}
         {/* </div> */}
       </div>
-    </>
     );
 };
 

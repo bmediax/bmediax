@@ -12,7 +12,7 @@ const portfolio = ({ data }) => {
             <SectionPageLayout title="Portfolio" label="page">
                 <div className="pageColumnLayout grid-three sectionMaxWidth">
                 {document.map((portfolio, index) => (
-                    <CTACardModule isLight key={index} 
+                    <CTACardModule isLight key={index}
                         title={portfolio.node.data.cover_title[0].name.text} 
                         raw={portfolio.node.data.cover_title[0].client.text} 
                         cover={portfolio.node.data.cover_title[0].background_image.localFile}

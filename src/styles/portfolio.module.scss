@@ -16,6 +16,7 @@
   background: getColor(lightBase);
   text-align: center;
   min-height: 35vh;
+  padding:5% 0px;
   // padding: $desktopPadding 0;
   display: flex;
   align-items: center;
@@ -37,7 +38,7 @@
 
   h1 {
     color: getColor(lightDarkText);
-    font-size: 5vmin;
+    font-size: 4.5rem;
     line-height: 70px;
     margin-bottom: 10px;
   }
@@ -49,10 +50,10 @@
   }
 
   @include responsive("mobile") {
-    height: 30vh;
+    min-height: 30vh !important;
 
     h1 {
-      font-size: 6vmin;
+      font-size: 3rem;
       line-height: 1.4em !important;
     }
 

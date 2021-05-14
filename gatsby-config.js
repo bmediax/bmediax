@@ -80,5 +80,12 @@ module.exports = {
       },
       __key: "images",
     },
+    {
+      resolve: 'gatsby-plugin-tidio-chat',
+      options: {
+        tidioKey: 'acppdswxukgmzxwkeisv64jvbqrwk1zd',
+        enableDuringDevelop: false, // Optional. Disables Tidio chat widget when running Gatsby dev server. Defaults to true.
+      },
+    },
   ]
 };

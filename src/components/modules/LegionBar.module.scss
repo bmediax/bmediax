@@ -2,7 +2,7 @@
 
 .container {
   width: 100%;
-  background:getColor(lightBase);
+  background: getColor(lightBase);
   // position: relative;
   // position:sticky !important;
   // top:$navHeight + 10px !important;
@@ -36,6 +36,7 @@
     padding: 0px 20px;
 
     a {
+      outline: none;
       display: block;
       text-decoration: none;
       font-size: 1.6rem;
@@ -48,6 +49,10 @@
       &:hover {
         color: getColor(azureToMist);
         border-bottom: 5px solid getColor(azureToMist);
+      }
+
+      &:focus {
+        border-bottom: 5px solid getColor(mistToCloud);
       }
     }
   }
