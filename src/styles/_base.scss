@@ -96,7 +96,7 @@ h5 {
 p {
   font-family: $primaryFont;
   font-size: 1.6rem;
-  font-weight: 500;
+  font-weight: 450;
   color: getColor(normalText);
 }
 
@@ -204,26 +204,41 @@ p {
   }
 }
 
-.activePrimary,
-.primary-active {
-  background: $midnight !important;
-  color: $blanco !important;
-}
-
 .primary {
-  background: getColor(lightdarkBase);
+  outline: none;
+  // background: getColor(lightdarkBase);
   color: getColor(menuText);
+  border: 2px solid getColor(lightdarkBase) !important;
 
   &:hover {
     background: $midnight;
+    border: 2px solid $midnight !important;
     color: $blanco;
     @include objectShadow("default", "midnight");
   }
 
   &:active {
-    background: $oscuro;
-    color: $minimal;
+    background: $oscuro !important;
+    color: $minimal !important;
     box-shadow: none !important;
+    border: 2px solid transparent !important;
+  }
+
+  &:focus {
+    color: getColor(menuText);
+    background: getColor(lightdarkBase);
+    border: 2px solid transparent !important;
+  }
+}
+
+.activePrimary,
+.primary-active {
+  background: $midnight !important;
+  color: $blanco !important;
+  border: none !important;
+
+  &:hover {
+    border: none !important;
   }
 }
 
@@ -246,11 +261,17 @@ p {
   border-color: $azure !important;
   color: $blanco;
   @include objectShadow("hover", "snow");
+  outline: none;
+
+  &:focus {
+    background: lighten($azure, 5);
+  }
 }
 
 .ghost {
   background: getColor(lightLightBase);
   color: getColor(lightDarkText);
+  outline: none;
 
   &:hover {
     @include objectShadow("hover", "snow");
@@ -264,6 +285,10 @@ p {
   &,
   .active {
     @include objectShadow("default", "snow");
+  }
+
+  &:focus {
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.05) !important;
   }
 }
 
@@ -423,6 +448,7 @@ nav {
           }
 
           a.nav-item {
+            outline: none;
             color: getColor(menuText);
             text-decoration: none;
             margin: 0px 15px;
@@ -432,6 +458,11 @@ nav {
 
             &:hover {
               color: getColor(azureToMist);
+            }
+
+            &:focus {
+              color: getColor(azureToMist);
+              text-decoration: underline;
             }
 
             &:first-child {
@@ -466,7 +497,7 @@ nav {
         // border-top:1px solid getColor(lightdarkBase);
         position: absolute;
         display: none;
-        top: $navHeight;
+        top: $navMobileHeight + 20;
         flex: 1;
         width: 100%;
         background: getColor(lightBase);
@@ -574,16 +605,31 @@ nav {
         text-align: center;
         transition: background 200ms linear, color 250ms linear,
           box-shadow 250ms linear;
+        outline: none;
 
         &:hover {
           background: $azure;
           color: getColor(lightBase);
           @include objectShadow("default", "azure");
         }
+
+        &:focus {
+          background: getColor(lightBase);
+          color: getColor(darkBase);
+        }
       }
 
       & > a + a {
         margin-left: 1em;
+      }
+    }
+
+    @include responsive("mobile") {
+      height: $navMobileHeight;
+      padding: 10px $widthPadding;
+
+      .logoWraps svg {
+        height: 50px !important;
       }
     }
   }

@@ -13,7 +13,7 @@ const Layout = ({children, title}) => {
         <div id={title}>
             <Seo title={title} />
             <Nav />
-            <AnimatePresence>
+            <AnimatePresence exitBeforeEnter>
                 <motion.div
                     initial={{ opacity:0, y:-100 }}
                     animate={{ opacity: 1, y:0 }}
