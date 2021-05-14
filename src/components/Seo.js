@@ -4,6 +4,13 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 function SEO({ description, lang, meta, image: metaImage, title }) {
+  const isHome = (homes) => {
+    if (homes === "Bmediax") {
+      return "Bmediax | Digital Designer & Frontend Developer"
+    } else {
+      return `%s | ${site.siteMetadata.title}`
+    }
+  }
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -30,7 +37,7 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={isHome(title)}
       // link={[
       //   { rel: 'apple-touch-icon', sizes: '180x180', href: `${appleTouchIcon}`},
       //   { rel: 'icon', type: 'image/png', sizes: '32x32', href: `${favicon32}`},

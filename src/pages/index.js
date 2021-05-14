@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => {
     const document = data.allPrismicHomepage.edges[0].node.data
     const awards = data.allPrismicHomepage.edges[0].node.data.body
     return (
-        <Layout title="Homepage">
+        <Layout title="Bmediax">
             <Cover coverData={document.cover[0]} />
             <RecentProjectsSection />
             <AwardsSection awardsData={awards[1]} />
