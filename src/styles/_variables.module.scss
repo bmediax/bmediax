@@ -17,6 +17,7 @@ $small-mobileWidth: 360px;
 
 // Element Size Define
 $navHeight: 85px;
+$navMobileHeight: 50px;
 $wrapMaxWidth: 1400px;
 $widthPadding: 7%;
 $desktopPadding: 150px;
@@ -93,7 +94,8 @@ $colors: (
   textHeader: $midnight,
   textHeaderDarkBG: $blanco,
   textSubTitle: $mist,
-  normalText: $midnight,
+  // normalText: $midnight,
+  normalText: #7f8197,
   // Color Specific
   azureToMist: $azure,
   azureToSteelBlue: $azure,

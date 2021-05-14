@@ -1,12 +1,11 @@
 import React from 'react';
 import Layout from '../layout'
+import SectionPageLayout from '../layout/SectionPageLayout';
 
-const contact = () => {
-    return (
-        <Layout title="Get In Touch">
-            <h1> Get In Touch </h1>
-        </Layout>
-    );
-};
+const contact = () => (
+    <Layout title="Get In Touch">
+        <SectionPageLayout label="page" title="Get In Touch" icon="Check Mark" align />
+    </Layout>
+)
 
 export default contact;

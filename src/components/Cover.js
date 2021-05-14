@@ -14,7 +14,7 @@ const Cover = ({ coverData }) => {
     return (
         <div className={homepageStyles.cover}>
             <Parallax y={[20, -20]} tagOuter="figure">
-                <StaticImage src="../images/profile/headshot.png" alt="Bmediax Headshot" width={230} placeholder="blurred" className="coverheadshot" />
+                <StaticImage src="../images/profile/headshot.png" alt="Bmediax Headshot" width={230} placeholder="blurred" className="coverheadshot" draggable="false" />
             </Parallax>
             <div className={homepageStyles.text}>
                 <h1>{ coverData.title.text }</h1>

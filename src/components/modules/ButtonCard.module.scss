@@ -1,16 +1,21 @@
 @use '../../styles/variables.module' as *;
 
 .wrapper {
-  text-decoration: none;
   //   min-width: 290px;
   //   min-height: 50px;
   @include objectCorner("default");
+  text-decoration: none;
   background: getColor(lightLightBase3);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 15px 20px;
   transition: background 250ms linear, box-shadow 250ms linear;
+  outline: none;
+
+  &:focus {
+    background: getColor(lightBase);
+  }
 
   .text {
     flex: 2;
