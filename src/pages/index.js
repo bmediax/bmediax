@@ -1,31 +1,58 @@
-import * as React from "react"
-import { Helmet } from 'react-helmet'
-import { RiLinksLine } from 'react-icons/ri'
-import { AiOutlineCloudDownload } from 'react-icons/ai'
-import '../styles/comingsoon.scss'
-import DropdownModule from '../components/modules/dropdownModule';
-import bmediaxResume from '../assets/files/Bmediax_Resume.pdf'
+import React from 'react'
+import { graphql } from 'gatsby'
 
-// markup
-const IndexPage = () => {
-  return (
-    <div>
-      <Helmet>
-        <title> Bmediax </title>
-      </Helmet>
-      <div className="container">
-        <div className="wrapper">
-          <h4 style={{ textAlign: "center", marginBottom:"10px" }}>Coming Soon...</h4>
-          <h1> Website Under Construction </h1>
-          <div className="links-media">
-            <DropdownModule />
-            <a href="https://bmediax.com" className="btn ghost"> View Portfolio <RiLinksLine /></a>
-            <a href={bmediaxResume} download="Bmediax_Resume" className="btn ghost"> Download Resume <AiOutlineCloudDownload /></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
+import Layout from '../layout/index.js'
+import Cover from '../components/Cover'
+import RecentProjectsSection from '../components/RecentProjectsSection.js'
+import AwardsSection from '../components/AwardsSection.js'
+
+const IndexPage = ({ data }) => {
+    if (!data) return null
+    const document = data.allPrismicHomepage.edges[0].node.data
+    const awards = data.allPrismicHomepage.edges[0].node.data.body
+    return (
+        <Layout title="Homepage">
+            <Cover coverData={document.cover[0]} />
+            <RecentProjectsSection />
+            <AwardsSection awardsData={awards[1]} />
+        </Layout>
+    )
 }
 
-export default IndexPage
+export default IndexPage;
+
+export const query = graphql`
+query homepageQuery {
+  allPrismicHomepage {
+    edges {
+      node {
+        data {
+          cover {
+            title {
+              text
+            }
+            description {
+              text
+              raw
+              html
+            }
+          }
+          body {
+            ... on PrismicHomepageBodyAwardsSection {
+              items {
+                medal
+                sub_text {
+                  text
+                }
+                title {
+                  text
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`
