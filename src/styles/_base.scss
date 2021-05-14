@@ -497,7 +497,7 @@ nav {
         // border-top:1px solid getColor(lightdarkBase);
         position: absolute;
         display: none;
-        top: $navHeight;
+        top: $navMobileHeight + 20;
         flex: 1;
         width: 100%;
         background: getColor(lightBase);
