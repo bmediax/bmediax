@@ -18,7 +18,7 @@ $small-mobileWidth: 360px;
 // Element Size Define
 $navHeight: 85px;
 $wrapMaxWidth: 1400px;
-$widthPadding: 6%;
+$widthPadding: 7%;
 $desktopPadding: 150px;
 $desktopSmallPadding: 60px;
 $mobilePadding: 80px;
@@ -196,6 +196,8 @@ $colors-dark: (
   @if $color == "snow" {
     @if $state == "default" {
       box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.04) !important;
+    } @else if $state == "minimal" {
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.07) !important;
     } @else if $state == "hover" {
       box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1) !important;
     }

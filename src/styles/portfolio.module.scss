@@ -7,28 +7,38 @@
   // place-items: flex-end center;
 
   @include responsive("mobile") {
-    height: 50vh;
+    // height: 50vh;
+    height: 40vh;
   }
 }
 
 .text {
-  background:getColor(lightBase);
+  background: getColor(lightBase);
   text-align: center;
-  height:35vh;
+  min-height: 35vh;
   // padding: $desktopPadding 0;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   // padding:0;
 
-  @include responsive("mobile") {
-    height:30vh;
+  .subtexts {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include responsive("mobile") {
+      flex-direction: column;
+    }
   }
 
   h1 {
     color: getColor(lightDarkText);
-    font-size: 6rem;
-    line-height: 80px;
+    font-size: 5vmin;
+    line-height: 70px;
     margin-bottom: 10px;
   }
 
@@ -39,9 +49,11 @@
   }
 
   @include responsive("mobile") {
+    height: 30vh;
+
     h1 {
-      font-size: 3.3rem;
-      line-height: 40px !important;
+      font-size: 6vmin;
+      line-height: 1.4em !important;
     }
 
     h5 {
@@ -68,7 +80,35 @@
   }
 
   @include responsive("mobile") {
+    grid-gap: 3em;
     grid-template-columns: 1fr !important;
+  }
+}
+
+.columnone {
+  grid-template-columns: 1fr;
+}
+.columntwo {
+  grid-template-columns: repeat(2, 1fr);
+}
+.columnthree {
+  grid-template-columns: repeat(3, 1fr);
+
+  @include responsive("mobile") {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+.columnfour {
+  grid-template-columns: repeat(4, 1fr);
+}
+.columnfive {
+  grid-template-columns: repeat(5, 1fr);
+}
+.columnsix {
+  grid-template-columns: repeat(6, 1fr);
+
+  @include responsive("mobile") {
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 

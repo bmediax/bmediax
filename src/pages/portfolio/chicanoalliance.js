@@ -6,7 +6,7 @@ const chicanoalliance = ({ data }) => {
     if (!data) return null
     const document = data.allPrismicPortfolio.edges[0].node.data
     return (
-        <PortfolioTemplate data={document} pageTitle="Chicanx Shop" />
+        <PortfolioTemplate data={document} pageTitle="Willamette Chicano Alliance" />
     );
 };
 
