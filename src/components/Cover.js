@@ -1,4 +1,5 @@
 import React from 'react';
+import { Parallax } from 'react-scroll-parallax'
 import { RichText } from 'prismic-reactjs'
 import { StaticImage } from 'gatsby-plugin-image'
 
@@ -12,7 +13,9 @@ import DropdownModule from './modules/dropdownModule';
 const Cover = ({ coverData }) => {
     return (
         <div className={homepageStyles.cover}>
-            <StaticImage src="../images/profile/headshot.png" alt="Bmediax Headshot" width={230} placeholder="blurred" className="coverheadshot" />
+            <Parallax y={[20, -20]} tagOuter="figure">
+                <StaticImage src="../images/profile/headshot.png" alt="Bmediax Headshot" width={230} placeholder="blurred" className="coverheadshot" />
+            </Parallax>
             <div className={homepageStyles.text}>
                 <h1>{ coverData.title.text }</h1>
                 <RichText render={coverData.description.raw} />

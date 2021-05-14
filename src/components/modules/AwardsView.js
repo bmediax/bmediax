@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion'
 import * as AwardsStyles from './AwardsView.module.scss'
 import { GoldMedal, SilverMedal, BronzeMedal } from '../Icons'
 
@@ -26,9 +27,12 @@ const AwardsView = ({ icon, title, subTitle }) => {
     }
     return (
         <div className={AwardsStyles.container}>
-            <div className={AwardsStyles.gfx} style={{ boxShadow: `0px 10px 30px -8px ${chooseColor(icon)}`, backgroundColor: chooseColor(icon)}}>
+            <motion.div 
+                whileHover={{ scale:1.1 }}
+                className={AwardsStyles.gfx} 
+                style={{ boxShadow: `0px 10px 30px -8px ${chooseColor(icon)}`, backgroundColor: chooseColor(icon)}}>
                 {chooseIcon(icon)}
-            </div>
+            </motion.div>
             <div className={AwardsStyles.text}>
                 <h3>{title.text}</h3>
                 <h5>{subTitle.text}</h5>
