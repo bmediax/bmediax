@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { motion } from 'framer-motion'
 import * as CTACardStyles from './CTACard.module.scss'
 
 const CTACardModule = ({ title, raw, cover, url, work, shortDescr, isLight }) => {
@@ -13,8 +14,10 @@ const CTACardModule = ({ title, raw, cover, url, work, shortDescr, isLight }) =>
                     <h5>{work ? work : "work"}</h5>
                     <h3>{title ? title : "Title"}</h3>
                 </span>
-                <p>{shortDescr ? shortDescr : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed mattis dui. Etiam vel volutpat ipsum, vitae molestie odio. Nam sed iaculis nisl. Phasellus mattis nulla sit amet suscipit eleifend." }</p>
-                <Link to={`/portfolio/${url}`} className="btn primary">Learn More</Link>
+                <motion.span transition={{ duration: 0.6 }} exit={{ opacity: 0 }}>
+                    <p>{shortDescr ? shortDescr : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed mattis dui. Etiam vel volutpat ipsum, vitae molestie odio. Nam sed iaculis nisl. Phasellus mattis nulla sit amet suscipit eleifend." }</p>
+                    <Link to={`/portfolio/${url}`} className="btn primary">Learn More</Link>
+                </motion.span>
             </div>
         </div>
     );

@@ -3,9 +3,9 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import { AnimatePresence } from 'framer-motion'
 
 export const wrapPageElement = ({element}) => (
-    <AnimatePresence exitBeforeEnter>
-        <ParallaxProvider>
+    <ParallaxProvider>
+        <AnimatePresence initial={false} exitBeforeEnter>
             {element}
-        </ParallaxProvider>
-    </AnimatePresence>
+       </AnimatePresence>
+    </ParallaxProvider>
 )

@@ -10,9 +10,6 @@ export const slowSlideUp = {
         //     delayChildren: 0.5
         // }
     },
-    transition: {
-        duration: 3
-    }
 }
 
 export const slowFadeIn = {
