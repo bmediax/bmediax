@@ -1,10 +1,11 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image'
-import { HiOutlineDocumentDownload } from 'react-icons/hi'
+import { HiArrowCircleDown, HiDocumentDownload } from 'react-icons/hi'
 import * as variables from '../styles/_variables.module.scss'
 import SectionPageLayout from '../layout/SectionPageLayout';
 import Layout from '../layout/index.js'
 import bmediaxResume from '../assets/files/Bmediax_Resume.pdf'
+import bmediaxPrintResume from '../assets/files/Bmediax_Resume_Print.pdf'
 
 const meetBrian = () => {
     return (
@@ -16,7 +17,10 @@ const meetBrian = () => {
                         <p>When I am not designing or coding interfaces, you can often find me out and about with my trusty camera and a good cup of coffee, capturing the world's beautiful raw moments.</p>
 
                         <p>My favorite productivity applications has to be the beautifully designed <a href="https://culturedcode.com/things/" target="_blank" className="azure" rel="noreferrer">Things 3</a>, <a target="_blank" href="https://superhuman.com/?utm_source=google&utm_medium=cpc&utm_campaign=20200918_brandedsearch&utm_term=superhuman&utm_content=a&gclid=CjwKCAjwkN6EBhBNEiwADVfya1MxNQQ8oizGrvHUyYIrIFNjLxuYvX4JcNQK7SO4an3BeejvW9s0axoCUlsQAvD_BwE" className="azure" rel="noreferrer">Superhuman</a>, <a href="https://todoist.com/" target="_blank" className="azure" rel="noreferrer">Todoist</a>, and <a href="https://www.craft.do/" target="_blank" className="azure" rel="noreferrer">Craft!</a> They all have beautiful interfaces with solid functionality!</p>
-                        <a href="https://google.com" className="btn primary" style={{ display: "inline-block", marginTop : "20px" }}>Download Resume <HiOutlineDocumentDownload style={{ position: 'relative', top: '2px' }}/></a>
+                        <div className="btn-flex">
+                            <a href={bmediaxResume} download="Bmediax_Resume" className="btn primary">Download Resume <HiArrowCircleDown style={{ position: 'relative', top: '2px' }}/></a>
+                            <a href={bmediaxPrintResume} download="Bmediax_Resume_Print" className="btn primary">Download Print Resume <HiDocumentDownload style={{ position: 'relative', top: '2px' }}/></a>
+                        </div>
                     </div>
                     <div className="pageTwoColumn">
                         <div className="gallery gallery-masonry">
@@ -55,7 +59,10 @@ const meetBrian = () => {
                 <div className="pageColumnLayout sectionMaxWidth">
                     <div className="pageOneColumn">
                         <center>
-                            <a href={bmediaxResume} download="Bmediax_Resume" className="btn primary primary-active" style={{ display: "inline-block", marginTop : "20px" }}>Download Resume <HiOutlineDocumentDownload style={{ position: 'relative', top: '2px' }}/></a>
+                            <div className="btn-flex sectionMaxWidth">
+                                <a href={bmediaxResume} download="Bmediax_Resume" className="btn primary primary-active">Download Resume <HiArrowCircleDown style={{ position: 'relative', top: '2px' }}/></a>
+                                <a href={bmediaxPrintResume} download="Bmediax_Resume_Print" className="btn primary primary-active">Download Print Resume <HiDocumentDownload style={{ position: 'relative', top: '2px' }}/></a>
+                            </div>
                         </center>
                     </div>
                 </div>
