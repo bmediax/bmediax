@@ -81,6 +81,17 @@ module.exports = {
       __key: "images",
     },
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "G-WF6QH93GFZ",
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: true,
+        // Setting this parameter is optional
+        anonymize: true,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-tidio-chat',
       options: {
         tidioKey: 'acppdswxukgmzxwkeisv64jvbqrwk1zd',
