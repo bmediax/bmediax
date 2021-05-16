@@ -94,6 +94,16 @@ query tedxpcc2018PortfolioQuery {
               raw
               html
             }
+            design_tools {
+              text
+              raw
+              html
+            }
+            development_tools {
+              text
+              raw
+              html
+            }
           }
           project_links {
             label {
@@ -188,6 +198,7 @@ query tedxpcc2018PortfolioQuery {
                 title {
                   text
                 }
+                column
               }
             }
           }

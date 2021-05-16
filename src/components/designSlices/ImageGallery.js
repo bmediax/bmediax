@@ -25,11 +25,17 @@ const ImageGallery = ({ slice }) => {
 
     const getImages = (slices) => {
         const img = getImage(slices.image.localFile)
-        return <GatsbyImage image={img} alt={slices.image.alt} placeholder="DOMINANT COLOR" imgClassName={portfolioStyles.imageGrid} className={portfolioStyles.imageGridWrap} />
+        return (
+            <>
+                <GatsbyImage image={img} draggable="false" alt={slices.image.alt} placeholder="DOMINANT COLOR" imgClassName={portfolioStyles.imageGrid} className={portfolioStyles.imageGridWrap} />
+                {/* <RichText render={slices.description.raw} /> */}
+            </>
+        )
+
     }
 
     const isTitle = (title) => {
-        if (title.primary.title.text === "") {
+        if (title.primary.title.text === "" || title.primary.title.text === undefined ) {
             return ""
         } else {
             return <h3>{title.primary.title.text}</h3>

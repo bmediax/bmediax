@@ -94,6 +94,16 @@ query chicanxshopPortfolioQuery {
               raw
               html
             }
+            design_tools {
+              text
+              raw
+              html
+            }
+            development_tools {
+              text
+              raw
+              html
+            }
           }
           project_links {
             label {
@@ -142,6 +152,9 @@ query chicanxshopPortfolioQuery {
                       )
                     }
                   }
+                }
+                description {
+                  raw
                 }
               }
               primary {

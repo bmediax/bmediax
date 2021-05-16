@@ -141,6 +141,7 @@
   }
 
   .imageGridWrap {
+    position: relative;
     @include objectCorner("default-mobile");
     transition: box-shadow 200ms linear, transform 250ms linear;
 

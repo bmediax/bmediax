@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import SectionLayout from '../layout/SectionLayout';
-import * as styles from '../styles/homepage.module.scss'
 import AwardsView from './modules/AwardsView';
+import * as styles from '../styles/homepage.module.scss'
+import { BsPersonBoundingBox } from 'react-icons/bs'
 
 const AwardsSection = ({awardsData}) => {
     return (
@@ -10,6 +12,13 @@ const AwardsSection = ({awardsData}) => {
                 {awardsData.items.map((awrds, index) => (
                     <AwardsView key={index} icon={awrds.medal} title={awrds.title} subTitle={awrds.sub_text} />
                 ))}
+            </div>
+            <div className="pageColumnLayout" style={{ marginTop: "50px" }}>
+                <div className="pageOneColumn">
+                    <center>
+                        <Link to="/meet-brian" className="btn outline-active"> Meet Brian <BsPersonBoundingBox style={{ position: 'relative', marginLeft:"5px", top: '2px' }}/></Link>
+                    </center>
+                </div>
             </div>
         </SectionLayout>
     );

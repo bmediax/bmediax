@@ -623,7 +623,7 @@ nav {
       a {
         display: inline-block;
         font-size: 1.7rem;
-        background: getColor(icn-lightBG);
+        // background: getColor(icn-lightBG);
         color: getColor(icon-lightTXT);
         margin: auto;
         height: 35px;
@@ -632,13 +632,14 @@ nav {
         line-height: 40px;
         text-align: center;
         transition: background 200ms linear, color 250ms linear,
-          box-shadow 250ms linear;
+        box-shadow 250ms linear;
         outline: none;
-
+        
         &:hover {
-          background: $azure;
-          color: getColor(lightBase);
-          @include objectShadow("default", "azure");
+          background: getColor(icn-lightBG);
+          // background: $azure;
+          color: $azure;
+          // @include objectShadow("default", "azure");
         }
 
         &:focus {

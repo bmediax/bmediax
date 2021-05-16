@@ -28,6 +28,16 @@
       font-weight: 700;
     }
 
+    p {
+      &:not(:first-child) {
+        margin-top:15px;
+      }
+      b {
+        font-weight:700;
+        text-transform: uppercase;
+      }
+    }
+
     ul li {
       font-size: 1.6rem;
       color: getColor(normalText);

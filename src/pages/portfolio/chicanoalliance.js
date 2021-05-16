@@ -94,6 +94,16 @@ query chicanoalliancePortfolioQuery {
               raw
               html
             }
+            design_tools {
+              text
+              raw
+              html
+            }
+            development_tools {
+              text
+              raw
+              html
+            }
           }
           project_links {
             label {
@@ -188,6 +198,7 @@ query chicanoalliancePortfolioQuery {
                 title {
                   text
                 }
+                column
               }
             }
           }

@@ -3,6 +3,21 @@ import { RichText } from 'prismic-reactjs'
 import * as SideBarStyles from './SideBar.module.scss'
 
 const SideBar = ({ sidebarData, projectLinks }) => {
+    const isToolsExist = ( dsi ) => {
+        if (dsi.design_tools === "" || dsi.development_tools === "") {
+            return ""
+        } else {
+            return (
+                <div className={SideBarStyles.section}>
+                    <h3>Tools/Technologies</h3>
+                    <p><b>Design</b></p>
+                    <RichText render={sidebarData.design_tools.raw} />
+                    <p><b>Development</b></p>
+                    <RichText render={sidebarData.development_tools.raw} />
+                </div>
+            )
+        }
+    }
     return (
         <div className={SideBarStyles.wrapper}>
             {/* Role */}
@@ -18,12 +33,7 @@ const SideBar = ({ sidebarData, projectLinks }) => {
                 <h3>Work</h3>
                 <RichText render={sidebarData.work.raw} />
             </div>
-
-            {/* <div className={SideBarStyles.section}>
-                <h3>Tools</h3>
-                <RichText render={sidebarData.tools.raw} />
-            </div> */}
-
+           {isToolsExist(sidebarData)}
             <div className={SideBarStyles.section}>
                 {/* Deliverable */}
                 <h3>Deliverables</h3>

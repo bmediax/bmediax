@@ -108,6 +108,20 @@
               "label": "Work"
             }
           },
+          "design_tools": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+              "label": "Design Tools"
+            }
+          },
+          "development_tools": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+              "label": "Development Tools"
+            }
+          },
           "deliverables": {
             "type": "StructuredText",
             "config": {
@@ -314,6 +328,13 @@
                   "thumbnails": [],
                   "label": "image"
                 }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                  "label": "description"
+                }
               }
             }
           },
@@ -329,6 +350,21 @@
                   "single": "heading1, heading2, heading3, heading4, heading5, heading6",
                   "label": "title"
                 }
+              },
+              "column": {
+                "type": "Select",
+                "config": {
+                  "options": [
+                    "1 Column",
+                    "2 Column",
+                    "3 Column",
+                    "4 Column",
+                    "5 Column",
+                    "6 Column"
+                  ],
+                  "default_value": "1 Column",
+                  "label": "Column"
+                }
               }
             },
             "repeat": {
@@ -338,6 +374,13 @@
                   "constraint": {},
                   "thumbnails": [],
                   "label": "image"
+                }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                  "label": "description"
                 }
               }
             },

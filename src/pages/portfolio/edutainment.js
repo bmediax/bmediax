@@ -96,6 +96,16 @@ query edutainmentPortfolioQuery {
               raw
               html
             }
+            design_tools {
+              text
+              raw
+              html
+            }
+            development_tools {
+              text
+              raw
+              html
+            }
           }
           project_links {
             label {
