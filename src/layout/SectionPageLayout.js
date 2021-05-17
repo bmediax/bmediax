@@ -10,6 +10,8 @@ const SectionPageLayout = ({ title, isDark, bgLightDark, icon, children, label, 
             return <CheckMarkIcon />
         } else if ( icn === "Paint") {
             return <PaintIcon  />
+        } else if ( icn === "") {
+            return ""
         }
     }
 

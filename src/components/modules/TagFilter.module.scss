@@ -1,0 +1,41 @@
+@use '../../styles/variables.module'as *;
+
+.container {
+  //   background: red;
+  margin-top: 25px;
+  width: 100%;
+}
+
+.wrapper {
+  margin: auto;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 1em;
+  max-width: 850px;
+  //   background: white;
+
+  li {
+    color: getColor(normalText);
+    flex: 1;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    padding: 7px 0px;
+    @include objectCorner("default");
+    transition: background 200ms linear;
+
+    &:hover {
+      background: getColor(lightdarkBase);
+      cursor: pointer;
+    }
+  }
+
+  li.selectedTag {
+    background: getColor(lightdarkBase);
+    color: getColor(lightDarkText);
+  }
+}
