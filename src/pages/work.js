@@ -1,57 +1,62 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { graphql } from 'gatsby'
-// import { StaticImage } from 'gatsby-plugin-image'
-import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
-// import * as variables from '../styles/_variables.module.scss'
+import { motion } from 'framer-motion'
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import SectionPageLayout from '../layout/SectionPageLayout';
 import Layout from '../layout/index.js'
 import WorkImage from '../components/workImage';
 import * as TagFilterStyles from '../components/modules/TagFilter.module.scss'
 
-const work = ({ data }) => {
-    if (!data) return null
-    const document = data.allPrismicWork.edges[0].node.data.works
-    return (
-        <Layout title="Work">
-            <SectionPageLayout label="page" title="Work">
-                <div className="sectionMaxWidth">
-                    <div className={TagFilterStyles.container}>
-                        <ul className={TagFilterStyles.wrapper}>
-                            <li className={TagFilterStyles.selectedTag}>All</li>
-                            <li>Graphics</li>
-                            <li>Motion</li>
-                            <li>Iconography</li>
-                            <li>Illustration</li>
-                            <li>Photography</li>
-                        </ul>
-                    </div>
-                    <div style={{ maxwidth: "1400px", marginTop: "100px" }}>
-                        <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}>
-                            <Masonry gutter="1em" >
-                                {document.map((work, index) => (
-                                    <WorkImage key={index} 
-                                        title={work.title} 
-                                        tag={work.tag} 
-                                        link={work.link} 
-                                        image={work.image.localFile} 
-                                        alt={work.image.alt} />
-                                ))}
-                                {/* <StaticImage alt="Images for Testing" src="https://images.unsplash.com/photo-1517021818302-9b520a06c834?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80" />
-                                <StaticImage alt="Images for Testing" src="https://images.unsplash.com/photo-1531346910157-b6b597b25fb0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80" />
-                                <StaticImage alt="Images for Testing" src="https://images.unsplash.com/photo-1516961642265-531546e84af2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80" />
-                                <StaticImage alt="Images for Testing" src="https://images.unsplash.com/photo-1548366426-7b1024cea820?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80" />
-                                <StaticImage alt="Images for Testing" src="https://images.unsplash.com/photo-1516961642265-531546e84af2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80" />
-                                <StaticImage alt="Images for Testing" src="https://images.unsplash.com/photo-1531346910157-b6b597b25fb0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80" /> */}
-                            </Masonry>
-                        </ResponsiveMasonry>
-                    </div>
-                </div>
-            </SectionPageLayout>
-        </Layout>
-    )
+const Work = ({ data }) => {
+  const [ tag, setTag ] = useState("All")
+  if (!data) return null
+  const document = data.allPrismicWork.edges[0].node.data.works
+  
+  const tagAction = (ts) => {
+      setTag(ts)
+  }
+  return (
+      <Layout title="Work">
+          <SectionPageLayout label="page" title="Work">
+              <div className="sectionMaxWidth">
+                  <div className={TagFilterStyles.container}>
+                      <ul className={TagFilterStyles.wrapper}>
+                          <li><button className={TagFilterStyles.selectedTag} onClick={() => tagAction("All")}>All</button></li>
+                          <li><button onClick={() => tagAction("Graphics")}>Graphics</button></li>
+                          {/* <li>Iconography</li> */}
+                          <li><button onClick={() => tagAction("Illustration")}>Illustration</button></li>
+                          <li><button onClick={() => tagAction("Photography")}>Photography</button></li>
+                      </ul>
+                  </div>
+                  <div style={{ maxwidth: "1400px", marginTop: "100px" }}>
+                      <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}>
+                          <Masonry gutter="1em" >
+                              {document.filter((tg) => {
+                                if (tag === "All") {
+                                  return tg
+                                } else {
+                                  return tg.tag === tag
+                                }
+                              }).map((work, index) => (
+                                <motion.div key={index}>
+                                  <WorkImage 
+                                      title={work.title} 
+                                      tag={work.tag} 
+                                      link={work.link} 
+                                      image={work.image.localFile} 
+                                      alt={work.image.alt} />
+                                </motion.div>
+                              ))}
+                          </Masonry>
+                      </ResponsiveMasonry>
+                  </div>
+              </div>
+          </SectionPageLayout>
+      </Layout>
+  )
 }
 
-export default work;
+export default Work;
 
 export const query = graphql`
 query WorkQuery {
