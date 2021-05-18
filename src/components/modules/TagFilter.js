@@ -1,7 +1,8 @@
 import React from 'react';
 import * as TagFilterStyles from './TagFilter.module.scss'
 
-const TagFilter = ({items}) => {
+const TagFilter = ({ items }) => {
+
     return (
         <div className={TagFilterStyles.container}>
             <ul className={TagFilterStyles.wrapper}>

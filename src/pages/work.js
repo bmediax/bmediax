@@ -5,8 +5,8 @@ import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 // import * as variables from '../styles/_variables.module.scss'
 import SectionPageLayout from '../layout/SectionPageLayout';
 import Layout from '../layout/index.js'
-import TagFilter from '../components/modules/TagFilter';
 import WorkImage from '../components/workImage';
+import * as TagFilterStyles from '../components/modules/TagFilter.module.scss'
 
 const work = ({ data }) => {
     if (!data) return null
@@ -15,7 +15,16 @@ const work = ({ data }) => {
         <Layout title="Work">
             <SectionPageLayout label="page" title="Work">
                 <div className="sectionMaxWidth">
-                    <TagFilter />
+                    <div className={TagFilterStyles.container}>
+                        <ul className={TagFilterStyles.wrapper}>
+                            <li className={TagFilterStyles.selectedTag}>All</li>
+                            <li>Graphics</li>
+                            <li>Motion</li>
+                            <li>Iconography</li>
+                            <li>Illustration</li>
+                            <li>Photography</li>
+                        </ul>
+                    </div>
                     <div style={{ maxwidth: "1400px", marginTop: "100px" }}>
                         <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}>
                             <Masonry gutter="1em" >
