@@ -1,0 +1,47 @@
+{
+  "Main": {
+    "works": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "image": {
+            "type": "Image",
+            "config": {
+              "constraint": {
+                "width": 2000
+              },
+              "thumbnails": [],
+              "label": "image"
+            }
+          },
+          "title": {
+            "type": "StructuredText",
+            "config": {
+              "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+              "label": "title"
+            }
+          },
+          "tag": {
+            "type": "Select",
+            "config": {
+              "options": [
+                "Graphics",
+                "Iconography",
+                "Illustration",
+                "Photography"
+              ],
+              "label": "tag"
+            }
+          },
+          "link": {
+            "type": "Link",
+            "config": {
+              "label": "Link"
+            }
+          }
+        },
+        "label": "works"
+      }
+    }
+  }
+}

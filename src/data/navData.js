@@ -33,6 +33,10 @@ export const navData = [
         //     },
         // ],
     },
+    {
+        title: "Works",
+        path: '/work'
+    },
     // {
     //     title: "Get In Touch",
     //     path: '/contact'

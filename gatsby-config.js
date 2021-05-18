@@ -50,6 +50,7 @@ module.exports = {
         schemas: {
            homepage: require("./custom_types/homepage.json"),
            portfolio: require("./custom_types/portfolio.json"),
+           work: require("./custom_types/work.json"),
         },
       },
     },
