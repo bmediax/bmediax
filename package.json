@@ -15,7 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "framer-motion": "^4.1.16",
+    "framer-motion": "^4.1.17",
     "gatsby": "^3.5.0",
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-gatsby-cloud": "^2.5.0",
@@ -44,6 +44,6 @@
     "sass": "^1.32.13"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.2"
+    "@babel/core": "^7.14.3"
   }
 }
