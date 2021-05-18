@@ -42,11 +42,21 @@
       background: getColor(lightBase);
       border: none;
       padding: 5px 20px;
-      transition: background 200ms linear;
+      transition: background 200ms linear, color 200ms linear;
       @include objectCorner("default");
       font-size: 1.6rem;
       font-weight: 500;
       color: getColor(normalText);
+      outline:none;
+
+      // &:focus {
+      //   background: getColor(lightdarkBase);
+      // }
+
+      // &:focus {
+      //   background: getColor(lightLightBase2) !important;
+      //   color: getColor(lightDarkText) !important;
+      // }
 
       &:hover {
         background: getColor(lightdarkBase);

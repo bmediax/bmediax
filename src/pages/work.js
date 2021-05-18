@@ -5,36 +5,32 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import SectionPageLayout from '../layout/SectionPageLayout';
 import Layout from '../layout/index.js'
 import WorkImage from '../components/workImage';
-import * as TagFilterStyles from '../components/modules/TagFilter.module.scss'
+import TagFilter from '../components/modules/TagFilter';
+import { TagContext } from '../contexts/TagContext'
 
 const Work = ({ data }) => {
-  const [ tag, setTag ] = useState("All")
+  const [ tag, setTag ] = useState({
+    tagged: "All",
+    id: null
+  })
+
   if (!data) return null
   const document = data.allPrismicWork.edges[0].node.data.works
-  
-  const tagAction = (ts) => {
-      setTag(ts)
-  }
+
   return (
+    <TagContext.Provider value={{tag, setTag}}>
       <Layout title="Work">
           <SectionPageLayout label="page" title="Work">
               <div className="sectionMaxWidth">
-                  <div className={TagFilterStyles.container}>
-                      <ul className={TagFilterStyles.wrapper}>
-                          <li><button className={TagFilterStyles.selectedTag} onClick={() => tagAction("All")}>All</button></li>
-                          <li><button onClick={() => tagAction("Graphics")}>Graphics</button></li>
-                          <li><button onClick={() => tagAction("Illustration")}>Illustration</button></li>
-                          <li><button onClick={() => tagAction("Photography")}>Photography</button></li>
-                      </ul>
-                  </div>
+                  <TagFilter data={["All", "Graphics", "Illustration", "Photography"]} />
                   <div style={{ maxwidth: "1400px", marginTop: "100px" }}>
                       <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}>
                           <Masonry gutter="1em" >
                               {document.filter((tg) => {
-                                if (tag === "All") {
+                                if (tag.tagged === "All") {
                                   return tg
                                 } else {
-                                  return tg.tag === tag
+                                  return tg.tag === tag.tagged
                                 }
                               }).map((work, index) => (
                                 <motion.div key={index} whileHover={{ y: -3 }}>
@@ -52,9 +48,9 @@ const Work = ({ data }) => {
               </div>
           </SectionPageLayout>
       </Layout>
+    </TagContext.Provider>
   )
 }
-
 export default Work;
 
 export const query = graphql`

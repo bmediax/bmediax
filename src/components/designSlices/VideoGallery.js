@@ -38,9 +38,9 @@ const VideoGallery = ({ slice }) => {
 
     useEffect(() => {
         document.addEventListener("touchstart", function(e) {
-            console.log(e.defaultPrevented);  // will be false
+            // console.log(e.defaultPrevented);  // will be false
             e.preventDefault();   // does nothing since the listener is passive
-            console.log(e.defaultPrevented);  // still false
+            // console.log(e.defaultPrevented);  // still false
           }, {passive: true});
     }, [])
 
