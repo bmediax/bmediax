@@ -113,5 +113,13 @@ module.exports = {
         enableDuringDevelop: false, // Optional. Disables Tidio chat widget when running Gatsby dev server. Defaults to true.
       },
     },
+    {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        includeInDevelopment: false, // optional parameter to include script in development
+        id: 2408072,
+        sv: 6,
+      },
+    },
   ]
 };
