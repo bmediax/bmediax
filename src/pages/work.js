@@ -23,7 +23,6 @@ const Work = ({ data }) => {
                       <ul className={TagFilterStyles.wrapper}>
                           <li><button className={TagFilterStyles.selectedTag} onClick={() => tagAction("All")}>All</button></li>
                           <li><button onClick={() => tagAction("Graphics")}>Graphics</button></li>
-                          {/* <li>Iconography</li> */}
                           <li><button onClick={() => tagAction("Illustration")}>Illustration</button></li>
                           <li><button onClick={() => tagAction("Photography")}>Photography</button></li>
                       </ul>
@@ -38,7 +37,7 @@ const Work = ({ data }) => {
                                   return tg.tag === tag
                                 }
                               }).map((work, index) => (
-                                <motion.div key={index}>
+                                <motion.div key={index} whileHover={{ y: -3 }}>
                                   <WorkImage 
                                       title={work.title} 
                                       tag={work.tag} 

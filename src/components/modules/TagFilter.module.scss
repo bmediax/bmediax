@@ -4,6 +4,17 @@
   //   background: red;
   margin-top: 25px;
   width: 100%;
+  position: sticky;
+  top: $navHeight;
+  right: 0;
+  left: 0;
+  background: getColor(lightBase);
+  padding: 15px 0px;
+  z-index: 1;
+
+  @include responsive("mobile") {
+    top: $navMobileHeight + 20;
+  }
 }
 
 .wrapper {
@@ -21,10 +32,15 @@
     display: block;
     width: 100%;
     text-align: center;
-    
+
+    .selectedTag {
+      background: getColor(lightLightBase2) !important;
+      color: getColor(lightDarkText) !important;
+    }
+
     button {
-      background:getColor(lightBase);
-      border:none;
+      background: getColor(lightBase);
+      border: none;
       padding: 5px 20px;
       transition: background 200ms linear;
       @include objectCorner("default");
@@ -32,16 +48,11 @@
       font-weight: 500;
       color: getColor(normalText);
 
-      .selectedTag {
-        background: getColor(lightdarkBase) !important;
-        color: getColor(lightDarkText) !important;
-      }
-
       &:hover {
-        background:getColor(lightdarkBase);
+        background: getColor(lightdarkBase);
+        color: getColor(azureToMist);
         cursor: pointer;
       }
     }
   }
 }
-

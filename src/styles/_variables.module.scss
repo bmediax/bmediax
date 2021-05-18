@@ -210,6 +210,14 @@ $colors-dark: (
   }
 }
 
+@mixin navHeight {
+  height: $navMobileHeight;
+
+  @include responsive("mobile") {
+    height: $navMobileHeight;
+  }
+}
+
 @mixin objectCorner($type) {
   @if $type == "default" {
     border-radius: $defaultBorder !important;
