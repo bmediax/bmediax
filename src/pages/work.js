@@ -11,7 +11,7 @@ import { TagContext } from '../contexts/TagContext'
 const Work = ({ data }) => {
   const [ tag, setTag ] = useState({
     tagged: "All",
-    id: null
+    id: 0
   })
 
   if (!data) return null

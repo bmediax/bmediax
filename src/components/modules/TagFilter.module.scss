@@ -45,9 +45,10 @@
       transition: background 200ms linear, color 200ms linear;
       @include objectCorner("default");
       font-size: 1.6rem;
+      font-family: $primaryFont;
       font-weight: 500;
       color: getColor(normalText);
-      outline:none;
+      outline: none;
 
       // &:focus {
       //   background: getColor(lightdarkBase);
