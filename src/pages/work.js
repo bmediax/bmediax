@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link, graphql } from 'gatsby'
 import { motion } from 'framer-motion'
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
-import { HiArrowCircleDown } from 'react-icons/hi';
 import SectionPageLayout from '../layout/SectionPageLayout';
 import Layout from '../layout/index.js'
 import WorkImage from '../components/workImage';
