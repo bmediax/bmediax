@@ -19,8 +19,8 @@ const meetBrian = () => {
 
                         <p>My favorite productivity applications has to be the beautifully designed <a href="https://culturedcode.com/things/" target="_blank" className="azure" rel="noreferrer">Things 3</a>, <a target="_blank" href="https://superhuman.com/?utm_source=google&utm_medium=cpc&utm_campaign=20200918_brandedsearch&utm_term=superhuman&utm_content=a&gclid=CjwKCAjwkN6EBhBNEiwADVfya1MxNQQ8oizGrvHUyYIrIFNjLxuYvX4JcNQK7SO4an3BeejvW9s0axoCUlsQAvD_BwE" className="azure" rel="noreferrer">Superhuman</a>, <a href="https://todoist.com/" target="_blank" className="azure" rel="noreferrer">Todoist</a>, and <a href="https://www.craft.do/" target="_blank" className="azure" rel="noreferrer">Craft!</a> They all have beautiful interfaces with solid functionality!</p>
                         <div className="btn-flex">
-                            <a href={bmediaxResume} download="Bmediax_Resume" className="btn primary">Download Resume <HiArrowCircleDown style={{ position: 'relative', top: '2px' }}/></a>
-                            <a href={bmediaxPrintResume} download="Bmediax_Resume_Print" className="btn primary">Download Print Resume <HiDocumentDownload style={{ position: 'relative', top: '2px' }}/></a>
+                            <a href={bmediaxResume} download="Bmediax_Resume" className="btn primary clickDownloadResume">Download Resume <HiArrowCircleDown style={{ position: 'relative', top: '2px' }}/></a>
+                            <a href={bmediaxPrintResume} download="Bmediax_Resume_Print" className="btn primary clickDownloadResumePrint">Download Print Resume <HiDocumentDownload style={{ position: 'relative', top: '2px' }}/></a>
                         </div>
                     </div>
                     <div className="pageTwoColumn">
@@ -63,7 +63,7 @@ const meetBrian = () => {
                 <div className="pageColumnLayout sectionMaxWidth">
                     <div className="cardLink_wrapper">
                         <h1>View my Portfolio</h1>
-                        <Link to="/portfolio/edutainment" className="btn outline-active">View a Case Study</Link>
+                        <Link to="/portfolio/edutainment" className="btn outline-active clickViewPortfolioFromAbout">View a Case Study</Link>
                     </div>
                 </div>
             </SectionPageLayout>

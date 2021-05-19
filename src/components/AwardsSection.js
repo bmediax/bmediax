@@ -16,7 +16,7 @@ const AwardsSection = ({awardsData}) => {
             <div className="pageColumnLayout" style={{ marginTop: "50px" }}>
                 <div className="pageOneColumn">
                     <center>
-                        <Link to="/meet-brian" className="btn outline-active"> Meet Brian <BsPersonBoundingBox style={{ position: 'relative', marginLeft:"5px", top: '2px' }}/></Link>
+                        <Link to="/meet-brian" className="btn outline-active clickViewAbout"> Meet Brian <BsPersonBoundingBox style={{ position: 'relative', marginLeft:"5px", top: '2px' }}/></Link>
                     </center>
                 </div>
             </div>

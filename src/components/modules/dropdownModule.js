@@ -58,7 +58,7 @@ const DropdownModule = ({ primary }) => {
 
     
     return (
-        <div>
+        <div className="clickEmailContact">
             <ToastContainer />
             <span>{isSelect.label}</span>
             <Dropdown options={options} onChange={_onSelect} placeholder="hello@bmediax.dev" controlClassName={`btn ${primary ? 'primary' : 'activePrimary'}`} menuClassName={DropdownModuleStyles.dropdownMenu} arrowClassName={DropdownModuleStyles.arrowDrop} />
