@@ -12,7 +12,6 @@ import { navData  } from '../data/navData'
 import Logo from '../components/Logo'
 // import logo from '../images/gfx/logo.svg'
 import MobileNav from './mobileNav';
-import DropdownModule from './modules/dropdownModule';
 
 const Nav = () => {
     const [ isMobileMenuOpen, SetIsMobileMenuOpen ] = useState(false)
