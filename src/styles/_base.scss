@@ -50,10 +50,19 @@ body {
   font-family: $primaryFont;
 }
 
-h1, h2, h3, h4, h5, h6, p, span, div, a {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div,
+a {
   &::selection {
-    background:getColor(lightdarkBase);
-    color:getColor(textHeader);
+    background: getColor(lightdarkBase);
+    color: getColor(textHeader);
   }
 }
 
@@ -635,24 +644,24 @@ nav {
       text-align: right;
 
       div {
-        max-width:220px;
-        padding:0px !important;
+        max-width: 220px;
+        padding: 0px !important;
 
         .Dropdown-menu .Dropdown-option {
-          padding:15px 20px !important;
+          padding: 15px 20px !important;
           // text-align: center;
-          line-height:20px;
+          line-height: 20px;
           white-space: nowrap;
         }
 
         .Dropdown-control {
-          height:45px;
-          line-height:42px;
+          height: 45px;
+          line-height: 42px;
         }
 
         .Dropdown-arrow-wrapper {
           // height:0;
-          display:none;
+          display: none;
         }
       }
 
@@ -672,9 +681,9 @@ nav {
         line-height: 40px;
         text-align: center;
         transition: background 200ms linear, color 250ms linear,
-        box-shadow 250ms linear;
+          box-shadow 250ms linear;
         outline: none;
-        border:2px solid getColor(icn-lightBG);
+        border: 2px solid getColor(icn-lightBG);
 
         &:hover {
           background: getColor(icn-lightBG);
@@ -764,7 +773,7 @@ nav {
 }
 
 #meetBrian {
-  background:getColor(lightdarkBase);
+  background: getColor(lightdarkBase);
 }
 
 #page {
@@ -820,43 +829,48 @@ nav {
 }
 
 .cardLink_wrapper {
-  background:getColor(lightBase);
-  @include objectShadow('default', 'snow');
-  width:100%;
-  padding:40px 40px;
-  @include objectCorner('default');
-  display:flex;
+  background: getColor(lightBase);
+  @include objectShadow("default", "snow");
+  width: 100%;
+  padding: 40px 40px;
+  @include objectCorner("default");
+  display: flex;
   justify-content: center;
   align-items: center;
   gap: 1em;
+  transition: transform 200ms ease;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
 
   h1 {
-    flex:2;
+    flex: 2;
     // font-size:clamp(1.6rem, 5vh, 6rem);
-    font-size: clamp(3rem, 3vw, 4rem); 
-    margin-left:20px;
+    font-size: clamp(3rem, 3vw, 4rem);
+    margin-left: 20px;
   }
-  
+
   a {
-    flex:1;
+    flex: 1;
     text-align: center;
-    // max-width:200px;
+    max-width: 500px;
   }
-  
+
   @include responsive("mobile") {
-    width:auto;
+    width: auto;
     flex-direction: column;
     gap: 2em;
-    
+
     h1 {
-      flex:1;
+      flex: 1;
       text-align: center;
-      margin-left:0 !important;
+      margin-left: 0 !important;
     }
 
     a {
-      display:block;
-      width:100%;
+      display: block;
+      width: 100%;
     }
   }
 }

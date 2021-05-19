@@ -16,7 +16,7 @@
   background: getColor(lightBase);
   text-align: center;
   min-height: 35vh;
-  padding:5% 0px;
+  padding: 5% 0px;
   // padding: $desktopPadding 0;
   display: flex;
   align-items: center;
@@ -200,7 +200,7 @@
 }
 
 .SCA_container {
-  background: getColor(lightBase);
+  // background: getColor(lightBase);
   // max-width: $wrapMaxWidth;
   margin: auto;
   display: flex;
@@ -212,15 +212,16 @@
   background: getColor(darkBase2);
   // padding: $mobilePadding $widthPadding $mobilePadding $widthPadding;
   max-width: $wrapMaxWidth;
-  margin: 0 $widthPadding;
+  // margin: 0 $widthPadding;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   @include sectionPadding("desktop-small");
+  // padding: 40px 40px;
   @include objectCorner("mobile");
   @include objectShadow("hover", "snow");
-  transition: transform 150ms ease;
+  transition: transform 200ms ease;
 
   &:hover {
     transform: translateY(-3px);
@@ -228,7 +229,7 @@
 
   div {
     flex: 2;
-    font-size: 3rem;
+    font-size: clamp(3rem, 3vw, 4rem);
     font-weight: 700;
     color: $blanco;
     text-align: left;
@@ -267,5 +268,16 @@
     div {
       margin-bottom: 20px;
     }
+  }
+}
+
+.message {
+  font-size: clamp(4rem, 3vw, 6rem);
+  text-align: center;
+  margin: 2% 0px;
+  text-transform: uppercase;
+
+  @include responsive("mobile") {
+    margin: 5% 0;
   }
 }
