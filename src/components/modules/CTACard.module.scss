@@ -21,12 +21,17 @@
   .coverImage {
     border-top-right-radius: $defaultBorder;
     border-top-left-radius: $defaultBorder;
+    transition: box-shadow 200ms linear;
   }
 
   &:hover {
     @include objectShadow("default", "snow");
     background: getColor(whiteToRaven);
     transform: translateY(-3px);
+
+    .coverImage {
+      box-shadow:0px 10px 20px rgba(160, 118, 118, 0.2);
+    }
   }
 
   &:nth-child(2) {

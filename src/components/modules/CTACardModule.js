@@ -9,7 +9,9 @@ const CTACardModule = ({ title, raw, cover, url, work, shortDescr, isLight }) =>
     const image = getImage(cover ? cover : "https://images.unsplash.com/photo-1543872981-b148af6c5f6d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80")
     return (
         <div className={`${CTACardStyles.CTACard} ${isLight ? CTACardStyles.isLight : '' }`}>
-            <GatsbyImage image={image} alt={`${raw} Cover`} style={{ display: "block", padding: "30px 0px" }} className={CTACardStyles.coverImage} draggable="false" />
+            <Link to={`/portfolio/${url}`}>
+                <GatsbyImage image={image} alt={`${raw} Cover`} style={{ display: "block", padding: "30px 0px" }} className={CTACardStyles.coverImage} draggable="false" />
+            </Link>
             <div className={CTACardStyles.text}>
                 <span className={CTACardStyles.headerText}>
                     <h5>{work ? work : "work"}</h5>

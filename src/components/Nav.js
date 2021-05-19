@@ -12,6 +12,7 @@ import { navData  } from '../data/navData'
 import Logo from '../components/Logo'
 // import logo from '../images/gfx/logo.svg'
 import MobileNav from './mobileNav';
+import DropdownModule from './modules/dropdownModule';
 
 const Nav = () => {
     const [ isMobileMenuOpen, SetIsMobileMenuOpen ] = useState(false)
@@ -88,6 +89,7 @@ const Nav = () => {
 
                 {/* Social Media */}
                 <div className="social-media_bar">
+                    {/* <DropdownModule primary/> */}
                     <motion.a 
                         href={`https://instagram.com/${siteSocial.instagram}`} 
                         target="_blank" 

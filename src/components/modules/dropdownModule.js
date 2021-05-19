@@ -8,7 +8,7 @@ import * as DropdownModuleStyles from './dropdownModule.module.scss'
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 
-const DropdownModule = () => {
+const DropdownModule = ({ primary }) => {
     const [isSelect, SetIsSelect ] = useState({
         selected: ''
     })
@@ -58,11 +58,11 @@ const DropdownModule = () => {
 
     
     return (
-        <>
+        <div>
             <ToastContainer />
             <span>{isSelect.label}</span>
-            <Dropdown options={options} onChange={_onSelect} placeholder="hello@bmediax.dev" controlClassName="btn primary activePrimary" menuClassName={DropdownModuleStyles.dropdownMenu} arrowClassName={DropdownModuleStyles.arrowDrop} />
-        </>
+            <Dropdown options={options} onChange={_onSelect} placeholder="hello@bmediax.dev" controlClassName={`btn ${primary ? 'primary' : 'activePrimary'}`} menuClassName={DropdownModuleStyles.dropdownMenu} arrowClassName={DropdownModuleStyles.arrowDrop} />
+        </div>
     );
 };
 

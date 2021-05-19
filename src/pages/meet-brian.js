@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image'
 import { HiArrowCircleDown, HiDocumentDownload } from 'react-icons/hi'
-import * as variables from '../styles/_variables.module.scss'
+// import * as variables from '../styles/_variables.module.scss'
 import SectionPageLayout from '../layout/SectionPageLayout';
 import Layout from '../layout/index.js'
 import bmediaxResume from '../assets/files/Bmediax_Resume.pdf'
@@ -55,7 +56,15 @@ const meetBrian = () => {
                     </div>
                 </div>
             </SectionPageLayout>
-            <SectionPageLayout label="page" title="View My Resume!" bgColor={variables.oscuro} isDark>
+            <SectionPageLayout idLabel="meetBrian">
+                <div className="pageColumnLayout sectionMaxWidth">
+                    <div className="cardLink_wrapper">
+                        <h1>View my Portfolio</h1>
+                        <Link to="/portfolio/edutainment" className="btn outline-active">View a Case Study</Link>
+                    </div>
+                </div>
+            </SectionPageLayout>
+            {/* <SectionPageLayout label="page" title="View My Resume!" bgColor={variables.oscuro} isDark>
                 <div className="pageColumnLayout sectionMaxWidth">
                     <div className="pageOneColumn">
                         <center>
@@ -66,7 +75,7 @@ const meetBrian = () => {
                         </center>
                     </div>
                 </div>
-            </SectionPageLayout>
+            </SectionPageLayout> */}
         </Layout>
     )
 }

@@ -50,6 +50,13 @@ body {
   font-family: $primaryFont;
 }
 
+h1, h2, h3, h4, h5, h6, p, span, div, a {
+  &::selection {
+    background:getColor(lightdarkBase);
+    color:getColor(textHeader);
+  }
+}
+
 h1 {
   font-size: 5vmin;
   font-weight: 700;
@@ -206,7 +213,7 @@ p {
 
 .primary {
   outline: none;
-  // background: getColor(lightdarkBase);
+  background: transparent;
   color: getColor(menuText);
   border: 2px solid getColor(lightdarkBase) !important;
 
@@ -260,8 +267,13 @@ p {
   background: $azure;
   border-color: $azure !important;
   color: $blanco;
-  @include objectShadow("hover", "snow");
+  @include objectShadow("default", "azure");
   outline: none;
+
+  &:hover {
+    background: lighten($azure, 3);
+    @include objectShadow("hover", "azure");
+  }
 
   &:focus {
     background: lighten($azure, 5);
@@ -290,6 +302,13 @@ p {
   &:focus {
     box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.05) !important;
   }
+}
+
+.ghostActive {
+  background: getColor(lightLightBase);
+  color: getColor(lightDarkText);
+  outline: none;
+  @include objectShadow("minimal", "snow");
 }
 
 .btn-flex {
@@ -615,6 +634,28 @@ nav {
       flex: 1;
       text-align: right;
 
+      div {
+        max-width:220px;
+        padding:0px !important;
+
+        .Dropdown-menu .Dropdown-option {
+          padding:15px 20px !important;
+          // text-align: center;
+          line-height:20px;
+          white-space: nowrap;
+        }
+
+        .Dropdown-control {
+          height:45px;
+          line-height:42px;
+        }
+
+        .Dropdown-arrow-wrapper {
+          // height:0;
+          display:none;
+        }
+      }
+
       @include responsive("mobile") {
         display: none;
       }
@@ -631,8 +672,9 @@ nav {
         line-height: 40px;
         text-align: center;
         transition: background 200ms linear, color 250ms linear,
-          box-shadow 250ms linear;
+        box-shadow 250ms linear;
         outline: none;
+        border:2px solid getColor(icn-lightBG);
 
         &:hover {
           background: getColor(icn-lightBG);
@@ -721,6 +763,10 @@ nav {
   }
 }
 
+#meetBrian {
+  background:getColor(lightdarkBase);
+}
+
 #page {
   background: getColor(lightBase);
 
@@ -773,6 +819,44 @@ nav {
   grid-area: masonryThree;
 }
 
-// .gallery-grids {
+.cardLink_wrapper {
+  background:getColor(lightBase);
+  @include objectShadow('default', 'snow');
+  width:100%;
+  padding:40px 40px;
+  @include objectCorner('default');
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
 
-// }
+  h1 {
+    flex:2;
+    // font-size:clamp(1.6rem, 5vh, 6rem);
+    font-size: clamp(3rem, 3vw, 4rem); 
+    margin-left:20px;
+  }
+  
+  a {
+    flex:1;
+    text-align: center;
+    // max-width:200px;
+  }
+  
+  @include responsive("mobile") {
+    width:auto;
+    flex-direction: column;
+    gap: 2em;
+    
+    h1 {
+      flex:1;
+      text-align: center;
+      margin-left:0 !important;
+    }
+
+    a {
+      display:block;
+      width:100%;
+    }
+  }
+}

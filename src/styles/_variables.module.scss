@@ -204,7 +204,9 @@ $colors-dark: (
       box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1) !important;
     }
   } @else if $state == "default" and $color == "azure" {
-    box-shadow: 0px 5px 20px rgba($azure, 0.3);
+    box-shadow: 0px 5px 20px rgba($azure, 0.4);
+  } @else if $state == "hover" and $color == "azure" {
+    box-shadow: 0px 5px 20px rgba($azure, 0.5);
   } @else if $state == "default" and $color == "midnight" {
     box-shadow: 0px 10px 20px rgba($midnight, 0.2) !important;
   }
