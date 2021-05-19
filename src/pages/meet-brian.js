@@ -50,9 +50,12 @@ const meetBrian = () => {
                     <div className="pageOneColumn">
                         <p>As a self taught and self motivated, designer and developer, I’ve had the great opportunity to compete in various competitions, one being the Skills USA State and National Web Design Competition, earning Gold for 2 years in a row and earning Bronze then Silver in the National level competitions, against over 31 competitors from around the US.</p>
                         <div className="pageColumnLayout" style={{ marginTop: "30px" }}>
+                            <StaticImage src="../images/profile/skillsusa2015.jpg" alt="SkillsUSA National 2015 Competition" imgClassName="galleryImg" className="galleryImgWrap pageTwoColumn" style={{ flex: "1" }} />
                             <StaticImage src="../images/profile/brianSkillsBenson.jpg" alt="SkillsUSA State 2015 Competition " imgClassName="galleryImg" className="galleryImgWrap pageTwoColumn" style={{ flex: "1" }} />
-                            <StaticImage src="../images/profile/brian_medalion.jpg" alt="SkillsUSA National 2015 Competition" imgClassName="galleryImg" className="galleryImgWrap pageTwoColumn" style={{ flex: "1" }} />
                         </div>
+                        {/* <div className="pageColumnLayout" style={{ marginTop: "30px" }}>
+                            <StaticImage src="../images/profile/brian_medalion.jpg" alt="SkillsUSA National 2015 Competition" imgClassName="galleryImg" className="galleryImgWrap pageTwoColumn" style={{ flex: "1" }} />
+                        </div> */}
                     </div>
                 </div>
             </SectionPageLayout>
