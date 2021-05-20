@@ -12,6 +12,10 @@ html {
   }
 }
 
+.active {
+  color: getColor(azureToMist) !important;
+}
+
 blockquote {
   font-size: 3rem;
   line-height: 150%;

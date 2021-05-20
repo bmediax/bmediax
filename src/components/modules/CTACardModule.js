@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby'
+import { Link, navigate } from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { motion } from 'framer-motion'
 import { BsArrowRightShort } from 'react-icons/bs'
@@ -8,7 +8,7 @@ import * as CTACardStyles from './CTACard.module.scss'
 const CTACardModule = ({ title, raw, cover, url, work, shortDescr, isLight }) => {
     const image = getImage(cover ? cover : "https://images.unsplash.com/photo-1543872981-b148af6c5f6d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80")
     return (
-        <div className={`${CTACardStyles.CTACard} ${isLight ? CTACardStyles.isLight : '' }`}>
+        <div className={`${CTACardStyles.CTACard} ${isLight ? CTACardStyles.isLight : '' }`} onClick={ () => navigate(`/portfolio/${url}`)} role="link" tabIndex="0" onKeyUp={() => navigate(`/portfolio/${url}`)}>
             <Link to={`/portfolio/${url}`}>
                 <GatsbyImage image={image} alt={`${raw} Cover`} style={{ display: "block", padding: "30px 0px" }} className={CTACardStyles.coverImage} draggable="false" />
             </Link>

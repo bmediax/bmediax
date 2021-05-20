@@ -22,6 +22,10 @@
     border-top-right-radius: $defaultBorder;
     border-top-left-radius: $defaultBorder;
     transition: box-shadow 200ms linear;
+
+    img {
+      transition: transform 450ms ease;
+    }
   }
 
   &:hover {
@@ -30,7 +34,11 @@
     transform: translateY(-3px);
 
     .coverImage {
-      box-shadow:0px 10px 20px rgba(160, 118, 118, 0.2);
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+
+      img {
+        transform: scale(1.1);
+      }
     }
   }
 
