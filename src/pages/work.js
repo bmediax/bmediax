@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, graphql } from 'gatsby'
 import { motion } from 'framer-motion'
 import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import SectionPageLayout from '../layout/SectionPageLayout';
 import Layout from '../layout/index.js'
