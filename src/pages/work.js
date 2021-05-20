@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, graphql } from 'gatsby'
 import { motion } from 'framer-motion'
+import Lightbox from 'react-image-lightbox';
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry"
 import SectionPageLayout from '../layout/SectionPageLayout';
 import Layout from '../layout/index.js'
@@ -15,9 +16,13 @@ const Work = ({ data }) => {
     id: 0
   })
 
+  const [isOpen, setIsOpen] = useState(false)
+  const [photoIndex, setPhotoIndex] = useState(0)
+  
+  
   if (!data) return null
   const document = data.allPrismicWork.edges[0].node.data.works
-
+  
   return (
     <TagContext.Provider value={{tag, setTag}}>
       <Layout title="Work">
@@ -34,18 +39,32 @@ const Work = ({ data }) => {
                                   return tg.tag === tag.tagged
                                 }
                               }).map((work, index) => (
-                                <motion.div key={index} whileHover={{ y: -3 }}>
+                                <motion.div key={index} whileHover={{ y: -3 }} onClick={() => setIsOpen(true)}>
                                   <WorkImage 
                                       title={work.title} 
                                       tag={work.tag} 
                                       link={work.link} 
                                       image={work.image.localFile} 
-                                      alt={work.image.alt} />
+                                    alt={work.image.alt} />
                                 </motion.div>
                               ))}
                           </Masonry>
                       </ResponsiveMasonry>
                   </div>
+                  {isOpen && (
+                    <Lightbox 
+                      mainSrc={document[photoIndex].image.localFile.childImageSharp.fluid.src}
+                      nextSrc={document[(photoIndex + 1) % (document.length)].image.localFile.childImageSharp.fluid.src}
+                      prevSrc={document[(photoIndex + document.length - 1) % document.length].image.localFile.childImageSharp.fluid.src}
+                      onCloseRequest={() => setIsOpen(false)}
+                      onMovePrevRequest={() =>
+                          setPhotoIndex((photoIndex + document.length - 1) % document.length)
+                      }
+                      onMoveNextRequest={() =>
+                        setPhotoIndex((photoIndex + 1) % document.length)
+                      } 
+                      />
+                  )}
               </div>
           </SectionPageLayout>
           <SectionPageLayout idLabel="meetBrian">
@@ -85,6 +104,9 @@ query WorkQuery {
               localFile {
                 childImageSharp {
                   gatsbyImageData(quality: 100)
+                  fluid {
+                    src
+                  }
                 }
               }
               alt
