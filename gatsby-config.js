@@ -42,6 +42,42 @@ module.exports = {
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-sitemap",
+    // {
+    //   resolve: "gatsby-plugin-sitemap",
+    //   options: {
+    //     exclude: ['/404', '/comingsoon', '/contact'],
+    //     query: `
+    //     {
+    //       allSite {
+    //         edges {
+    //           node {
+    //             siteMetadata {
+    //               siteUrl
+    //             }
+    //           }
+    //         }
+    //       }
+    //       allSitePage {
+    //         edges {
+    //           node {
+    //             path
+    //           }
+    //         }
+    //       }
+    //     }        
+    //     `,
+    //     serialize: ({ allSite, allSitePage }) => {
+    //       return allSitePage.edges.map(({ node }) => {
+    //           return {
+    //           url: allSite.node.siteMetadata.siteUrl + node.path,
+    //           changefreq: 'daily',
+    //           priority: 0.7,
+    //         };
+    //       });
+    //     },
+    //   }
+    // },
     {
       resolve: 'gatsby-source-prismic',
       options: {
