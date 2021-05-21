@@ -45,7 +45,7 @@
     "react-responsive-masonry": "^2.1.2",
     "react-scroll-parallax": "^2.4.0",
     "react-toastify": "^7.0.4",
-    "sass": "^1.32.13"
+    "sass": "^1.33.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3"
