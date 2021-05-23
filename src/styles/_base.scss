@@ -71,7 +71,7 @@ a {
 }
 
 h1 {
-  font-size: 5vmin;
+  font-size: clamp(4rem, 3vmax, 5rem);
   font-weight: 700;
   color: getColor(textHeader);
   text-transform: capitalize;

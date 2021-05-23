@@ -57,8 +57,8 @@
     }
 
     .coverImage {
-      border-top-right-radius: $mobileBorder;
-      border-top-left-radius: $mobileBorder;
+      border-top-right-radius: $mobileBorder !important;
+      border-top-left-radius: $mobileBorder !important;
     }
   }
 }
