@@ -7,6 +7,7 @@ import CTACardModule from '../components/modules/CTACardModule';
 const portfolio = ({ data }) => {
     if (!data) return null
     const document = data.allPrismicPortfolio.edges
+    console.log(data)
     return (
         <Layout title="Portfolio">
             <SectionPageLayout title="Portfolio" label="page">
@@ -42,6 +43,9 @@ export const query = graphql`
                                 text
                             }
                             client {
+                                text
+                            }
+                            date {
                                 text
                             }
                             background_image {

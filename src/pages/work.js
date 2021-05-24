@@ -106,9 +106,6 @@ query WorkQuery {
                 childImageSharp {
                   gatsbyImageData(quality: 100)
                   id
-                  fluid {
-                    src
-                  }
                 }
               }
               alt
