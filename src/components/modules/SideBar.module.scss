@@ -4,11 +4,16 @@
   position: sticky;
   top: $navHeight + 20;
   right: 0;
-  background: getColor(lightBase);
+  background: getColor(lightLightBase);
   //   padding: 40px;
   padding: 8% 7%;
   @include objectShadow("minimal", "snow");
   @include objectCorner("default");
+
+  @media (prefers-color-scheme: dark) {
+    box-shadow:none !important;
+  }
+  
 
   .section {
     &:not(:last-child) {
