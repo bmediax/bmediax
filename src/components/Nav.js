@@ -4,17 +4,21 @@ import { Link, useStaticQuery, graphql } from 'gatsby'
 
 import { motion } from "framer-motion";
 // import { useMediaQuery } from 'react-responsive';
+import { debounce } from '../utilities/helpers';  
 import { AiOutlineInstagram } from 'react-icons/ai'
 import { DiGithubAlt } from 'react-icons/di'
 import { FaLinkedinIn } from 'react-icons/fa'
 
 import { navData  } from '../data/navData'
 import Logo from '../components/Logo'
-// import logo from '../images/gfx/logo.svg'
 import MobileNav from './mobileNav';
+
+
 
 const Nav = () => {
     const [ isMobileMenuOpen, SetIsMobileMenuOpen ] = useState(false)
+    const [prevScrollPos, setPrevScrollPos] = useState(0); 
+    const [visible, setVisible] = useState(true);  
     const data = useStaticQuery(graphql`
     query navSocial {
         site {
@@ -30,8 +34,23 @@ const Nav = () => {
     }`)
     const siteSocial = data.site.siteMetadata.social
 
+    const handleScroll = debounce(() => {
+        const currentScrollPos = window.pageYOffset;
+        
+        setVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70) || currentScrollPos < 10);
+        
+        setPrevScrollPos(currentScrollPos);
+    }, 80);
+    
     useEffect(() => {
-        const handleScroll = () => {
+        window.addEventListener('scroll', handleScroll);
+        
+        return () => window.removeEventListener('scroll', handleScroll);
+        
+    }, [prevScrollPos, visible, handleScroll]);
+    
+    useEffect(() => {
+        const handleScrolls = () => {
             if (window.scrollY > 0) {
                 document.querySelector(".navBar").className = "navBar navScroll";
             } else {
@@ -39,16 +58,16 @@ const Nav = () => {
             }
         };
         
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
+        window.addEventListener("scroll", handleScrolls);
+        return () => window.removeEventListener("scroll", handleScrolls);
     }, []);
-
+    
     const toggleMobileMenu = () => {
         SetIsMobileMenuOpen(!isMobileMenuOpen)
     }
 
     return (
-        <nav className="navBar">
+        <nav className="navBar" style={{ top: visible ? '0' : '-85px' }}>
             <div className="nav-wrapper">
                 {/* Logo */}
                 <div className="logo-contain" >
