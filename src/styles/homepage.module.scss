@@ -15,6 +15,31 @@ div.cover {
     @include sectionPadding("mobile");
   }
 
+  .icons {
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    margin-top: $navHeight;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    span {
+      position: absolute;
+
+      &:first-child {
+        top: 0;
+        left: 0;
+      }
+
+      &:nth-child(1) {
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+
   .text {
     max-width: 900px;
     text-align: center;
@@ -23,6 +48,7 @@ div.cover {
       line-height: 1.4;
       max-width: 700px;
       margin: auto;
+      color: getColor(darkbase3);
       // line-height: 1;
       // font-size: 96px;
       // text-transform: uppercase;

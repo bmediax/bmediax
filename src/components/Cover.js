@@ -13,6 +13,12 @@ import DropdownModule from './modules/dropdownModule';
 const Cover = ({ coverData }) => {
     return (
         <div className={homepageStyles.cover}>
+            <div className={homepageStyles.icons}>
+                <span>A</span>
+                <span>B</span>
+                <span>C</span>
+                <span>D</span>
+            </div>
             {/* <Parallax y={[20, -20]} tagOuter="figure"> */}
                 <StaticImage src="../images/profile/headshot.png" alt="Bmediax Headshot" width={250} placeholder="blurred" className="coverheadshot" draggable="false" />
             {/* </Parallax> */}
