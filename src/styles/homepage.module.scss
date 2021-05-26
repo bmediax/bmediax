@@ -7,7 +7,8 @@ div.cover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  @include sectionPadding("desktop");
+  min-height: 70vh;
+  @include sectionPadding("mobile");
   // padding:30px 5%;
 
   @include responsive("mobile") {
@@ -20,11 +21,17 @@ div.cover {
 
     h1 {
       line-height: 1.4;
+      max-width: 700px;
+      margin: auto;
+      // line-height: 1;
+      // font-size: 96px;
+      // text-transform: uppercase;
     }
 
     p {
-      margin-top: 20px;
-      line-height: 30px;
+      margin-top: 10px;
+      line-height: 35px;
+      font-size: clamp(1.6rem, 1.8vw, 20px);
     }
   }
 
