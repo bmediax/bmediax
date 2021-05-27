@@ -15,27 +15,22 @@ div.cover {
     @include sectionPadding("mobile");
   }
 
-  .icons {
-    background: rgba(0, 0, 0, 0.2);
-    width: 100%;
-    margin-top: $navHeight;
-    height: 300px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
+  .head {
+    position:relative;
+    width:80%;
+    margin:auto;
+    text-align: center;
+    margin-bottom: 50px;
 
-    span {
+    .icons span {
       position: absolute;
 
-      &:first-child {
-        top: 0;
-        left: 0;
+      .lightBase {
+        fill:getColor(lightdarkBase);
       }
 
-      &:nth-child(1) {
-        top: 0;
-        right: 0;
+      .darkBase {
+        fill:getColor(darkLightBase);
       }
     }
   }
