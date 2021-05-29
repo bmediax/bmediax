@@ -7,7 +7,8 @@ div.cover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: 70vh;
+  min-height: 65vh;
+  margin:auto;
   @include sectionPadding("mobile");
   // padding:30px 5%;
 
@@ -17,14 +18,10 @@ div.cover {
 
   .head {
     position:relative;
-    margin:auto;
+    // margin:auto;
+    margin-bottom:30px;
     text-align: center;
-    bottom:50px;
-    width:50%;
-
-    @include responsive("mobile") {
-      width:100%;
-    }
+    width:65%;
 
     .icons span {
       position: absolute;
@@ -50,6 +47,13 @@ div.cover {
 
       .darkBase {
         fill:getColor(darkLightBase);
+      }
+    }
+
+    @include responsive("mobile") {
+      width:100%;
+      .icons span {
+        transform: scale(1);
       }
     }
   }
