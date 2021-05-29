@@ -9,13 +9,23 @@ import { Link } from 'gatsby'
 import * as homepageStyles from '../styles/homepage.module.scss'
 import DropdownModule from './modules/dropdownModule';
 
+// Icons
+import { EDIcon, AztecEye, Eye, Bone } from '../components/Icons'
 
 const Cover = ({ coverData }) => {
     return (
         <div className={homepageStyles.cover}>
-            {/* <Parallax y={[20, -20]} tagOuter="figure"> */}
-                <StaticImage src="../images/profile/headshot.png" alt="Bmediax Headshot" width={230} placeholder="blurred" className="coverheadshot" draggable="false" />
-            {/* </Parallax> */}
+            <div className={homepageStyles.head}>
+                {/* <Parallax y={[20, -20]} tagOuter="figure"> */}
+                <StaticImage src="../images/profile/headshot.png" alt="Bmediax Headshot" width={250} placeholder="blurred" className="coverheadshot" draggable="false" />
+                <div className={homepageStyles.icons}>
+                    <span style={{ top:0, left:0 }}><EDIcon lightBase={homepageStyles.lightBase} darkBase={homepageStyles.darkBase} /></span>
+                    <span style={{ top:0, right:0 }}><Eye lightBase={homepageStyles.lightBase} darkBase={homepageStyles.darkBase}/></span>
+                    <span style={{ bottom:0, left:0 }}><AztecEye lightBase={homepageStyles.lightBase} darkBase={homepageStyles.darkBase}/></span>
+                    <span style={{ bottom:0, right:0 }}><Bone lightBase={homepageStyles.lightBase} darkBase={homepageStyles.darkBase}/></span>
+                </div>
+                {/* </Parallax> */}
+            </div>
             <div className={homepageStyles.text}>
                 <h1>{ coverData.title.text }</h1>
                 <RichText render={coverData.description.raw} />

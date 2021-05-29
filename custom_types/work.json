@@ -1,46 +1,49 @@
 {
-  "Main": {
-    "works": {
-      "type": "Group",
-      "config": {
-        "fields": {
-          "image": {
-            "type": "Image",
-            "config": {
-              "constraint": {
-                "width": 2000
+  "Main" : {
+    "works" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "image" : {
+            "type" : "Image",
+            "config" : {
+              "constraint" : {
+                "width" : 2000
               },
-              "thumbnails": [],
-              "label": "image"
+              "thumbnails" : [ ],
+              "label" : "image"
             }
           },
-          "title": {
-            "type": "StructuredText",
-            "config": {
-              "single": "heading1, heading2, heading3, heading4, heading5, heading6",
-              "label": "title"
+          "type" : {
+            "type" : "Select",
+            "config" : {
+              "options" : [ "Image", "Gif", "Video" ],
+              "default_value" : "Image",
+              "label" : "Type"
             }
           },
-          "tag": {
-            "type": "Select",
-            "config": {
-              "options": [
-                "Graphics",
-                "Iconography",
-                "Illustration",
-                "Photography"
-              ],
-              "label": "tag"
+          "title" : {
+            "type" : "StructuredText",
+            "config" : {
+              "single" : "heading1, heading2, heading3, heading4, heading5, heading6",
+              "label" : "title"
             }
           },
-          "link": {
-            "type": "Link",
-            "config": {
-              "label": "Link"
+          "tag" : {
+            "type" : "Select",
+            "config" : {
+              "options" : [ "Graphics", "Iconography", "Illustration", "Photography", "Animation" ],
+              "label" : "tag"
+            }
+          },
+          "link" : {
+            "type" : "Link",
+            "config" : {
+              "label" : "Link"
             }
           }
         },
-        "label": "works"
+        "label" : "works"
       }
     }
   }

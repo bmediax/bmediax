@@ -476,7 +476,7 @@ nav {
           ul {
             display: none;
             position: absolute;
-            left: -20%;
+            left: -25%;
             top: 100%;
             text-align: left;
             padding-top: 20px;
@@ -590,7 +590,7 @@ nav {
               padding-top: 0;
               position: unset;
               text-align: center;
-              display: block !important;
+              // display: block !important;
 
               a {
                 padding: 30px 0px;
@@ -718,9 +718,9 @@ nav {
   }
 }
 
-.coverheadshot {
-  margin-bottom: 50px;
-}
+// .coverheadshot {
+//   margin-bottom: 50px;
+// }
 
 .Dropdown-menu {
   background-color: getColor(lightLightBase) !important;
