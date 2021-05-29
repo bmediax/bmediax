@@ -19,7 +19,7 @@ div.cover {
     position:relative;
     margin:auto;
     text-align: center;
-    padding-bottom: 50px;
+    bottom:50px;
     width:50%;
 
     @include responsive("mobile") {
@@ -29,9 +29,23 @@ div.cover {
     .icons span {
       position: absolute;
       z-index:0;
+      transform: scale(1.2);
+      
+      .lightBase, .darkBase {
+        transition: fill 250ms ease;
+      }
+
+      &:hover {
+        .lightBase {
+          fill:getColor(darkLightBase);
+        }
+        .darkBase {
+          fill:getColor(lightdarkBase)
+        }
+      }
 
       .lightBase {
-        fill:getColor(lightdarkBase);
+        fill:getColor(lightLightBase3);
       }
 
       .darkBase {
