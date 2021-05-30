@@ -29,7 +29,7 @@ const Work = ({ data }) => {
       <Layout title="Work">
           <SectionPageLayout label="page" title="Work">
               <div className="sectionMaxWidth">
-                  <TagFilter data={["All", "Graphics", "Illustration", "Photography", "Animation"]} />
+                  <TagFilter data={["All", "Graphics", "Illustration", "Photography"]} />
                   <div style={{ maxwidth: "1400px", marginTop: "100px" }}>
                       <ResponsiveMasonry columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}>
                           <Masonry gutter="1em" >
