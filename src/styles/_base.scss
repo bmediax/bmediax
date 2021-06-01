@@ -191,6 +191,24 @@ p {
   }
 }
 
+.grid-two {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-row-gap: 2em;
+  grid-column-gap: 2em;
+  justify-items: flex-start;
+  align-items: flex-start;
+
+  @include responsive("desktopish") {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include responsive("mobile") {
+    grid-template-columns: 1fr;
+  }
+}
+
 .btn {
   padding: 18px 30px !important;
   font-family: $primaryFont;
@@ -785,6 +803,18 @@ nav {
 
   .section-title {
     margin-bottom: 20px;
+  }
+}
+
+.page {
+  padding-top:clamp(30px, 5vw, 60px) !important;
+
+  .section-title {
+    margin-bottom:clamp(30px, 5vw, 60px) !important;
+  }
+
+  h2 {
+    font-size:clamp(5rem, 4vw, 4.5rem);
   }
 }
 
