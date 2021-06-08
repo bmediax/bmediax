@@ -19,9 +19,9 @@ const CTACardModule = ({ title, raw, cover, url, work, shortDescr, isLight }) =>
                 </span>
                 <motion.span transition={{ duration: 0.6 }} exit={{ opacity: 0 }}>
                     <p>{shortDescr ? shortDescr : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed mattis dui. Etiam vel volutpat ipsum, vitae molestie odio. Nam sed iaculis nisl. Phasellus mattis nulla sit amet suscipit eleifend." }</p>
-                    <Link to={`/portfolio/${url}`} className="btn primary">Learn More <BsArrowRightShort /></Link>
                 </motion.span>
             </div>
+            <Link to={`/portfolio/${url}`} className={`btn primary ${CTACardStyles.button}`}>Learn More <BsArrowRightShort /></Link>
         </div>
     );
 };

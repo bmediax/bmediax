@@ -246,11 +246,13 @@ p {
   outline: none;
   background: transparent;
   color: getColor(menuText);
-  border: 2px solid getColor(lightdarkBase) !important;
+  // background: getColor(lightdarkBase);
+  // border: 2px solid getColor(lightdarkBase) !important;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.03);
 
   &:hover {
     background: $midnight;
-    border: 2px solid $midnight !important;
+    // border: 2px solid $midnight !important;
     color: $blanco;
     @include objectShadow("default", "midnight");
   }
@@ -807,14 +809,14 @@ nav {
 }
 
 .page {
-  padding-top:clamp(30px, 5vw, 60px) !important;
+  padding-top: clamp(30px, 5vw, 60px) !important;
 
   .section-title {
-    margin-bottom:clamp(30px, 5vw, 60px) !important;
+    margin-bottom: clamp(30px, 5vw, 60px) !important;
   }
 
   h2 {
-    font-size:clamp(5rem, 4vw, 4.5rem);
+    font-size: clamp(5rem, 4vw, 4.5rem);
   }
 }
 

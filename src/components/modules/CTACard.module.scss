@@ -84,19 +84,28 @@
   p {
     line-height: 25px;
   }
+}
 
-  a {
-    margin-top: 20px;
-    display: block;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.button {
+  &:hover {
+    border-top: 4px solid getColor(lightLightBase) !important;
+  }
 
-    svg {
-      position: relative;
-      top: 2px;
-      transform: scale(1.3);
-      // font-size: 22px;
-    }
+  // margin-top: 20px;
+  border-top: 4px solid getColor(lightdarkBase) !important;
+  border-top-right-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-top: 23px !important;
+  padding-bottom: 23px !important;
+
+  svg {
+    position: relative;
+    top: 2px;
+    transform: scale(1.3);
+    // font-size: 22px;
   }
 }
