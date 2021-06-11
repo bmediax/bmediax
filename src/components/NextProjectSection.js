@@ -1,10 +1,10 @@
 import React from 'react';
 // import { Link } from 'gatsby'
 // import { BsArrowRight } from 'react-icons/bs'
+import SectionLayout from '../layout/SectionLayout';
 import CTACardModule from './modules/CTACardModule';
 import * as portfolioStyles from '../styles/portfolio.module.scss'
 import * as styles from '../styles/homepage.module.scss'
-import SectionLayout from '../layout/SectionLayout';
 
 const NextProjectSection = ({ nextProjectData }) => {
     return (
