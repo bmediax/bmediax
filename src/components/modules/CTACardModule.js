@@ -2,8 +2,8 @@ import React from 'react';
 import { Link, navigate } from 'gatsby'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { motion } from 'framer-motion'
-import * as CTACardStyles from './CTACard.module.scss'
 import { BsArrowRightShort } from 'react-icons/bs'
+import * as CTACardStyles from './CTACard.module.scss'
 
 const CTACardModule = ({ title, raw, cover, img, url, work, shortDescr, isLight }) => {
     const image = getImage(cover)
