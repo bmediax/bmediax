@@ -1,4 +1,5 @@
 import React from 'react';
+import Layout from '../layout'
 import CoverTitle from '../components/CoverTitle';
 import DesignSection from '../components/DesignSection';
 import ImageSection from '../components/ImageSection';
@@ -7,7 +8,6 @@ import NextProjectSection from '../components/NextProjectSection';
 import OverviewSection from '../components/OverviewSection';
 import PortfolioTitle from '../components/PortfolioTitle';
 import ResultsSection from '../components/ResultsSection';
-import Layout from '../layout'
 // import * as portfolioStyles from '../styles/portfolio.module.scss'
 
 const PortfolioTemplate = ({ data, pageTitle }) => {
@@ -22,7 +22,7 @@ const PortfolioTemplate = ({ data, pageTitle }) => {
             <DesignSection {...data} />
             <ImageSection image={data.results_image} />
             <ResultsSection {...data} />
-            <NextProjectSection nextProjectData={data.next_project} />
+            <NextProjectSection title={pageTitle} />
         </Layout>
         </>
     )

@@ -1,28 +1,72 @@
 import React from 'react';
-import { Link } from 'gatsby'
-import { BsArrowRight } from 'react-icons/bs'
-import * as portfolioStyles from '../styles/portfolio.module.scss'
+import { graphql, useStaticQuery } from 'gatsby'
+import * as homeStyles from '../styles/homepage.module.scss'
+import CTACardModule from './modules/CTACardModule';
+import SectionLayout from '../layout/SectionLayout';
+// import { Link } from 'gatsby'
+// import * as portfolioStyles from '../styles/portfolio.module.scss'
+// import { BsArrowRight } from 'react-icons/bs'
 
-const NextProjectSection = ({ nextProjectData }) => {
+const NextProjectSection = ({ title }) => {
+    const data = useStaticQuery(graphql`
+        query nextQuery {
+            allPrismicPortfolio {
+                edges {
+                    node {
+                        data {
+                            cover_title {
+                                title {
+                                    text
+                                }
+                                name {
+                                    text
+                                }
+                                client {
+                                    text
+                                }
+                                background_image {
+                                    localFile {
+                                        childImageSharp {
+                                            gatsbyImageData(quality: 100)
+                                        }
+                                    }
+                                }
+                            }
+                            overview {
+                                short_description {
+                                    text
+                                }
+                                role {
+                                    text
+                                }
+                                short_tags {
+                                    text
+                                }
+                            }
+                        }
+                        uid
+                    }
+                }
+            }
+        }
+    `)
+    const recentData = data.allPrismicPortfolio.edges
     return (
-        <div style={{padding: "150px 5%"}}>
-            <div className={portfolioStyles.SCA_container}>
-                <div className={portfolioStyles.SCA_wrapper}>
-                    <div>View my Next Project!</div>
-                    <Link to={`/portfolio/${nextProjectData.uid}`} 
-                        className="btn outline-active fullwidth-btn" style={{ width: "100%" }}>
-                            Next Project: <span style={{ textTransform: 'capitalize' }}>{nextProjectData.uid}</span> <BsArrowRight />
-                    </Link>
-                </div>
+        <SectionLayout label={homeStyles.recentProjects} title="View More Projects" subtitle="Case Study">
+            <div className={homeStyles.cardWrapper}>
+                {recentData.filter(recents => recents.node.data.cover_title[0].name.text !== title).slice(0, 3).map((recent, index) => (
+                    <React.Fragment key={index}>
+                        <CTACardModule 
+                            title={recent.node.data.cover_title[0].name.text}
+                            shortDescr={recent.node.data.overview[0].short_description.text} 
+                            work={recent.node.data.overview[0].short_tags.text}
+                            url={recent.node.uid}
+                            cover={recent.node.data.cover_title[0].background_image.localFile}
+                            />
+                    </React.Fragment>
+                ))}
             </div>
-            <h1 className={portfolioStyles.message}>Or</h1>
-            <div className="pageColumnLayout sectionMaxWidth">
-                <div className="cardLink_wrapper">
-                    <h1>View my Work</h1>
-                    <Link to="/work" className="btn outline-active">View Work</Link>
-                </div>
-            </div>
-        </div>
+        </SectionLayout>
     );
 };
 

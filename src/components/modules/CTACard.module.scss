@@ -87,12 +87,8 @@
 }
 
 .button {
-  &:hover {
-    border-top: 4px solid getColor(lightLightBase) !important;
-  }
-
   // margin-top: 20px;
-  border-top: 4px solid getColor(lightdarkBase) !important;
+  // border-top: 4px solid getColor(lightdarkBase) !important;
   border-top-right-radius: 0px !important;
   border-top-left-radius: 0px !important;
   display: block;
@@ -101,6 +97,12 @@
   letter-spacing: 1px;
   padding-top: 23px !important;
   padding-bottom: 23px !important;
+
+  // &:hover {
+  // border-top-right-radius: 0px !important;
+  // border-top-left-radius: 0px !important;
+  // border-top: 4px solid getColor(lightLightBase) !important;
+  // }
 
   svg {
     position: relative;
