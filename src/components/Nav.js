@@ -100,6 +100,17 @@ const Nav = () => {
                             </li>
                         ))}
                     </ul>
+                    <div className="msocials_wrapper">
+                        <a rel="noreferrer" target="_blank" href={`https://instagram.com/${siteSocial.instagram}`} className="msocials-item">
+                            <AiOutlineInstagram />
+                        </a>
+                        <a rel="noreferrer" target="_blank" href={`https://github.com/${siteSocial.github}`} className="msocials-item">
+                            <DiGithubAlt />
+                        </a>
+                        <a rel="noreferrer" target="_blank" href={`https://linkedin.com/in/${siteSocial.linkedin}`} className="msocials-item">
+                            <FaLinkedinIn />
+                        </a>
+                    </div>
                 </div>
 
                 {/* Mobile Hamburger Menu */}
