@@ -474,6 +474,10 @@ nav {
       text-align: center;
       flex: 2;
 
+      .msocials_wrapper {
+        display: none;
+      }
+
       .menu {
         display: flex;
         justify-content: center;
@@ -576,22 +580,72 @@ nav {
         // border-top:1px solid getColor(lightdarkBase);
         position: absolute;
         display: none;
-        top: $navMobileHeight + 20;
+        // top: $navMobileHeight + 20;
+        top: 0;
+        margin-top: $navMobileHeight + 20;
         flex: 1;
         width: 100%;
+        height: 92.6vh;
         background: getColor(lightBase);
 
-        ::after {
-          content: "";
-          height: 100vh;
+        // ::after {
+        //   content: "";
+        //   height: 100vh;
+        //   width: 100%;
+        //   overflow: hidden;
+        // }
+
+        .msocials_wrapper {
+          display: flex !important;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          align-items: center;
+          justify-content: center;
           width: 100%;
-          overflow: hidden;
+          margin: auto;
+          gap: 2.5em;
+          margin-bottom: 2em;
+          transition: top 250ms linear;
+
+          .msocials-item {
+            text-decoration: none;
+            flex: 1;
+            padding: 20px 0px;
+            background: getColor(lightLightBase2);
+            border-radius: 20px;
+            transition: background 250ms linear;
+
+            svg {
+              font-size: 4em;
+              fill: getColor(menuText);
+            }
+
+            &:hover {
+              background: getColor(lightDarkText) !important;
+
+              svg {
+                fill: getColor(lightLightBase2);
+              }
+            }
+
+            &:first-child {
+              margin-left: 2em;
+            }
+
+            &:last-child {
+              margin-right: 2em;
+            }
+          }
         }
 
         .menu {
           flex-direction: column;
-          // background:red;
-          @include objectShadow("default", "snow");
+          align-items: center;
+          justify-content: center;
+          height: 80vh;
+
+          // @include objectShadow("default", "snow");
 
           li {
             width: 100%;
@@ -604,6 +658,7 @@ nav {
               padding: 30px 0px;
               margin-right: 0 !important;
               margin-left: 0 !important;
+              font-size: 2.5rem !important;
             }
 
             ul {
