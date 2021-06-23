@@ -29,7 +29,6 @@
     "gatsby-plugin-sass": "^4.8.0",
     "gatsby-plugin-sharp": "^3.8.0",
     "gatsby-plugin-sitemap": "^4.4.0",
-    "gatsby-plugin-tidio-chat": "^1.0.0",
     "gatsby-source-filesystem": "^3.8.0",
     "gatsby-source-prismic": "^3.3.6",
     "gatsby-transformer-sharp": "^3.8.0",

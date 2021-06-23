@@ -1,15 +1,17 @@
 module.exports = {
   siteMetadata: {
     title: "Bmediax",
-    description: "Hi there, my name is Brian Moreno and I am a Digital Designer and Web Developer with over 7+ years of experience designing, prototyping, developing, and deploying large scale pixel-perfect websites and web applications.",
-    descriptionHTML: "<p>I am a <span className='azure'>Digital Designer</span> and <span className='azure'>Web Developer</span> with over <span className='azure'>7+ years</span> of experience <span className='azure'>designing, prototyping, developing, and deploying</span> large scale pixel-perfect <span className='azure'>websites and web applications</span></p>",
+    description:
+      "Hi there, my name is Brian Moreno and I am a Digital Designer and Web Developer with over 7+ years of experience designing, prototyping, developing, and deploying large scale pixel-perfect websites and web applications.",
+    descriptionHTML:
+      "<p>I am a <span className='azure'>Digital Designer</span> and <span className='azure'>Web Developer</span> with over <span className='azure'>7+ years</span> of experience <span className='azure'>designing, prototyping, developing, and deploying</span> large scale pixel-perfect <span className='azure'>websites and web applications</span></p>",
     author: "Brian Moreno",
     // keywords: "Reiko Mia Williams, Reiko For PCC, Reiko, Reiko4PCC, Portland Community College, Zone 7, PCC Zone 7",
     siteUrl: "https://bmediax.dev",
     social: {
-      instagram: 'bmediax',
-      linkedin: 'bmediax',
-      github: 'bmediax',
+      instagram: "bmediax",
+      linkedin: "bmediax",
+      github: "bmediax",
     },
     socials: [
       {
@@ -30,9 +32,9 @@ module.exports = {
       {
         platform: "Youtube",
         subTitle: "Video",
-        url:'https://www.youtube.com/channel/UCPdDzUu7Mj5GCWtaJtUTQKw'
+        url: "https://www.youtube.com/channel/UCPdDzUu7Mj5GCWtaJtUTQKw",
       },
-    ]
+    ],
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -65,7 +67,7 @@ module.exports = {
     //           }
     //         }
     //       }
-    //     }        
+    //     }
     //     `,
     //     serialize: ({ allSite, allSitePage }) => {
     //       return allSitePage.edges.map(({ node }) => {
@@ -79,14 +81,14 @@ module.exports = {
     //   }
     // },
     {
-      resolve: 'gatsby-source-prismic',
+      resolve: "gatsby-source-prismic",
       options: {
-        repositoryName: 'bmediax',
+        repositoryName: "bmediax",
         shouldDownloadImage: () => true,
         schemas: {
-           homepage: require("./custom_types/homepage.json"),
-           portfolio: require("./custom_types/portfolio.json"),
-           work: require("./custom_types/work.json"),
+          homepage: require("./custom_types/homepage.json"),
+          portfolio: require("./custom_types/portfolio.json"),
+          work: require("./custom_types/work.json"),
         },
       },
     },
@@ -106,8 +108,8 @@ module.exports = {
       resolve: "gatsby-plugin-anchor-links",
       options: {
         offset: -75,
-        duration: 1500
-      }
+        duration: 1500,
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
@@ -143,13 +145,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-tidio-chat',
-      options: {
-        tidioKey: 'acppdswxukgmzxwkeisv64jvbqrwk1zd',
-        enableDuringDevelop: false, // Optional. Disables Tidio chat widget when running Gatsby dev server. Defaults to true.
-      },
-    },
-    {
       resolve: `gatsby-plugin-hotjar`,
       options: {
         includeInDevelopment: false, // optional parameter to include script in development
@@ -161,23 +156,23 @@ module.exports = {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
         id: "GTM-PRJJ8ZC",
-  
+
         // Include GTM in development.
         //
         // Defaults to false meaning GTM will only be loaded in production.
         includeInDevelopment: false,
-  
+
         // datalayer to be set before GTM is loaded
         // should be an object or a function that is executed in the browser
         //
         // Defaults to null
         defaultDataLayer: { platform: "gatsby" },
-  
+
         // Specify optional GTM environment details.
         // gtmAuth: "YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_AUTH_STRING",
         // gtmPreview: "YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_PREVIEW_NAME",
         // dataLayerName: "YOUR_DATA_LAYER_NAME",
-  
+
         // Name of the event that is triggered
         // on every Gatsby route change.
         //
@@ -185,5 +180,5 @@ module.exports = {
         routeChangeEventName: "gatsby-route-change",
       },
     },
-  ]
+  ],
 };
