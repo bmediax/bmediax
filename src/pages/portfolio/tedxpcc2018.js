@@ -39,6 +39,7 @@ query tedxpcc2018PortfolioQuery {
                 }
               }
               alt
+              url
             }
           }
           design {

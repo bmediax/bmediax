@@ -8,10 +8,10 @@ import WorkSection from '../components/WorkSection'
 import '../styles/reset.css'
 import '../styles/_base.scss'
 
-const Layout = ({children, title}) => {
+const Layout = ({children, title, descr}) => {
     return (
         <div id={title}>
-            <Seo title={title} />
+            <Seo title={title} description={descr}/>
             <Nav />
             <AnimatePresence exitBeforeEnter>
                 <motion.div
