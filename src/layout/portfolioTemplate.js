@@ -11,7 +11,6 @@ import ResultsSection from '../components/ResultsSection';
 // import * as portfolioStyles from '../styles/portfolio.module.scss'
 
 const PortfolioTemplate = ({ data, pageTitle }) => {
-    console.log(data)
     return (
         <>
             <Layout title={pageTitle} descr={data.cover_title[0].title.text}>
