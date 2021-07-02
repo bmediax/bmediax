@@ -80,14 +80,14 @@ const Nav = ({theme}) => {
                     <ul className="menu">
                         {navData.map((navs, index) => (
                             <li key={index}>
-                                <Link to={navs.path} className="nav-item" activeClassName="active">{navs.title}</Link>
+                                <Link to={navs.path} className="nav-item" activeClassName="active" style={{ color: theme ? `${variables.minimal}` : '' }}>{navs.title}</Link>
                                 {navs.sub &&
                                     <ul>
                                         {navs.sub.map((subs, index) => (
-                                            <li key={index} style={{ color: theme ? `${variables.blanco} !important` : '' }}>
+                                            <li key={index}>
                                                 {subs.path 
                                                 ? 
-                                                <Link to={subs.path} title={subs.title}>{subs.title}</Link>
+                                                <Link to={subs.path} title={subs.title} style={{ background: theme ? `${variables.oscuro}` : '', color: theme ? `${variables.minimal}` : ''}}>{subs.title}</Link>
                                                 :
                                                 <a href={subs.link}>{subs.title}</a>
                                                 } 
