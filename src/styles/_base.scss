@@ -965,3 +965,30 @@ nav {
     }
   }
 }
+
+.footer-color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    padding: 6px 0;
+    flex: 1;
+  }
+
+  .footer-color-1 {
+    background: $midnight;
+  }
+
+  .footer-color-2 {
+    background: $azure;
+  }
+
+  .footer-color-3 {
+    background: $oscuro;
+  }
+
+  .footer-color-4 {
+    background: $mist;
+  }
+}

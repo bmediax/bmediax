@@ -8,7 +8,7 @@ div.cover {
   align-items: center;
   flex-direction: column;
   min-height: 65vh;
-  margin:auto;
+  margin: auto;
   @include sectionPadding("mobile");
   // padding:30px 5%;
 
@@ -17,41 +17,42 @@ div.cover {
   }
 
   .head {
-    position:relative;
+    position: relative;
     // margin:auto;
-    margin-bottom:30px;
+    margin-bottom: 30px;
     text-align: center;
-    width:65%;
+    width: 65%;
 
     .icons span {
       position: absolute;
-      z-index:0;
+      z-index: 0;
       transform: scale(1.2);
-      
-      .lightBase, .darkBase {
+
+      .lightBase,
+      .darkBase {
         transition: fill 250ms ease;
       }
 
       &:hover {
         .lightBase {
-          fill:getColor(darkLightBase);
+          fill: getColor(darkLightBase);
         }
         .darkBase {
-          fill:getColor(lightdarkBase)
+          fill: getColor(lightdarkBase);
         }
       }
 
       .lightBase {
-        fill:getColor(lightLightBase3);
+        fill: getColor(lightLightBase3);
       }
 
       .darkBase {
-        fill:getColor(darkLightBase);
+        fill: getColor(darkLightBase);
       }
     }
 
     @include responsive("mobile") {
-      width:100%;
+      width: 100%;
       .icons span {
         transform: scale(1);
       }
@@ -104,7 +105,7 @@ div.cover {
 }
 
 .awards {
-  background: getColor(midnightToRaven);
+  background: getColor(oscuroToRaven);
 }
 
 .friends {

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-// import * as variables from '../styles/_variables.module.scss'
+import * as variables from '../styles/_variables.module.scss'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 
 import { motion } from "framer-motion";
@@ -13,9 +13,7 @@ import { navData  } from '../data/navData'
 import Logo from '../components/Logo'
 import MobileNav from './mobileNav';
 
-
-
-const Nav = () => {
+const Nav = ({theme}) => {
     const [ isMobileMenuOpen, SetIsMobileMenuOpen ] = useState(false)
     const [prevScrollPos, setPrevScrollPos] = useState(0); 
     const [visible, setVisible] = useState(true);  
@@ -67,13 +65,13 @@ const Nav = () => {
     }
 
     return (
-        <nav className="navBar" style={{ top: visible ? '0' : '-85px' }}>
+        <nav className="navBar" style={{ top: visible ? '0' : '-85px', background: theme ? `${variables.masOscuro}` : '' }}>
             <div className="nav-wrapper">
                 {/* Logo */}
                 <div className="logo-contain" >
                     <Link to="/" exact="true" className="logoWraps" style={{ outline: "none" }}>
                         <Logo height={60} />
-                        <span className="logo-text">mediax</span>
+                        <span className="logo-text" style={{ color: theme ? `${variables.blanco}` : '' }}>mediax</span>
                     </Link>
                 </div>
 
@@ -86,7 +84,7 @@ const Nav = () => {
                                 {navs.sub &&
                                     <ul>
                                         {navs.sub.map((subs, index) => (
-                                            <li key={index}>
+                                            <li key={index} style={{ color: theme ? `${variables.blanco} !important` : '' }}>
                                                 {subs.path 
                                                 ? 
                                                 <Link to={subs.path} title={subs.title}>{subs.title}</Link>
