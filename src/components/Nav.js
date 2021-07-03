@@ -71,7 +71,7 @@ const Nav = ({ theme }) => {
                 <div className="logo-contain" >
                     <Link to="/" exact="true" className="logoWraps" style={{ outline: "none" }}>
                         <Logo height={60} />
-                        <span className="logo-text" style={{ color: theme ? `${variables.blanco}` : '' }}>mediax</span>
+                        <span className="logo-text">mediax</span>
                     </Link>
                 </div>
 
@@ -80,7 +80,8 @@ const Nav = ({ theme }) => {
                     <ul className="menu">
                         {navData.map((navs, index) => (
                             <li key={index}>
-                                <Link to={navs.path} className="nav-item" activeClassName="active" style={{ color: theme ? `${variables.minimal}` : '' }}>{navs.title}</Link>
+                                {/* style={{ color: theme ? `${variables.minimal}` : '' }} */}
+                                <Link to={navs.path} className="nav-item" activeClassName="active" style={{ color: theme ? `${variables.mist}` : '' }}>{navs.title}</Link>
                                 {navs.sub &&
                                     <ul>
                                         {navs.sub.map((subs, index) => (
@@ -121,8 +122,8 @@ const Nav = ({ theme }) => {
                         href={`https://instagram.com/${siteSocial.instagram}`} 
                         target="_blank" 
                         rel="noreferrer"
-                        animate={{ y:0 }}
-                        initial={{ y:30 }}
+                        // animate={{ y:0 }}
+                        // initial={{ y:30 }}
                         whileHover={{ scale:1.1}}
                         whileTap={{ scale:.9 }}>
                         <AiOutlineInstagram />
@@ -131,8 +132,8 @@ const Nav = ({ theme }) => {
                         href={`https://github.com/${siteSocial.github}`} 
                         target="_blank" 
                         rel="noreferrer"
-                        animate={{ y:0 }}
-                        initial={{ y:30 }}
+                        // animate={{ y:0 }}
+                        // initial={{ y:30 }}
                         whileHover={{ scale:1.1 }}
                         whileTap={{ scale:.9 }}>
                         <DiGithubAlt />
@@ -141,8 +142,8 @@ const Nav = ({ theme }) => {
                         href={`https://linkedin.com/in/${siteSocial.linkedin}`} 
                         target="_blank" 
                         rel="noreferrer"
-                        animate={{ y:0 }}
-                        initial={{ y:30 }}
+                        // animate={{ y:0 }}
+                        // initial={{ y:30 }}
                         whileHover={{ scale:1.1 }}
                         whileTap={{ scale:.9 }}>
                         <FaLinkedinIn />

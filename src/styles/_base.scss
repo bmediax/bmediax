@@ -375,6 +375,10 @@ p {
 .navScroll {
   @include objectShadow("default", "snow");
   background: getColor(lightBase) !important;
+
+  a.nav-item {
+    color: $midnight !important;
+  }
 }
 
 .sectionMaxWidth {
@@ -530,6 +534,10 @@ nav {
                 background: getColor(lightdarkBase);
               }
             }
+          }
+
+          a.darkNav {
+            color: $mist;
           }
 
           a.nav-item {
@@ -764,7 +772,6 @@ nav {
         transition: background 200ms linear, color 250ms linear,
           box-shadow 250ms linear;
         outline: none;
-        border: 2px solid getColor(icn-lightBG);
 
         &:hover {
           background: getColor(icn-lightBG);
