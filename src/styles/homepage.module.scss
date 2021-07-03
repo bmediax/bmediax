@@ -160,7 +160,7 @@ div.cover {
   .coverCTA_wrapper {
     max-width: $wrapMaxWidth;
     margin: auto;
-    @include sectionPadding("mobile");
+    @include sectionPadding("desktop");
     justify-content: center;
     align-items: center;
     display: flex;

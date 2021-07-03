@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import { BsArrowDown } from 'react-icons/bs'
 
 import Layout from '../layout/index.js'
+import WhatDoSection from '../components/WhatDoSection'
 import RecentProjectsSection from '../components/RecentProjectsSection.js'
 import AwardsSection from '../components/AwardsSection.js'
 import CoverCTA from '../components/CoverCTA.js'
@@ -20,6 +21,7 @@ const IndexPage = ({ data }) => {
               <span>Scroll Down</span>
               <BsArrowDown />
             </div>
+            <WhatDoSection />
             <RecentProjectsSection />
             <AwardsSection awardsData={awards[1]} />
         </Layout>
