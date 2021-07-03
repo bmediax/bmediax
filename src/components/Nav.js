@@ -13,7 +13,7 @@ import { navData  } from '../data/navData'
 import Logo from '../components/Logo'
 import MobileNav from './mobileNav';
 
-const Nav = ({theme}) => {
+const Nav = ({ theme }) => {
     const [ isMobileMenuOpen, SetIsMobileMenuOpen ] = useState(false)
     const [prevScrollPos, setPrevScrollPos] = useState(0); 
     const [visible, setVisible] = useState(true);  

@@ -1,5 +1,5 @@
 import React from 'react';
-// import { RichText } from 'prismic-reactjs'
+import { RichText } from 'prismic-reactjs'
 import { StaticImage } from 'gatsby-plugin-image'
 
 // External
@@ -11,16 +11,18 @@ import DropdownModule from './modules/dropdownModule';
 // Icons
 // import { EDIcon, AztecEye, Eye, Bone } from '../components/Icons'
 
-const CoverCTA = () => {
+const CoverCTA = ({ coverData }) => {
     return (
         <div className={homepageStyles.coverCTA}>
             <div className={homepageStyles.coverCTA_wrapper}>
                 <div className={homepageStyles.coverImage}>
+                    {/* Profile Headshot */}
                     <StaticImage src="../images/profile/headshot.png" alt="Bmediax Headshot" width={300} placeholder="blurred" className={homepageStyles.coverHeadshot} draggable="false" />
                 </div>
                 <div className={homepageStyles.coverInfo}>
-                    <h1>Hi There, I'm A Digital Designer And Developer</h1>
-                    <p>With over 5+ years of experience designing, prototyping, developing and deploying pixel-perfect websites, web applications and brands.</p>
+                    {/* Header */}
+                    <h1>{ coverData.title.text }</h1>
+                    <RichText render={coverData.description.raw} />
 
                     {/* Buttons */}
                     <div className={homepageStyles.buttonWrapper}>

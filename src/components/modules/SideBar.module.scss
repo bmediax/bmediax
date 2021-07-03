@@ -11,9 +11,8 @@
   @include objectCorner("default");
 
   @media (prefers-color-scheme: dark) {
-    box-shadow:none !important;
+    box-shadow: none !important;
   }
-  
 
   .section {
     &:not(:last-child) {
@@ -35,10 +34,10 @@
 
     p {
       &:not(:first-child) {
-        margin-top:15px;
+        margin-top: 15px;
       }
       b {
-        font-weight:700;
+        font-weight: 700;
         text-transform: uppercase;
       }
     }

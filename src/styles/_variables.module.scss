@@ -47,6 +47,7 @@ $jetBlack: #14171c;
 $raven: #1e2329;
 $steelBlue: #2b313c;
 $cloud: #687077;
+$crow: #181c21;
 
 :export {
   masOscuro: $masOscuro;
@@ -83,6 +84,7 @@ $colors: (
   darkBase: $oscuro,
   darkBase2: $steelBlue,
   darkbase3: $oscuro,
+  medDarkBase: $masOscuro,
   // Btn Based
   lightDarkText: $midnight,
   // Nav Text
@@ -120,6 +122,7 @@ $colors-dark: (
   darkBase: $oscuro,
   darkBase2: $steelBlue,
   darkbase3: $blanco,
+  medDarkBase: $crow,
   // Btn Based
   lightDarkText: $minimal,
   // Nav Text
