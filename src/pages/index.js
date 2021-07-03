@@ -1,10 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { BsArrowDown } from 'react-icons/bs'
 
 import Layout from '../layout/index.js'
 import RecentProjectsSection from '../components/RecentProjectsSection.js'
 import AwardsSection from '../components/AwardsSection.js'
 import CoverCTA from '../components/CoverCTA.js'
+
+import * as homepageStyles from '../styles/homepage.module.scss'
 
 const IndexPage = ({ data }) => {
     if (!data) return null
@@ -13,6 +16,10 @@ const IndexPage = ({ data }) => {
     return (
         <Layout title="Bmediax" darkNav={true}>
             <CoverCTA coverData={document.cover[0]} />
+            <div className={homepageStyles.scrollDownSection}>
+              <span>Scroll Down</span>
+              <BsArrowDown />
+            </div>
             <RecentProjectsSection />
             <AwardsSection awardsData={awards[1]} />
         </Layout>

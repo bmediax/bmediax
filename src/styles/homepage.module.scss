@@ -214,3 +214,37 @@ div.cover {
     }
   }
 }
+
+// Scroll Down
+.scrollDownSection {
+  background: $masOscuro;
+
+  span,
+  svg {
+    display: block;
+  }
+
+  span {
+    text-align: center;
+    color: $midnight;
+    font-size: 1.5rem;
+    font-family: $primaryFont;
+  }
+
+  svg {
+    fill: $midnight;
+    margin: auto;
+    padding-top: 5px;
+    font-size: 2rem;
+  }
+
+  @include responsive("mobile") {
+    span {
+      font-size: 2rem;
+    }
+
+    svg {
+      font-size: 3rem;
+    }
+  }
+}
