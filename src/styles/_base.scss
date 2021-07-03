@@ -285,8 +285,9 @@ p {
 .outline,
 .btn-outline {
   background: transparent;
-  color: getColor(lightDarkText);
-  border: 3px solid getColor(lightdarkBase) !important;
+  color: $blanco;
+  // getColor(lightDarkText);
+  // border: 2px solid getColor(lightdarkBase) !important;
 
   &:hover {
     background: $azure;

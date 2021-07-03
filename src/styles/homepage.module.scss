@@ -79,25 +79,6 @@ div.cover {
       font-size: clamp(1.6rem, 1.8vw, 20px);
     }
   }
-
-  .buttonWrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    width: 100%;
-
-    @include responsive("mobile") {
-      flex-direction: column;
-    }
-
-    & > div + a {
-      margin-left: 15px;
-
-      @include responsive("mobile") {
-        margin-left: 0;
-      }
-    }
-  }
 }
 
 .recentProjects {
@@ -173,5 +154,62 @@ div.cover {
 
 // Cover CTA
 .coverCTA {
-  background: red;
+  background: $masOscuro;
+
+  .coverCTA_wrapper {
+    max-width: $wrapMaxWidth;
+    margin: auto;
+    @include sectionPadding("mobile");
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 3em;
+
+    @include responsive("mobile") {
+      flex-direction: column;
+    }
+
+    .coverImage {
+      flex: 1;
+
+      .coverHeadshot {
+        margin: auto;
+      }
+    }
+
+    .coverInfo {
+      flex: 2;
+
+      h1 {
+        color: $blanco;
+        line-height: 1.4;
+        margin: auto;
+      }
+
+      p {
+        margin-top: 10px;
+        line-height: 35px;
+        font-size: clamp(1.6rem, 1.8vw, 20px);
+      }
+
+      .buttonWrapper {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 25px;
+        width: 100%;
+
+        @include responsive("mobile") {
+          flex-direction: column;
+        }
+
+        & > div + a {
+          margin-left: 15px;
+
+          @include responsive("mobile") {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
 }
