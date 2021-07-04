@@ -408,6 +408,22 @@ section {
   background: getColor(lightBase);
   @include sectionPadding("desktop");
 
+  .section-link {
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+
+    a {
+      text-decoration: none;
+    }
+
+    @include responsive("mobile") {
+      button {
+        width: 100%;
+      }
+    }
+  }
+
   .section-title {
     margin-bottom: 30px;
 

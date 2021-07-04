@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby'
 import SectionLayout from '../layout/SectionLayout';
 import InfoCardModule from './modules/InfoCardModule';
 
@@ -30,6 +31,13 @@ const WhatDoSection = () => {
                     descr="Capturing variety of photos from headshots to product photography to be displayed on sites."
                     icon={<MdPhotoCamera />}
                 />
+            </div>
+            <div className="section-link">
+                <Link to="/work">
+                    <button className="btn primary-active">
+                        View all Work
+                    </button>
+                </Link>
             </div>
         </SectionLayout>
     );
