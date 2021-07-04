@@ -1,6 +1,5 @@
 import React from 'react';
 import SectionLayout from '../layout/SectionLayout';
-import * as styles from '../styles/homepage.module.scss'
 import InfoCardModule from './modules/InfoCardModule';
 
 // Icons
@@ -12,7 +11,7 @@ import { MdPhotoCamera } from 'react-icons/md'
 const WhatDoSection = () => {
     return (
         <SectionLayout title="What Do I do" subtitle="Skills" ide="firstSection">
-            <div className={styles.cardWrapper} style={{ gap: "2em"  }}>
+            <div className="grid-three sectionMaxWidth">
                 <InfoCardModule 
                     subtitle="Technical"
                     title="Web Development"
@@ -26,8 +25,8 @@ const WhatDoSection = () => {
                     icon={<AiOutlineAntDesign />}
                 />
                 <InfoCardModule 
-                    subtitle="Photography"
-                    title="Product Photography"
+                    subtitle="Technical"
+                    title="Photography"
                     descr="Capturing variety of photos from headshots to product photography to be displayed on sites."
                     icon={<MdPhotoCamera />}
                 />

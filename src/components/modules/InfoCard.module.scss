@@ -6,7 +6,8 @@
   padding: 30px 27px;
   @include objectCorner("default");
   text-decoration: none !important;
-  transition: background ease-in-out 250ms, box-shadow linear 250ms;
+  transition: background ease-in-out 250ms, box-shadow ease-in-out 250ms,
+    transform 300ms linear;
   border: 2px solid getColor(lightBase);
 
   .infoCard_text {
@@ -40,8 +41,13 @@
   }
 
   &:hover {
-    background: getColor(lightBase);
+    background: getColor(lightToLight);
     @include objectShadow("default", "snow");
+    transform: translateY(-2px);
+
+    @media (prefers-color-scheme: dark) {
+      box-shadow: none !important;
+    }
 
     .infoCard_icon svg {
       fill: $midnight;

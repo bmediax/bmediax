@@ -173,6 +173,24 @@ p {
   }
 }
 
+.grid-four {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-row-gap: 2em;
+  grid-column-gap: 2em;
+  justify-items: flex-start;
+  align-items: flex-start;
+
+  @include responsive("desktopish") {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include responsive("mobile") {
+    grid-template-columns: 1fr;
+  }
+}
+
 .grid-three {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
