@@ -32,6 +32,7 @@ const WhatDoSection = () => {
                     icon={<MdPhotoCamera />}
                 />
             </div>
+            <SectionLink path="/work" />
             <div className="section-link">
                 <Link to="/work">
                     <button className="btn primary-active">
