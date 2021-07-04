@@ -216,8 +216,11 @@ div.cover {
 }
 
 // Scroll Down
-.scrollDownSection {
+.scrollSection {
   background: $masOscuro;
+  padding-bottom: 50px;
+  display: block;
+  text-decoration: none;
 
   span,
   svg {

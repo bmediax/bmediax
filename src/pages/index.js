@@ -17,10 +17,10 @@ const IndexPage = ({ data }) => {
     return (
         <Layout title="Bmediax" darkNav={true}>
             <CoverCTA coverData={document.cover[0]} />
-            <div className={homepageStyles.scrollDownSection}>
-              <span>Scroll Down</span>
-              <BsArrowDown />
-            </div>
+            <a href="#firstSection" className={homepageStyles.scrollSection}>
+                <span>Scroll Down</span>
+                <BsArrowDown />
+            </a>
             <WhatDoSection />
             <RecentProjectsSection />
             <AwardsSection awardsData={awards[1]} />
