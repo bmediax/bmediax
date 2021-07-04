@@ -75,6 +75,7 @@ $crow: #181c21;
 // Light Theme
 $colors: (
   // base
+  contrastBase: $blanco,
   lightBase: $blanco,
   lightdarkBase: $minimal,
   lightLightBase: $blanco,
@@ -108,12 +109,14 @@ $colors: (
   whiteToRaven: $white,
   midnightToRaven: $midnight,
   oscuroToRaven: $oscuro,
-  mistToCloud: $mist
+  mistToCloud: $mist,
+  minimalBase: $minimal
 );
 
 // Dark Theme
 $colors-dark: (
   // base
+  contrastBase: $jetBlack,
   lightBase: $onyx,
   lightdarkBase: $jetBlack,
   lightLightBase: $raven,
@@ -125,7 +128,7 @@ $colors-dark: (
   darkBase2: $steelBlue,
   darkbase3: $blanco,
   medDarkBase: $crow,
-  lightToLight: $steelBlue,
+  lightToLight: $raven,
   // Btn Based
   lightDarkText: $minimal,
   // Nav Text
@@ -146,7 +149,8 @@ $colors-dark: (
   whiteToRaven: $raven,
   midnightToRaven: $raven,
   oscuroToRaven: $raven,
-  mistToCloud: $cloud
+  mistToCloud: $cloud,
+  minimalBase: $crow
 );
 
 :root {

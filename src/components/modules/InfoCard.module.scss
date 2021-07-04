@@ -2,12 +2,12 @@
 
 .infoCard {
   flex: 1;
-  background: getColor(lightLightBase3);
+  background: getColor(minimalBase);
   padding: 30px 27px;
   @include objectCorner("default");
   text-decoration: none !important;
   transition: background ease-in-out 250ms, box-shadow ease-in-out 250ms,
-    transform 300ms linear;
+    transform 300ms linear, border 250ms ease-in-out;
   border: 2px solid getColor(lightBase);
 
   .infoCard_text {
@@ -34,7 +34,7 @@
   }
 
   &:focus {
-    background: getColor(lightBase);
+    background: getColor(lightToLight);
     border: 2px solid getColor(darkLightBase);
     @include objectShadow("default", "snow");
     outline: none;
@@ -42,6 +42,7 @@
 
   &:hover {
     background: getColor(lightToLight);
+    border: 2px solid getColor(lightToLight);
     @include objectShadow("default", "snow");
     transform: translateY(-2px);
 

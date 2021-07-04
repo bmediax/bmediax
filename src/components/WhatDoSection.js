@@ -11,7 +11,7 @@ import { MdPhotoCamera } from 'react-icons/md'
 
 const WhatDoSection = () => {
     return (
-        <SectionLayout title="What Do I do" subtitle="Skills" ide="firstSection">
+        <SectionLayout title="What Do I do" subtitle="Skills" ide="firstSection" isTheme="darker-section">
             <div className="grid-three sectionMaxWidth">
                 <InfoCardModule 
                     subtitle="Technical"
@@ -32,7 +32,7 @@ const WhatDoSection = () => {
                     icon={<MdPhotoCamera />}
                 />
             </div>
-            <SectionLink path="/work" />
+            {/* <SectionLink path="/work" /> */}
             <div className="section-link">
                 <Link to="/work">
                     <button className="btn primary-active">
