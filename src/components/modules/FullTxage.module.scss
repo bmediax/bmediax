@@ -8,10 +8,21 @@
     margin-top: 3em;
   }
 
-  &:nth-child(2n + 1) {
+  &:nth-child(odd) {
     .fullTxage {
       flex-direction: row-reverse;
-      justify-content: flex-start;
+
+      img {
+        border-top-right-radius: $defaultBorder;
+        border-bottom-right-radius: $defaultBorder;
+      }
+    }
+  }
+
+  &:nth-child(even) {
+    .fullTxage .txageImage img {
+      border-top-left-radius: $defaultBorder;
+      border-bottom-left-radius: $defaultBorder;
     }
   }
 }
@@ -20,14 +31,26 @@
   background: getColor(lightLightBase);
   display: flex;
   align-items: center;
-  width: 100%;
+  justify-content: center;
+  @include objectCorner("default");
 
   .txageImage {
     flex: 1;
     width: 100%;
   }
 
-  .txageText_wrapper {
-    flex: 3;
+  .txageText {
+    // background: red;
+    flex: 1.5;
+    padding: 0 5%;
+
+    h4 {
+      margin-bottom: 10px;
+    }
+
+    h3,
+    p {
+      margin-bottom: 15px;
+    }
   }
 }
