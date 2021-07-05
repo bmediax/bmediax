@@ -300,6 +300,16 @@ p {
   }
 }
 
+.outline-inverse {
+  background: transparent;
+  border: 2px solid getColor(lightLightBase2) !important;
+  color: getColor(lightDarkText);
+
+  &:hover {
+    background: getColor(lightLightBase2);
+  }
+}
+
 .outline,
 .btn-outline {
   background: transparent;

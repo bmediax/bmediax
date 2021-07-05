@@ -7,7 +7,9 @@ const RecentCaseSection = () => {
     return (
         <SectionLayout isTheme="lightDark-section" title="Recent Case Study" subtitle="Portfolio">
             <FullTxageModule />
-            <SectionLink path="/portfolio" type="primary">
+            <FullTxageModule />
+            <FullTxageModule />
+            <SectionLink path="/portfolio" type="ghost">
                 View All Case Study
             </SectionLink>
         </SectionLayout>

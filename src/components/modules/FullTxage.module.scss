@@ -1,5 +1,33 @@
 @use '../../styles/variables.module' as *;
 
+.txageContainer {
+  max-width: $wrapMaxWidth;
+  margin: auto;
+
+  &:not(:first-child) {
+    margin-top: 3em;
+  }
+
+  &:nth-child(2n + 1) {
+    .fullTxage {
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+    }
+  }
+}
+
 .fullTxage {
-  background: red;
+  background: getColor(lightLightBase);
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  .txageImage {
+    flex: 1;
+    width: 100%;
+  }
+
+  .txageText_wrapper {
+    flex: 3;
+  }
 }
