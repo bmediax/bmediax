@@ -462,6 +462,10 @@ section {
   background: getColor(contrastBase) !important;
 }
 
+.lightDark-section {
+  background: getColor(minimalBase);
+}
+
 // Navigation
 nav {
   position: sticky;

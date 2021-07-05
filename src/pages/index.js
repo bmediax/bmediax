@@ -9,6 +9,7 @@ import CoverCTA from '../components/CoverCTA.js'
 // import RecentProjectsSection from '../components/RecentProjectsSection.js'
 
 import * as homepageStyles from '../styles/homepage.module.scss'
+import RecentCaseSection from '../components/RecentCaseSection.js'
 
 const IndexPage = ({ data }) => {
     if (!data) return null
@@ -22,6 +23,7 @@ const IndexPage = ({ data }) => {
                 <BsArrowDown />
             </a>
             <WhatDoSection />
+            <RecentCaseSection />
             {/* <RecentProjectsSection /> */}
             <AwardsSection awardsData={awards[1]} />
         </Layout>

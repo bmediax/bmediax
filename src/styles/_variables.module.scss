@@ -109,6 +109,7 @@ $colors: (
   whiteToRaven: $white,
   midnightToRaven: $midnight,
   oscuroToRaven: $oscuro,
+  oscuroToJetBlack: $oscuro,
   mistToCloud: $mist,
   minimalBase: $minimal
 );
@@ -149,6 +150,7 @@ $colors-dark: (
   whiteToRaven: $raven,
   midnightToRaven: $raven,
   oscuroToRaven: $raven,
+  oscuroToJetBlack: $jetBlack,
   mistToCloud: $cloud,
   minimalBase: $crow
 );

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'gatsby'
 import SectionLayout from '../layout/SectionLayout';
 import InfoCardModule from './modules/InfoCardModule';
 
@@ -7,11 +6,12 @@ import InfoCardModule from './modules/InfoCardModule';
 import { BiCodeAlt } from 'react-icons/bi'
 import { AiOutlineAntDesign } from 'react-icons/ai'
 import { MdPhotoCamera } from 'react-icons/md'
+import SectionLink from './SectionLink';
 // import * as variables from '../styles/_variables.module.scss'
 
 const WhatDoSection = () => {
     return (
-        <SectionLayout title="What Do I do" subtitle="Skills" ide="firstSection" isTheme="darker-section">
+        <SectionLayout title="What I do" subtitle="Skills" ide="firstSection" isTheme="darker-section">
             <div className="grid-three sectionMaxWidth">
                 <InfoCardModule 
                     subtitle="Technical"
@@ -32,14 +32,9 @@ const WhatDoSection = () => {
                     icon={<MdPhotoCamera />}
                 />
             </div>
-            {/* <SectionLink path="/work" /> */}
-            <div className="section-link">
-                <Link to="/work">
-                    <button className="btn primary-active">
-                        View all Work
-                    </button>
-                </Link>
-            </div>
+            <SectionLink path="/work" type="primary-active">
+                View All Work
+            </SectionLink>
         </SectionLayout>
     );
 };
