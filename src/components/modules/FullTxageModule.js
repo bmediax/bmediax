@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { StaticImage } from "gatsby-plugin-image"
 import * as txageStyles from './FullTxage.module.scss'
 
-const FullTxageModule = () => {
+const FullTxageModule = ({ title, raw, cover, url, work, shortDescr }) => {
     return (
         <div className={txageStyles.txageContainer}>
             <div className={txageStyles.fullTxage}>
