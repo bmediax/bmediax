@@ -1,58 +1,58 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby'
+// import { graphql, useStaticQuery } from 'gatsby'
 import SectionLayout from '../layout/SectionLayout';
 import * as styles from '../styles/homepage.module.scss'
 import CTACardModule from './modules/CTACardModule';
 // import { portfolioData } from '../data/portfolioData'
 
 const RecentProjectsSection = () => {
-    const data = useStaticQuery(graphql`
-    query recentProjectsQuery($filter: PrismicPortfolioFilterInput = {uid: {in: ["tedxpcc2018", "chicanxshop", "edutainment"]}}) {
-        allPrismicPortfolio(filter: $filter) {
-            edges {
-                node {
-                    data {
-                        cover_title {
-                            title {
-                                text
-                            }
-                            name {
-                                text
-                            }
-                            client {
-                                text
-                            }
-                            background_image {
-                                localFile {
-                                    childImageSharp {
-                                        gatsbyImageData(
-                                            width: 1000
-                                            placeholder: DOMINANT_COLOR
-                                            quality: 100
-                                        )
-                                    }
-                                }
-                            }
-                        }
-                        overview {
-                            short_description {
-                                text
-                            }
-                            role {
-                                text
-                            }
-                            short_tags {
-                                text
-                            }
-                        }
-                    }
-                    uid
-                }
-            }
-        }
-    }
-`)
-    const recentProjectData = data.allPrismicPortfolio.edges
+//     const data = useStaticQuery(graphql`
+//     query recentProjectsQuery($filter: PrismicPortfolioFilterInput = {uid: {in: ["tedxpcc2018", "chicanxshop", "edutainment"]}}) {
+//         allPrismicPortfolio(filter: $filter) {
+//             edges {
+//                 node {
+//                     data {
+//                         cover_title {
+//                             title {
+//                                 text
+//                             }
+//                             name {
+//                                 text
+//                             }
+//                             client {
+//                                 text
+//                             }
+//                             background_image {
+//                                 localFile {
+//                                     childImageSharp {
+//                                         gatsbyImageData(
+//                                             width: 1000
+//                                             placeholder: DOMINANT_COLOR
+//                                             quality: 100
+//                                         )
+//                                     }
+//                                 }
+//                             }
+//                         }
+//                         overview {
+//                             short_description {
+//                                 text
+//                             }
+//                             role {
+//                                 text
+//                             }
+//                             short_tags {
+//                                 text
+//                             }
+//                         }
+//                     }
+//                     uid
+//                 }
+//             }
+//         }
+//     }
+// `)
+//     const recentProjectData = data.allPrismicPortfolio.edges
     return (
         <SectionLayout label={styles.recentProjects} title="Recent Projects" subtitle="Portfolio">
             <div className={styles.cardWrapper}>

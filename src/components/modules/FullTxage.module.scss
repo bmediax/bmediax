@@ -41,6 +41,10 @@
     transform: translateY(-3px);
   }
 
+  @include responsive("mobile") {
+    flex-direction: column;
+  }
+
   .txageImage {
     flex: 1;
     width: 100%;
@@ -60,6 +64,10 @@
     h3,
     p {
       margin-bottom: 15px;
+    }
+
+    p {
+      line-height: 25px;
     }
   }
 }
