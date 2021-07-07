@@ -144,14 +144,14 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: `gatsby-plugin-hotjar`,
-      options: {
-        includeInDevelopment: false, // optional parameter to include script in development
-        id: 2408072,
-        sv: 6,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-hotjar`,
+    //   options: {
+    //     includeInDevelopment: false, // optional parameter to include script in development
+    //     id: 2408072,
+    //     sv: 6,
+    //   },
+    // },
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
