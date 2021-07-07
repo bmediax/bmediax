@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-// import * as variables from '../styles/_variables.module.scss'
+import * as variables from '../styles/_variables.module.scss'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 
 import { motion } from "framer-motion";
@@ -13,9 +13,7 @@ import { navData  } from '../data/navData'
 import Logo from '../components/Logo'
 import MobileNav from './mobileNav';
 
-
-
-const Nav = () => {
+const Nav = ({ theme }) => {
     const [ isMobileMenuOpen, SetIsMobileMenuOpen ] = useState(false)
     const [prevScrollPos, setPrevScrollPos] = useState(0); 
     const [visible, setVisible] = useState(true);  
@@ -67,7 +65,7 @@ const Nav = () => {
     }
 
     return (
-        <nav className="navBar" style={{ top: visible ? '0' : '-85px' }}>
+        <nav className="navBar" style={{ top: visible ? '0' : '-85px', background: theme ? `${variables.masOscuro}` : '' }}>
             <div className="nav-wrapper">
                 {/* Logo */}
                 <div className="logo-contain" >
@@ -82,14 +80,15 @@ const Nav = () => {
                     <ul className="menu">
                         {navData.map((navs, index) => (
                             <li key={index}>
-                                <Link to={navs.path} className="nav-item" activeClassName="active">{navs.title}</Link>
+                                {/* style={{ color: theme ? `${variables.minimal}` : '' }} */}
+                                <Link to={navs.path} className="nav-item" activeClassName="active" style={{ color: theme ? `${variables.mist}` : '' }}>{navs.title}</Link>
                                 {navs.sub &&
                                     <ul>
                                         {navs.sub.map((subs, index) => (
                                             <li key={index}>
                                                 {subs.path 
                                                 ? 
-                                                <Link to={subs.path} title={subs.title}>{subs.title}</Link>
+                                                <Link to={subs.path} title={subs.title} style={{ background: theme ? `${variables.oscuro}` : '', color: theme ? `${variables.minimal}` : ''}}>{subs.title}</Link>
                                                 :
                                                 <a href={subs.link}>{subs.title}</a>
                                                 } 
@@ -123,8 +122,8 @@ const Nav = () => {
                         href={`https://instagram.com/${siteSocial.instagram}`} 
                         target="_blank" 
                         rel="noreferrer"
-                        animate={{ y:0 }}
-                        initial={{ y:30 }}
+                        // animate={{ y:0 }}
+                        // initial={{ y:30 }}
                         whileHover={{ scale:1.1}}
                         whileTap={{ scale:.9 }}>
                         <AiOutlineInstagram />
@@ -133,8 +132,8 @@ const Nav = () => {
                         href={`https://github.com/${siteSocial.github}`} 
                         target="_blank" 
                         rel="noreferrer"
-                        animate={{ y:0 }}
-                        initial={{ y:30 }}
+                        // animate={{ y:0 }}
+                        // initial={{ y:30 }}
                         whileHover={{ scale:1.1 }}
                         whileTap={{ scale:.9 }}>
                         <DiGithubAlt />
@@ -143,8 +142,8 @@ const Nav = () => {
                         href={`https://linkedin.com/in/${siteSocial.linkedin}`} 
                         target="_blank" 
                         rel="noreferrer"
-                        animate={{ y:0 }}
-                        initial={{ y:30 }}
+                        // animate={{ y:0 }}
+                        // initial={{ y:30 }}
                         whileHover={{ scale:1.1 }}
                         whileTap={{ scale:.9 }}>
                         <FaLinkedinIn />

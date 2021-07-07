@@ -1,0 +1,57 @@
+@use '../../styles/variables.module' as *;
+
+.infoCard {
+  flex: 1;
+  background: getColor(minimalBase);
+  padding: 30px 27px;
+  @include objectCorner("default");
+  text-decoration: none !important;
+  transition: background ease-in-out 250ms, box-shadow ease-in-out 250ms,
+    transform 300ms linear, border 250ms ease-in-out;
+  border: 2px solid getColor(lightBase);
+
+  .infoCard_text {
+    h4 {
+      letter-spacing: 0.1em;
+    }
+
+    h3 {
+      margin-top: 0.3em;
+    }
+
+    p {
+      line-height: 1.5em;
+      margin-top: 1em;
+    }
+  }
+
+  .infoCard_icon svg {
+    text-decoration: none;
+    font-size: 5em;
+    fill: $clude;
+    transition: fill linear 250ms;
+    margin-bottom: 0.3em;
+  }
+
+  &:focus {
+    background: getColor(lightToLight);
+    border: 2px solid getColor(darkLightBase);
+    @include objectShadow("default", "snow");
+    outline: none;
+  }
+
+  &:hover {
+    background: getColor(lightToLight);
+    border: 2px solid getColor(lightToLight);
+    @include objectShadow("default", "snow");
+    transform: translateY(-2px);
+
+    @media (prefers-color-scheme: dark) {
+      box-shadow: none !important;
+    }
+
+    .infoCard_icon svg {
+      fill: $midnight;
+    }
+  }
+}

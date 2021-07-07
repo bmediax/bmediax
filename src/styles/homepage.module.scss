@@ -8,7 +8,7 @@ div.cover {
   align-items: center;
   flex-direction: column;
   min-height: 65vh;
-  margin:auto;
+  margin: auto;
   @include sectionPadding("mobile");
   // padding:30px 5%;
 
@@ -17,41 +17,42 @@ div.cover {
   }
 
   .head {
-    position:relative;
+    position: relative;
     // margin:auto;
-    margin-bottom:30px;
+    margin-bottom: 30px;
     text-align: center;
-    width:65%;
+    width: 65%;
 
     .icons span {
       position: absolute;
-      z-index:0;
+      z-index: 0;
       transform: scale(1.2);
-      
-      .lightBase, .darkBase {
+
+      .lightBase,
+      .darkBase {
         transition: fill 250ms ease;
       }
 
       &:hover {
         .lightBase {
-          fill:getColor(darkLightBase);
+          fill: getColor(darkLightBase);
         }
         .darkBase {
-          fill:getColor(lightdarkBase)
+          fill: getColor(lightdarkBase);
         }
       }
 
       .lightBase {
-        fill:getColor(lightLightBase3);
+        fill: getColor(lightLightBase3);
       }
 
       .darkBase {
-        fill:getColor(darkLightBase);
+        fill: getColor(darkLightBase);
       }
     }
 
     @include responsive("mobile") {
-      width:100%;
+      width: 100%;
       .icons span {
         transform: scale(1);
       }
@@ -78,25 +79,6 @@ div.cover {
       font-size: clamp(1.6rem, 1.8vw, 20px);
     }
   }
-
-  .buttonWrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    width: 100%;
-
-    @include responsive("mobile") {
-      flex-direction: column;
-    }
-
-    & > div + a {
-      margin-left: 15px;
-
-      @include responsive("mobile") {
-        margin-left: 0;
-      }
-    }
-  }
 }
 
 .recentProjects {
@@ -104,7 +86,7 @@ div.cover {
 }
 
 .awards {
-  background: getColor(midnightToRaven);
+  background: getColor(oscuroToJetBlack);
 }
 
 .friends {
@@ -166,6 +148,107 @@ div.cover {
 
     & > div + div {
       margin-top: 30px;
+    }
+  }
+}
+
+// Cover CTA
+.coverCTA {
+  // background: getColor(medDarkBase);
+  background: $masOscuro;
+
+  .coverCTA_wrapper {
+    max-width: $wrapMaxWidth;
+    margin: auto;
+    @include sectionPadding("desktop");
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 3em;
+
+    @include responsive("mobile") {
+      flex-direction: column;
+    }
+
+    .coverImage {
+      flex: 1;
+
+      .coverHeadshot {
+        margin: auto;
+      }
+    }
+
+    .coverInfo {
+      flex: 2;
+
+      h1 {
+        color: $blanco;
+        line-height: 1.4;
+        margin: auto;
+      }
+
+      p {
+        margin-top: 10px;
+        line-height: 35px;
+        font-size: clamp(1.6rem, 1.8vw, 20px);
+      }
+
+      .buttonWrapper {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 25px;
+        width: 100%;
+
+        @include responsive("mobile") {
+          flex-direction: column;
+        }
+
+        & > div + a {
+          margin-left: 15px;
+
+          @include responsive("mobile") {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Scroll Down
+.scrollSection {
+  background: $masOscuro;
+  padding-bottom: 50px;
+  display: block;
+  text-decoration: none;
+  outline: none;
+
+  span,
+  svg {
+    display: block;
+  }
+
+  span {
+    text-align: center;
+    color: $midnight;
+    font-size: 1.5rem;
+    font-family: $primaryFont;
+  }
+
+  svg {
+    fill: $midnight;
+    margin: auto;
+    padding-top: 5px;
+    font-size: 2rem;
+  }
+
+  @include responsive("mobile") {
+    span {
+      font-size: 2rem;
+    }
+
+    svg {
+      font-size: 3rem;
     }
   }
 }

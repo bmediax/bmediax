@@ -3,6 +3,11 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
+// Use iOS 15 Meta Custom Banner Color
+// 1. Import the variables to use 
+// Setup the Meta
+// Connect the variables to the meta
+
 function SEO({ description, lang, meta, image: metaImage, title }) {
   const isHome = (homes) => {
     if (homes === "Bmediax") {
@@ -30,7 +35,7 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
       // && metaImage.src
       // ? `${site.siteMetadata.siteUrl}${metaImage.src}`
       // : null
-  console.log(metaImage);
+  // console.log(metaImage);
   // const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
   return (
     <Helmet
@@ -50,6 +55,16 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
           name: `description`,
           content: metaDescription,
         },
+        // {
+        //   name: "theme-color",
+        //   content: `${variableStyles.midnight}`,
+        //   media: "(prefers-color-scheme: light)"
+        // },
+        // {
+        //   name: "theme-color",
+        //   content: `${variableStyles.masOscuro}`,
+        //   media: "(prefers-color-scheme: dark)"
+        // },
         // {
         //   name: "keywords",
         //   content: site.siteMetadata.keywords.join(","),

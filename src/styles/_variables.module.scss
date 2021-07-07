@@ -47,6 +47,8 @@ $jetBlack: #14171c;
 $raven: #1e2329;
 $steelBlue: #2b313c;
 $cloud: #687077;
+$clude: #7f8197;
+$crow: #181c21;
 
 :export {
   masOscuro: $masOscuro;
@@ -73,6 +75,7 @@ $cloud: #687077;
 // Light Theme
 $colors: (
   // base
+  contrastBase: $blanco,
   lightBase: $blanco,
   lightdarkBase: $minimal,
   lightLightBase: $blanco,
@@ -83,6 +86,8 @@ $colors: (
   darkBase: $oscuro,
   darkBase2: $steelBlue,
   darkbase3: $oscuro,
+  medDarkBase: $masOscuro,
+  lightToLight: $blanco,
   // Btn Based
   lightDarkText: $midnight,
   // Nav Text
@@ -103,12 +108,16 @@ $colors: (
   whiteToAzure: $white,
   whiteToRaven: $white,
   midnightToRaven: $midnight,
-  mistToCloud: $mist
+  oscuroToRaven: $oscuro,
+  oscuroToJetBlack: $oscuro,
+  mistToCloud: $mist,
+  minimalBase: $minimal
 );
 
 // Dark Theme
 $colors-dark: (
   // base
+  contrastBase: $jetBlack,
   lightBase: $onyx,
   lightdarkBase: $jetBlack,
   lightLightBase: $raven,
@@ -119,6 +128,8 @@ $colors-dark: (
   darkBase: $oscuro,
   darkBase2: $steelBlue,
   darkbase3: $blanco,
+  medDarkBase: $crow,
+  lightToLight: $raven,
   // Btn Based
   lightDarkText: $minimal,
   // Nav Text
@@ -138,7 +149,10 @@ $colors-dark: (
   whiteToAzure: $azure,
   whiteToRaven: $raven,
   midnightToRaven: $raven,
-  mistToCloud: $cloud
+  oscuroToRaven: $raven,
+  oscuroToJetBlack: $jetBlack,
+  mistToCloud: $cloud,
+  minimalBase: $crow
 );
 
 :root {

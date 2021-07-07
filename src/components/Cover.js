@@ -24,11 +24,10 @@ const Cover = ({ coverData }) => {
                     <span style={{ bottom:0, left:0 }}><AztecEye lightBase={homepageStyles.lightBase} darkBase={homepageStyles.darkBase}/></span>
                     <span style={{ bottom:0, right:0 }}><Bone lightBase={homepageStyles.lightBase} darkBase={homepageStyles.darkBase}/></span>
                 </div>
-                {/* </Parallax> */}
             </div>
             <div className={homepageStyles.text}>
                 <h1>{ coverData.title.text }</h1>
-                <RichText render={coverData.description.raw} />
+                <RichText render={coverData.description.raw}/>
                 <div className={homepageStyles.buttonWrapper}>
                     <DropdownModule />
                     {/* <Link to="mailto:hello@bmediax.dev" className="btn primary active">hello@bmediax.dev</Link> */}

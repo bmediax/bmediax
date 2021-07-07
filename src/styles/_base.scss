@@ -173,6 +173,24 @@ p {
   }
 }
 
+.grid-four {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-row-gap: 2em;
+  grid-column-gap: 2em;
+  justify-items: flex-start;
+  align-items: flex-start;
+
+  @include responsive("desktopish") {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include responsive("mobile") {
+    grid-template-columns: 1fr;
+  }
+}
+
 .grid-three {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -282,11 +300,22 @@ p {
   }
 }
 
+.outline-inverse {
+  background: transparent;
+  border: 2px solid getColor(lightLightBase2) !important;
+  color: getColor(lightDarkText);
+
+  &:hover {
+    background: getColor(lightLightBase2);
+  }
+}
+
 .outline,
 .btn-outline {
   background: transparent;
-  color: getColor(lightDarkText);
-  border: 3px solid getColor(lightdarkBase) !important;
+  color: $blanco;
+  // getColor(lightDarkText);
+  // border: 2px solid getColor(lightdarkBase) !important;
 
   &:hover {
     background: $azure;
@@ -373,6 +402,11 @@ p {
 
 .navScroll {
   @include objectShadow("default", "snow");
+  background: getColor(lightBase) !important;
+
+  a.nav-item {
+    color: $midnight !important;
+  }
 }
 
 .sectionMaxWidth {
@@ -383,6 +417,22 @@ p {
 section {
   background: getColor(lightBase);
   @include sectionPadding("desktop");
+
+  .section-link {
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+
+    a {
+      text-decoration: none;
+    }
+
+    @include responsive("mobile") {
+      button {
+        width: 100%;
+      }
+    }
+  }
 
   .section-title {
     margin-bottom: 30px;
@@ -418,6 +468,14 @@ section {
   }
 }
 
+.darker-section {
+  background: getColor(contrastBase) !important;
+}
+
+.lightDark-section {
+  background: getColor(minimalBase);
+}
+
 // Navigation
 nav {
   position: sticky;
@@ -426,7 +484,7 @@ nav {
   left: 0;
   z-index: 10;
   background: getColor(lightBase);
-  transition: box-shadow 250ms linear, top 0.6s;
+  transition: box-shadow 250ms linear, top 0.6s, background linear 400ms;
   font-family: $primaryFont;
 
   .nav-wrapper {
@@ -528,6 +586,10 @@ nav {
                 background: getColor(lightdarkBase);
               }
             }
+          }
+
+          a.darkNav {
+            color: $mist;
           }
 
           a.nav-item {
@@ -762,7 +824,6 @@ nav {
         transition: background 200ms linear, color 250ms linear,
           box-shadow 250ms linear;
         outline: none;
-        border: 2px solid getColor(icn-lightBG);
 
         &:hover {
           background: getColor(icn-lightBG);
@@ -963,5 +1024,32 @@ nav {
       display: block;
       width: 100%;
     }
+  }
+}
+
+.footer-color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    padding: 6px 0;
+    flex: 1;
+  }
+
+  .footer-color-1 {
+    background: $midnight;
+  }
+
+  .footer-color-2 {
+    background: $azure;
+  }
+
+  .footer-color-3 {
+    background: $oscuro;
+  }
+
+  .footer-color-4 {
+    background: $mist;
   }
 }

@@ -1,0 +1,94 @@
+@use '../../styles/variables.module' as *;
+
+.txageContainer {
+  max-width: $wrapMaxWidth;
+  margin: auto;
+  text-decoration: none;
+
+  &:not(:first-child) {
+    padding-top: 3em;
+  }
+
+  &:nth-child(odd) {
+    .fullTxage {
+      flex-direction: row-reverse;
+
+      img {
+        border-top-right-radius: $defaultBorder;
+        border-bottom-right-radius: $defaultBorder;
+
+        @include responsive("mobile") {
+          border-top-left-radius: $defaultBorder;
+          border-bottom-right-radius: 0px;
+        }
+      }
+    }
+  }
+
+  &:nth-child(even) {
+    .fullTxage .txageImage img {
+      border-top-left-radius: $defaultBorder;
+      border-bottom-left-radius: $defaultBorder;
+
+      @include responsive("mobile") {
+        border-top-right-radius: $defaultBorder;
+        border-bottom-left-radius: 0px;
+      }
+    }
+  }
+}
+
+.fullTxage {
+  background: getColor(lightLightBase);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include objectCorner("default");
+  transition: box-shadow 250ms ease-in-out, transform 250ms ease-in-out;
+
+  &:hover {
+    @include objectShadow("default", "snow");
+    transform: translateY(-3px);
+  }
+
+  .txageImage {
+    flex: 1;
+    width: 100%;
+    height: 300px;
+  }
+
+  .txageText {
+    // background: red;
+    flex: 1.5;
+    margin-top: 10px;
+    padding: 0 5%;
+
+    h4 {
+      margin-bottom: 10px;
+    }
+
+    h3,
+    p {
+      margin-bottom: 15px;
+    }
+
+    p {
+      line-height: 25px;
+    }
+  }
+
+  // Responsive
+  @include responsive("mobile") {
+    flex-direction: column !important;
+
+    .txageText {
+      margin:0px;
+      padding:7% 5%;
+
+      button {
+        display:block;
+        width:100%;
+      }
+    }
+  }
+}
