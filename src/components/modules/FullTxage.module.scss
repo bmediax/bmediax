@@ -16,6 +16,11 @@
       img {
         border-top-right-radius: $defaultBorder;
         border-bottom-right-radius: $defaultBorder;
+
+        @include responsive("mobile") {
+          border-top-left-radius: $defaultBorder;
+          border-bottom-right-radius: 0px;
+        }
       }
     }
   }
@@ -24,6 +29,11 @@
     .fullTxage .txageImage img {
       border-top-left-radius: $defaultBorder;
       border-bottom-left-radius: $defaultBorder;
+
+      @include responsive("mobile") {
+        border-top-right-radius: $defaultBorder;
+        border-bottom-left-radius: 0px;
+      }
     }
   }
 }
@@ -39,10 +49,6 @@
   &:hover {
     @include objectShadow("default", "snow");
     transform: translateY(-3px);
-  }
-
-  @include responsive("mobile") {
-    flex-direction: column;
   }
 
   .txageImage {
@@ -68,6 +74,21 @@
 
     p {
       line-height: 25px;
+    }
+  }
+
+  // Responsive
+  @include responsive("mobile") {
+    flex-direction: column !important;
+
+    .txageText {
+      margin:0px;
+      padding:7% 5%;
+
+      button {
+        display:block;
+        width:100%;
+      }
     }
   }
 }
