@@ -29,7 +29,7 @@
     "gatsby-plugin-sharp": "^3.10.2",
     "gatsby-plugin-sitemap": "^4.6.0",
     "gatsby-source-filesystem": "^3.10.0",
-    "gatsby-source-prismic": "^4.0.1",
+    "gatsby-source-prismic": "^4.0.2",
     "gatsby-transformer-sharp": "^3.10.0",
     "prismic-reactjs": "^1.3.4",
     "react": "^17.0.2",
