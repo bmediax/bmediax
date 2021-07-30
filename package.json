@@ -18,7 +18,7 @@
     "framer-motion": "^4.1.17",
     "gatsby": "^3.10.2",
     "gatsby-plugin-anchor-links": "^1.2.1",
-    "gatsby-plugin-gatsby-cloud": "^2.10.0",
+    "gatsby-plugin-gatsby-cloud": "^2.10.1",
     "gatsby-plugin-google-analytics": "^3.10.0",
     "gatsby-plugin-google-gtag": "^3.10.0",
     "gatsby-plugin-google-tagmanager": "^3.10.0",
