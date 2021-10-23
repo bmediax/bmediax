@@ -8,9 +8,6 @@ import { Link } from 'gatsby'
 import * as homepageStyles from '../styles/homepage.module.scss'
 import DropdownModule from './modules/dropdownModule';
 
-// Icons
-// import { EDIcon, AztecEye, Eye, Bone } from '../components/Icons'
-
 const CoverCTA = ({ coverData }) => {
     return (
         <div className={homepageStyles.coverCTA}>
@@ -22,7 +19,7 @@ const CoverCTA = ({ coverData }) => {
                 <div className={homepageStyles.coverInfo}>
                     {/* Header */}
                     <h1>{ coverData.title.text }</h1>
-                    <RichText render={coverData.description.raw} />
+                    <RichText render={coverData.description.richText} />
 
                     {/* Buttons */}
                     <div className={homepageStyles.buttonWrapper}>

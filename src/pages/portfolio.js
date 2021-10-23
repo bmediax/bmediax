@@ -15,7 +15,7 @@ const portfolio = ({ data }) => {
                     <CTACardModule isLight key={index}
                         title={portfolio.node.data.cover_title[0].name.text} 
                         raw={portfolio.node.data.cover_title[0].client.text} 
-                        cover={portfolio.node.data.cover_title[0].background_image.localFile}
+                        cover={portfolio.node.data.cover_title[0].background_image.gatsbyImageData}
                         url={portfolio.node.uid}
                         work={portfolio.node.data.overview[0].short_tags.text}
                         shortDescr={portfolio.node.data.overview[0].short_description.text} />
@@ -29,51 +29,43 @@ const portfolio = ({ data }) => {
 export default portfolio;
 
 export const query = graphql`
-    query portfolioQuery {
-        allPrismicPortfolio {
-            edges {
-                node {
-                    data {
-                        cover_title {
-                            title {
-                                text
-                            }
-                            name {
-                                text
-                            }
-                            client {
-                                text
-                            }
-                            date {
-                                text
-                            }
-                            background_image {
-                                localFile {
-                                    childImageSharp {
-                                        gatsbyImageData(
-                                            width: 1000
-                                            placeholder: DOMINANT_COLOR
-                                            quality: 100
-                                        )
-                                    }
-                                }
-                            }
-                        }
-                        overview {
-                            short_description {
-                                text
-                            }
-                            role {
-                                text
-                            }
-                            short_tags {
-                                text
-                            }
-                        }
-                    }
-                    uid
-                }
+query portfolioQuery {
+  allPrismicPortfolio {
+    edges {
+      node {
+        data {
+          cover_title {
+            title {
+              text
             }
+            name {
+              text
+            }
+            client {
+              text
+            }
+            date {
+              text
+            }
+            background_image {
+              gatsbyImageData(width: 2000)
+            }
+          }
+          overview {
+            short_description {
+              text
+            }
+            role {
+              text
+            }
+            short_tags {
+              text
+            }
+          }
         }
+        uid
+      }
     }
+  }
+}
 `

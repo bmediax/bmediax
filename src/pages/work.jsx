@@ -45,7 +45,7 @@ const Work = ({ data }) => {
                                       title={work.title} 
                                       tag={work.tag} 
                                       link={work.link} 
-                                      image={work.image.localFile} 
+                                      image={work.image.gatsbyImageData} 
                                     alt={work.image.alt} />
                                   {/* {isOpen && (
                                     <Lightbox 
@@ -102,13 +102,8 @@ query WorkQuery {
               url
             }
             image {
-              localFile {
-                childImageSharp {
-                  gatsbyImageData(quality: 100)
-                  id
-                }
-              }
               alt
+              gatsbyImageData(width: 2000)
             }
           }
         }

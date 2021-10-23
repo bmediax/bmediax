@@ -10,7 +10,7 @@ const DesignSection = (data) => {
         <SectionPageLayout idLabel="results" title="Results & Summary" icon="Check Mark" sectionMaxWidth>
             <div className={`${portfolioStyles.columnLayout} sectionMaxWidth`}>
                 <div className={portfolioStyles.twoColumn}>
-                    <RichText render={resultsData.description.raw} />
+                    <RichText render={resultsData.description.richText} />
                 </div>
             </div>
             <ResultsSliceZone sliceZone={data.body} />

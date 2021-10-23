@@ -3,7 +3,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as portfolioStyles from '../styles/portfolio.module.scss'
 
 const CoverTitle = ({ coverData }) => {
-    const image = getImage(coverData.background_image.localFile)
+    const image = getImage(coverData.background_image.gatsbyImageData)
     return (
         <div style={{ display: "grid" }}>
         <GatsbyImage

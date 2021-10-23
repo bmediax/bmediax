@@ -2,7 +2,7 @@ import React from 'react';
 import { getImage, GatsbyImage } from 'gatsby-plugin-image'
 
 const ImageSection = ({ image }) => {
-    const coverimg = getImage(image.localFile)
+    const coverimg = getImage(image.gatsbyImageData)
     return (
         <GatsbyImage
             style={{

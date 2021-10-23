@@ -10,14 +10,14 @@ const OverviewSection = ({ overviewData, projectLinks }) => {
             <div className="sectionMaxWidth">
                 <div className={portfolioStyles.columnLayout}>
                     <div className={portfolioStyles.twoColumn_2to1}>
-                        <RichText render={overviewData.description.raw} />
+                        <RichText render={overviewData.description.richText} />
                         <div className={portfolioStyles.textSection}>
                             <h3>The Problem</h3>
-                            <RichText render={overviewData.problem.raw} />
+                            <RichText render={overviewData.problem.richText} />
                         </div>
                         <div className={portfolioStyles.textSection}>
                             <h3>The Solution</h3>
-                            <RichText render={overviewData.solution.raw} />
+                            <RichText render={overviewData.solution.richText} />
                         </div>
                     </div>
                     <div className={portfolioStyles.twoColumn_1to2}>

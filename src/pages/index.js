@@ -45,6 +45,7 @@ query homepageQuery {
             description {
               text
               raw
+              richText
               html
             }
           }
