@@ -29,15 +29,7 @@ query tedxpcc2018PortfolioQuery {
               text
             }
             background_image {
-              localFile {
-                childImageSharp {
-                  gatsbyImageData(
-                    width: 2500
-                    placeholder: DOMINANT_COLOR
-                    quality: 100
-                  )
-                }
-              }
+              gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
               alt
               url
             }
@@ -52,15 +44,7 @@ query tedxpcc2018PortfolioQuery {
           }
           design_image {
             alt
-            localFile {
-              childImageSharp {
-                gatsbyImageData(
-                  height: 550
-                  placeholder: DOMINANT_COLOR
-                  quality: 100
-                )
-              }
-            }
+            gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
           }
           next_project {
             uid
@@ -121,38 +105,22 @@ query tedxpcc2018PortfolioQuery {
             }
           }
           results_image {
-            localFile {
-              childImageSharp {
-                gatsbyImageData(
-                  height: 550
-                  placeholder: DOMINANT_COLOR
-                  quality: 100
-                )
-              }
-            }
+            gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
             alt
           }
           body {
-            ... on PrismicPortfolioBodyDesignColorPalette {
+            ... on PrismicPortfolioDataBodyDesignColorPalette {
               slice_type
               items {
                 colour
               }
             }
-            ... on PrismicPortfolioBodyDesignImageGallery {
+            ... on PrismicPortfolioDataBodyDesignImageGallery {
               slice_type
               items {
                 image {
                   alt
-                  localFile {
-                    childImageSharp {
-                      gatsbyImageData (
-                        width:2000
-                        placeholder: DOMINANT_COLOR
-                        quality: 100
-                      )
-                    }
-                  }
+                  gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
                 }
               }
               primary {
@@ -162,7 +130,7 @@ query tedxpcc2018PortfolioQuery {
                 column
               }
             }
-            ... on PrismicPortfolioBodyDesignVideo {
+            ... on PrismicPortfolioDataBodyDesignVideo {
               slice_type
               primary {
                 column
@@ -179,20 +147,12 @@ query tedxpcc2018PortfolioQuery {
                 }
               }
             }
-            ... on PrismicPortfolioBodyResultsImageGallery {
+            ... on PrismicPortfolioDataBodyResultsImageGallery {
               slice_type
               items {
                 image {
                   alt
-                  localFile {
-                    childImageSharp {
-                      gatsbyImageData (
-                        width:2000
-                        placeholder: DOMINANT_COLOR
-                        quality: 100
-                      )
-                    }
-                  }
+                  gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
                 }
               }
               primary {

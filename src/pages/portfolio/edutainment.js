@@ -31,15 +31,7 @@ query edutainmentPortfolioQuery {
               text
             }
             background_image {
-              localFile {
-                childImageSharp {
-                  gatsbyImageData(
-                    width: 2000
-                    placeholder: DOMINANT_COLOR
-                    webpOptions: {quality: 100}
-                  )
-                }
-              }
+              gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
               alt
             }
           }
@@ -53,15 +45,7 @@ query edutainmentPortfolioQuery {
           }
           design_image {
             alt
-            localFile {
-              childImageSharp {
-                gatsbyImageData(
-                  height: 550
-                  placeholder: DOMINANT_COLOR
-                  webpOptions: {quality: 100}
-                )
-              }
-            }
+            gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
           }
           next_project {
             uid
@@ -122,38 +106,22 @@ query edutainmentPortfolioQuery {
             }
           }
           results_image {
-            localFile {
-              childImageSharp {
-                gatsbyImageData(
-                  height: 550
-                  placeholder: DOMINANT_COLOR
-                  webpOptions: {quality: 100}
-                )
-              }
-            }
+            gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
             alt
           }
           body {
-            ... on PrismicPortfolioBodyDesignColorPalette {
+            ... on PrismicPortfolioDataBodyDesignColorPalette {
               slice_type
               items {
                 colour
               }
             }
-            ... on PrismicPortfolioBodyDesignImageGallery {
+            ... on PrismicPortfolioDataBodyDesignImageGallery {
               slice_type
               items {
                 image {
                   alt
-                  localFile {
-                    childImageSharp {
-                      gatsbyImageData (
-                        width:2000
-                        placeholder: DOMINANT_COLOR
-                        webpOptions: {quality: 100}
-                      )
-                    }
-                  }
+                  gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
                 }
               }
               primary {
@@ -163,7 +131,7 @@ query edutainmentPortfolioQuery {
                 column
               }
             }
-            ... on PrismicPortfolioBodyDesignVideo {
+            ... on PrismicPortfolioDataBodyDesignVideo {
               slice_type
               primary {
                 column
@@ -180,20 +148,12 @@ query edutainmentPortfolioQuery {
                 }
               }
             }
-            ... on PrismicPortfolioBodyResultsImageGallery {
+            ... on PrismicPortfolioDataBodyResultsImageGallery {
               slice_type
               items {
                 image {
                   alt
-                  localFile {
-                    childImageSharp {
-                      gatsbyImageData (
-                        width:2000
-                        placeholder: DOMINANT_COLOR
-                        webpOptions: {quality: 100}
-                      )
-                    }
-                  }
+                  gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
                 }
               }
               primary {
@@ -208,4 +168,5 @@ query edutainmentPortfolioQuery {
     }
   }
 }
+
 `

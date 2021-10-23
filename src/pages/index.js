@@ -49,7 +49,7 @@ query homepageQuery {
             }
           }
           body {
-            ... on PrismicHomepageBodyAwardsSection {
+            ... on PrismicHomepageDataBodyAwardsSection {
               items {
                 medal
                 sub_text {

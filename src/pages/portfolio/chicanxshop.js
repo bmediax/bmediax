@@ -29,15 +29,7 @@ query chicanxshopPortfolioQuery {
               text
             }
             background_image {
-              localFile {
-                childImageSharp {
-                  gatsbyImageData(
-                    width: 2000
-                    placeholder: DOMINANT_COLOR
-                    quality: 100
-                  )
-                }
-              }
+              gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
               alt
             }
           }
@@ -51,15 +43,7 @@ query chicanxshopPortfolioQuery {
           }
           design_image {
             alt
-            localFile {
-              childImageSharp {
-                gatsbyImageData(
-                  height: 550
-                  placeholder: DOMINANT_COLOR
-                  quality: 100
-                )
-              }
-            }
+            gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
           }
           next_project {
             uid
@@ -120,38 +104,22 @@ query chicanxshopPortfolioQuery {
             }
           }
           results_image {
-            localFile {
-              childImageSharp {
-                gatsbyImageData(
-                  height: 550
-                  placeholder: DOMINANT_COLOR
-                  quality: 100
-                )
-              }
-            }
+            gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
             alt
           }
           body {
-            ... on PrismicPortfolioBodyDesignColorPalette {
+            ... on PrismicPortfolioDataBodyDesignColorPalette {
               slice_type
               items {
                 colour
               }
             }
-            ... on PrismicPortfolioBodyDesignImageGallery {
+            ... on PrismicPortfolioDataBodyDesignImageGallery {
               slice_type
               items {
                 image {
                   alt
-                  localFile {
-                    childImageSharp {
-                      gatsbyImageData (
-                        width:2000
-                        placeholder: DOMINANT_COLOR
-                        quality: 100
-                      )
-                    }
-                  }
+                  gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
                 }
                 description {
                   raw
@@ -165,7 +133,7 @@ query chicanxshopPortfolioQuery {
                 responsive_column
               }
             }
-            ... on PrismicPortfolioBodyDesignVideo {
+            ... on PrismicPortfolioDataBodyDesignVideo {
               slice_type
               primary {
                 column
@@ -182,20 +150,12 @@ query chicanxshopPortfolioQuery {
                 }
               }
             }
-            ... on PrismicPortfolioBodyResultsImageGallery {
+            ... on PrismicPortfolioDataBodyResultsImageGallery {
               slice_type
               items {
                 image {
                   alt
-                  localFile {
-                    childImageSharp {
-                      gatsbyImageData (
-                        width:2000
-                        placeholder: DOMINANT_COLOR
-                        quality: 100
-                      )
-                    }
-                  }
+                  gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
                 }
               }
               primary {
