@@ -83,13 +83,13 @@ module.exports = {
     {
       resolve: "gatsby-source-prismic",
       options: {
-        repositoryName: "bmediax",
-        shouldNormalizeImage: () => true,
         schemas: {
           homepage: require("./custom_types/homepage.json"),
           portfolio: require("./custom_types/portfolio.json"),
           work: require("./custom_types/work.json"),
         },
+        repositoryName: "bmediax",
+        // shouldNormalizeImage: () => true,
       },
     },
     {

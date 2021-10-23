@@ -17,7 +17,7 @@ const CoverCTA = ({ coverData }) => {
             <div className={homepageStyles.coverCTA_wrapper}>
                 <div className={homepageStyles.coverImage}>
                     {/* Profile Headshot */}
-                    <StaticImage src="../images/profile/headshot.png" alt="Bmediax Headshot" width={300} placeholder="blurred" className={homepageStyles.coverHeadshot} draggable="false" />
+                    <StaticImage src="../images/profile/headshot-old.png" alt="Bmediax Headshot" width={300} className={homepageStyles.coverHeadshot} placeholder="blurred" draggable="false" />
                 </div>
                 <div className={homepageStyles.coverInfo}>
                     {/* Header */}
