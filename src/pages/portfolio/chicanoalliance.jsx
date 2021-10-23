@@ -2,21 +2,19 @@ import React from 'react';
 import { graphql } from 'gatsby'
 import PortfolioTemplate from '../../layout/PortfolioTemplate'
 
-const bensonhs2016 = ({ data }) => {
+const chicanoalliance = ({ data }) => {
     if (!data) return null
     const document = data.allPrismicPortfolio.edges[0].node.data
     return (
-        <>
-          <PortfolioTemplate data={document} pageTitle="Benson H.S 2016" />
-        </>
+        <PortfolioTemplate data={document} pageTitle="Willamette Chicano Alliance" />
     );
 };
 
-export default bensonhs2016;
+export default chicanoalliance;
 
 export const query = graphql`
-query bensonhs2016PortfolioQuery {
-  allPrismicPortfolio(filter: {uid: {eq: "bensonhs2016"}}) {
+query chicanoalliancePortfolioQuery {
+  allPrismicPortfolio(filter: {uid: {eq: "chicanoalliance"}}) {
     edges {
       node {
         data {
@@ -31,15 +29,7 @@ query bensonhs2016PortfolioQuery {
               text
             }
             background_image {
-              localFile {
-                childImageSharp {
-                  gatsbyImageData(
-                    width: 2000
-                    placeholder: DOMINANT_COLOR
-                    webpOptions: {quality: 100}
-                  )
-                }
-              }
+              gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
               alt
             }
           }
@@ -53,15 +43,7 @@ query bensonhs2016PortfolioQuery {
           }
           design_image {
             alt
-            localFile {
-              childImageSharp {
-                gatsbyImageData(
-                  height: 550
-                  placeholder: DOMINANT_COLOR
-                  webpOptions: {quality: 100}
-                )
-              }
-            }
+            gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
           }
           next_project {
             uid
@@ -70,18 +52,22 @@ query bensonhs2016PortfolioQuery {
             deliverables {
               text
               raw
+              richText
               html
             }
             description {
               text
               raw
+              richText
               html
             }
             problem {
               raw
+              richText
             }
             solution {
               raw
+              richText
             }
             project_link {
               url
@@ -89,21 +75,25 @@ query bensonhs2016PortfolioQuery {
             role {
               text
               raw
+              richText
               html
             }
             work {
               text
               raw
+              richText
               html
             }
             design_tools {
               text
               raw
+              richText
               html
             }
             development_tools {
               text
               raw
+              richText
               html
             }
           }
@@ -119,41 +109,26 @@ query bensonhs2016PortfolioQuery {
             description {
               text
               raw
+              richText
             }
           }
           results_image {
-            localFile {
-              childImageSharp {
-                gatsbyImageData(
-                  height: 550
-                  placeholder: DOMINANT_COLOR
-                  webpOptions: {quality: 100}
-                )
-              }
-            }
+            gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
             alt
           }
           body {
-            ... on PrismicPortfolioBodyDesignColorPalette {
+            ... on PrismicPortfolioDataBodyDesignColorPalette {
               slice_type
               items {
                 colour
               }
             }
-            ... on PrismicPortfolioBodyDesignImageGallery {
+            ... on PrismicPortfolioDataBodyDesignImageGallery {
               slice_type
               items {
                 image {
                   alt
-                  localFile {
-                    childImageSharp {
-                      gatsbyImageData (
-                        width:2000
-                        placeholder: DOMINANT_COLOR
-                        webpOptions: {quality: 100}
-                      )
-                    }
-                  }
+                  gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
                 }
               }
               primary {
@@ -163,7 +138,7 @@ query bensonhs2016PortfolioQuery {
                 column
               }
             }
-            ... on PrismicPortfolioBodyDesignVideo {
+            ... on PrismicPortfolioDataBodyDesignVideo {
               slice_type
               primary {
                 column
@@ -180,26 +155,19 @@ query bensonhs2016PortfolioQuery {
                 }
               }
             }
-            ... on PrismicPortfolioBodyResultsImageGallery {
+            ... on PrismicPortfolioDataBodyResultsImageGallery {
               slice_type
               items {
                 image {
                   alt
-                  localFile {
-                    childImageSharp {
-                      gatsbyImageData (
-                        width:2000
-                        placeholder: DOMINANT_COLOR
-                        webpOptions: {quality: 100}
-                      )
-                    }
-                  }
+                  gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
                 }
               }
               primary {
                 title {
                   text
                 }
+                column
               }
             }
           }

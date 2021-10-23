@@ -12,43 +12,39 @@ const NextProjectSection = ({ title }) => {
         query nextQuery {
             allPrismicPortfolio {
                 edges {
-                    node {
-                        data {
-                            cover_title {
-                                title {
-                                    text
-                                }
-                                name {
-                                    text
-                                }
-                                client {
-                                    text
-                                }
-                                background_image {
-                                    localFile {
-                                        childImageSharp {
-                                            gatsbyImageData(quality: 100)
-                                        }
-                                    }
-                                }
-                            }
-                            overview {
-                                short_description {
-                                    text
-                                }
-                                role {
-                                    text
-                                }
-                                short_tags {
-                                    text
-                                }
-                            }
+                node {
+                    data {
+                    cover_title {
+                        title {
+                        text
                         }
-                        uid
+                        name {
+                        text
+                        }
+                        client {
+                        text
+                        }
+                        background_image {
+                        gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
+                        }
                     }
+                    overview {
+                        short_description {
+                        text
+                        }
+                        role {
+                        text
+                        }
+                        short_tags {
+                        text
+                        }
+                    }
+                    }
+                    uid
+                }
                 }
             }
-        }
+            }
     `)
     const recentData = data.allPrismicPortfolio.edges
     return (
@@ -61,7 +57,7 @@ const NextProjectSection = ({ title }) => {
                             shortDescr={recent.node.data.overview[0].short_description.text} 
                             work={recent.node.data.overview[0].short_tags.text}
                             url={recent.node.uid}
-                            cover={recent.node.data.cover_title[0].background_image.localFile}
+                            cover={recent.node.data.cover_title[0].background_image.gatsbyImageData}
                             />
                     </React.Fragment>
                 ))}

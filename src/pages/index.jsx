@@ -45,11 +45,12 @@ query homepageQuery {
             description {
               text
               raw
+              richText
               html
             }
           }
           body {
-            ... on PrismicHomepageBodyAwardsSection {
+            ... on PrismicHomepageDataBodyAwardsSection {
               items {
                 medal
                 sub_text {

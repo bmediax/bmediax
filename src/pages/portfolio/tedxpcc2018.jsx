@@ -2,19 +2,19 @@ import React from 'react';
 import { graphql } from 'gatsby'
 import PortfolioTemplate from '../../layout/PortfolioTemplate'
 
-const chicanoalliance = ({ data }) => {
+const tedxpcc2018 = ({ data }) => {
     if (!data) return null
     const document = data.allPrismicPortfolio.edges[0].node.data
     return (
-        <PortfolioTemplate data={document} pageTitle="Willamette Chicano Alliance" />
+        <PortfolioTemplate data={document} pageTitle="TEDxPCC 2018" />
     );
 };
 
-export default chicanoalliance;
+export default tedxpcc2018;
 
 export const query = graphql`
-query chicanoalliancePortfolioQuery {
-  allPrismicPortfolio(filter: {uid: {eq: "chicanoalliance"}}) {
+query tedxpcc2018PortfolioQuery {
+  allPrismicPortfolio(filter: {uid: {eq: "tedxpcc2018"}}) {
     edges {
       node {
         data {
@@ -29,16 +29,9 @@ query chicanoalliancePortfolioQuery {
               text
             }
             background_image {
-              localFile {
-                childImageSharp {
-                  gatsbyImageData(
-                    width: 2000
-                    placeholder: DOMINANT_COLOR
-                    webpOptions: {quality: 100}
-                  )
-                }
-              }
+              gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
               alt
+              url
             }
           }
           design {
@@ -51,15 +44,7 @@ query chicanoalliancePortfolioQuery {
           }
           design_image {
             alt
-            localFile {
-              childImageSharp {
-                gatsbyImageData(
-                  height: 550
-                  placeholder: DOMINANT_COLOR
-                  webpOptions: {quality: 100}
-                )
-              }
-            }
+            gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
           }
           next_project {
             uid
@@ -68,18 +53,22 @@ query chicanoalliancePortfolioQuery {
             deliverables {
               text
               raw
+              richText
               html
             }
             description {
               text
               raw
+              richText
               html
             }
             problem {
               raw
+              richText
             }
             solution {
               raw
+              richText
             }
             project_link {
               url
@@ -87,21 +76,25 @@ query chicanoalliancePortfolioQuery {
             role {
               text
               raw
+              richText
               html
             }
             work {
               text
               raw
+              richText
               html
             }
             design_tools {
               text
               raw
+              richText
               html
             }
             development_tools {
               text
               raw
+              richText
               html
             }
           }
@@ -117,41 +110,26 @@ query chicanoalliancePortfolioQuery {
             description {
               text
               raw
+              richText
             }
           }
           results_image {
-            localFile {
-              childImageSharp {
-                gatsbyImageData(
-                  height: 550
-                  placeholder: DOMINANT_COLOR
-                  webpOptions: {quality: 100}
-                )
-              }
-            }
+            gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
             alt
           }
           body {
-            ... on PrismicPortfolioBodyDesignColorPalette {
+            ... on PrismicPortfolioDataBodyDesignColorPalette {
               slice_type
               items {
                 colour
               }
             }
-            ... on PrismicPortfolioBodyDesignImageGallery {
+            ... on PrismicPortfolioDataBodyDesignImageGallery {
               slice_type
               items {
                 image {
                   alt
-                  localFile {
-                    childImageSharp {
-                      gatsbyImageData (
-                        width:2000
-                        placeholder: DOMINANT_COLOR
-                        webpOptions: {quality: 100}
-                      )
-                    }
-                  }
+                  gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
                 }
               }
               primary {
@@ -161,7 +139,7 @@ query chicanoalliancePortfolioQuery {
                 column
               }
             }
-            ... on PrismicPortfolioBodyDesignVideo {
+            ... on PrismicPortfolioDataBodyDesignVideo {
               slice_type
               primary {
                 column
@@ -178,20 +156,12 @@ query chicanoalliancePortfolioQuery {
                 }
               }
             }
-            ... on PrismicPortfolioBodyResultsImageGallery {
+            ... on PrismicPortfolioDataBodyResultsImageGallery {
               slice_type
               items {
                 image {
                   alt
-                  localFile {
-                    childImageSharp {
-                      gatsbyImageData (
-                        width:2000
-                        placeholder: DOMINANT_COLOR
-                        webpOptions: {quality: 100}
-                      )
-                    }
-                  }
+                  gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
                 }
               }
               primary {

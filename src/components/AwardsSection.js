@@ -5,7 +5,7 @@ import * as styles from '../styles/homepage.module.scss'
 import { BsPersonBoundingBox } from 'react-icons/bs'
 import SectionLink from './SectionLink';
 
-const AwardsSection = ({awardsData}) => {
+const AwardsSection = ({ awardsData }) => {
     return (
         <SectionLayout isDark={true} label={styles.awards} subtitle="Recognitions" title="Awards">
             <div style={{ maxWidth: "900px", margin: "auto" }}>

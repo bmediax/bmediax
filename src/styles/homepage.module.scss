@@ -1,4 +1,4 @@
-@use './variables.module' as *;
+@use "./variables.module" as *;
 
 div.cover {
   background: getColor(lightBase);
@@ -160,7 +160,9 @@ div.cover {
   .coverCTA_wrapper {
     max-width: $wrapMaxWidth;
     margin: auto;
-    @include sectionPadding("desktop");
+    // @include sectionPadding("desktop");
+    padding: clamp(30px, 10vw, 50px) 7%;
+    min-height: calc(100vh - 275px);
     justify-content: center;
     align-items: center;
     display: flex;

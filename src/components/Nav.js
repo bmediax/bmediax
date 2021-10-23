@@ -3,7 +3,6 @@ import * as variables from '../styles/_variables.module.scss'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 
 import { motion } from "framer-motion";
-// import { useMediaQuery } from 'react-responsive';
 import { debounce } from '../utilities/helpers';  
 import { AiOutlineInstagram } from 'react-icons/ai'
 import { DiGithubAlt } from 'react-icons/di'
