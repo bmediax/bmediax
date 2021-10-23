@@ -53,18 +53,22 @@ query tedxpcc2018PortfolioQuery {
             deliverables {
               text
               raw
+              richText
               html
             }
             description {
               text
               raw
+              richText
               html
             }
             problem {
               raw
+              richText
             }
             solution {
               raw
+              richText
             }
             project_link {
               url
@@ -72,21 +76,25 @@ query tedxpcc2018PortfolioQuery {
             role {
               text
               raw
+              richText
               html
             }
             work {
               text
               raw
+              richText
               html
             }
             design_tools {
               text
               raw
+              richText
               html
             }
             development_tools {
               text
               raw
+              richText
               html
             }
           }
@@ -102,6 +110,7 @@ query tedxpcc2018PortfolioQuery {
             description {
               text
               raw
+              richText
             }
           }
           results_image {

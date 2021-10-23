@@ -52,6 +52,7 @@ query reikoforpccPortfolioQuery {
             deliverables {
               text
               raw
+              richText
               html
             }
             description {
@@ -79,6 +80,7 @@ query reikoforpccPortfolioQuery {
             work {
               text
               raw
+              richText
               html
             }
             design_tools {

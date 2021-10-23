@@ -2,19 +2,21 @@ import React from 'react';
 import { graphql } from 'gatsby'
 import PortfolioTemplate from '../../layout/PortfolioTemplate'
 
-const chicanoalliance = ({ data }) => {
+const bensonhs2016 = ({ data }) => {
     if (!data) return null
     const document = data.allPrismicPortfolio.edges[0].node.data
     return (
-        <PortfolioTemplate data={document} pageTitle="Willamette Chicano Alliance" />
+        <>
+          <PortfolioTemplate data={document} pageTitle="Benson H.S 2016" />
+        </>
     );
 };
 
-export default chicanoalliance;
+export default bensonhs2016;
 
 export const query = graphql`
-query chicanoalliancePortfolioQuery {
-  allPrismicPortfolio(filter: {uid: {eq: "chicanoalliance"}}) {
+query bensonhs2016PortfolioQuery {
+  allPrismicPortfolio(filter: {uid: {eq: "bensonhs2016"}}) {
     edges {
       node {
         data {
@@ -29,8 +31,8 @@ query chicanoalliancePortfolioQuery {
               text
             }
             background_image {
-              gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
               alt
+              gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
             }
           }
           design {
@@ -52,18 +54,22 @@ query chicanoalliancePortfolioQuery {
             deliverables {
               text
               raw
+              richText
               html
             }
             description {
               text
               raw
+              richText
               html
             }
             problem {
               raw
+              richText
             }
             solution {
               raw
+              richText
             }
             project_link {
               url
@@ -71,21 +77,25 @@ query chicanoalliancePortfolioQuery {
             role {
               text
               raw
+              richText
               html
             }
             work {
               text
               raw
+              richText
               html
             }
             design_tools {
               text
               raw
+              richText
               html
             }
             development_tools {
               text
               raw
+              richText
               html
             }
           }
@@ -101,6 +111,7 @@ query chicanoalliancePortfolioQuery {
             description {
               text
               raw
+              richText
             }
           }
           results_image {
@@ -151,15 +162,19 @@ query chicanoalliancePortfolioQuery {
               items {
                 image {
                   alt
-                  gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
+                  gatsbyImageData(width: 2000)
                 }
               }
               primary {
                 title {
+                  raw
+                  richText
+                  richText
                   text
+                  html
                 }
-                column
               }
+              slice_label
             }
           }
         }

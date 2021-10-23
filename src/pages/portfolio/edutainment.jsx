@@ -54,18 +54,22 @@ query edutainmentPortfolioQuery {
             deliverables {
               text
               raw
+              richText
               html
             }
             description {
               text
               raw
+              richText
               html
             }
             problem {
               raw
+              richText
             }
             solution {
               raw
+              richText
             }
             project_link {
               url
@@ -73,21 +77,25 @@ query edutainmentPortfolioQuery {
             role {
               text
               raw
+              richText
               html
             }
             work {
               text
               raw
+              richText
               html
             }
             design_tools {
               text
               raw
+              richText
               html
             }
             development_tools {
               text
               raw
+              richText
               html
             }
           }
@@ -103,6 +111,7 @@ query edutainmentPortfolioQuery {
             description {
               text
               raw
+              richText
             }
           }
           results_image {

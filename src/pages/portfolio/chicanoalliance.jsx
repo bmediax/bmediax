@@ -2,19 +2,19 @@ import React from 'react';
 import { graphql } from 'gatsby'
 import PortfolioTemplate from '../../layout/PortfolioTemplate'
 
-const chicanxshop = ({ data }) => {
+const chicanoalliance = ({ data }) => {
     if (!data) return null
     const document = data.allPrismicPortfolio.edges[0].node.data
     return (
-        <PortfolioTemplate data={document} pageTitle="Chicanx Shop" />
+        <PortfolioTemplate data={document} pageTitle="Willamette Chicano Alliance" />
     );
 };
 
-export default chicanxshop;
+export default chicanoalliance;
 
 export const query = graphql`
-query chicanxshopPortfolioQuery {
-  allPrismicPortfolio(filter: {uid: {eq: "chicanxshop"}}) {
+query chicanoalliancePortfolioQuery {
+  allPrismicPortfolio(filter: {uid: {eq: "chicanoalliance"}}) {
     edges {
       node {
         data {
@@ -52,18 +52,22 @@ query chicanxshopPortfolioQuery {
             deliverables {
               text
               raw
+              richText
               html
             }
             description {
               text
               raw
+              richText
               html
             }
             problem {
               raw
+              richText
             }
             solution {
               raw
+              richText
             }
             project_link {
               url
@@ -71,21 +75,25 @@ query chicanxshopPortfolioQuery {
             role {
               text
               raw
+              richText
               html
             }
             work {
               text
               raw
+              richText
               html
             }
             design_tools {
               text
               raw
+              richText
               html
             }
             development_tools {
               text
               raw
+              richText
               html
             }
           }
@@ -101,6 +109,7 @@ query chicanxshopPortfolioQuery {
             description {
               text
               raw
+              richText
             }
           }
           results_image {
@@ -121,16 +130,12 @@ query chicanxshopPortfolioQuery {
                   alt
                   gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
                 }
-                description {
-                  raw
-                }
               }
               primary {
                 title {
                   text
                 }
                 column
-                responsive_column
               }
             }
             ... on PrismicPortfolioDataBodyDesignVideo {
@@ -162,6 +167,7 @@ query chicanxshopPortfolioQuery {
                 title {
                   text
                 }
+                column
               }
             }
           }

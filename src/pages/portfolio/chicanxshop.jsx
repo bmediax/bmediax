@@ -2,21 +2,19 @@ import React from 'react';
 import { graphql } from 'gatsby'
 import PortfolioTemplate from '../../layout/PortfolioTemplate'
 
-const bensonhs2016 = ({ data }) => {
+const chicanxshop = ({ data }) => {
     if (!data) return null
     const document = data.allPrismicPortfolio.edges[0].node.data
     return (
-        <>
-          <PortfolioTemplate data={document} pageTitle="Benson H.S 2016" />
-        </>
+        <PortfolioTemplate data={document} pageTitle="Chicanx Shop" />
     );
 };
 
-export default bensonhs2016;
+export default chicanxshop;
 
 export const query = graphql`
-query bensonhs2016PortfolioQuery {
-  allPrismicPortfolio(filter: {uid: {eq: "bensonhs2016"}}) {
+query chicanxshopPortfolioQuery {
+  allPrismicPortfolio(filter: {uid: {eq: "chicanxshop"}}) {
     edges {
       node {
         data {
@@ -31,8 +29,8 @@ query bensonhs2016PortfolioQuery {
               text
             }
             background_image {
-              alt
               gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
+              alt
             }
           }
           design {
@@ -54,18 +52,22 @@ query bensonhs2016PortfolioQuery {
             deliverables {
               text
               raw
+              richText
               html
             }
             description {
               text
               raw
+              richText
               html
             }
             problem {
               raw
+              richText
             }
             solution {
               raw
+              richText
             }
             project_link {
               url
@@ -73,21 +75,25 @@ query bensonhs2016PortfolioQuery {
             role {
               text
               raw
+              richText
               html
             }
             work {
               text
               raw
+              richText
               html
             }
             design_tools {
               text
               raw
+              richText
               html
             }
             development_tools {
               text
               raw
+              richText
               html
             }
           }
@@ -103,6 +109,7 @@ query bensonhs2016PortfolioQuery {
             description {
               text
               raw
+              richText
             }
           }
           results_image {
@@ -123,12 +130,17 @@ query bensonhs2016PortfolioQuery {
                   alt
                   gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
                 }
+                description {
+                  raw
+                  richText
+                }
               }
               primary {
                 title {
                   text
                 }
                 column
+                responsive_column
               }
             }
             ... on PrismicPortfolioDataBodyDesignVideo {
@@ -153,18 +165,14 @@ query bensonhs2016PortfolioQuery {
               items {
                 image {
                   alt
-                  gatsbyImageData(width: 2000)
+                  gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
                 }
               }
               primary {
                 title {
-                  raw
-                  richText
                   text
-                  html
                 }
               }
-              slice_label
             }
           }
         }
