@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import { motion } from 'framer-motion'
 import * as buttonCardStyles from './ButtonCard.module.scss'
 import { LinkedinIcon, YoutubeIcon,  GithubIcon, InstagramIcon } from '../Icons'
@@ -30,5 +31,18 @@ const ButtonCard = ({ title, subtitle, url }) => {
         </motion.a>
     );
 };
+
+// Prop Type
+ButtonCard.defaultProps = {
+    title: "Title",
+    subtitle: "Sub Title",
+    url: "https://example.com",
+}
+
+ButtonCard.propTypes = {
+    title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+}
 
 export default ButtonCard;
