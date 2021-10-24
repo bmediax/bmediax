@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, graphql } from 'gatsby'
+import PropTypes from 'prop-types'
 import { motion } from 'framer-motion'
 // import Lightbox from 'react-image-lightbox';
 // import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
@@ -23,7 +24,6 @@ const Work = ({ data }) => {
   
   if (!data) return null
   const document = data.allPrismicWork.edges[0].node.data.works
-  
   return (
     <TagContext.Provider value={{tag, setTag}}>
       <Layout title="Work">
@@ -86,6 +86,32 @@ const Work = ({ data }) => {
   )
 }
 export default Work;
+
+Work.propTypes = {
+  data: PropTypes.shape({
+    allPrismicWork: PropTypes.shape({
+      edges: PropTypes.arrayOf(PropTypes.shape({
+        node: PropTypes.shape({
+          data: PropTypes.shape({
+            works: PropTypes.arrayOf(PropTypes.shape({
+              title: PropTypes.shape({
+                text: PropTypes.string.isRequired
+              }),
+              tag: PropTypes.string,
+              link: PropTypes.shape({
+                url: PropTypes.string
+              }),
+              image: PropTypes.shape({
+                alt: PropTypes.string.isRequired,
+                gatsbyImageData: PropTypes.object.isRequired
+              })
+            }))
+          })
+        })
+      }))
+    })
+  })
+}
 
 export const query = graphql`
 query WorkQuery {

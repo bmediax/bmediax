@@ -51,7 +51,6 @@ query reikoforpccPortfolioQuery {
           overview {
             deliverables {
               text
-              raw
               richText
               html
             }
@@ -61,11 +60,9 @@ query reikoforpccPortfolioQuery {
               html
             }
             problem {
-              raw
               richText
             }
             solution {
-              raw
               richText
             }
             project_link {
@@ -73,25 +70,21 @@ query reikoforpccPortfolioQuery {
             }
             role {
               text
-              raw
               richText
               html
             }
             work {
               text
-              raw
               richText
               html
             }
             design_tools {
               text
-              raw
               richText
               html
             }
             development_tools {
               text
-              raw
               richText
               html
             }
@@ -107,7 +100,6 @@ query reikoforpccPortfolioQuery {
           results {
             description {
               text
-              raw
               richText
             }
           }

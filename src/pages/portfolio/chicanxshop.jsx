@@ -51,22 +51,18 @@ query chicanxshopPortfolioQuery {
           overview {
             deliverables {
               text
-              raw
               richText
               html
             }
             description {
               text
-              raw
               richText
               html
             }
             problem {
-              raw
               richText
             }
             solution {
-              raw
               richText
             }
             project_link {
@@ -74,25 +70,21 @@ query chicanxshopPortfolioQuery {
             }
             role {
               text
-              raw
               richText
               html
             }
             work {
               text
-              raw
               richText
               html
             }
             design_tools {
               text
-              raw
               richText
               html
             }
             development_tools {
               text
-              raw
               richText
               html
             }
@@ -108,7 +100,6 @@ query chicanxshopPortfolioQuery {
           results {
             description {
               text
-              raw
               richText
             }
           }
@@ -131,7 +122,6 @@ query chicanxshopPortfolioQuery {
                   gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
                 }
                 description {
-                  raw
                   richText
                 }
               }
