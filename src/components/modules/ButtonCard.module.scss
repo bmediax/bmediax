@@ -1,11 +1,12 @@
-@use '../../styles/variables.module' as *;
+@use "../../styles/variables.module" as *;
 
 .wrapper {
   //   min-width: 290px;
   //   min-height: 50px;
   @include objectCorner("default");
   text-decoration: none;
-  background: getColor(lightLightBase3);
+  // Old - background: getColor(lightLightBase3);
+  background: theme(surface);
   display: flex;
   justify-content: center;
   align-items: center;
