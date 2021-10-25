@@ -1,4 +1,4 @@
-@use './variables.module' as *;
+@use "./variables.module" as *;
 
 // Desktop: 1 rem = 10px
 // Mobile: 1rem - 9.6px
@@ -117,7 +117,7 @@ p {
   font-family: $primaryFont;
   font-size: 1.6rem;
   font-weight: 450;
-  color: getColor(normalText);
+  color: theme(body);
 }
 
 .imageSection {
@@ -291,8 +291,8 @@ p {
 
 .activePrimary,
 .primary-active {
-  background: $midnight !important;
-  color: $blanco !important;
+  background: $color-azure !important;
+  color: $color-crystal !important;
   border: none !important;
 
   &:hover {
@@ -416,7 +416,8 @@ p {
 
 section {
   background: getColor(lightBase);
-  @include sectionPadding("desktop");
+  // @include sectionPadding("desktop");
+  padding: clamp(40px, 10vw, 150px) $widthPadding;
 
   .section-link {
     margin: auto;
@@ -450,7 +451,7 @@ section {
 
   .darkTitle {
     h4 {
-      color: getColor(mistToCloud);
+      color: $color-cloud;
     }
 
     h2 {
@@ -460,7 +461,7 @@ section {
 
   // Responsive
   @include responsive("mobile") {
-    @include sectionPadding("mobile");
+    // @include sectionPadding("mobile");
 
     .section-title h4 {
       margin-bottom: 10px;
@@ -1038,18 +1039,18 @@ nav {
   }
 
   .footer-color-1 {
-    background: $midnight;
+    background: $color-space;
   }
 
   .footer-color-2 {
-    background: $azure;
+    background: $color-azure;
   }
 
   .footer-color-3 {
-    background: $oscuro;
+    background: $color-sable;
   }
 
   .footer-color-4 {
-    background: $mist;
+    background: $color-mist;
   }
 }

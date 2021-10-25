@@ -24,8 +24,8 @@ $desktopPadding: 150px;
 $desktopSmallPadding: 60px;
 $mobilePadding: 80px;
 
-$defaultBorder: 15px;
-$mobileBorder: 25px;
+$defaultBorder: 10px;
+$mobileBorder: 10px;
 
 $masOscuro: #171926;
 $oscuro: #2d3346;
@@ -49,6 +49,33 @@ $steelBlue: #2b313c;
 $cloud: #687077;
 $clude: #7f8197;
 $crow: #181c21;
+
+// New Color Palette 👀
+$color-azure: #3c86a5;
+$color-crystal: #fff;
+$color-snow: #f4f4f8;
+$color-mist: #b8c3d0;
+$color-cloud: #656d78;
+$color-space: #444a53;
+$color-sable: #2d3136;
+$color-satin: #1b1d20;
+$color-jetBlack: #0b0c0d;
+
+$theme: (
+  base: $color-crystal,
+  surface: $color-snow,
+  headline: $color-sable,
+  body: $color-space,
+  tagline: $color-mist,
+);
+
+$theme-dark: (
+  base: $color-jetBlack,
+  surface: $color-satin,
+  headline: $color-crystal,
+  body: $color-cloud,
+  tagline: $color-space,
+);
 
 :export {
   masOscuro: $masOscuro;
@@ -157,6 +184,9 @@ $colors-dark: (
 
 :root {
   @each $name, $color in $colors {
+    --color_#{$name}: #{$color};
+  }
+  @each $name, $color in $theme {
     --color-#{$name}: #{$color};
   }
 }
@@ -165,12 +195,19 @@ $colors-dark: (
 @media (prefers-color-scheme: dark) {
   :root {
     @each $name, $color in $colors-dark {
+      --color_#{$name}: #{$color};
+    }
+    @each $name, $color in $theme-dark {
       --color-#{$name}: #{$color};
     }
   }
 }
 
 @function getColor($color-name) {
+  @return var(--color_#{$color-name});
+}
+
+@function theme($color-name) {
   @return var(--color-#{$color-name});
 }
 
