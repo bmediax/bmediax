@@ -1,4 +1,4 @@
-@use '../../styles/variables.module' as *;
+@use "../../styles/variables.module" as *;
 
 .container {
   display: flex;
@@ -57,7 +57,11 @@
   flex: 2;
 
   h3 {
-    color: getColor(textHeaderDarkBG);
+    color: $color-crystal;
+  }
+
+  h5 {
+    color: theme(tagline);
   }
 
   @include responsive("mobile") {

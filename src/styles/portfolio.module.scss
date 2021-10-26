@@ -1,4 +1,4 @@
-@use './variables.module' as *;
+@use "./variables.module" as *;
 
 .coverImgs {
   height: 70vh;
@@ -37,14 +37,14 @@
   }
 
   h1 {
-    color: getColor(lightDarkText);
+    color: theme(headline);
     font-size: 4.5rem;
     line-height: 70px;
     margin-bottom: 10px;
   }
 
   h5 {
-    color: getColor(textSubTitle);
+    color: theme(tagline);
     font-size: 1.8rem;
     line-height: 25px;
   }
