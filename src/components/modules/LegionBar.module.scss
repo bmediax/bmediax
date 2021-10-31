@@ -2,7 +2,8 @@
 
 .container {
   width: 100%;
-  background: getColor(lightBase);
+  // background: getColor(lightBase);
+  @include BGTheme("lighter");
   // position: relative;
   // position:sticky !important;
   // top:$navHeight + 10px !important;
@@ -21,7 +22,8 @@
   // top:$navHeight + 10px !important;
   // right:0;
   // left:0;
-  background: getColor(lightLightBase);
+  // background: getColor(lightLightBase);
+  @include BGTheme("lightest");
   width: 500px;
   position: relative;
   margin: 0px auto -20px auto;
@@ -29,7 +31,13 @@
   list-style: none;
   text-align: center;
   @include objectCorner("default");
-  @include objectShadow("hover", "snow");
+  @include objectShadow("active", "snow");
+  transition: box-shadow 250ms linear, transform 250ms linear;
+
+  &:hover {
+    transform: translateY(-2px);
+    @include objectShadow("activeHard", "snow");
+  }
 
   li {
     display: inline-block;
@@ -41,7 +49,8 @@
       text-decoration: none;
       font-size: 1.6rem;
       padding: 20px 0px 15px 0;
-      color: getColor(menuText);
+      // color: getColor(menuText);
+      color: theme("body");
       font-weight: 500;
       border-bottom: 5px solid transparent;
       transition: color 200ms linear, border-bottom 300ms linear;

@@ -8,6 +8,8 @@ import NextProjectSection from "../components/NextProjectSection";
 import OverviewSection from "../components/OverviewSection";
 import PortfolioTitle from "../components/PortfolioTitle";
 import ResultsSection from "../components/ResultsSection";
+
+
 // import * as portfolioStyles from '../styles/portfolio.module.scss'
 
 const PortfolioTemplate = ({ data, pageTitle }) => {

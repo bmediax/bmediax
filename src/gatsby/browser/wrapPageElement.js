@@ -1,13 +1,13 @@
-import React from "react"
-import { ParallaxProvider } from 'react-scroll-parallax'
-import Layout from '../../layout/index'
+import React from "react";
+import Layout from "../../layout/index";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 const CustomLayout = ({ element, props }) => {
   return (
     <ParallaxProvider>
-        <Layout {...props}>{element}</Layout>
+      <Layout {...props}>{element}</Layout>
     </ParallaxProvider>
-  )
-}
+  );
+};
 
-export default CustomLayout
+export default CustomLayout;
