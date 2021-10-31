@@ -88,7 +88,7 @@ $theme-dark: (
   basePrimary: $color-coal,
   basePrimaryLight: $color-satin,
   baseSecondary: $color-coal,
-  baseTeriary: $color-satin,
+  baseTeriary: $color-coal,
   surface: $color-satin,
   headline: $color-crystal,
   body: $color-cloud,
@@ -249,16 +249,18 @@ $colors-dark: (
 
 @mixin cardStyle($type) {
   transition: background 250ms linear, box-shadow 250ms linear,
-    transform 100ms linear !important;
+    transform 250ms linear !important;
   @include objectCorner("default");
 
   @if $type == "primary" {
     background: theme(baseLight);
     border: 1px solid theme(borderBaseMinimal);
-
+    
     &:hover {
       @include objectShadow("hover", "snow");
       background: theme(basePrimary);
+      transform: translateY(-3px) !important;
+      border: 1px solid theme(borderBase);
 
       h3 {
         color: theme(headline);
@@ -406,7 +408,7 @@ $colors-dark: (
     } @else if $state == "active" {
       box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.2) !important;
     } @else if $state == "activeHard" {
-      box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.4) !important;
+      box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.2) !important;
     }
   } @else if $state == "default" and $color == "azure" {
     box-shadow: 0px 5px 20px rgba($azure, 0.4);

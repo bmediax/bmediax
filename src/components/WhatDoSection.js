@@ -11,7 +11,7 @@ import SectionLink from './SectionLink';
 
 const WhatDoSection = () => {
     return (
-        <SectionLayout title="What I do" subtitle="Skills" ide="firstSection" isTheme="darker-section">
+        <SectionLayout title="What I do" subtitle="Skills" ide="firstSection" label="lighterSection">
             <div className="grid-three sectionMaxWidth">
                 <InfoCardModule 
                     subtitle="Technical"

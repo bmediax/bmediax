@@ -2,13 +2,12 @@
 
 .infoCard {
   flex: 1;
-  background: getColor(minimalBase);
+  @include cardStyle("primary");
   padding: 30px 27px;
-  @include objectCorner("default");
   text-decoration: none !important;
-  transition: background ease-in-out 250ms, box-shadow ease-in-out 250ms,
-    transform 300ms linear, border 250ms ease-in-out;
-  border: 2px solid getColor(lightBase);
+  // transition: background ease-in-out 250ms, box-shadow ease-in-out 250ms,
+  //   transform 300ms linear, border 250ms ease-in-out;
+  // border: 2px solid getColor(lightBase);
 
   .infoCard_text {
     h4 {
@@ -33,25 +32,25 @@
     margin-bottom: 0.3em;
   }
 
-  &:focus {
-    background: getColor(lightToLight);
-    border: 2px solid getColor(darkLightBase);
-    @include objectShadow("default", "snow");
-    outline: none;
-  }
+  // &:focus {
+  //   background: getColor(lightToLight);
+  //   border: 2px solid getColor(darkLightBase);
+  //   @include objectShadow("default", "snow");
+  //   outline: none;
+  // }
 
-  &:hover {
-    background: getColor(lightToLight);
-    border: 2px solid getColor(lightToLight);
-    @include objectShadow("default", "snow");
-    transform: translateY(-2px);
+  // &:hover {
+  //   background: getColor(lightToLight);
+  //   border: 2px solid getColor(lightToLight);
+  //   @include objectShadow("default", "snow");
+  //   transform: translateY(-2px);
 
-    @media (prefers-color-scheme: dark) {
-      box-shadow: none !important;
-    }
+  //   @media (prefers-color-scheme: dark) {
+  //     box-shadow: none !important;
+  //   }
 
-    .infoCard_icon svg {
-      fill: $midnight;
-    }
-  }
+  //   .infoCard_icon svg {
+  //     fill: $midnight;
+  //   }
+  // }
 }
