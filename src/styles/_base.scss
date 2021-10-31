@@ -236,7 +236,7 @@ p {
   font-weight: 600;
   @include objectCorner("default");
   // border-radius:15px !important;
-  border: none !important;
+  border: none;
   font-size: 1.6rem;
   text-decoration: none;
   transition: background 250ms ease-in-out, box-shadow 200ms ease-in-out,
@@ -346,12 +346,16 @@ p {
 }
 
 .ghost {
-  background: getColor(lightLightBase);
-  color: getColor(lightDarkText);
+  // background: getColor(lightLightBase);
+  // color: getColor(lightDarkText);
+  @include cardStyle("primaryActive");
+  color: theme("body");
   outline: none;
+  transition: color 250ms linear;
 
   &:hover {
     @include objectShadow("hover", "snow");
+    color: theme("headline");
   }
 
   &:active {
