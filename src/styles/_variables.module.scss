@@ -52,6 +52,7 @@ $crow: #181c21;
 
 // New Color Palette 👀
 $color-azure: #3c86a5;
+$color-midnight: #171926;
 $color-crystal: #fff;
 $color-snow: #f4f4f8;
 $color-rice: #e6e6ef;
@@ -230,6 +231,22 @@ $colors-dark: (
   @return var(--color-#{$color-name});
 }
 
+@mixin BGTheme($theme) {
+  @if $theme == "light" {
+    background: theme(base);
+  } @else if $theme == "lighter" {
+    background: theme(baseLight);
+  } @else if $theme == "lightest" {
+    background: theme(basePrimaryLight);
+  } @else if $theme == "dark" {
+    background: theme(borderBaseMinimal);
+  } @else if $theme == "darker" {
+    background: theme(surface);
+  } @else if $theme == "darkest" {
+    background: theme(baseDark);
+  }
+}
+
 @mixin cardStyle($type) {
   transition: background 250ms linear, box-shadow 250ms linear,
     transform 100ms linear !important;
@@ -362,6 +379,10 @@ $colors-dark: (
       box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.07) !important;
     } @else if $state == "hover" {
       box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1) !important;
+    } @else if $state == "active" {
+      box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.2) !important;
+    } @else if $state == "activeHard" {
+      box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.4) !important;
     }
   } @else if $state == "default" and $color == "azure" {
     box-shadow: 0px 5px 20px rgba($azure, 0.4);

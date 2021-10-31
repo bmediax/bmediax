@@ -475,7 +475,41 @@ section {
   }
 }
 
-.darker-section {
+.lightSection {
+  // background: theme(base);
+  @include BGTheme("light");
+}
+
+.lighterSection {
+  // background: theme(baseLight);
+  @include BGTheme("lighter");
+}
+
+.lightestSection {
+  // background: theme(basePrimaryLight);
+  @include BGTheme("lightest");
+}
+
+.darkSection {
+  // background: theme(borderBaseMinimal);
+  @include BGTheme("dark");
+}
+
+.darkerSection {
+  // background: theme(surface);
+  @include BGTheme("darker");
+}
+
+.darkestSection {
+  // background: theme(baseDark);
+  @include BGTheme("darkest");
+}
+
+.darkest-section {
+  background: getColor(contrastBase) !important;
+}
+
+.darkest-section {
   background: getColor(contrastBase) !important;
 }
 
@@ -924,7 +958,7 @@ nav {
 }
 
 #page {
-  background: getColor(lightBase);
+  background: theme(basePrimary);
 
   .section-title {
     margin-bottom: 20px;
@@ -988,10 +1022,10 @@ nav {
 }
 
 .cardLink_wrapper {
-  background: getColor(basePrimary);
+  background: theme(baseLight);
   @include objectShadow("default", "snow");
   width: 100%;
-  padding: 40px 40px;
+  padding: 25px 30px;
   @include objectCorner("default");
   display: flex;
   justify-content: center;
@@ -1005,8 +1039,9 @@ nav {
 
   h1 {
     flex: 2;
+    margin-top: 3px;
     // font-size:clamp(1.6rem, 5vh, 6rem);
-    font-size: clamp(3rem, 3vw, 4rem);
+    font-size: clamp(2.5rem, 3vw, 3rem);
     margin-left: 20px;
   }
 
