@@ -1,9 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 import { RichText } from 'prismic-reactjs'
 import * as SideBarStyles from './SideBar.module.scss'
 
 const SideBar = ({ sidebarData, projectLinks }) => {
-    // dsi.development_tools === "") 
     const isToolsExist = (dsi) => {
         if (dsi.design_tools.text === "" ) {
             return ""
@@ -11,7 +11,7 @@ const SideBar = ({ sidebarData, projectLinks }) => {
             return (
                 <div className={SideBarStyles.section}>
                     <h3>Tools</h3>
-                    <RichText render={sidebarData.design_tools.raw} />
+                    <RichText render={sidebarData.design_tools.richText} />
                 </div>
             )
         }
@@ -24,7 +24,7 @@ const SideBar = ({ sidebarData, projectLinks }) => {
             return (
                 <div className={SideBarStyles.section}>
                     <h3>Technologies</h3>
-                    <RichText render={sidebarData.development_tools.raw} />
+                    <RichText render={sidebarData.development_tools.richText} />
                 </div>
             )
         }
@@ -35,22 +35,22 @@ const SideBar = ({ sidebarData, projectLinks }) => {
             {/* Role */}
             <div className={SideBarStyles.section}>
                 <h3>Role</h3>
-                <RichText render={sidebarData.role.raw} />
-                {/* {RichText.asText(sidebarData.role.raw)} */}
+                <RichText render={sidebarData.role.richText} />
+                {/* {RichText.asText(sidebarData.role.richText)} */}
                 {/* {sidebarData.role.html} */}
             </div>
 
             <div className={SideBarStyles.section}>
                 {/* Work */}
                 <h3>Work</h3>
-                <RichText render={sidebarData.work.raw} />
+                <RichText render={sidebarData.work.richText} />
             </div>
            {isToolsExist(sidebarData)}
            {isTechExist (sidebarData)}
             <div className={SideBarStyles.section}>
                 {/* Deliverable */}
                 <h3>Deliverables</h3>
-                <RichText render={sidebarData.deliverables.raw} />
+                <RichText render={sidebarData.deliverables.richText} />
             </div>
 
             <div className={SideBarStyles.section}>
@@ -65,5 +65,10 @@ const SideBar = ({ sidebarData, projectLinks }) => {
         </div>
     );
 };
+
+SideBar.propTypes = {
+    sidebarData: PropTypes.object.isRequired,
+    projectLinks: PropTypes.array.isRequired,
+}
 
 export default SideBar;

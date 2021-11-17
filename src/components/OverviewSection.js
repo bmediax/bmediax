@@ -6,7 +6,7 @@ import SideBar from './modules/SideBar'
 
 const OverviewSection = ({ overviewData, projectLinks }) => {
     return (
-        <SectionPageLayout idLabel="overview" title="Overview" icon="Check Mark" bgLightDark align>
+        <SectionPageLayout idLabel="overview" label="lighterSection" title="Overview" icon="Check Mark" bgLightDark align>
             <div className="sectionMaxWidth">
                 <div className={portfolioStyles.columnLayout}>
                     <div className={portfolioStyles.twoColumn_2to1}>

@@ -1,16 +1,16 @@
-@use '../../styles/variables.module' as *;
+@use "../../styles/variables.module" as *;
 
 .wrapper {
   //   min-width: 290px;
   //   min-height: 50px;
+  // Old - background: getColor(lightLightBase3);
   @include objectCorner("default");
   text-decoration: none;
-  background: getColor(lightLightBase3);
+  @include cardStyle("primary");
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 15px 20px;
-  transition: background 250ms linear, box-shadow 250ms linear;
   outline: none;
 
   &:focus {
@@ -21,7 +21,7 @@
     flex: 2;
 
     h3 {
-      transition: color 150ms linear;
+      transition: color 250ms linear;
     }
   }
 
@@ -29,17 +29,6 @@
     display: flex;
     justify-content: flex-end;
     flex: 1;
-  }
-
-  &:hover {
-    background: getColor(darkBase2);
-    @include objectShadow("hover", "snow");
-
-    .text {
-      h3 {
-        color: $white !important;
-      }
-    }
   }
 
   @include responsive("mobile") {

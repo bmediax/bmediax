@@ -1,14 +1,16 @@
-@use './variables.module' as *;
+@use "./variables.module" as *;
 
 // Desktop: 1 rem = 10px
 // Mobile: 1rem - 9.6px
 html {
+  scroll-behavior: smooth;
   // 16px
   font-size: 62.5%;
+  // font-size: 16px;
 
   @include responsive("mobile") {
     //15.36px
-    font-size: 60%;
+    font-size: 65%;
   }
 }
 
@@ -73,14 +75,14 @@ a {
 h1 {
   font-size: clamp(4rem, 3vmax, 5rem);
   font-weight: 700;
-  color: getColor(textHeader);
+  color: theme(headline);
   text-transform: capitalize;
 }
 
 h2 {
   font-size: 3.6rem;
   font-weight: 700;
-  color: getColor(textHeader);
+  color: theme(headline);
   text-transform: capitalize;
 }
 
@@ -91,7 +93,7 @@ h2 {
 h3 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: getColor(textHeader);
+  color: theme(headline);
   text-transform: capitalize;
 }
 
@@ -115,9 +117,9 @@ h5 {
 
 p {
   font-family: $primaryFont;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: 450;
-  color: getColor(normalText);
+  color: theme(body);
 }
 
 .imageSection {
@@ -150,7 +152,8 @@ p {
   }
 
   p {
-    line-height: 30px;
+    // line-height: 30px;
+    line-height: 2;
 
     & + p {
       margin-top: 15px;
@@ -233,7 +236,7 @@ p {
   font-weight: 600;
   @include objectCorner("default");
   // border-radius:15px !important;
-  border: none !important;
+  border: none;
   font-size: 1.6rem;
   text-decoration: none;
   transition: background 250ms ease-in-out, box-shadow 200ms ease-in-out,
@@ -291,8 +294,8 @@ p {
 
 .activePrimary,
 .primary-active {
-  background: $midnight !important;
-  color: $blanco !important;
+  background: $color-azure !important;
+  color: $color-crystal !important;
   border: none !important;
 
   &:hover {
@@ -343,12 +346,16 @@ p {
 }
 
 .ghost {
-  background: getColor(lightLightBase);
-  color: getColor(lightDarkText);
+  // background: getColor(lightLightBase);
+  // color: getColor(lightDarkText);
+  @include cardStyle("primaryActive");
+  color: theme("body");
   outline: none;
+  transition: color 250ms linear;
 
   &:hover {
     @include objectShadow("hover", "snow");
+    color: theme("headline");
   }
 
   &:active {
@@ -415,8 +422,8 @@ p {
 }
 
 section {
-  background: getColor(lightBase);
-  @include sectionPadding("desktop");
+  background: theme(base);
+  padding: clamp(40px, 10vw, 150px) $widthPadding;
 
   .section-link {
     margin: auto;
@@ -439,6 +446,11 @@ section {
 
     h4 {
       margin-bottom: 15px;
+      color: theme(tagline);
+    }
+
+    h2 {
+      color: theme(headline);
     }
 
     h4,
@@ -450,7 +462,7 @@ section {
 
   .darkTitle {
     h4 {
-      color: getColor(mistToCloud);
+      color: $color-cloud;
     }
 
     h2 {
@@ -460,7 +472,7 @@ section {
 
   // Responsive
   @include responsive("mobile") {
-    @include sectionPadding("mobile");
+    // @include sectionPadding("mobile");
 
     .section-title h4 {
       margin-bottom: 10px;
@@ -468,12 +480,46 @@ section {
   }
 }
 
-.darker-section {
+.lightSection {
+  // background: theme(base);
+  @include BGTheme("light");
+}
+
+.lighterSection {
+  // background: theme(baseLight);
+  @include BGTheme("lighter");
+}
+
+.lightestSection {
+  // background: theme(basePrimaryLight);
+  @include BGTheme("lightest");
+}
+
+.darkSection {
+  // background: theme(borderBaseMinimal);
+  @include BGTheme("dark");
+}
+
+.darkerSection {
+  // background: theme(surface);
+  @include BGTheme("darker");
+}
+
+.darkestSection {
+  // background: theme(baseDark);
+  @include BGTheme("darkest");
+}
+
+.darkest-section {
+  background: getColor(contrastBase) !important;
+}
+
+.darkest-section {
   background: getColor(contrastBase) !important;
 }
 
 .lightDark-section {
-  background: getColor(minimalBase);
+  background: theme(baseDark);
 }
 
 // Navigation
@@ -484,6 +530,7 @@ nav {
   left: 0;
   z-index: 10;
   background: getColor(lightBase);
+  @include BGTheme("lighter");
   transition: box-shadow 250ms linear, top 0.6s, background linear 400ms;
   font-family: $primaryFont;
 
@@ -917,7 +964,7 @@ nav {
 }
 
 #page {
-  background: getColor(lightBase);
+  background: theme(basePrimary);
 
   .section-title {
     margin-bottom: 20px;
@@ -981,10 +1028,10 @@ nav {
 }
 
 .cardLink_wrapper {
-  background: getColor(lightBase);
+  background: theme(baseLight);
   @include objectShadow("default", "snow");
   width: 100%;
-  padding: 40px 40px;
+  padding: 25px 30px;
   @include objectCorner("default");
   display: flex;
   justify-content: center;
@@ -998,8 +1045,9 @@ nav {
 
   h1 {
     flex: 2;
+    margin-top: 3px;
     // font-size:clamp(1.6rem, 5vh, 6rem);
-    font-size: clamp(3rem, 3vw, 4rem);
+    font-size: clamp(2.5rem, 3vw, 3rem);
     margin-left: 20px;
   }
 
@@ -1038,18 +1086,18 @@ nav {
   }
 
   .footer-color-1 {
-    background: $midnight;
+    background: $color-space;
   }
 
   .footer-color-2 {
-    background: $azure;
+    background: $color-azure;
   }
 
   .footer-color-3 {
-    background: $oscuro;
+    background: $color-sable;
   }
 
   .footer-color-4 {
-    background: $mist;
+    background: $color-mist;
   }
 }

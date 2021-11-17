@@ -1,7 +1,8 @@
-@use './variables.module' as *;
+@use "./variables.module" as *;
 
 .fourofour {
-  background: getColor(lightdarkBase);
+  // background: getColor(lightdarkBase);
+  @include BGTheme("darkest");
 }
 
 .wrapper {

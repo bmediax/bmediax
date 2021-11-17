@@ -24,8 +24,8 @@ $desktopPadding: 150px;
 $desktopSmallPadding: 60px;
 $mobilePadding: 80px;
 
-$defaultBorder: 15px;
-$mobileBorder: 25px;
+$defaultBorder: 10px;
+$mobileBorder: 10px;
 
 $masOscuro: #171926;
 $oscuro: #2d3346;
@@ -49,6 +49,53 @@ $steelBlue: #2b313c;
 $cloud: #687077;
 $clude: #7f8197;
 $crow: #181c21;
+
+// New Color Palette 👀
+$color-azure: #3c86a5;
+$color-midnight: #171926;
+$color-crystal: #fff;
+$color-snow: #f4f4f8;
+$color-rice: #e6e6ef;
+$color-mist: #b8c3d0;
+$color-cloud: #656d78;
+$color-space: #444a53;
+$color-sable: #2d3136;
+$color-coal: #232629;
+$color-satin: #1b1d20;
+$color-soot: #151719;
+$color-jetBlack: #060707;
+
+$theme: (
+  base: $color-crystal,
+  baseDark: $color-snow,
+  baseLight: $color-crystal,
+  basePrimary: $color-crystal,
+  basePrimaryLight: $color-crystal,
+  baseSecondary: $color-sable,
+  baseTeriary: $color-coal,
+  surface: $color-snow,
+  headline: $color-sable,
+  body: $color-space,
+  tagline: $color-mist,
+  borderBase: $color-rice,
+  borderBaseMinimal: $color-snow,
+);
+
+$theme-dark: (
+  base: $color-jetBlack,
+  baseDark: $color-soot,
+  baseLight: $color-soot,
+  basePrimary: $color-coal,
+  basePrimaryLight: $color-satin,
+  baseSecondary: $color-coal,
+  baseTeriary: $color-coal,
+  surface: $color-satin,
+  headline: $color-crystal,
+  body: $color-cloud,
+  tagline: $color-space,
+  borderBase: $color-coal,
+  borderBaseMinimal: $color-coal,
+);
 
 :export {
   masOscuro: $masOscuro;
@@ -157,6 +204,9 @@ $colors-dark: (
 
 :root {
   @each $name, $color in $colors {
+    --color_#{$name}: #{$color};
+  }
+  @each $name, $color in $theme {
     --color-#{$name}: #{$color};
   }
 }
@@ -165,13 +215,150 @@ $colors-dark: (
 @media (prefers-color-scheme: dark) {
   :root {
     @each $name, $color in $colors-dark {
+      --color_#{$name}: #{$color};
+    }
+    @each $name, $color in $theme-dark {
       --color-#{$name}: #{$color};
     }
   }
 }
 
 @function getColor($color-name) {
+  @return var(--color_#{$color-name});
+}
+
+@function theme($color-name) {
   @return var(--color-#{$color-name});
+}
+
+@mixin BGTheme($theme) {
+  @if $theme == "light" {
+    background: theme(base);
+  } @else if $theme == "lighter" {
+    background: theme(baseLight);
+  } @else if $theme == "lightest" {
+    background: theme(basePrimaryLight);
+  } @else if $theme == "dark" {
+    background: theme(borderBaseMinimal);
+  } @else if $theme == "darker" {
+    background: theme(surface);
+  } @else if $theme == "darkest" {
+    background: theme(baseDark);
+  }
+}
+
+@mixin cardStyle($type) {
+  transition: background 250ms linear, box-shadow 250ms linear,
+    transform 250ms linear !important;
+  @include objectCorner("default");
+
+  @if $type == "primary" {
+    background: theme(baseLight);
+    border: 1px solid theme(borderBaseMinimal);
+    
+    &:hover {
+      @include objectShadow("hover", "snow");
+      background: theme(basePrimary);
+      transform: translateY(-3px) !important;
+      border: 1px solid theme(borderBase);
+
+      h3 {
+        color: theme(headline);
+      }
+    }
+
+    &:active {
+      box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &:focus {
+      border: 1px solid theme(borderBase);
+      background: theme(basePrimary);
+      transform: translateY(-3px) !important;
+    }
+  } @else if $type == "primaryActive" {
+    // background: theme("basePrimary");
+    @include BGTheme("lightest");
+    border: 1px solid theme(borderBaseMinimal);
+    @include objectShadow("default", "snow");
+
+    &:hover {
+      @include objectShadow("hover", "snow");
+      // background: theme(basePrimary);
+
+      h3 {
+        color: theme(headline);
+      }
+    }
+
+    &:active {
+      box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &:focus {
+      border: 1px solid theme(borderBase);
+      background: theme(basePrimary);
+    }
+    
+  } @else if $type == "secondary" {
+    background: theme(surface);
+    border: 1px solid theme(borderBase);
+
+    &:hover {
+      @include objectShadow("hover", "snow");
+      background: theme(basePrimary);
+
+      h3 {
+        color: theme(headline);
+      }
+    }
+  } @else if $type == "primary-light" {
+    background: theme(basePrimaryLight);
+    border: 1px solid theme(borderBaseMinimal);
+
+    &:hover {
+      @include objectShadow("hover", "snow");
+      background: theme(basePrimaryLight);
+
+      h3 {
+        color: theme(headline);
+      }
+    }
+
+    &:active {
+      box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &:focus {
+      border: 1px solid theme(borderBase);
+      background: theme(basePrimary);
+      transform: translateY(-3px) !important;
+    }
+  } @else if $type == "secondary" {
+    background: theme(surface);
+    border: 1px solid theme(borderBase);
+
+    &:hover {
+      @include objectShadow("hover", "snow");
+      background: theme(basePrimary);
+
+      h3 {
+        color: theme(headline);
+      }
+    }
+  } @else if $type == "tertiary" {
+    background: theme(surface);
+    border: 1px solid theme(borderBase);
+
+    &:hover {
+      @include objectShadow("hover", "snow");
+      background: theme(baseSecondary);
+
+      h3 {
+        color: $color-crystal;
+      }
+    }
+  }
 }
 
 // Responsive
@@ -218,6 +405,10 @@ $colors-dark: (
       box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.07) !important;
     } @else if $state == "hover" {
       box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1) !important;
+    } @else if $state == "active" {
+      box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.2) !important;
+    } @else if $state == "activeHard" {
+      box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.2) !important;
     }
   } @else if $state == "default" and $color == "azure" {
     box-shadow: 0px 5px 20px rgba($azure, 0.4);

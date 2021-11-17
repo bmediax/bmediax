@@ -86,11 +86,12 @@ div.cover {
 }
 
 .awards {
-  background: getColor(oscuroToJetBlack);
+  // background: getColor(oscuroToJetBlack);
+  background: theme(baseTeriary);
 }
 
 .friends {
-  background: getColor(lightBase);
+  background: theme(baseLight);
 
   .buttonCardContainer {
     display: grid;
@@ -132,7 +133,11 @@ div.cover {
 }
 
 .letsWork {
-  background: getColor(darkestDark);
+  background: $color-satin;
+
+  p {
+    color: $color-space;
+  }
 }
 
 .cardWrapper {

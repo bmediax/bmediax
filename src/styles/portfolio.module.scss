@@ -1,7 +1,7 @@
-@use './variables.module' as *;
+@use "./variables.module" as *;
 
 .coverImgs {
-  height: 70vh;
+  min-height: 40vh;
   // padding: $desktopPadding $widthPadding $desktopSmallPadding $widthPadding;
   // text-align: center;
   // place-items: flex-end center;
@@ -13,9 +13,10 @@
 }
 
 .text {
-  background: getColor(lightBase);
+  @include BGTheme("lighter");
   text-align: center;
-  min-height: 35vh;
+  // min-height: 35vh;
+  min-height: 200px;
   padding: 5% 0px;
   // padding: $desktopPadding 0;
   display: flex;
@@ -37,15 +38,16 @@
   }
 
   h1 {
-    color: getColor(lightDarkText);
-    font-size: 4.5rem;
+    color: theme(headline);
+    font-size: clamp(2.2rem, 4vw, 4.5rem);
     line-height: 70px;
     margin-bottom: 10px;
+    text-align: center;
   }
 
   h5 {
-    color: getColor(textSubTitle);
-    font-size: 1.8rem;
+    color: theme(tagline);
+    font-size: clamp(1.5rem, 2vw, 1.8rem);
     line-height: 25px;
   }
 
@@ -53,12 +55,7 @@
     min-height: 30vh !important;
 
     h1 {
-      font-size: 3rem;
-      line-height: 1.4em !important;
-    }
-
-    h5 {
-      font-size: 1.5rem;
+      line-height: 1.7em !important;
     }
   }
 }

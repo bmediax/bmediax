@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types"
 import { motion } from 'framer-motion'
 import * as AwardsStyles from './AwardsView.module.scss'
 import { GoldMedal, SilverMedal, BronzeMedal } from '../Icons'
@@ -40,5 +41,17 @@ const AwardsView = ({ icon, title, subTitle }) => {
         </div>
     );
 };
+
+AwardsView.defaultProps = {
+    icon: "",
+    title: {},
+    subTitle: {},
+}
+
+AwardsView.propTypes = {
+    icon: PropTypes.string,
+    title: PropTypes.object,
+    subTitle: PropTypes.object,
+}
 
 export default AwardsView;

@@ -47,7 +47,7 @@ const RecentCaseSection = () => {
     `)
     const recentProjectData = data.allPrismicPortfolio.edges
     return (
-        <SectionLayout isTheme="lightDark-section" title="Recent Case Study" subtitle="Portfolio">
+        <SectionLayout title="Recent Case Study" subtitle="Portfolio" label="darkerSection">
             {recentProjectData.map((portfolio, index) => (
                 <FullTxageModule 
                     key={index} 

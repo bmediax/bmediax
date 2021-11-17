@@ -1,4 +1,4 @@
-@use '../../styles/variables.module' as *;
+@use "../../styles/variables.module" as *;
 
 .isLight {
   @include objectShadow("default", "snow");
@@ -68,7 +68,7 @@
 
   .headerText {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 
     h5 {
       line-height: 15px;
@@ -76,13 +76,13 @@
     }
 
     h3 {
-      font-weight: 600;
+      font-weight: 700;
       line-height: 30px;
     }
   }
 
   p {
-    line-height: 25px;
+    line-height: 1.5 !important;
   }
 }
 
