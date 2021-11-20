@@ -182,11 +182,12 @@ div.cover {
 
       .coverHeadshot {
         margin: auto;
+        border-radius: 50%;
       }
     }
 
     .coverInfo {
-      flex: 2;
+      flex: 3;
 
       h1 {
         color: $blanco;
