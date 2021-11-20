@@ -21,6 +21,7 @@ html {
 blockquote {
   font-size: 3rem;
   line-height: 150%;
+  font-weight: bold;
   color: getColor(normalText);
 
   &::before {

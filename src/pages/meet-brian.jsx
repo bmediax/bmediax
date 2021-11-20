@@ -1,12 +1,12 @@
-import React from "react";
-import { Link } from "gatsby";
+import bmediaxResume from "../assets/files/Bmediax_Resume.pdf";
+import bmediaxPrintResume from "../assets/files/Bmediax_Resume_Print.pdf";
 // import * as variables from '../styles/_variables.module.scss'
 import SectionPageLayout from "../layout/SectionPageLayout";
 import Layout from "../layout/index.js";
+import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
+import React from "react";
 import { HiArrowCircleDown, HiDocumentDownload } from "react-icons/hi";
-import bmediaxResume from "../assets/files/Bmediax_Resume.pdf";
-import bmediaxPrintResume from "../assets/files/Bmediax_Resume_Print.pdf";
 
 const meetBrian = () => {
   return (
@@ -103,7 +103,7 @@ const meetBrian = () => {
                 className="galleryImgWrap gallery-masonry-1"
               />
               <StaticImage
-                src="../images/profile/brianSkillsusa.jpg"
+                src="../images/profile/brianNotion.png"
                 alt="Image Brian"
                 imgClassName="galleryImg"
                 className="galleryImgWrap gallery-masonry-2"

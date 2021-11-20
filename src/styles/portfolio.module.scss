@@ -177,7 +177,7 @@
       li {
         font-family: "Montserrat", sans-serif;
         font-weight: 500;
-        color: var(--color-normalText);
+        color: theme(body);
         font-size: 1.6rem;
 
         &:not(:last-child) {
