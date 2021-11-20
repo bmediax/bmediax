@@ -133,7 +133,7 @@ div.cover {
 }
 
 .letsWork {
-  background: $color-satin;
+  background: $color-oscuro;
 
   p {
     color: $color-space;
@@ -199,6 +199,7 @@ div.cover {
         margin-top: 10px;
         line-height: 35px;
         font-size: clamp(1.6rem, 1.8vw, 20px);
+        color: $color-mist;
       }
 
       .buttonWrapper {
@@ -211,7 +212,7 @@ div.cover {
           flex-direction: column;
         }
 
-        & > div + a {
+        & > a + div {
           margin-left: 15px;
 
           @include responsive("mobile") {

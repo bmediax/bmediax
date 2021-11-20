@@ -29,14 +29,17 @@ const CoverCTA = ({ coverData }) => {
 
           {/* Buttons */}
           <div className={homepageStyles.buttonWrapper}>
-            <DropdownModule />
             {/* <Link to="mailto:hello@bmediax.dev" className="btn primary active">hello@bmediax.dev</Link> */}
-            <Link to="/portfolio" className="btn outline clickViewPortfolio">
+            <Link
+              to="/portfolio"
+              className="btn primary-active clickViewPortfolio"
+            >
               <RiInboxFill
                 style={{ position: "relative", top: "3px", marginRight: "5px" }}
               />{" "}
               View Portfolio
             </Link>
+            <DropdownModule primary={true} />
           </div>
         </div>
       </div>

@@ -53,6 +53,7 @@ $crow: #181c21;
 // New Color Palette 👀
 $color-azure: #3c86a5;
 $color-midnight: #171926;
+$color-oscuro: #171926;
 $color-crystal: #fff;
 $color-snow: #f4f4f8;
 $color-rice: #e6e6ef;
@@ -255,7 +256,7 @@ $colors-dark: (
   @if $type == "primary" {
     background: theme(baseLight);
     border: 1px solid theme(borderBaseMinimal);
-    
+
     &:hover {
       @include objectShadow("hover", "snow");
       background: theme(basePrimary);
@@ -299,7 +300,6 @@ $colors-dark: (
       border: 1px solid theme(borderBase);
       background: theme(basePrimary);
     }
-    
   } @else if $type == "secondary" {
     background: theme(surface);
     border: 1px solid theme(borderBase);
