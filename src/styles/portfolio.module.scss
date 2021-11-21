@@ -68,6 +68,7 @@
   // margin-bottom:100px !important;
 }
 
+// Image Grid Template
 .columnGallery {
   display: grid;
   grid-column-gap: 5em;
@@ -77,51 +78,39 @@
     margin: 0 !important;
   }
 
+  .imageWrapper {
+    // Image Captions
+    .caption {
+      margin-top:10px;
+      margin-left:10px;
+      color:theme(body);
+      font-size:$paraSize;
+      text-align: center;
+      
+      @include responsive("mobile") {
+        margin-left:0px;
+      }
+    }
+  }
+
   @include responsive("mobile") {
     grid-gap: 3em;
     grid-template-columns: 1fr !important;
   }
 }
 
-.columnone {
-  grid-template-columns: 1fr;
-}
-.columntwo {
-  grid-template-columns: repeat(2, 1fr);
-}
-.columnthree {
-  grid-template-columns: repeat(3, 1fr);
-
-  @include responsive("mobile") {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-}
-.columnfour {
-  grid-template-columns: repeat(4, 1fr);
-}
-.columnfive {
-  grid-template-columns: repeat(5, 1fr);
-}
-.columnsix {
-  grid-template-columns: repeat(6, 1fr);
-
-  @include responsive("mobile") {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-}
-
-.columnLayout {
+// Sections
+.layoutSection {
   display: flex;
 
   .textSection {
     h3 {
       margin-bottom: 10px;
     }
-
     margin-top: 30px;
   }
 
-  & + .columnLayout {
+  & + .layoutSection {
     margin-top: 50px;
 
     h3 {
@@ -193,6 +182,64 @@
 
   .twoColumn {
     flex: 1;
+
+    h3 {
+      @include responsive("mobile") {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.column_1 { grid-template-columns: 1fr; }
+.column_2 { grid-template-columns: repeat(2, 1fr); }
+.column_3 { grid-template-columns: repeat(3, 1fr); }
+.column_4 { grid-template-columns: repeat(4, 1fr); }
+.column_5 { grid-template-columns: repeat(5, 1fr); }
+.column_6 { grid-template-columns: repeat(2, 1fr); }
+
+.responsiveColumn_1 {
+  @include responsive("mobile") {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+
+.responsiveColumn_2 {
+  @include responsive("mobile") {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+.responsiveColumn_3 {
+  @include responsive("mobile") {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+.columnone {
+  grid-template-columns: 1fr;
+}
+.columntwo {
+  grid-template-columns: repeat(2, 1fr);
+}
+.columnthree {
+  grid-template-columns: repeat(3, 1fr);
+
+  @include responsive("mobile") {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+.columnfour {
+  grid-template-columns: repeat(4, 1fr);
+}
+.columnfive {
+  grid-template-columns: repeat(5, 1fr);
+}
+.columnsix {
+  grid-template-columns: repeat(6, 1fr);
+
+  @include responsive("mobile") {
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 

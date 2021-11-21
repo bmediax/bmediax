@@ -134,6 +134,7 @@ export const query = graphql`
                 text
               }
               column
+              responsive_column
             }
           }
           ... on PrismicPortfolioDataBodyDesignVideo {

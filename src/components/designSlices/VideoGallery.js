@@ -46,7 +46,7 @@ const VideoGallery = ({ slice }) => {
 
     return (
         <>
-            <div className={`${portfolioStyles.columnLayout} ${portfolioStyles.columnTop} sectionMaxWidth`}>
+            <div className={`${portfolioStyles.layoutSection} ${portfolioStyles.columnTop} sectionMaxWidth`}>
                 <div className={portfolioStyles.twoColumn}>
                     {isTitle(slice)}
                     <div className={`${portfolioStyles.columnGallery} sectionMaxWidth`} style={{ gridTemplateColumns: `${gridColumn(slice.primary.column)}`, gridStyles }}>

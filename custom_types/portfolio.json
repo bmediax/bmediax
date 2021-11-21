@@ -326,7 +326,8 @@
                     "6 Column"
                   ],
                   "default_value": "1 Column",
-                  "label": "Column"
+                  "label": "Column",
+                  "placeholder": "Desktop Grid Layout"
                 }
               },
               "responsive_column": {
@@ -335,11 +336,11 @@
                   "options": [
                     "1 Column",
                     "2 Column",
-                    "3 Column",
-                    "4 Column"
+                    "3 Column"
                   ],
                   "default_value": "1 Column",
-                  "label": "Responsive Column"
+                  "label": "Responsive Column",
+                  "placeholder": "Mobile Grid Layout"
                 }
               }
             },

@@ -8,7 +8,7 @@ const DesignSection = (data) => {
     const resultsData = data.results[0]
     return (
         <SectionPageLayout label="lightestSection" idLabel="results" title="Results & Summary" icon="Check Mark" sectionMaxWidth>
-            <div className={`${portfolioStyles.columnLayout} sectionMaxWidth`}>
+            <div className={`${portfolioStyles.layoutSection} sectionMaxWidth`}>
                 <div className={portfolioStyles.twoColumn}>
                     <RichText render={resultsData.description.richText} />
                 </div>

@@ -20,14 +20,14 @@ const DesignSection = (data) => {
     }
     return (
         <SectionPageLayout idLabel="design" title="Design" label="lighterSection" icon="Paint" sectionMaxWidth align>
-            <div className={`${portfolioStyles.columnLayout} sectionMaxWidth`}>
+            <div className={`${portfolioStyles.layoutSection} sectionMaxWidth`}>
                 <div className={portfolioStyles.twoColumn}>
                     <p>{designData.description.text}</p>
                 </div>
                 {isQuote(designData)}
             </div>
             
-            {/* <div className={`${portfolioStyles.columnLayout} sectionMaxWidth`}> */}
+            {/* <div className={`${portfolioStyles.layoutSection} sectionMaxWidth`}> */}
                 {/* {isColourRender(data)} */}
                 {/* <div className={portfolioStyles.twoColumn}>
                     <h3>Typography</h3>

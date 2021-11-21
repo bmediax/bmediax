@@ -8,7 +8,7 @@ const OverviewSection = ({ overviewData, projectLinks }) => {
     return (
         <SectionPageLayout idLabel="overview" label="lighterSection" title="Overview" icon="Check Mark" bgLightDark align>
             <div className="sectionMaxWidth">
-                <div className={portfolioStyles.columnLayout}>
+                <div className={portfolioStyles.layoutSection}>
                     <div className={portfolioStyles.twoColumn_2to1}>
                         <RichText render={overviewData.description.richText} />
                         <div className={portfolioStyles.textSection}>
