@@ -89,6 +89,7 @@ module.exports = {
           work: require("./custom_types/work.json"),
         },
         repositoryName: "bmediax",
+        linkResolver: require("./src/utils/linkResolver").linkResolver,
         // shouldNormalizeImage: () => true,
       },
     },

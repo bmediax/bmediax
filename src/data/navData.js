@@ -5,7 +5,7 @@ export const navData = [
   },
   {
     title: "Case Study",
-    path: "/portfolio",
+    path: "/casestudy",
     sub: [
       {
         title: "Edutainment",

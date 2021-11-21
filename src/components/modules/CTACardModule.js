@@ -8,8 +8,8 @@ import * as CTACardStyles from './CTACard.module.scss'
 const CTACardModule = ({ title, raw, cover, img, url, work, shortDescr, isLight }) => {
     const image = getImage(cover)
     return (
-        <div className={`${CTACardStyles.CTACard} ${isLight ? CTACardStyles.isLight : '' }`} onClick={ () => navigate(`/portfolio/${url}`)} role="link" tabIndex="0" onKeyUp={() => navigate(`/portfolio/${url}`)}>
-            <Link to={`/portfolio/${url}`}>
+        <div className={`${CTACardStyles.CTACard} ${isLight ? CTACardStyles.isLight : '' }`} onClick={ () => navigate(`${url}`)} role="link" tabIndex="0" onKeyUp={() => navigate(`${url}`)}>
+            <Link to={`${url}`}>
                 {img ?
                     <img src={img} alt={`${raw} Cover`} width="100%"  className={CTACardStyles.coverImage} />
                 :
@@ -25,7 +25,7 @@ const CTACardModule = ({ title, raw, cover, img, url, work, shortDescr, isLight 
                     <p>{shortDescr ? shortDescr : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed mattis dui. Etiam vel volutpat ipsum, vitae molestie odio. Nam sed iaculis nisl. Phasellus mattis nulla sit amet suscipit eleifend." }</p>
                 </motion.span>
             </div>
-            <Link to={`/portfolio/${url}`} className={`btn primary ${CTACardStyles.button}`}>Learn More <BsArrowRightShort /></Link>
+            <Link to={`${url}`} className={`btn primary ${CTACardStyles.button}`}>Learn More <BsArrowRightShort /></Link>
         </div>
     );
 };
