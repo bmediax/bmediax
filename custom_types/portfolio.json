@@ -6,6 +6,15 @@
         "label": "UID"
       }
     },
+    "is_displayed": {
+      "type": "Boolean",
+      "config": {
+        "placeholder_false": "No",
+        "placeholder_true": "Yes",
+        "default_value": true,
+        "label": "Display on site"
+      }
+    },
     "cover_title": {
       "type": "Group",
       "config": {
@@ -33,7 +42,7 @@
           "name": {
             "type": "StructuredText",
             "config": {
-              "multi": "strong, em",
+              "multi": "strong,em",
               "label": "Name",
               "placeholder": "Name of Project"
             }
@@ -66,7 +75,7 @@
           "description": {
             "type": "StructuredText",
             "config": {
-              "multi": "paragraph, strong, em, list-item, o-list-item",
+              "multi": "paragraph,strong,em,list-item,o-list-item",
               "label": "Description",
               "placeholder": "Overview Description"
             }
@@ -74,7 +83,7 @@
           "short_description": {
             "type": "StructuredText",
             "config": {
-              "multi": "strong, em, embed",
+              "multi": "strong,em,embed",
               "label": "Short Description",
               "placeholder": "Card Description"
             }
@@ -82,7 +91,7 @@
           "problem": {
             "type": "StructuredText",
             "config": {
-              "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+              "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
               "label": "Problem",
               "placeholder": "Problem Description Block"
             }
@@ -90,7 +99,7 @@
           "solution": {
             "type": "StructuredText",
             "config": {
-              "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+              "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
               "label": "Solution",
               "placeholder": "Solution Description Block"
             }
@@ -98,7 +107,7 @@
           "short_tags": {
             "type": "StructuredText",
             "config": {
-              "multi": "strong, em",
+              "multi": "strong,em",
               "label": "Short Tags",
               "placeholder": "Card Tags"
             }
@@ -122,7 +131,7 @@
           "design_tools": {
             "type": "StructuredText",
             "config": {
-              "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+              "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
               "label": "Design Tools",
               "placeholder": "Design Tools Utilized"
             }
@@ -130,7 +139,7 @@
           "development_tools": {
             "type": "StructuredText",
             "config": {
-              "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+              "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
               "label": "Development Tools",
               "placeholder": "Technical Tools Utilized"
             }
@@ -141,15 +150,6 @@
               "multi": "list-item",
               "label": "Deliverables",
               "placeholder": "Delivered Product Types"
-            }
-          },
-          "project_link": {
-            "type": "Link",
-            "config": {
-              "allowTargetBlank": true,
-              "label": "Project Link",
-              "select": null,
-              "placeholder": "Link to the Project"
             }
           }
         },
@@ -200,7 +200,7 @@
           "description": {
             "type": "StructuredText",
             "config": {
-              "multi": "paragraph, strong, em, list-item, o-list-item",
+              "multi": "paragraph,strong,em,list-item,o-list-item",
               "label": "Description",
               "placeholder": "Design Section Description"
             }
@@ -208,7 +208,7 @@
           "quote": {
             "type": "StructuredText",
             "config": {
-              "multi": "paragraph, strong, em",
+              "multi": "paragraph,strong,em",
               "label": "Quote",
               "placeholder": "Design Section Quote"
             }
@@ -236,7 +236,7 @@
           "description": {
             "type": "StructuredText",
             "config": {
-              "multi": "paragraph, strong, em, list-item, o-list-item",
+              "multi": "paragraph,strong,em,list-item,o-list-item",
               "label": "Description",
               "placeholder": "Results Description"
             }

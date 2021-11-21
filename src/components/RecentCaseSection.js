@@ -10,7 +10,7 @@ const RecentCaseSection = () => {
     const data = useStaticQuery(graphql`
       query recentProjectsQuery(
         $filter: PrismicPortfolioFilterInput = {
-          uid: { in: ["tedxpcc2018", "chicanxshop", "edutainment"] }
+          uid: { in: ["reikoforpcc", "chicanxshop", "tedxpcc2018"] }
         }
       ) {
         allPrismicPortfolio(filter: $filter) {

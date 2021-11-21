@@ -20,6 +20,7 @@ export const query = graphql`
   query AllPortfolioQuery($id: String) {
     prismicPortfolio(id: { eq: $id }) {
       data {
+        is_displayed
         cover_title {
           name {
             text
@@ -70,9 +71,10 @@ export const query = graphql`
           solution {
             richText
           }
-          project_link {
-            url
-          }
+          # Doesn't Exist anymore
+          # project_link {
+          #   url
+          # }
           role {
             text
             richText

@@ -1,9 +1,9 @@
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+
 import SectionLayout from '../layout/SectionLayout';
 import * as homeStyles from '../styles/homepage.module.scss';
 import CTACardModule from './modules/CTACardModule';
-import { graphql, useStaticQuery } from 'gatsby';
-import React from 'react';
-
 
 // import { Link } from 'gatsby'
 // import * as portfolioStyles from '../styles/portfolio.module.scss'
@@ -12,10 +12,11 @@ import React from 'react';
 const NextProjectSection = ({ title }) => {
     const data = useStaticQuery(graphql`
       query nextQuery {
-        allPrismicPortfolio {
+        allPrismicPortfolio(filter: { data: { is_displayed: { eq: true } } }) {
           nodes {
             uid
             data {
+              is_displayed
               cover_title {
                 title {
                   text

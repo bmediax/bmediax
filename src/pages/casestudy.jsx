@@ -1,17 +1,16 @@
 import React from "react";
 import { graphql } from "gatsby";
-// import PropTypes from "prop-types";
+
 import Layout from "../layout";
 import SectionPageLayout from "../layout/SectionPageLayout";
 import CTACardModule from "../components/modules/CTACardModule";
-
 
 const casestudy = ({ data }) => {
   if (!data) return null;
   const document = data.allPrismicPortfolio.nodes;
   return (
-    <Layout title="Portfolio">
-      <SectionPageLayout title="Portfolio" label="page lighterSection">
+    <Layout title="Case Study">
+      <SectionPageLayout title="Case Study" label="page lighterSection">
         <div className="pageColumnLayout grid-three sectionMaxWidth">
           {document.map((portfolio, index) => (
             <CTACardModule
@@ -36,49 +35,16 @@ const casestudy = ({ data }) => {
   );
 };
 
-// casestudy.propTypes = {
-//   data: PropTypes.shape({
-//     allPrismicPortfolio: PropTypes.shape({
-//       edges: PropTypes.arrayOf(
-//         PropTypes.shape({
-//           node: PropTypes.shape({
-//             data: PropTypes.shape({
-//               cover_title: PropTypes.arrayOf(
-//                 PropTypes.shape({
-//                   title: PropTypes.shape({
-//                     text: PropTypes.string,
-//                   }),
-//                   name: PropTypes.shape({
-//                     text: PropTypes.string,
-//                   }),
-//                   client: PropTypes.shape({
-//                     text: PropTypes.string,
-//                   }),
-//                   date: PropTypes.shape({
-//                     text: PropTypes.string,
-//                   }),
-//                   background_image: PropTypes.shape({
-//                     gatsbyImageData: PropTypes.object,
-//                   }),
-//                 })
-//               ),
-//             }),
-//           }),
-//         })
-//       ),
-//     }),
-//   }),
-// };
-
 export default casestudy;
 
 export const query = graphql`
   query portfolioQuery {
-    allPrismicPortfolio {
+    allPrismicPortfolio(filter: { data: { is_displayed: { eq: true } } }) {
       nodes {
         url
         uid
         data {
+          is_displayed
           cover_title {
             title {
               text
