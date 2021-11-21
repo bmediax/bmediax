@@ -1,6 +1,7 @@
-import React from "react";
-import { graphql } from "gatsby";
 import PortfolioTemplate from "../../layout/PortfolioTemplate";
+import { graphql } from "gatsby";
+import React from "react";
+
 
 const Portfolio = ({ data }) => {
   if (!data) return null;
@@ -155,7 +156,7 @@ export const query = graphql`
             items {
               image {
                 alt
-                gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
+                gatsbyImageData(width: 2000)
               }
             }
             primary {
