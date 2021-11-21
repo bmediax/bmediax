@@ -14,6 +14,7 @@ const NextProjectSection = ({ title }) => {
       query nextQuery {
         allPrismicPortfolio {
           nodes {
+            uid
             data {
               cover_title {
                 title {
@@ -81,14 +82,14 @@ const NextProjectSection = ({ title }) => {
     return (
         <SectionLayout label={homeStyles.recentProjects} title="View More Projects" subtitle="Case Study">
             <div className={homeStyles.cardWrapper}>
-                {recentData.filter(recents => recents.data.data.cover_title[0].name.text !== title).slice(0, 3).map((recent, index) => (
+                {recentData.filter(recents => recents.data.cover_title[0].name.text !== title).slice(0, 3).map((recent, index) => (
                     <React.Fragment key={index}>
                         <CTACardModule 
-                            title={recent.data.data.cover_title[0].name.text}
-                            shortDescr={recent.data.data.overview[0].short_description.text} 
-                            work={recent.data.data.overview[0].short_tags.text}
-                            url={recent.data.uid}
-                            cover={recent.data.data.cover_title[0].background_image.gatsbyImageData}
+                            title={recent.data.cover_title[0].name.text}
+                            shortDescr={recent.data.overview[0].short_description.text} 
+                            work={recent.data.overview[0].short_tags.text}
+                            url={`/casestudy/${recent.uid}`}
+                            cover={recent.data.cover_title[0].background_image.gatsbyImageData}
                             />
                     </React.Fragment>
                 ))}

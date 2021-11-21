@@ -20,7 +20,7 @@ const FullTxageModule = ({ title, raw, cover, url, work, shortDescr }) => {
                     <h4>{work}</h4>
                     <h3>{title}</h3>
                     <p>{shortDescr}</p>
-                    <Link to={`/portfolio/${url}`}>
+                    <Link to={url}>
                         <button className="btn outline-inverse">
                             View Case Study
                         </button>
