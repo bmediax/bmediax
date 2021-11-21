@@ -27,7 +27,7 @@ const ImageGallery = ({ slice }) => {
         const img = getImage(slices.image.gatsbyImageData)
         return (
             <>
-                <GatsbyImage image={img} draggable="false" alt={slices.image.alt} placeholder="DOMINANT COLOR" imgClassName={portfolioStyles.imageGrid} className={portfolioStyles.imageGridWrap} />
+                { img ? <GatsbyImage image={img} draggable="false" alt={slices.image.alt} placeholder="DOMINANT COLOR" imgClassName={portfolioStyles.imageGrid} className={portfolioStyles.imageGridWrap} /> : null }
                 {/* <RichText render={slices.description.raw} /> */}
             </>
         )
