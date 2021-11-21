@@ -23,7 +23,7 @@ const casestudy = ({ data }) => {
                 portfolio.data.cover_title[0].background_image
                   .gatsbyImageData
               }
-              url={portfolio.url}
+              url={portfolio.uid}
               work={portfolio.data.overview[0].short_tags.text}
               shortDescr={
                 portfolio.data.overview[0].short_description.text
@@ -77,6 +77,7 @@ export const query = graphql`
     allPrismicPortfolio {
       nodes {
         url
+        uid
         data {
           cover_title {
             title {
@@ -107,7 +108,6 @@ export const query = graphql`
             }
           }
         }
-        uid
       }
     }
   }
