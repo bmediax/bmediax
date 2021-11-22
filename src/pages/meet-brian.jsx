@@ -174,7 +174,7 @@ const meetBrian = () => {
           <div className="cardLink_wrapper">
             <h1>View my Portfolio</h1>
             <Link
-              to="/portfolio/edutainment"
+              to="/casestudy/edutainment"
               className="btn outline-active clickViewPortfolioFromAbout"
             >
               View a Case Study

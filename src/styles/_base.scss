@@ -268,7 +268,8 @@ p {
 
 .button-primary {
     outline: none;
-    background: theme(surface);
+    // background: theme(surface);
+    background: transparent;
     color: theme(body);
     border:1px solid theme(borderBase);
     // background: getColor(lightdarkBase);
@@ -484,6 +485,14 @@ p {
   .logo-text {
     color:theme(headline) !important;
   }
+
+  .mobile-nav svg path {
+    fill: theme(headline) !important;
+  }
+  
+  .social-media_bar a {
+    color: theme(body) !important;
+  }
 }
 
 .sectionMaxWidth {
@@ -592,8 +601,18 @@ section {
   background: theme(baseDark);
 }
 
-#Bmediax .logo-text {
-  color:#FFF;
+#Bmediax {
+  .logo-text {
+    color:#FFF;
+  }
+
+  .mobile-nav svg path {
+    fill:#FFF;
+  }
+
+  nav .nav-wrapper .social-media_bar a {
+    color:$color-crystal;
+  }
 }
 
 // Navigation
@@ -894,7 +913,8 @@ nav {
         }
 
         path {
-          fill: getColor(menuText);
+          fill: theme(headline);
+          // fill: getColor(menuText);
         }
       }
 
@@ -938,7 +958,8 @@ nav {
         display: inline-block;
         font-size: 1.7rem;
         // background: getColor(icn-lightBG);
-        color: getColor(icon-lightTXT);
+        // color: getColor(icon-lightTXT);
+        color: theme(body);
         margin: auto;
         height: 35px;
         width: 35px;
@@ -1070,11 +1091,12 @@ nav {
   @include objectCorner("default");
 }
 .galleryImgWrap {
-  transition: transform 200ms linear, box-shadow 200ms linear;
+  transition: transform 200ms linear, box-shadow 200ms linear, filter 200ms linear;
   @include objectCorner("default");
 
   &:hover {
-    @include objectShadow("default", "snow");
+    // @include objectShadow("default", "snow");
+    filter: drop-shadow(0 10px 34px rgb(0 0 0 / 10%));
     transform: translateY(-3px);
   }
 }

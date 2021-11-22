@@ -190,9 +190,10 @@ div.cover {
       flex: 3;
 
       h1 {
-        color: $blanco;
+        color: $color-white;
         line-height: 1.4;
         margin: auto;
+        text-transform: none !important;
       }
 
       p {
