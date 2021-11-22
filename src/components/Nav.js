@@ -9,7 +9,7 @@ import { DiGithubAlt } from 'react-icons/di'
 import { FaLinkedinIn } from 'react-icons/fa'
 
 import { navData } from '../data/navData'
-import Logo from '../components/Logo'
+// import Logo from '../components/Logo'
 import MobileNav from './mobileNav';
 
 const Nav = ({ theme }) => {
@@ -69,8 +69,8 @@ const Nav = ({ theme }) => {
                 {/* Logo */}
                 <div className="logo-contain" >
                     <Link to="/" exact="true" className="logoWraps" style={{ outline: "none" }}>
-                        <Logo height={60} />
-                        <span className="logo-text">mediax</span>
+                        {/* <Logo height={60} /> */}
+                        <span className="logo-text">Bmediax</span>
                     </Link>
                 </div>
 

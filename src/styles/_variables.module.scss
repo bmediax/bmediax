@@ -52,7 +52,7 @@ $crow: #181c21;
 
 // New Color Palette 👀
 $color-azure: #3c86a5;
-$color-midnight: #171926;
+$color-midnight: #2d3346;
 $color-oscuro: #171926;
 $color-crystal: #fff;
 $color-snow: #f4f4f8;
@@ -80,6 +80,7 @@ $theme: (
   tagline: $color-mist,
   borderBase: $color-rice,
   borderBaseMinimal: $color-snow,
+  surfaceCard: $color-midnight
 );
 
 $theme-dark: (
@@ -96,6 +97,7 @@ $theme-dark: (
   tagline: $color-space,
   borderBase: $color-coal,
   borderBaseMinimal: $color-coal,
+  surfaceCard: $color-coal
 );
 
 :export {

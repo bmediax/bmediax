@@ -121,6 +121,10 @@ p {
   font-size: 1.7rem;
   font-weight: 400;
   color: theme(body);
+
+  strong, b {
+    font-weight:700;
+  }
 }
 
 .imageSection {
@@ -230,6 +234,67 @@ p {
     grid-template-columns: 1fr;
   }
 }
+
+.button {
+  padding:18px 30px;
+  font-family:$primaryFont;
+  font-weight:600;
+  @include objectCorner("default");
+  font-size: 1.6rem;
+  text-decoration: none;
+  transition: background 250ms ease-in-out, box-shadow 200ms ease-in-out,
+    transform 150ms ease-in-out, border 200ms ease-in-out,
+    color 250ms ease-in-out;
+
+  &:hover {
+    transform: translateY(-2px);
+    cursor: pointer;
+  }
+  
+  &:active {
+    transform: translateY(0px) !important;
+  }
+
+  @include responsive("mobile") {
+    display: block !important;
+    padding: 20px 0px !important;
+    text-align: center !important;
+
+    &:first-child {
+      margin-bottom: 2%;
+    }
+  }
+}
+
+.button-primary {
+    outline: none;
+    background: theme(surface);
+    color: theme(body);
+    border:1px solid theme(borderBase);
+    // background: getColor(lightdarkBase);
+    // border: 2px solid getColor(lightdarkBase) !important;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.03);
+
+    &:hover {
+      background: theme(surfaceCard);
+      border-color: theme(surfaceCard) !important;
+      color: $color-crystal;
+      @include objectShadow("hover", "snow");
+    }
+
+    &:active {
+      background: $oscuro !important;
+      color: $minimal !important;
+      box-shadow: none !important;
+      border: 2px solid transparent !important;
+    }
+
+    &:focus {
+      color: getColor(menuText);
+      background: getColor(lightdarkBase);
+      border: 2px solid transparent !important;
+    }
+  }
 
 .btn {
   padding: 18px 30px !important;
@@ -415,6 +480,10 @@ p {
   a.nav-item {
     color: $midnight !important;
   }
+
+  .logo-text {
+    color:theme(headline) !important;
+  }
 }
 
 .sectionMaxWidth {
@@ -523,6 +592,10 @@ section {
   background: theme(baseDark);
 }
 
+#Bmediax .logo-text {
+  color:#FFF;
+}
+
 // Navigation
 nav {
   position: sticky;
@@ -565,10 +638,13 @@ nav {
 
       .logo-text {
         position: relative;
-        top: -20px;
-        left: 10px;
-        font-size: 1.6rem;
-        color: getColor(menuText);
+        // top: -20px;
+        // left: 10px;
+        font-size: 1.8rem;
+        color: theme(headline);
+        font-weight:600;
+        letter-spacing:1px;
+        text-transform: uppercase;
       }
 
       @include responsive("desktopish") {

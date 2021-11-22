@@ -59,7 +59,7 @@ const SideBar = ({ sidebarData, projectLinks }) => {
                         rel="noreferrer" 
                         target="_blank" 
                         key={index} 
-                        className="btn primary fullwidth"> {link.label.text} </a>
+                        className="button button-primary fullwidth"> {link.label.text} </a>
                 ))}
             </div>
         </div>

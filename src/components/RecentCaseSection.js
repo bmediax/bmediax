@@ -94,7 +94,7 @@ const RecentCaseSection = () => {
                     shortDescr={portfolio.data.overview[0].short_description.text} 
                 />
             ))}
-            <SectionLink path="/portfolio" type="ghost">
+            <SectionLink path="/casestudy" type="ghost">
                 View All Case Study
             </SectionLink>
         </SectionLayout>

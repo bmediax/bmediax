@@ -1,6 +1,7 @@
-import React from 'react'
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import * as portfolioStyles from '../../styles/portfolio.module.scss'
+import React from 'react';
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import * as portfolioStyles from "../../styles/portfolio.module.scss";
+
 
 const ImageGallery = ({ slice }) => {
     const gridStyles = {
