@@ -1,5 +1,10 @@
 # **Bmediax Portfolio 2021**
 
+## Hi there! :wave:
+My name is Brian Moreno and I am a Digital Designer, Fontend Web Developer and Tech Enthusiast based in Portland, OR.
+
+When I am not designing or coding interfaces, you can often find me out and about with my trusty camera and a good cup of coffee, capturing the world's beautiful raw moments.
+
 > Live Website: [bmediax.dev](https://bmediax.dev)
 
 Follow me 👋🏽
@@ -7,4 +12,13 @@ Follow me 👋🏽
 - [Instagram](https://instagram.com/bmediax) 📸
 - [Twitter](https://twitter.com/bm3diax) 🐦
 
-If you have any questions or concerns, please don't hesitate on contacting me via [email](mailto:hello@bmediax.dev)!
+### :email: Contact Me
+[hello(at)bmediax.dev](mailto:hello@bmediax.dev)
+```
+|￣￣￣￣￣￣￣ |
+| bmediax.dev |
+| ＿＿＿＿＿＿＿|
+(\__/)  ||
+(•ㅅ•)  ||
+/ 　 づ
+```
