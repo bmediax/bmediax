@@ -81,7 +81,8 @@ $theme: (
   tagline: $color-mist,
   borderBase: $color-rice,
   borderBaseMinimal: $color-snow,
-  surfaceCard: $color-midnight
+  surfaceCard: $color-midnight,
+  whiteToSable: $color-snow
 );
 
 $theme-dark: (
@@ -98,7 +99,8 @@ $theme-dark: (
   tagline: $color-space,
   borderBase: $color-coal,
   borderBaseMinimal: $color-coal,
-  surfaceCard: $color-coal
+  surfaceCard: $color-coal,
+  whiteToSable: $color-sable
 );
 
 :export {
