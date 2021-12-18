@@ -1,20 +1,13 @@
 import { AnimatePresence } from "framer-motion";
-import {
-  KBarProvider,
-  KBarPortal,
-  KBarPositioner,
-  KBarAnimator,
-  KBarSearch,
-  useMatches,
-  KBarResults,
-} from "kbar";
+import { KBarProvider, KBarPortal, KBarPositioner, KBarAnimator, KBarSearch, useMatches, KBarResults } from "kbar";
 import React from "react";
 import { ParallaxProvider } from "react-scroll-parallax";
+
 
 const searchStyle = {
   padding: "17px 16px",
   fontSize: "16px",
-  width: "100%",
+  width: "auto",
   boxSizing: "border-box",
   outline: "none",
   border: "none",
@@ -27,6 +20,7 @@ const animatorStyle = {
   width: "100%",
   background: "var(--color-basePrimary)",
   color: "var(--color-headline)",
+  fontWeight: "500",
   borderRadius: "8px",
   overflow: "hidden",
   boxShadow: "0px 10px 40px -10px rgb(0, 0, 0, 0.3)",
@@ -37,15 +31,26 @@ const groupNameStyle = {
   fontSize: "10px",
   textTransform: "uppercase",
   opacity: 0.5,
+  width: "auto",
+  fontWeight: "600",
+  letterSpacing: ".5px",
 };
 
 const actions = [
+  {
+    id: "showwcase-profile",
+    name: "Showwcase Profile",
+    shortcut: ["s"],
+    keywords: "showwcase-profile",
+    perform: () => (window.location = "https://profile.bmediax.dev"),
+  },
   {
     id: "home",
     name: "Home",
     shortcut: ["h"],
     keywords: "home",
     perform: () => (window.location.pathname = "/"),
+    section: "Pages",
   },
   {
     id: "meet-brian",
@@ -53,13 +58,7 @@ const actions = [
     shortcut: ["m"],
     keywords: "about brian",
     perform: () => (window.location.pathname = "meet-brian"),
-  },
-  {
-    id: "work",
-    name: "Work",
-    shortcut: ["w"],
-    keywords: "view works",
-    perform: () => (window.location.pathname = "work"),
+    section: "Pages",
   },
   {
     id: "case-study",
@@ -67,6 +66,43 @@ const actions = [
     shortcut: ["c"],
     keywords: "case study",
     perform: () => (window.location.pathname = "casestudy"),
+    section: "Pages",
+  },
+  {
+    id: "work",
+    name: "Work",
+    shortcut: ["w"],
+    keywords: "view works",
+    section: "Pages",
+    perform: () => (window.location.pathname = "work"),
+    section: "Pages",
+  },
+  {
+    id: "github",
+    name: "Github",
+    shortcut: ["g"],
+    keywords: "github",
+    icon: "🦑",
+    perform: () => (window.location = "https://github.com/bmediax"),
+    section: "Social Media",
+  },
+  {
+    id: "instagram",
+    name: "Instagram",
+    shortcut: ["I"],
+    keywords: "instagram",
+    icon: "📸",
+    perform: () => (window.location = "https://instagram.com/bmediax"),
+    section: "Social Media",
+  },
+  {
+    id: "twitter",
+    name: "Twitter",
+    shortcut: ["T"],
+    keywords: "twitter",
+    icon: "🐤",
+    perform: () => (window.location = "https://twitter.com/bm3diax"),
+    section: "Social Media",
   },
 ];
 
@@ -75,7 +111,11 @@ export const wrapPageElement = ({ element }) => (
     <AnimatePresence initial={false} exitBeforeEnter>
       <KBarProvider actions={actions}>
         <KBarPortal>
-          <KBarPositioner>
+          <KBarPositioner
+            style={{
+              width: "auto",
+            }}
+          >
             <KBarAnimator style={animatorStyle}>
               <KBarSearch style={searchStyle} />
               <RenderResults />
