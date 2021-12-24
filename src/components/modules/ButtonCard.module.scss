@@ -17,6 +17,17 @@
     background: getColor(lightBase);
   }
 
+  .icon path {
+    transition: fill 250ms linear;
+    fill:interface(tagline);
+  }
+
+  &:hover {
+    .icon path {
+      fill: interface(primary);
+    }
+  }
+
   .text {
     flex: 2;
 

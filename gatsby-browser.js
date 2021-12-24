@@ -11,15 +11,16 @@ const searchStyle = {
   boxSizing: "border-box",
   outline: "none",
   border: "none",
-  background: "var(--color-basePrimary)",
+  background: "var(--clr-card)",
   color: "var(--color-headline)",
 };
 
 const animatorStyle = {
   maxWidth: "600px",
   width: "100%",
-  background: "var(--color-basePrimary)",
-  color: "var(--color-headline)",
+  // background: "var(--color-basePrimary)",
+  background: "var(--clr-card)",
+  color: "var(--clr-body)",
   fontWeight: "500",
   borderRadius: "8px",
   overflow: "hidden",
@@ -30,10 +31,11 @@ const groupNameStyle = {
   padding: "8px 16px",
   fontSize: "10px",
   textTransform: "uppercase",
-  opacity: 0.5,
+  opacity: 1,
   width: "auto",
   fontWeight: "600",
   letterSpacing: ".5px",
+  color: "var(--clr-subline)",
 };
 
 const actions = [
@@ -175,10 +177,11 @@ const ResultItem = React.forwardRef(
         ref={ref}
         style={{
           padding: "12px 16px",
-          background: active ? "var(--color-whiteToSable)" : "transparent",
-          borderLeft: `2px solid ${
-            active ? "var(--color_textTitle)" : "transparent"
+          background: active ? "var(--clr-card-hover)" : "transparent",
+          borderLeft: `3px solid ${
+            active ? "var(--clr-primary)" : "transparent"
           }`,
+          color: active ? "var(--clr-headline)" : "var(--color-body)",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",

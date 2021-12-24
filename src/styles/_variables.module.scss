@@ -50,7 +50,7 @@ $cloud: #687077;
 $clude: #7f8197;
 $crow: #181c21;
 
-// New Color Palette 👀
+// Current Color Palette 👀
 $color-azure: #3c86a5;
 $color-midnight: #2d3346;
 $color-oscuro: #171926;
@@ -82,7 +82,7 @@ $theme: (
   borderBase: $color-rice,
   borderBaseMinimal: $color-snow,
   surfaceCard: $color-midnight,
-  whiteToSable: $color-snow
+  whiteToSable: $color-snow,
 );
 
 $theme-dark: (
@@ -100,7 +100,68 @@ $theme-dark: (
   borderBase: $color-coal,
   borderBaseMinimal: $color-coal,
   surfaceCard: $color-coal,
-  whiteToSable: $color-sable
+  whiteToSable: $color-sable,
+);
+
+// *** New Color Palette *** //
+
+// Global
+$global_white: #ffffff;
+$global_black: #000000;
+
+// Primary Azure
+$primary_azure-600: #3fa7d3;
+$primary_azure-500: #3c99c0;
+$primary_azure-400: #3c86a5;
+
+// Sky
+$sky_pearl-100: #fafafa;
+$sky_minimal-200: #f4f4f6;
+$sky_cotton-300: #f2f2f4;
+$sky_smoke-400: #e3e3e8;
+$sky_ford-500: #b8c3d0;
+$sky_lavender-600: #c0c6d7;
+$sky_slate-700: #7682a8;
+
+// Midnight
+$midnight_charcoal-100: #151923;
+$midnight_ebony-200: #171b26;
+$midnight_mirage-300: #1b202c;
+$midnight_obsidian-400: #212636;
+$midnight_bunting-500: #292f42;
+$midnight_express-600: #454f6d;
+$midnight_tuna-700: #444a53;
+$midnight_storm-800: #747781;
+
+$interface: (
+  primary:$primary_azure-500,
+  background: $global_white,
+  sideground: $sky_pearl-100,
+  surface: $global_white,
+  card: $global_white,
+  card-hover: $global_white,
+  card-active: $sky-cotton_300,
+  border: $sky_minimal-200,
+  border-active: $sky_smoke-400,
+  tagline: $sky_ford-500,
+  headline: $midnight_ebony-200,
+  subline: $midnight_storm-800,
+  body: $midnight_tuna-700,
+);
+$interface-dark: (
+  primary:$primary_azure-500,
+  background: $midnight_ebony-200,
+  sideground: $midnight_charcoal-100,
+  surface: $midnight_mirage-300,
+  card: $midnight_mirage-300,
+  card-hover: $midnight_obsidian-400,
+  card-active: $midnight_ebony-200,
+  border: $midnight_bunting-500,
+  border-active: $midnight_bunting-500,
+  tagline: $midnight_express-600,
+  headline: $global_white,
+  subline: $sky_slate-700,
+  body: $sky_lavender-600,
 );
 
 :export {
@@ -215,6 +276,9 @@ $colors-dark: (
   @each $name, $color in $theme {
     --color-#{$name}: #{$color};
   }
+  @each $name, $color in $interface {
+    --clr-#{$name}: #{$color};
+  }
 }
 
 // Dark Mode
@@ -226,6 +290,9 @@ $colors-dark: (
     @each $name, $color in $theme-dark {
       --color-#{$name}: #{$color};
     }
+    @each $name, $color in $interface-dark {
+      --clr-#{$name}: #{$color};
+    }
   }
 }
 
@@ -235,6 +302,10 @@ $colors-dark: (
 
 @function theme($color-name) {
   @return var(--color-#{$color-name});
+}
+
+@function interface($color-name) {
+  @return var(--clr-#{$color-name});
 }
 
 @mixin BGTheme($theme) {
@@ -259,17 +330,17 @@ $colors-dark: (
   @include objectCorner("default");
 
   @if $type == "primary" {
-    background: theme(baseLight);
-    border: 1px solid theme(borderBaseMinimal);
+    // background: interface(card);
+    border: 1px solid interface(border);
 
     &:hover {
       @include objectShadow("hover", "snow");
-      background: theme(basePrimary);
+      background: interface(card-hover);
       transform: translateY(-3px) !important;
-      border: 1px solid theme(borderBase);
+      border: 1px solid interface(card-hover);
 
       h3 {
-        color: theme(headline);
+        color: interface(headline);
       }
     }
 
