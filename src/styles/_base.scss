@@ -69,21 +69,21 @@ div,
 a {
   &::selection {
     background: getColor(lightdarkBase);
-    color: getColor(textHeader);
+    color: interface(headine);
   }
 }
 
 h1 {
   font-size: clamp(4rem, 3vmax, 5rem);
   font-weight: 700;
-  color: theme(headline);
+  color: interface(headline);
   text-transform: capitalize;
 }
 
 h2 {
   font-size: 3.6rem;
   font-weight: 700;
-  color: theme(headline);
+  color: interface(headline);
   text-transform: capitalize;
 }
 
@@ -94,7 +94,7 @@ h2 {
 h3 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: theme(headline);
+  color: interface(headline);
   text-transform: capitalize;
 }
 
@@ -103,7 +103,7 @@ h4 {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 1.8rem;
-  color: getColor(textSubTitle);
+  color: interface(subline);
 }
 
 h5 {
@@ -113,14 +113,14 @@ h5 {
   font-size: 1.3rem;
   line-height: 1.6rem + 0.5rem;
   // line-height:15px;
-  color: getColor(textSubTitle);
+  color: interface(subline);
 }
 
 p {
-  font-family: $primaryFont;
-  font-size: 1.7rem;
+  font-family: $font-body;
+  font-size: 1.6rem;
   font-weight: 400;
-  color: theme(body);
+  color: interface(body);
 
   strong, b {
     font-weight:700;
@@ -236,10 +236,10 @@ p {
 }
 
 .button {
-  padding:18px 30px;
-  font-family:$primaryFont;
+  padding:10px 30px;
+  font-family:$font-body;
   font-weight:600;
-  @include objectCorner("default");
+  border-radius:$border-sm;
   font-size: 1.6rem;
   text-decoration: none;
   transition: background 250ms ease-in-out, box-shadow 200ms ease-in-out,
@@ -501,7 +501,7 @@ p {
 }
 
 section {
-  background: theme(base);
+  background: interface(background);
   padding: clamp(40px, 10vw, 150px) $widthPadding;
 
   .section-link {
@@ -525,7 +525,7 @@ section {
 
     h4 {
       margin-bottom: 15px;
-      color: theme(tagline);
+      color: interface(tagline);
     }
 
     h2 {
@@ -541,7 +541,8 @@ section {
 
   .darkTitle {
     h4 {
-      color: $color-cloud;
+      // color: $color-cloud;
+      color: $sky-700;
     }
 
     h2 {
@@ -1185,18 +1186,18 @@ nav {
   }
 
   .footer-color-1 {
-    background: $color-space;
+    background: $midnight-500;
   }
 
   .footer-color-2 {
-    background: $color-azure;
+    background: $azure-500;
   }
 
   .footer-color-3 {
-    background: $color-sable;
+    background: $midnight-400;
   }
 
   .footer-color-4 {
-    background: $color-mist;
+    background: $sky-700;
   }
 }

@@ -2,8 +2,8 @@
 
 .infoCard {
   flex: 1;
-  @include cardStyle("primary");
-  padding: 30px 27px;
+  @include card("primary");
+  padding: $padding-sm;
   text-decoration: none !important;
   // transition: background ease-in-out 250ms, box-shadow ease-in-out 250ms,
   //   transform 300ms linear, border 250ms ease-in-out;
@@ -11,7 +11,10 @@
 
   .infoCard_text {
     h4 {
-      letter-spacing: 0.1em;
+      // letter-spacing: 0.1em;
+      // font-weight: 800;
+      font-size:1.6rem;
+      color:interface(tagline);
     }
 
     h3 {
@@ -27,9 +30,15 @@
   .infoCard_icon svg {
     text-decoration: none;
     font-size: 5em;
-    fill: $clude;
+    fill: interface(tagline);
     transition: fill linear 250ms;
     margin-bottom: 0.3em;
+  }
+
+  &:hover {
+    .infoCard_icon svg {
+      fill: $primary-azure-500;
+    }
   }
 
   // &:focus {

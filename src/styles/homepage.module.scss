@@ -91,7 +91,7 @@ div.cover {
 }
 
 .friends {
-  background: theme(baseLight);
+  background: interface(sideground);
 
   .buttonCardContainer {
     display: grid;
@@ -133,10 +133,12 @@ div.cover {
 }
 
 .letsWork {
-  background: $color-oscuro;
+  // background: $color-oscuro;
+  background: interface(triground);
 
   p {
     color: $color-space;
+    color: $midnight_express-600;
   }
 }
 

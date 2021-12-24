@@ -4,9 +4,23 @@ $artic-white: #f4f4f9;
 $dark-blue: #171926;
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
-// Font Define
-$primaryFont: "Montserrat", sans-serif;
+// Define Font
+$primaryFont: "Inter", sans-serif;
+$font-header: "Montserrat", sans-serif;
+$font-body: "Inter", sans-serif;
+
+// Defone Shadow
+$shadow-sm: 0px 10px 20px rgb(0 0 0 / 5%);
+$shadow-md: 0px 15px 25px -5px rgb(0 0 0 / 10%);
+$shadow-xl: 0px 48px 100px 0px rgb(17 12 46 / 15%);
+
+// Define Border
+$border-sm: 10px;
+
+// Define Padding
+$padding-sm: 30px 25px;
 
 $titleSize: 2.25rem;
 $subHeader: 1.125rem;
@@ -16,13 +30,99 @@ $mobileWidth: 760px;
 $small-mobileWidth: 360px;
 
 // Element Size Define
-$navHeight: 85px;
+$navHeight: 70px;
 $navMobileHeight: 50px;
 $wrapMaxWidth: 1400px;
 $widthPadding: 7%;
 $desktopPadding: 150px;
 $desktopSmallPadding: 60px;
 $mobilePadding: 80px;
+
+// *** New Color Palette *** //
+
+// Global
+$global_white: #ffffff;
+$global_black: #000000;
+
+// Primary Azure
+$primary_azure-600: #3fa7d3;
+$primary_azure-500: #3c99c0;
+$primary_azure-400: #3c86a5;
+
+$azure-600: #3fa7d3;
+$azure-500: #3c99c0;
+$azure-400: #3c86a5;
+
+// Sky
+$sky_pearl-100: #fafafa;
+$sky_minimal-200: #f4f4f6;
+$sky_cotton-300: #f2f2f4;
+$sky_smoke-400: #e3e3e8;
+$sky_ford-500: #b8c3d0;
+$sky_lavender-600: #c0c6d7;
+$sky_slate-700: #7682a8;
+
+$sky-100: #fafafa;
+$sky-200: #f4f4f6;
+$sky-300: #f2f2f4;
+$sky-400: #e3e3e8;
+$sky-500: #b8c3d0;
+$sky-600: #c0c6d7;
+$sky-700: #7682a8;
+
+// Midnight
+$midnight_charcoal-100: #151923;
+$midnight_ebony-200: #171b26;
+$midnight_mirage-300: #1b202c;
+$midnight_obsidian-400: #212636;
+$midnight_bunting-500: #292f42;
+$midnight_express-600: #454f6d;
+$midnight_tuna-700: #444a53;
+$midnight_storm-800: #747781;
+
+$midnight-100: #151923;
+$midnight-200: #171b26;
+$midnight-300: #1b202c;
+$midnight-400: #212636;
+$midnight-500: #292f42;
+$midnight-600: #454f6d;
+$midnight-700: #444a53;
+$midnight-800: #747781;
+
+$interface: (
+  primary: $primary_azure-500,
+  background: $global_white,
+  sideground: $sky_pearl-100,
+  secground: $sky_pearl-100,
+  triground: $midnight_mirage-300,
+  surface: $global_white,
+  card: $global_white,
+  card-hover: $global_white,
+  card-active: $sky-cotton_300,
+  border: $sky_minimal-200,
+  border-active: $sky_smoke-400,
+  tagline: $sky_ford-500,
+  headline: $midnight_ebony-200,
+  subline: $midnight_storm-800,
+  body: $midnight_tuna-700,
+);
+$interface-dark: (
+  primary: $primary_azure-500,
+  background: $midnight_ebony-200,
+  sideground: $midnight_charcoal-100,
+  secground: $sky_pearl-100,
+  triground: $midnight_ebony-200,
+  surface: $midnight_mirage-300,
+  card: $midnight_mirage-300,
+  card-hover: $midnight_obsidian-400,
+  card-active: $midnight_ebony-200,
+  border: $midnight_bunting-500,
+  border-active: $midnight_bunting-500,
+  tagline: $midnight_express-600,
+  headline: $global_white,
+  subline: $sky_slate-700,
+  body: $sky_lavender-600,
+);
 
 $defaultBorder: 10px;
 $mobileBorder: 10px;
@@ -103,67 +203,6 @@ $theme-dark: (
   whiteToSable: $color-sable,
 );
 
-// *** New Color Palette *** //
-
-// Global
-$global_white: #ffffff;
-$global_black: #000000;
-
-// Primary Azure
-$primary_azure-600: #3fa7d3;
-$primary_azure-500: #3c99c0;
-$primary_azure-400: #3c86a5;
-
-// Sky
-$sky_pearl-100: #fafafa;
-$sky_minimal-200: #f4f4f6;
-$sky_cotton-300: #f2f2f4;
-$sky_smoke-400: #e3e3e8;
-$sky_ford-500: #b8c3d0;
-$sky_lavender-600: #c0c6d7;
-$sky_slate-700: #7682a8;
-
-// Midnight
-$midnight_charcoal-100: #151923;
-$midnight_ebony-200: #171b26;
-$midnight_mirage-300: #1b202c;
-$midnight_obsidian-400: #212636;
-$midnight_bunting-500: #292f42;
-$midnight_express-600: #454f6d;
-$midnight_tuna-700: #444a53;
-$midnight_storm-800: #747781;
-
-$interface: (
-  primary:$primary_azure-500,
-  background: $global_white,
-  sideground: $sky_pearl-100,
-  surface: $global_white,
-  card: $global_white,
-  card-hover: $global_white,
-  card-active: $sky-cotton_300,
-  border: $sky_minimal-200,
-  border-active: $sky_smoke-400,
-  tagline: $sky_ford-500,
-  headline: $midnight_ebony-200,
-  subline: $midnight_storm-800,
-  body: $midnight_tuna-700,
-);
-$interface-dark: (
-  primary:$primary_azure-500,
-  background: $midnight_ebony-200,
-  sideground: $midnight_charcoal-100,
-  surface: $midnight_mirage-300,
-  card: $midnight_mirage-300,
-  card-hover: $midnight_obsidian-400,
-  card-active: $midnight_ebony-200,
-  border: $midnight_bunting-500,
-  border-active: $midnight_bunting-500,
-  tagline: $midnight_express-600,
-  headline: $global_white,
-  subline: $sky_slate-700,
-  body: $sky_lavender-600,
-);
-
 :export {
   masOscuro: $masOscuro;
   oscuro: $oscuro;
@@ -189,7 +228,7 @@ $interface-dark: (
 // Light Theme
 $colors: (
   // base
-  contrastBase: $blanco,
+    contrastBase: $blanco,
   lightBase: $blanco,
   lightdarkBase: $minimal,
   lightLightBase: $blanco,
@@ -203,21 +242,21 @@ $colors: (
   medDarkBase: $masOscuro,
   lightToLight: $blanco,
   // Btn Based
-  lightDarkText: $midnight,
+    lightDarkText: $midnight,
   // Nav Text
-  menuText: $midnight,
+    menuText: $midnight,
   // Icon Based
-  icn-lightBG: $minimal,
+    icn-lightBG: $minimal,
   icon-lightTXT: $midnight,
   // Text
-  textTitle: $azure,
+    textTitle: $azure,
   textHeader: $midnight,
   textHeaderDarkBG: $blanco,
   textSubTitle: $mist,
   // normalText: $midnight,
-  normalText: #7f8197,
+    normalText: #7f8197,
   // Color Specific
-  azureToMist: $azure,
+    azureToMist: $azure,
   azureToSteelBlue: $azure,
   whiteToAzure: $white,
   whiteToRaven: $white,
@@ -231,7 +270,7 @@ $colors: (
 // Dark Theme
 $colors-dark: (
   // base
-  contrastBase: $jetBlack,
+    contrastBase: $jetBlack,
   lightBase: $onyx,
   lightdarkBase: $jetBlack,
   lightLightBase: $raven,
@@ -245,20 +284,20 @@ $colors-dark: (
   medDarkBase: $crow,
   lightToLight: $raven,
   // Btn Based
-  lightDarkText: $minimal,
+    lightDarkText: $minimal,
   // Nav Text
-  menuText: $cloud,
+    menuText: $cloud,
   // Icon Based
-  icn-lightBG: $raven,
+    icn-lightBG: $raven,
   icon-lightTXT: $cloud,
   // Text
-  textTitle: $azure,
+    textTitle: $azure,
   textHeader: $minimal,
   textHeaderDarkBG: $blanco,
   textSubTitle: $cloud,
   normalText: $cloud,
   // Color Specific
-  azureToMist: $mist,
+    azureToMist: $mist,
   azureToSteelBlue: $steelBlue,
   whiteToAzure: $azure,
   whiteToRaven: $raven,
@@ -296,6 +335,10 @@ $colors-dark: (
   }
 }
 
+@function interface($color-name) {
+  @return var(--clr-#{$color-name});
+}
+
 @function getColor($color-name) {
   @return var(--color_#{$color-name});
 }
@@ -304,8 +347,43 @@ $colors-dark: (
   @return var(--color-#{$color-name});
 }
 
-@function interface($color-name) {
-  @return var(--clr-#{$color-name});
+@mixin sectionTheme($theme) {
+  @if $theme == "light" {
+    background: interface(secground);
+  } @else if $theme == "lighter" {
+    background: interface(triground);
+  }
+}
+
+@mixin card($type) {
+  transition: background 250ms linear, box-shadow 250ms linear,
+    transform 250ms linear !important;
+    border-radius:$border-sm;
+
+    @if $type == "primary" {
+    border: 1px solid interface(border);
+
+    &:hover {
+      background: interface(card-hover);
+      transform: translateY(-2px) !important;
+      border: 1px solid interface(card-hover);
+      box-shadow: $shadow-md;
+
+      h3 {
+        color: interface(headline);
+      }
+    }
+
+    &:active {
+      border:1px solid interface(border-active);
+    }
+
+    &:focus {
+      border: 1px solid interface(border-active);
+      background: interface(card-hover);
+      transform: translateY(-2px) !important;
+    }
+  }
 }
 
 @mixin BGTheme($theme) {
@@ -334,7 +412,7 @@ $colors-dark: (
     border: 1px solid interface(border);
 
     &:hover {
-      @include objectShadow("hover", "snow");
+      // @include objectShadow("hover", "snow");
       background: interface(card-hover);
       transform: translateY(-3px) !important;
       border: 1px solid interface(card-hover);

@@ -77,7 +77,6 @@ const actions = [
     keywords: "view works",
     section: "Pages",
     perform: () => (window.location.pathname = "work"),
-    section: "Pages",
   },
   {
     id: "github",

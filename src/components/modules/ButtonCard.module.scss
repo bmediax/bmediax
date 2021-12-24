@@ -6,7 +6,7 @@
   // Old - background: getColor(lightLightBase3);
   @include objectCorner("default");
   text-decoration: none;
-  @include cardStyle("primary");
+  @include card("primary");
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +19,7 @@
 
   .icon path {
     transition: fill 250ms linear;
-    fill:interface(tagline);
+    fill: interface(tagline);
   }
 
   &:hover {
