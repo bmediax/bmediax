@@ -1,0 +1,28 @@
+@use '../styles/variables.module' as *;
+
+.btnFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+
+  a {
+    flex: 1;
+    text-align: center;
+
+    &:not(:first-child) {
+      margin-left: 15px;
+    }
+  }
+  @include responsive("mobile") {
+    flex-direction: column;
+
+    a {
+      width: 100%;
+
+      &:not(:first-child) {
+        margin-left: 0px !important;
+      }
+    }
+  }
+}

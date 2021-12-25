@@ -334,18 +334,19 @@ p {
 }
 
 .btn-primary {
-  border-color: interface(border);
+  border-color: interface(btnBorder);
   color: interface(btnColor);
 
   &:hover {
-    box-shadow: $shadow-sm;
+    box-shadow: $shadow-md;
     background: interface(card-hover);
     border-color: interface(card-hover);
+    color:interface(btnColor-hover);
   }
 
   &:active {
     border-color: interface(border-active);
-    outline:none;
+    outline: none;
   }
 }
 
@@ -466,33 +467,6 @@ p {
   @include objectShadow("minimal", "snow");
 }
 
-.btn-flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-
-  a {
-    flex: 1;
-    text-align: center;
-
-    &:not(:first-child) {
-      margin-left: 15px;
-    }
-  }
-  @include responsive("mobile") {
-    flex-direction: column;
-
-    a {
-      width: 100%;
-
-      &:not(:first-child) {
-        margin-left: 0px !important;
-      }
-    }
-  }
-}
-
 .navScroll {
   @include objectShadow("default", "snow");
   background: getColor(lightBase) !important;
@@ -528,6 +502,9 @@ section {
     text-align: center;
     margin-top: 50px;
     display: block;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
     text-decoration: none;
 
     a {
@@ -535,9 +512,7 @@ section {
     }
 
     @include responsive("mobile") {
-      button {
-        width: 100%;
-      }
+      width: 100% !important;
     }
   }
 

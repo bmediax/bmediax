@@ -1,5 +1,4 @@
 import SectionLayout from "../layout/SectionLayout";
-import SectionLink from "./SectionLink";
 import Button from "./modules/Button";
 import InfoCardModule from "./modules/InfoCardModule";
 import React from "react";
@@ -38,10 +37,7 @@ const WhatDoSection = () => {
           icon={<MdPhotoCamera />}
         />
       </div>
-      {/* <SectionLink path="/work" type="primary-active">
-        View All Work
-      </SectionLink> */}
-      <Button type="primary" link="/work" btnSection={true}>
+      <Button type="primary" path="/work" btnSection={true}>
         View All Work
       </Button>
     </SectionLayout>

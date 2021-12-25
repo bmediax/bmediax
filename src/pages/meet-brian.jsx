@@ -1,5 +1,7 @@
 import bmediaxResume from "../assets/files/Bmediax_Resume.pdf";
 import bmediaxPrintResume from "../assets/files/Bmediax_Resume_Print.pdf";
+import ButtonWrapper from "../components/ButtonWrapper";
+import Button from "../components/modules/Button";
 // import * as variables from '../styles/_variables.module.scss'
 import SectionPageLayout from "../layout/SectionPageLayout";
 import Layout from "../layout/index.js";
@@ -71,28 +73,30 @@ const meetBrian = () => {
               </a>{" "}
               They all have beautiful interfaces with solid functionality!
             </p>
-            <div className="btn-flex">
-              <a
-                href={bmediaxResume}
+            <ButtonWrapper>
+              <Button
+                type="primary"
+                link={bmediaxResume}
                 download="Bmediax_Resume"
-                className="btn primary clickDownloadResume"
+                className="clickDownloadResume"
               >
-                Download Resume{" "}
+                Download Resume
                 <HiArrowCircleDown
-                  style={{ position: "relative", top: "2px" }}
+                  style={{ position: "relative", top: "2px", left: "5px" }}
                 />
-              </a>
-              <a
-                href={bmediaxPrintResume}
+              </Button>
+              <Button
+                type="primary"
+                link={bmediaxPrintResume}
                 download="Bmediax_Resume_Print"
-                className="btn primary clickDownloadResumePrint"
+                className="clickDownloadResumePrint"
               >
-                Download Print Resume{" "}
+                Download Resume
                 <HiDocumentDownload
-                  style={{ position: "relative", top: "2px" }}
+                  style={{ position: "relative", top: "2px", left: "5px" }}
                 />
-              </a>
-            </div>
+              </Button>
+            </ButtonWrapper>
           </div>
           <div className="pageTwoColumn">
             <div className="gallery gallery-masonry">

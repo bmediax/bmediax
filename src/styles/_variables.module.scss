@@ -6,24 +6,45 @@ $dark-blue: #171926;
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
+$fonts: (
+  header: "'Montserrat', sans-serif",
+  body: "'inter', sans-serif",
+) !default;
+
+// Define Shadow
+$shadows: (
+  "sm":
+    "rgba(0, 0, 0, 0.1) 0px 10px 20px -3px,rgba(0, 0, 0, 0.05) 0px 4px 6px -2px",
+  "md":
+    "rgba(0, 0, 0, 0.1) 0px 10px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px",
+  "xs-soft": 0px 10px 20px rgb(0 0 0 / 5%),
+  "sm-soft": 0px 15px 25px -5px rgb(0 0 0 / 10%),
+  "xl-soft": 0px 48px 100px 0px rgb(17 12 46 / 15%),
+) !default;
+
+$shadow-sm: rgba(0, 0, 0, 0.1) 0px 10px 20px -3px,
+  rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+$shadow-md: rgba(0, 0, 0, 0.1) 0px 10px 25px -5px,
+  rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+$shadow-xs-soft: 0px 10px 20px rgb(0 0 0 / 5%);
+$shadow-sm-soft: 0px 15px 25px -5px rgb(0 0 0 / 10%);
+$shadow-xl-soft: 0px 48px 100px 0px rgb(17 12 46 / 15%);
+
 // Define Font
 $primaryFont: "Inter", sans-serif;
 $font-header: "Montserrat", sans-serif;
 $font-body: "Inter", sans-serif;
 
-// Defone Shadow
-$shadow-sm: rgba(0, 0, 0, 0.1) 0px 10px 20px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-$shadow-md: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-
-$shadow-xs-soft: 0px 10px 20px rgb(0 0 0 / 5%);
-$shadow-sm-soft: 0px 15px 25px -5px rgb(0 0 0 / 10%);
-$shadow-xl-soft: 0px 48px 100px 0px rgb(17 12 46 / 15%);
-
 // Define Border
 $border-sm: 10px;
+$radius-sm: 10px;
 
 // Define Padding
 $padding-sm: 30px 25px;
+
+$paddings: (
+  sm: 30px 25px,
+) !default;
 
 $titleSize: 2.25rem;
 $subHeader: 1.125rem;
@@ -97,25 +118,27 @@ $interface: (
   primary: $azure-500,
   background: $global_white,
   sideground: $sky-200,
-  secground: $sky-100,
+  secground: $global_white,
   triground: $midnight-300,
   surface: $global_white,
   card: $global_white,
   card-hover: $global_white,
   card-active: $sky-300,
-  border: $sky-200,
+  border: $sky-300,
   border-active: $sky-400,
   tagline: $sky-500,
   headline: $midnight-200,
   subline: $midnight-800,
   body: $midnight-700,
-  btnColor:$midnight-700,
+  btnColor: $midnight-700,
+  btnColor-hover:$midnight-200,
+  btnBorder: $sky-300,
 );
 $interface-dark: (
   primary: $azure-500,
   background: $midnight-200,
   sideground: $midnight-100,
-  secground: $sky-100,
+  secground: $midnight-100,
   triground: $midnight-200,
   surface: $midnight-300,
   card: $midnight-300,
@@ -127,7 +150,9 @@ $interface-dark: (
   headline: $global_white,
   subline: $sky-700,
   body: $sky-600,
-  btnColor:$global-white,
+  btnColor: $sky-700,
+  btnColor-hover: $global-white,
+  btnBorder: $midnight-500,
 );
 
 $defaultBorder: 10px;
@@ -315,14 +340,28 @@ $colors-dark: (
 );
 
 :root {
+  @each $font, $value in $fonts {
+    --font-#{$font}: #{$value};
+  }
+
+  @each $name, $color in $interface {
+    --clr-#{$name}: #{$color};
+  }
+
+  @each $shadow, $value in $shadows {
+    --shadow-#{$shadow}: #{$value};
+  }
+
+  @each $padding, $value in $paddings {
+    --pading-#{$padding}: #{$value};
+  }
+
   @each $name, $color in $colors {
     --color_#{$name}: #{$color};
   }
+
   @each $name, $color in $theme {
     --color-#{$name}: #{$color};
-  }
-  @each $name, $color in $interface {
-    --clr-#{$name}: #{$color};
   }
 }
 
@@ -362,11 +401,10 @@ $colors-dark: (
 }
 
 @mixin card($type) {
-  transition: background 250ms linear, box-shadow 250ms linear,
-    transform 250ms linear !important;
-    border-radius:$border-sm;
+  transition: background 250ms linear, box-shadow 250ms linear, border 250ms linear, transform 250ms linear !important;
+  border-radius: $border-sm;
 
-    @if $type == "primary" {
+  @if $type == "primary" {
     border: 1px solid interface(border);
 
     &:hover {
@@ -381,7 +419,7 @@ $colors-dark: (
     }
 
     &:active {
-      border:1px solid interface(border-active);
+      border: 1px solid interface(border-active);
     }
 
     &:focus {

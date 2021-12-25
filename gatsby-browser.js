@@ -24,7 +24,8 @@ const animatorStyle = {
   fontWeight: "500",
   borderRadius: "8px",
   overflow: "hidden",
-  boxShadow: "0px 10px 40px -10px rgb(0, 0, 0, 0.3)",
+  // boxShadow: "0px 10px 40px -10px rgb(0, 0, 0, 0.3)",
+  boxShadow: "var(--shadow-md)",
 };
 
 const groupNameStyle = {
