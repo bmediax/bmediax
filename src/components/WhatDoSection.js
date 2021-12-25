@@ -1,4 +1,4 @@
-import SectionLayout from "../layout/SectionLayout";
+import { Section } from "../layout/SectionLayout";
 import Button from "./modules/Button";
 import InfoCardModule from "./modules/InfoCardModule";
 import React from "react";
@@ -11,11 +11,11 @@ import { MdPhotoCamera } from "react-icons/md";
 
 const WhatDoSection = () => {
   return (
-    <SectionLayout
+    <Section
       title="What I do"
       subtitle="Skills"
-      ide="firstSection"
-      label="lighterSection"
+      id="firstSection"
+      theme="primary"
     >
       <div className="grid-three sectionMaxWidth">
         <InfoCardModule
@@ -40,7 +40,7 @@ const WhatDoSection = () => {
       <Button type="primary" path="/work" btnSection={true}>
         View All Work
       </Button>
-    </SectionLayout>
+    </Section>
   );
 };
 

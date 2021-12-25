@@ -341,7 +341,7 @@ p {
     box-shadow: $shadow-md;
     background: interface(card-hover);
     border-color: interface(card-hover);
-    color:interface(btnColor-hover);
+    color: interface(btnColor-hover);
   }
 
   &:active {
@@ -494,7 +494,6 @@ p {
 }
 
 section {
-  background: interface(background);
   padding: clamp(40px, 10vw, 150px) $widthPadding;
 
   .section-link {
@@ -554,6 +553,14 @@ section {
       margin-bottom: 10px;
     }
   }
+}
+
+.primaryTheme {
+  background: interface(background);
+}
+
+.secondaryTheme {
+  background: interface(sideground);
 }
 
 .lightSection {

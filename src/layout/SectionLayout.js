@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 
+
 const SectionLayout = ({
   title,
   subtitle,
@@ -35,8 +36,18 @@ export const Section = ({
   className,
   theme,
 }) => {
+  const classCheck = (className) => {
+    if (className != undefined || className != null) {
+      return className;
+    } else {
+      return "";
+    }
+  };
   return (
-    <section className={`${theme ? `${theme}Theme` : ""} ${className}`} id={id}>
+    <section
+      className={`${theme ? `${theme}Theme` : ""} ${classCheck(className)}`}
+      id={id}
+    >
       <div className="section-title">
         <h4>{subtitle}</h4>
         <h2>{title}</h2>
@@ -46,8 +57,15 @@ export const Section = ({
   );
 };
 
-Section.PropTypes = {
-  title: propTypes.string,
+Section.defaultProps = {
+  title: "Section Title",
+  subtitle: "Sub Title",
+};
+
+Section.propTypes = {
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  theme: PropTypes.string,
 };
 
 export default SectionLayout;
