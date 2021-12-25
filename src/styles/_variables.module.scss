@@ -12,9 +12,12 @@ $font-header: "Montserrat", sans-serif;
 $font-body: "Inter", sans-serif;
 
 // Defone Shadow
-$shadow-sm: 0px 10px 20px rgb(0 0 0 / 5%);
-$shadow-md: 0px 15px 25px -5px rgb(0 0 0 / 10%);
-$shadow-xl: 0px 48px 100px 0px rgb(17 12 46 / 15%);
+$shadow-sm: rgba(0, 0, 0, 0.1) 0px 10px 20px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+$shadow-md: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+
+$shadow-xs-soft: 0px 10px 20px rgb(0 0 0 / 5%);
+$shadow-sm-soft: 0px 15px 25px -5px rgb(0 0 0 / 10%);
+$shadow-xl-soft: 0px 48px 100px 0px rgb(17 12 46 / 15%);
 
 // Define Border
 $border-sm: 10px;
@@ -42,6 +45,7 @@ $mobilePadding: 80px;
 
 // Global
 $global_white: #ffffff;
+$global-white: #ffffff;
 $global_black: #000000;
 
 // Primary Azure
@@ -90,38 +94,40 @@ $midnight-700: #444a53;
 $midnight-800: #747781;
 
 $interface: (
-  primary: $primary_azure-500,
+  primary: $azure-500,
   background: $global_white,
-  sideground: $sky_pearl-100,
-  secground: $sky_pearl-100,
-  triground: $midnight_mirage-300,
+  sideground: $sky-200,
+  secground: $sky-100,
+  triground: $midnight-300,
   surface: $global_white,
   card: $global_white,
   card-hover: $global_white,
-  card-active: $sky-cotton_300,
-  border: $sky_minimal-200,
-  border-active: $sky_smoke-400,
-  tagline: $sky_ford-500,
-  headline: $midnight_ebony-200,
-  subline: $midnight_storm-800,
-  body: $midnight_tuna-700,
+  card-active: $sky-300,
+  border: $sky-200,
+  border-active: $sky-400,
+  tagline: $sky-500,
+  headline: $midnight-200,
+  subline: $midnight-800,
+  body: $midnight-700,
+  btnColor:$midnight-700,
 );
 $interface-dark: (
-  primary: $primary_azure-500,
-  background: $midnight_ebony-200,
-  sideground: $midnight_charcoal-100,
-  secground: $sky_pearl-100,
-  triground: $midnight_ebony-200,
-  surface: $midnight_mirage-300,
-  card: $midnight_mirage-300,
-  card-hover: $midnight_obsidian-400,
-  card-active: $midnight_ebony-200,
-  border: $midnight_bunting-500,
-  border-active: $midnight_bunting-500,
-  tagline: $midnight_express-600,
+  primary: $azure-500,
+  background: $midnight-200,
+  sideground: $midnight-100,
+  secground: $sky-100,
+  triground: $midnight-200,
+  surface: $midnight-300,
+  card: $midnight-300,
+  card-hover: $midnight-400,
+  card-active: $midnight-200,
+  border: $midnight-500,
+  border-active: $midnight-500,
+  tagline: $midnight-600,
   headline: $global_white,
-  subline: $sky_slate-700,
-  body: $sky_lavender-600,
+  subline: $sky-700,
+  body: $sky-600,
+  btnColor:$global-white,
 );
 
 $defaultBorder: 10px;
@@ -367,7 +373,7 @@ $colors-dark: (
       background: interface(card-hover);
       transform: translateY(-2px) !important;
       border: 1px solid interface(card-hover);
-      box-shadow: $shadow-md;
+      box-shadow: $shadow-sm-soft;
 
       h3 {
         color: interface(headline);
