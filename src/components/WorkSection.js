@@ -21,12 +21,12 @@ const WorkSection = () => {
         </div>
         <p
           style={{
-            lineHeight: "25px",
+            lineHeight: "2",
             textAlign: "center",
             paddingTop: "50px",
           }}
         >
-          © {currentDate} All rights reserved - Designed and Coded by Brian
+          All rights reserved © {currentDate} <br /> Designed and Coded by Brian
           Moreno
         </p>
       </Section>

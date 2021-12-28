@@ -1,3 +1,4 @@
+import React from "react";
 import bmediaxResume from "../assets/files/Bmediax_Resume.pdf";
 import bmediaxPrintResume from "../assets/files/Bmediax_Resume_Print.pdf";
 import ButtonWrapper from "../components/ButtonWrapper";
@@ -7,7 +8,6 @@ import SectionPageLayout from "../layout/SectionPageLayout";
 import Layout from "../layout/index.js";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import React from "react";
 import { HiArrowCircleDown, HiDocumentDownload } from "react-icons/hi";
 
 const meetBrian = () => {

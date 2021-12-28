@@ -1,9 +1,9 @@
 // Components
-import { Section } from "../layout/SectionLayout";
-import SectionLink from "./SectionLink";
-import FullTxageModule from "./modules/FullTxageModule";
-import { graphql, useStaticQuery } from "gatsby";
-import React from "react";
+import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+import { Section } from '../layout/SectionLayout'
+import FullTxageModule from './modules/FullTxageModule'
+import SectionLink from './SectionLink'
 
 const RecentCaseSection = () => {
   const data = useStaticQuery(graphql`
@@ -78,8 +78,8 @@ const RecentCaseSection = () => {
         }
       }
     }
-  `);
-  const recentProjectData = data.allPrismicPortfolio.nodes;
+  `)
+  const recentProjectData = data.allPrismicPortfolio.nodes
   return (
     <Section
       title="Recent Case Study"
@@ -102,7 +102,7 @@ const RecentCaseSection = () => {
         View All Case Study
       </SectionLink>
     </Section>
-  );
-};
+  )
+}
 
-export default RecentCaseSection;
+export default RecentCaseSection

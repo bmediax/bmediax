@@ -1,7 +1,7 @@
+import React from "react";
 import { Section } from "../layout/SectionLayout";
 import Button from "./modules/Button";
 import InfoCardModule from "./modules/InfoCardModule";
-import React from "react";
 import { AiOutlineAntDesign } from "react-icons/ai";
 // Icons
 import { BiCodeAlt } from "react-icons/bi";
@@ -37,7 +37,7 @@ const WhatDoSection = () => {
           icon={<MdPhotoCamera />}
         />
       </div>
-      <Button type="primary" path="/work" btnSection={true}>
+      <Button type="secondary" path="/work" btnSection={true}>
         View All Work
       </Button>
     </Section>

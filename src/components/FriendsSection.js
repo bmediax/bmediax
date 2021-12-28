@@ -1,8 +1,8 @@
-import { Section } from '../layout/SectionLayout';
-import * as styles from "../styles/homepage.module.scss";
-import ButtonCard from "./modules/ButtonCard";
-import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import * as styles from "../styles/homepage.module.scss";
+import { Section } from '../layout/SectionLayout';
+import ButtonCard from "./modules/ButtonCard";
 
 const FriendsSection = () => {
   const data = useStaticQuery(graphql`

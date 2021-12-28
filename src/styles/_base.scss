@@ -66,11 +66,17 @@ h6,
 p,
 span,
 div,
-a {
+a,
+ul li {
   &::selection {
     background: getColor(lightdarkBase);
-    color: interface(headine);
+    color: interface(headline);
   }
+}
+
+a {
+  color: $azure-500;
+  text-decoration: none;
 }
 
 h1 {
@@ -350,6 +356,26 @@ p {
   }
 }
 
+.btn-secondary {
+  background: rgba($azure-500, 0.1);
+  border-color: rgba($azure-500, 0.1);
+  color: $azure-500;
+
+  &:hover {
+    background: $azure-500;
+    color: $global-white;
+    border-color: $azure-500;
+    box-shadow: 0 10px 20px rgba(#00b4ff, 0.3), 0px 3px 3px rgba(#00b4ff, 0.2);
+  }
+
+  &:active {
+    background: $azure-400;
+    border-color: $azure-400;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
 .primary {
   outline: none;
   background: transparent;
@@ -561,6 +587,26 @@ section {
 
 .secondaryTheme {
   background: interface(sideground);
+}
+
+.midnightTheme {
+  background: $midnight-300;
+
+  .section-title {
+    h2 {
+      color: $global-white;
+    }
+    h4 {
+      color: $midnight-700;
+    }
+
+  }
+  p {
+    color: $midnight-800;
+  }
+  // p {
+
+  // }
 }
 
 .lightSection {
