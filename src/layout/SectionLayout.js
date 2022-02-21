@@ -37,7 +37,7 @@ export const Section = ({
   theme,
 }) => {
   const classCheck = (className) => {
-    if (className != undefined || className != null) {
+    if (className !== undefined || className !== null) {
       return className;
     } else {
       return "";

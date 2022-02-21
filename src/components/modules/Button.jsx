@@ -13,7 +13,7 @@ const Button = ({
   download,
 }) => {
   const typeCheck = (typeName) => {
-    if (typeName != undefined || typeName != null) {
+    if (typeName !== undefined || typeName !== null) {
       return `btn-${typeName}`;
     } else {
       return "";
@@ -21,7 +21,7 @@ const Button = ({
   };
 
   const classCheck = (className) => {
-    if (className != undefined || className != null) {
+    if (className !== undefined || className !== null) {
       return className;
     } else {
       return "";
