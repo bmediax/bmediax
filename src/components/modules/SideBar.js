@@ -1,7 +1,7 @@
+import { RichText } from 'prismic-reactjs';
+import PropTypes from 'prop-types';
 import React from 'react';
-import PropTypes from 'prop-types'
-import { RichText } from 'prismic-reactjs'
-import * as SideBarStyles from './SideBar.module.scss'
+import * as SideBarStyles from './SideBar.module.scss';
 
 const SideBar = ({ sidebarData, projectLinks }) => {
     const isToolsExist = (dsi) => {
@@ -47,7 +47,7 @@ const SideBar = ({ sidebarData, projectLinks }) => {
             </div>
            {isToolsExist(sidebarData)}
            {isTechExist (sidebarData)}
-            <div className={SideBarStyles.section}>
+            <div className={`${SideBarStyles.section} ${SideBarStyles.sectionDeliver}`}>
                 {/* Deliverable */}
                 <h3>Deliverables</h3>
                 <RichText render={sidebarData.deliverables.richText} />

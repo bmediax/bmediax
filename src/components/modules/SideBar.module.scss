@@ -49,7 +49,7 @@
     ul li {
       font-size: 1.6rem;
       // color: getColor(normalText);
-      color: theme("body");
+      color: interface("body");
       line-height: 1;
 
       & + li {
@@ -60,5 +60,9 @@
         color:theme("headline");
       }
     }
+  }
+
+  .sectionDeliver ul li {
+    line-height:1.5;
   }
 }

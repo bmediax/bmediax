@@ -36,7 +36,7 @@ $font-header: "Montserrat", sans-serif;
 $font-body: "Inter", sans-serif;
 
 // Define Border
-$border-sm: 10px;
+$border-sm: 7px;
 $radius-sm: 10px;
 
 // Define Padding
@@ -131,7 +131,7 @@ $interface: (
   subline: $midnight-800,
   body: $midnight-700,
   btnColor: $midnight-700,
-  btnColor-hover:$midnight-200,
+  btnColor-hover: $midnight-200,
   btnBorder: $sky-300,
 );
 $interface-dark: (
@@ -401,7 +401,8 @@ $colors-dark: (
 }
 
 @mixin card($type) {
-  transition: background 250ms linear, box-shadow 250ms linear, border 250ms linear, transform 250ms linear !important;
+  transition: background 250ms linear, box-shadow 250ms linear,
+    border 250ms linear, transform 250ms linear !important;
   border-radius: $border-sm;
 
   @if $type == "primary" {
@@ -477,8 +478,8 @@ $colors-dark: (
     }
   } @else if $type == "primaryActive" {
     // background: theme("basePrimary");
-    @include BGTheme("lightest");
-    border: 1px solid theme(borderBaseMinimal);
+    background: interface("card");
+    border: 1px solid interface("border");
     @include objectShadow("default", "snow");
 
     &:hover {

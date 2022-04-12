@@ -1,14 +1,14 @@
-import React from "react";
 import { motion } from "framer-motion";
-import * as portfolioStyles from "../styles/portfolio.module.scss";
-import { slowSlideUp } from "../data/motionVariants";
+import React from "react";
 import { Parallax } from "react-scroll-parallax";
+import { slowSlideUp } from "../data/motionVariants";
+import * as portfolioStyles from "../styles/portfolio.module.scss";
 
 const PortfolioTitle = ({ coverData }) => {
   return (
     <div className={`${portfolioStyles.text}`}>
       <div className="sectionMaxWidth" style={{ padding: "0 4%" }}>
-        <Parallax y={[0, -0]} tagOuter="figure">
+        <Parallax y={[0, -0]} tagouter="figure">
           <motion.h1
             variants={slowSlideUp}
             initial="hidden"

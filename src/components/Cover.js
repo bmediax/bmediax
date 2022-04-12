@@ -1,21 +1,20 @@
-import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { RichText } from "prismic-reactjs";
-
-// Icons
-import { EDIcon, AztecEye, Eye, Bone } from "../components/Icons";
-import * as homepageStyles from "../styles/homepage.module.scss";
-import DropdownModule from "./modules/dropdownModule";
+import React from "react";
 // import { Parallax } from 'react-scroll-parallax'
 // External
 import { RiInboxFill } from "react-icons/ri";
+// Icons
+import { AztecEye, Bone, EDIcon, Eye } from "../components/Icons";
+import * as homepageStyles from "../styles/homepage.module.scss";
+import DropdownModule from "./modules/dropdownModule";
+
 
 const Cover = ({ coverData }) => {
   return (
     <div className={homepageStyles.cover}>
       <div className={homepageStyles.head}>
-        {/* <Parallax y={[20, -20]} tagOuter="figure"> */}
         <StaticImage
           src="../images/profile/headshot.png"
           alt="Bmediax Headshot"
