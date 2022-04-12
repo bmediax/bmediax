@@ -1,5 +1,5 @@
-import * as DropdownModuleStyles from "./dropdownModule.module.scss";
 import React, { useState } from "react";
+import * as DropdownModuleStyles from "./dropdownModule.module.scss";
 // External Libs
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";

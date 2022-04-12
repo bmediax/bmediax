@@ -1,7 +1,9 @@
 import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+
 import Nav from '../components/Nav'
 import Seo from '../components/Seo'
+
 import FriendsSection from '../components/FriendsSection.js'
 import WorkSection from '../components/WorkSection'
 

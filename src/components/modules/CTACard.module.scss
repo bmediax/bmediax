@@ -11,7 +11,8 @@
 
 .CTACard {
   flex: 1;
-  background: getColor(lightBase);
+  // background: getColor(lightBase);
+  background: interface(surface);
   // max-width: 400px;
   min-height: 200px;
   @include objectCorner('default');

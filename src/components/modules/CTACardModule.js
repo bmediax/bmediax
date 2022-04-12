@@ -1,9 +1,11 @@
-import { motion } from 'framer-motion';
-import { Link, navigate } from 'gatsby';
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import React from 'react';
-import { BsArrowRightShort } from 'react-icons/bs';
 import * as CTACardStyles from './CTACard.module.scss';
+
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { Link, navigate } from 'gatsby';
+
+import { BsArrowRightShort } from 'react-icons/bs';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const CTACardModule = ({ title, raw, cover, img, url, work, shortDescr, isLight }) => {
     const image = getImage(cover)
