@@ -277,16 +277,16 @@ p {
   outline: none;
   // background: theme(surface);
   background: transparent;
-  color: theme(body);
-  border: 1px solid theme(borderBase);
+  color: interface(body);
+  border: 1px solid interface(border);
   // background: getColor(lightdarkBase);
   // border: 2px solid getColor(lightdarkBase) !important;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.03);
 
   &:hover {
-    background: theme(surfaceCard);
-    border-color: theme(surfaceCard) !important;
-    color: $color-crystal;
+    background: interface(card-hover);
+    border-color: interface(border-active) !important;
+    color: interface(body);
     @include objectShadow("hover", "snow");
   }
 
@@ -621,7 +621,7 @@ section {
 
 .lightestSection {
   // background: theme(basePrimaryLight);
-  @include BGTheme("lightest");
+  background: interface("secground");
 }
 
 .darkSection {
