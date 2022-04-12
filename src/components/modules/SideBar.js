@@ -1,7 +1,8 @@
-import { RichText } from 'prismic-reactjs';
+import * as SideBarStyles from './SideBar.module.scss';
+
 import PropTypes from 'prop-types';
 import React from 'react';
-import * as SideBarStyles from './SideBar.module.scss';
+import { RichText } from 'prismic-reactjs';
 
 const SideBar = ({ sidebarData, projectLinks }) => {
     const isToolsExist = (dsi) => {
@@ -29,7 +30,7 @@ const SideBar = ({ sidebarData, projectLinks }) => {
             )
         }
     }
-
+    
     return (
         <div className={SideBarStyles.wrapper}>
             {/* Role */}
