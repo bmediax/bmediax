@@ -512,12 +512,12 @@ $colors-dark: (
       }
     }
   } @else if $type == "primary-light" {
-    background: theme(basePrimaryLight);
+    background: interface(surface);
     border: 1px solid theme(borderBaseMinimal);
 
     &:hover {
       @include objectShadow("hover", "snow");
-      background: theme(basePrimaryLight);
+      // background: theme(basePrimaryLight);
 
       h3 {
         color: theme(headline);

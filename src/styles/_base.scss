@@ -495,10 +495,15 @@ p {
 
 .navScroll {
   @include objectShadow("default", "snow");
-  background: getColor(lightBase) !important;
+  background: interface(secground) !important;
+  border-bottom: 1px solid interface(border);
 
   a.nav-item {
-    color: $midnight !important;
+    color: interface(body) !important;
+
+    &:hover {
+      color: interface(headline) !important;
+    }
   }
 
   .logo-text {
@@ -597,12 +602,11 @@ section {
       color: $global-white;
     }
     h4 {
-      color: $midnight-700;
+      color: $midnight-800;
     }
-
   }
   p {
-    color: $midnight-800;
+    color: $sky-700;
   }
   // p {
 
@@ -672,8 +676,9 @@ nav {
   right: 0;
   left: 0;
   z-index: 10;
-  background: getColor(lightBase);
-  @include BGTheme("lighter");
+  // background: getColor(lightBase);
+  // @include BGTheme("lighter");
+  background: interface("secground");
   transition: box-shadow 250ms linear, top 0.6s, background linear 400ms;
   font-family: $primaryFont;
 
@@ -767,7 +772,7 @@ nav {
               font-family: $primaryFont;
               font-weight: 500;
               font-size: 1.6rem;
-              color: getColor(menuText);
+              color: interface(body);
               text-decoration: none;
               background: getColor(lightLightBase);
               padding: 0.9em 1.5em;
@@ -787,7 +792,7 @@ nav {
 
           a.nav-item {
             outline: none;
-            color: getColor(menuText);
+            color: interface(body);
             text-decoration: none;
             margin: 0px 15px;
             font-size: 1.6rem;
@@ -795,7 +800,7 @@ nav {
             transition: color 150ms linear;
 
             &:hover {
-              color: getColor(azureToMist);
+              color: interface(headline);
             }
 
             &:focus {
@@ -914,6 +919,7 @@ nav {
               margin-right: 0 !important;
               margin-left: 0 !important;
               font-size: 2.5rem !important;
+              text-align:center;
             }
 
             ul {
