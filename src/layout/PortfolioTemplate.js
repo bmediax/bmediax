@@ -15,7 +15,6 @@ const PortfolioTemplate = ({ data, pageTitle }) => {
     <>
       <Layout title={pageTitle} descr={data.cover_title[0].title.text}>
         <PortfolioTitle coverData={data.cover_title[0]} />
-        <LegionBar />
         <CoverTitle coverData={data.cover_title[0]} />
         <OverviewSection
           overviewData={data.overview[0]}
