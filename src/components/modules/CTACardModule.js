@@ -1,9 +1,9 @@
+import { motion } from 'framer-motion';
+import { Link, navigate } from 'gatsby';
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React from 'react';
-import { Link, navigate } from 'gatsby'
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { motion } from 'framer-motion'
-import { BsArrowRightShort } from 'react-icons/bs'
-import * as CTACardStyles from './CTACard.module.scss'
+import { BsArrowRightShort } from 'react-icons/bs';
+import * as CTACardStyles from './CTACard.module.scss';
 
 const CTACardModule = ({ title, raw, cover, img, url, work, shortDescr, isLight }) => {
     const image = getImage(cover)
@@ -25,7 +25,9 @@ const CTACardModule = ({ title, raw, cover, img, url, work, shortDescr, isLight 
                     <p>{shortDescr ? shortDescr : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed mattis dui. Etiam vel volutpat ipsum, vitae molestie odio. Nam sed iaculis nisl. Phasellus mattis nulla sit amet suscipit eleifend." }</p>
                 </motion.span>
             </div>
-            <Link to={`${url}`} className={`btn primary ${CTACardStyles.button}`}>Learn More <BsArrowRightShort /></Link>
+            <div className={CTACardStyles.buttonWrapper}>
+                <Link to={`${url}`} className={`btn ${CTACardStyles.button}`}>Learn More <BsArrowRightShort /></Link>
+            </div>
         </div>
     );
 };

@@ -1,11 +1,11 @@
 @use "../../styles/variables.module" as *;
 
 .isLight {
-  @include objectShadow("default", "snow");
+  @include objectShadow('default', 'snow');
   transition: box-shadow 200ms linear;
 
   &:hover {
-    @include objectShadow("hover", "snow");
+    @include objectShadow('hover', 'snow');
   }
 }
 
@@ -14,7 +14,7 @@
   background: getColor(lightBase);
   // max-width: 400px;
   min-height: 200px;
-  @include objectCorner("default");
+  @include objectCorner('default');
   transition: box-shadow 200ms linear, transform 200ms linear,
     background 200ms linear;
 
@@ -29,7 +29,7 @@
   }
 
   &:hover {
-    @include objectShadow("default", "snow");
+    @include objectShadow('default', 'snow');
     background: getColor(whiteToRaven);
     transform: translateY(-3px);
 
@@ -47,9 +47,9 @@
     margin-left: 2%;
   }
 
-  @include responsive("mobile") {
+  @include responsive('mobile') {
     max-width: 100%;
-    @include objectCorner("mobile");
+    @include objectCorner('mobile');
 
     &:nth-child(2) {
       margin-right: unset;
@@ -86,17 +86,33 @@
   }
 }
 
+.buttonWrapper {
+  padding: 0px 7px 7px 7px;
+}
+
 .button {
+  background: interface('sideground');
   // margin-top: 20px;
   // border-top: 4px solid getColor(lightdarkBase) !important;
-  border-top-right-radius: 0px !important;
-  border-top-left-radius: 0px !important;
   display: block;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding-top: 23px !important;
-  padding-bottom: 23px !important;
+  padding-block: 20px !important;
+  border: none !important;
+
+  &:hover {
+    background:$midnight-600;
+    color:#FFF;
+    transform: none !important;
+    border: none !important;
+  }
+
+  @include responsive('mobile') {
+    &:first-child {
+      margin-bottom: 0px !important;
+    }
+  }
 
   // &:hover {
   // border-top-right-radius: 0px !important;
