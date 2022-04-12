@@ -1,6 +1,7 @@
-import PortfolioTemplate from "../../layout/PortfolioTemplate";
-import { graphql } from "gatsby";
 import React from "react";
+import { graphql } from "gatsby";
+
+import PortfolioTemplate from "../../layout/portfolioTemplate";
 
 
 const Portfolio = ({ data }) => {
