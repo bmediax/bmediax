@@ -13,7 +13,8 @@
 }
 
 .text {
-  @include BGTheme("lighter");
+  // @include BGTheme("lighter");
+  background: interface("secground");
   text-align: center;
   // min-height: 35vh;
   min-height: 200px;
@@ -39,14 +40,14 @@
 
   h1 {
     color: theme(headline);
-    font-size: clamp(2.2rem, 4vw, 4.5rem);
+    font-size: clamp(3rem, 6vw, 4.5rem);
     line-height: 70px;
     margin-bottom: 10px;
     text-align: center;
   }
 
   h5 {
-    color: theme(tagline);
+    color: interface(tagline);
     font-size: clamp(1.5rem, 2vw, 1.8rem);
     line-height: 25px;
   }
@@ -55,7 +56,7 @@
     min-height: 30vh !important;
 
     h1 {
-      line-height: 1.7em !important;
+      line-height: 1.5em !important;
     }
   }
 }
@@ -81,14 +82,14 @@
   .imageWrapper {
     // Image Captions
     .caption {
-      margin-top:10px;
-      margin-left:10px;
-      color:theme(body);
-      font-size:$paraSize;
+      margin-top: 10px;
+      margin-left: 10px;
+      color: theme(body);
+      font-size: $paraSize;
       text-align: center;
-      
+
       @include responsive("mobile") {
-        margin-left:0px;
+        margin-left: 0px;
       }
     }
   }
@@ -191,12 +192,24 @@
   }
 }
 
-.column_1 { grid-template-columns: 1fr; }
-.column_2 { grid-template-columns: repeat(2, 1fr); }
-.column_3 { grid-template-columns: repeat(3, 1fr); }
-.column_4 { grid-template-columns: repeat(4, 1fr); }
-.column_5 { grid-template-columns: repeat(5, 1fr); }
-.column_6 { grid-template-columns: repeat(2, 1fr); }
+.column_1 {
+  grid-template-columns: 1fr;
+}
+.column_2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.column_3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.column_4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.column_5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+.column_6 {
+  grid-template-columns: repeat(2, 1fr);
+}
 
 .responsiveColumn_1 {
   @include responsive("mobile") {
