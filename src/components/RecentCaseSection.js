@@ -1,15 +1,16 @@
 // Components
-import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import { Section } from '../layout/SectionLayout'
-import FullTxageModule from './modules/FullTxageModule'
-import SectionLink from './SectionLink'
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+
+import FullTxageModule from './modules/FullTxageModule';
+import { Section } from '../layout/SectionLayout';
+import SectionLink from './SectionLink';
 
 const RecentCaseSection = () => {
   const data = useStaticQuery(graphql`
     query recentProjectsQuery(
       $filter: PrismicPortfolioFilterInput = {
-        uid: { in: ["reikoforpcc", "chicanxshop", "tedxpcc2018"] }
+        uid: { in: ["bevy", "reikoforpcc", "horizoncme"] }
       }
     ) {
       allPrismicPortfolio(filter: $filter) {
@@ -78,7 +79,7 @@ const RecentCaseSection = () => {
         }
       }
     }
-  `)
+  `);
   const recentProjectData = data.allPrismicPortfolio.nodes
   return (
     <Section
@@ -87,7 +88,7 @@ const RecentCaseSection = () => {
       // className="darkerSection"
       theme="secondary"
     >
-      {recentProjectData.map((portfolio, index) => (
+      {recentProjectData.sort((a, b) => a.data.cover_title[0].name.text.localeCompare(b.data.cover_title[0].name.text)).map((portfolio, index) => (
         <FullTxageModule
           key={index}
           title={portfolio.data.cover_title[0].name.text}
