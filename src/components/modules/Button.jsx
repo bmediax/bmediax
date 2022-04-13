@@ -2,7 +2,6 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 
-
 const Button = ({
   children,
   link,
@@ -14,7 +13,7 @@ const Button = ({
 }) => {
   const typeCheck = (typeName) => {
     if (typeName !== undefined || typeName !== null) {
-      return `btn-${typeName}`;
+      return `button-${typeName}`;
     } else {
       return "";
     }
@@ -31,7 +30,7 @@ const Button = ({
     <a
       href={link}
       download={download}
-      className={`${btnSection ? "section-link" : ""} btn ${typeCheck(
+      className={`${btnSection ? "section-link" : ""} button ${typeCheck(
         type
       )} ${classCheck(className)}`}
     >
@@ -40,7 +39,7 @@ const Button = ({
   ) : (
     <Link
       to={path}
-      className={`${btnSection ? "section-link" : ""} btn ${typeCheck(
+      className={`${btnSection ? "section-link" : ""} button ${typeCheck(
         type
       )} ${classCheck(className)}`}
     >

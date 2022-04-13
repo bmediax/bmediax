@@ -8,7 +8,7 @@ html {
   font-size: 62.5%;
   // font-size: 16px;
 
-  @include responsive("mobile") {
+  @include responsive('mobile') {
     //15.36px
     font-size: 65%;
   }
@@ -122,7 +122,8 @@ h5 {
   color: interface(subline);
 }
 
-p, ul li {
+p,
+ul li {
   font-family: $font-body;
   font-size: 1.6rem;
   font-weight: 400;
@@ -135,7 +136,7 @@ p, ul li {
 }
 
 .imageSection {
-  @include responsive("mobile") {
+  @include responsive('mobile') {
     padding: 80px 0px !important;
   }
 }
@@ -154,7 +155,7 @@ p, ul li {
     margin-right: 30px;
   }
 
-  @include responsive("mobile") {
+  @include responsive('mobile') {
     flex-direction: column;
 
     .pageTwoColumn:not(:last-child) {
@@ -197,11 +198,11 @@ p, ul li {
   justify-items: flex-start;
   align-items: flex-start;
 
-  @include responsive("desktopish") {
+  @include responsive('desktopish') {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @include responsive("mobile") {
+  @include responsive('mobile') {
     grid-template-columns: 1fr;
   }
 }
@@ -215,11 +216,11 @@ p, ul li {
   justify-items: flex-start;
   align-items: flex-start;
 
-  @include responsive("desktopish") {
+  @include responsive('desktopish') {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @include responsive("mobile") {
+  @include responsive('mobile') {
     grid-template-columns: 1fr;
   }
 }
@@ -233,11 +234,11 @@ p, ul li {
   justify-items: flex-start;
   align-items: flex-start;
 
-  @include responsive("desktopish") {
+  @include responsive('desktopish') {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @include responsive("mobile") {
+  @include responsive('mobile') {
     grid-template-columns: 1fr;
   }
 }
@@ -262,7 +263,7 @@ p, ul li {
     transform: translateY(0px) !important;
   }
 
-  @include responsive("mobile") {
+  @include responsive('mobile') {
     display: block !important;
     padding: 20px 0px !important;
     text-align: center !important;
@@ -276,7 +277,7 @@ p, ul li {
 .button-primary {
   outline: none;
   // background: theme(surface);
-  background: interface(card-active);
+  background: interface(surfaceAlt);
   color: interface(body);
   border: 1px solid interface(border);
   // background: getColor(lightdarkBase);
@@ -287,20 +288,20 @@ p, ul li {
     background: $midnight-400;
     border-color: interface(border-active) !important;
     color: $global-white;
-    @include objectShadow("hover", "snow");
+    @include objectShadow('hover', 'snow');
   }
 
   &:active {
-    background: $oscuro !important;
-    color: $minimal !important;
+    background: $midnight-400;
+    color: $global-white;
     box-shadow: none !important;
-    border: 2px solid transparent !important;
+    // border: 2px solid transparent !important;
   }
 
   &:focus {
-    color: getColor(menuText);
-    background: getColor(lightdarkBase);
-    border: 2px solid transparent !important;
+    color: $global-white;
+    background: $midnight-400;
+    // border: 2px solid transparent !important;
   }
 }
 
@@ -327,7 +328,7 @@ p, ul li {
     transform: translateY(0px) !important;
   }
 
-  @include responsive("mobile") {
+  @include responsive('mobile') {
     // display: block !important;
     padding: 20px 0px !important;
     width: 100%;
@@ -388,7 +389,7 @@ p, ul li {
     background: $midnight;
     // border: 2px solid $midnight !important;
     color: $blanco;
-    @include objectShadow("default", "midnight");
+    @include objectShadow('default', 'midnight');
   }
 
   &:active {
@@ -429,6 +430,7 @@ p, ul li {
 .outline,
 .btn-outline {
   background: transparent;
+  border: 1px solid $midnight-500;
   color: $blanco;
   // getColor(lightDarkText);
   // border: 2px solid getColor(lightdarkBase) !important;
@@ -437,7 +439,7 @@ p, ul li {
     background: $azure;
     border-color: $azure !important;
     color: $blanco;
-    @include objectShadow("hover", "snow");
+    @include objectShadow('hover', 'snow');
   }
 }
 
@@ -445,12 +447,12 @@ p, ul li {
   background: $azure;
   border-color: $azure !important;
   color: $blanco;
-  @include objectShadow("default", "azure");
+  @include objectShadow('default', 'azure');
   outline: none;
 
   &:hover {
     background: lighten($azure, 3);
-    @include objectShadow("hover", "azure");
+    @include objectShadow('hover', 'azure');
   }
 
   &:focus {
@@ -461,14 +463,14 @@ p, ul li {
 .ghost {
   // background: getColor(lightLightBase);
   // color: getColor(lightDarkText);
-  @include cardStyle("primaryActive");
-  color: theme("body");
+  @include cardStyle('primaryActive');
+  color: theme('body');
   outline: none;
   transition: color 250ms linear;
 
   &:hover {
-    @include objectShadow("hover", "snow");
-    color: theme("headline");
+    @include objectShadow('hover', 'snow');
+    color: theme('headline');
   }
 
   &:active {
@@ -478,7 +480,7 @@ p, ul li {
 
   &,
   .active {
-    @include objectShadow("default", "snow");
+    @include objectShadow('default', 'snow');
   }
 
   &:focus {
@@ -490,11 +492,11 @@ p, ul li {
   background: getColor(lightLightBase);
   color: getColor(lightDarkText);
   outline: none;
-  @include objectShadow("minimal", "snow");
+  @include objectShadow('minimal', 'snow');
 }
 
 .navScroll {
-  @include objectShadow("default", "snow");
+  @include objectShadow('default', 'snow');
   background: interface(secground) !important;
   border-bottom: 1px solid interface(border);
 
@@ -541,7 +543,7 @@ section {
       text-decoration: none !important;
     }
 
-    @include responsive("mobile") {
+    @include responsive('mobile') {
       width: 100% !important;
     }
   }
@@ -577,7 +579,7 @@ section {
   }
 
   // Responsive
-  @include responsive("mobile") {
+  @include responsive('mobile') {
     // @include sectionPadding("mobile");
 
     .section-title h4 {
@@ -615,32 +617,32 @@ section {
 
 .lightSection {
   // background: theme(base);
-  @include BGTheme("light");
+  @include BGTheme('light');
 }
 
 .lighterSection {
   // background: theme(baseLight);
-  background: interface("background");
+  background: interface('secground');
 }
 
 .lightestSection {
   // background: theme(basePrimaryLight);
-  background: interface("secground");
+  background: interface('secground');
 }
 
 .darkSection {
   // background: theme(borderBaseMinimal);
-  @include BGTheme("dark");
+  @include BGTheme('dark');
 }
 
 .darkerSection {
   // background: theme(surface);
-  @include BGTheme("darker");
+  @include BGTheme('darker');
 }
 
 .darkestSection {
   // background: theme(baseDark);
-  @include BGTheme("darkest");
+  @include BGTheme('darkest');
 }
 
 .darkest-section {
@@ -678,7 +680,7 @@ nav {
   z-index: 10;
   // background: getColor(lightBase);
   // @include BGTheme("lighter");
-  background: interface("secground");
+  background: interface('secground');
   transition: box-shadow 250ms linear, top 0.6s, background linear 400ms;
   font-family: $primaryFont;
 
@@ -721,7 +723,7 @@ nav {
         text-transform: uppercase;
       }
 
-      @include responsive("desktopish") {
+      @include responsive('desktopish') {
         flex: 0.6;
       }
     }
@@ -777,7 +779,7 @@ nav {
               background: getColor(lightLightBase);
               padding: 0.9em 1.5em;
               transition: background 200ms linear, color 200ms linear;
-              @include objectShadow("default", "snow");
+              @include objectShadow('default', 'snow');
               white-space: nowrap;
 
               &:hover {
@@ -816,11 +818,11 @@ nav {
               margin-right: 0px !important;
             }
 
-            @include responsive("desktopish") {
+            @include responsive('desktopish') {
               font-size: 1.4rem;
             }
 
-            @include responsive("mobile") {
+            @include responsive('mobile') {
               font-size: 1.8rem;
             }
           }
@@ -836,7 +838,7 @@ nav {
         }
       }
 
-      @include responsive("mobile") {
+      @include responsive('mobile') {
         // border-top:1px solid getColor(lightdarkBase);
         position: absolute;
         display: none;
@@ -919,7 +921,7 @@ nav {
               margin-right: 0 !important;
               margin-left: 0 !important;
               font-size: 2.5rem !important;
-              text-align:center;
+              text-align: center;
             }
 
             ul {
@@ -938,7 +940,7 @@ nav {
         }
       }
 
-      @include responsive("desktop") {
+      @include responsive('desktop') {
         display: block !important;
       }
     }
@@ -974,7 +976,7 @@ nav {
         }
       }
 
-      @include responsive("mobile") {
+      @include responsive('mobile') {
         display: block;
       }
     }
@@ -1006,7 +1008,7 @@ nav {
         }
       }
 
-      @include responsive("mobile") {
+      @include responsive('mobile') {
         display: none;
       }
 
@@ -1044,7 +1046,7 @@ nav {
       }
     }
 
-    @include responsive("mobile") {
+    @include responsive('mobile') {
       height: $navMobileHeight;
       padding: 10px $widthPadding;
 
@@ -1144,12 +1146,12 @@ nav {
 }
 
 .galleryImg {
-  @include objectCorner("default");
+  @include objectCorner('default');
 }
 .galleryImgWrap {
   transition: transform 200ms linear, box-shadow 200ms linear,
     filter 200ms linear;
-  @include objectCorner("default");
+  @include objectCorner('default');
 
   &:hover {
     // @include objectShadow("default", "snow");
@@ -1162,14 +1164,14 @@ nav {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   grid-template-areas:
-    "masonryOne masonryThree"
-    "masonryTwo masonryThree";
-  @include responsive("mobile") {
+    'masonryOne masonryThree'
+    'masonryTwo masonryThree';
+  @include responsive('mobile') {
     grid-template-columns: 1fr;
     grid-template-areas:
-      "masonryOne"
-      "masonryTwo"
-      "masonryThree";
+      'masonryOne'
+      'masonryTwo'
+      'masonryThree';
   }
 }
 
@@ -1185,15 +1187,16 @@ nav {
 
 .cardLink_wrapper {
   background: theme(baseLight);
-  @include objectShadow("default", "snow");
-  width: 100%;
+  @include objectShadow('default', 'snow');
+  width: min(100%, 750px);
   padding: 25px 30px;
-  @include objectCorner("default");
+  @include objectCorner('default');
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1em;
   transition: transform 200ms ease;
+  margin-inline: auto;
 
   &:hover {
     transform: translateY(-3px);
@@ -1213,7 +1216,7 @@ nav {
     max-width: 500px;
   }
 
-  @include responsive("mobile") {
+  @include responsive('mobile') {
     width: auto;
     flex-direction: column;
     gap: 2em;

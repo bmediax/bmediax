@@ -12,7 +12,7 @@
 .CTACard {
   flex: 1;
   // background: getColor(lightBase);
-  background: interface(surface);
+  background: interface(card);
   // max-width: 400px;
   min-height: 200px;
   @include objectCorner('default');
@@ -31,7 +31,8 @@
 
   &:hover {
     @include objectShadow('default', 'snow');
-    background: getColor(whiteToRaven);
+    // background: getColor(whiteToRaven);
+    // background: interface(card-hover);
     transform: translateY(-3px);
 
     .coverImage {
@@ -92,7 +93,7 @@
 }
 
 .button {
-  background: interface('sideground');
+  background: interface('surfaceAlt');
   // margin-top: 20px;
   // border-top: 4px solid getColor(lightdarkBase) !important;
   display: block;
@@ -100,13 +101,13 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   padding-block: 20px !important;
-  border: none !important;
+  border: 1px solid interface(border);
 
   &:hover {
-    background:$midnight-600;
+    background: $midnight-400;
     color:#FFF;
     transform: none !important;
-    border: none !important;
+    border-color: $midnight-500 !important;
   }
 
   @include responsive('mobile') {

@@ -1,19 +1,16 @@
 @use "../../styles/variables.module" as *;
 
 .container {
-  //   background: red;
   margin-top: 25px;
   width: 100%;
   // position: sticky;
   top: $navHeight;
   right: 0;
   left: 0;
-  background: getColor(lightBase);
-  @include BGTheme("lighter");
   padding: 15px 0px;
   z-index: 1;
 
-  @include responsive("mobile") {
+  @include responsive('mobile') {
     top: $navMobileHeight + 20;
   }
 }
@@ -26,7 +23,6 @@
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-gap: 1em;
   max-width: 850px;
-  //   background: white;
 
   li {
     flex: 1;
@@ -35,32 +31,35 @@
     text-align: center;
 
     .selectedTag {
-      // background: getColor(lightLightBase2) !important;
       color: getColor(lightDarkText) !important;
-      @include BGTheme("lightest");
-      @include objectShadow("active", "snow");
+      // @include BGTheme("lightest");
+      background: interface(surfaceAlt);
+      // @include objectShadow("active", "snow");
       font-weight: bold;
       transition: background 500ms linear, box-shadow 250ms linear;
+      border-color: interface(border-active);
 
       &:hover {
-        @include BGTheme("lightest");
-        @include objectShadow("activeHard", "snow");
+        // @include BGTheme("lightest");
+        background: interface(surfaceAlt);
+        border-color: interface(border-active);
       }
     }
 
     button {
-      // background: getColor(lightBase);
-      @include BGTheme("lighter");
+      // @include BGTheme("lighter");
+      background: interface(secground);
       border: none;
       padding: 7px 20px;
       transition: background 200ms linear, color 200ms linear;
-      @include objectCorner("default");
-      font-size: 1.6rem;
+      @include objectCorner('default');
+      font-size: 1.8rem;
       font-family: $primaryFont;
       font-weight: 500;
       color: getColor(normalText);
       color: theme(tagline);
       outline: none;
+      border: 1px solid interface(secground);
 
       // &:focus {
       //   background: getColor(lightdarkBase);
@@ -72,9 +71,10 @@
       // }
 
       &:hover {
-        @include BGTheme("darker");
+        background:interface(surfaceAlt);
         color: theme(headline);
         cursor: pointer;
+        border-color: interface(surfaceAlt);
       }
     }
   }

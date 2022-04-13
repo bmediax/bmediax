@@ -121,6 +121,7 @@ $interface: (
   secground: $global_white,
   triground: $midnight-300,
   surface: $global_white,
+  surfaceAlt: $sky-200,
   card: $global_white,
   card-hover: $global_white,
   card-active: $sky-300,
@@ -141,6 +142,7 @@ $interface-dark: (
   secground: $midnight-100,
   triground: $midnight-300,
   surface: $midnight-300,
+  surfaceAlt: $midnight-300,
   card: $midnight-300,
   card-hover: $midnight-400,
   card-active: $midnight-200,
@@ -406,12 +408,13 @@ $colors-dark: (
   border-radius: $border-sm;
 
   @if $type == "primary" {
+    background:interface(surfaceAlt);
     border: 1px solid interface(border);
 
     &:hover {
       background: interface(card-hover);
       transform: translateY(-2px) !important;
-      border: 1px solid interface(card-hover);
+      border-color: interface(card-hover);
       box-shadow: $shadow-sm-soft;
 
       h3 {

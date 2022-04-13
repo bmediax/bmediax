@@ -1,14 +1,15 @@
-import React from "react";
-import bmediaxResume from "../assets/files/Bmediax_Resume.pdf";
-import bmediaxPrintResume from "../assets/files/Bmediax_Resume_Print.pdf";
-import ButtonWrapper from "../components/ButtonWrapper";
+import { HiArrowCircleDown, HiDocumentDownload } from "react-icons/hi";
+
 import Button from "../components/modules/Button";
-// import * as variables from '../styles/_variables.module.scss'
-import SectionPageLayout from "../layout/SectionPageLayout";
+import ButtonWrapper from "../components/ButtonWrapper";
 import Layout from "../layout/index.js";
 import { Link } from "gatsby";
+import React from "react";
+// import * as variables from '../styles/_variables.module.scss'
+import SectionPageLayout from "../layout/SectionPageLayout";
 import { StaticImage } from "gatsby-plugin-image";
-import { HiArrowCircleDown, HiDocumentDownload } from "react-icons/hi";
+import bmediaxPrintResume from "../assets/files/Bmediax_Resume_Print.pdf";
+import bmediaxResume from "../assets/files/Bmediax_Resume.pdf";
 
 const meetBrian = () => {
   return (
@@ -91,7 +92,7 @@ const meetBrian = () => {
                 download="Bmediax_Resume_Print"
                 className="clickDownloadResumePrint"
               >
-                Download Resume
+                Download Resume (Print)
                 <HiDocumentDownload
                   style={{ position: "relative", top: "2px", left: "5px" }}
                 />
@@ -173,12 +174,12 @@ const meetBrian = () => {
           </div>
         </div>
       </SectionPageLayout>
-      <SectionPageLayout label="darkerSection">
+      <SectionPageLayout label="darkerSection" title="Portfolio">
         <div className="pageColumnLayout sectionMaxWidth">
           <div className="cardLink_wrapper">
             <h1>View my Portfolio</h1>
             <Link
-              to="/casestudy/edutainment"
+              to="/casestudy/bevy"
               className="btn outline-active clickViewPortfolioFromAbout"
             >
               View a Case Study

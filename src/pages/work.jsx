@@ -1,16 +1,17 @@
-import bmediaxResume from "../assets/files/Bmediax_Resume.pdf";
-import TagFilter from "../components/modules/TagFilter";
-import WorkImage from "../components/workImage";
-import { TagContext } from "../contexts/TagContext";
-import SectionPageLayout from "../layout/SectionPageLayout";
-import Layout from "../layout/index.js";
-import { motion } from "framer-motion";
 import { Link, graphql } from "gatsby";
-import PropTypes from "prop-types";
-import React, { useState } from "react";
 // import Lightbox from 'react-image-lightbox';
 // import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import React, { useState } from "react";
+
+import Layout from "../layout/index.js";
+import PropTypes from "prop-types";
+import SectionPageLayout from "../layout/SectionPageLayout";
+import { TagContext } from "../contexts/TagContext";
+import TagFilter from "../components/modules/TagFilter";
+import WorkImage from "../components/workImage";
+import bmediaxResume from "../assets/files/Bmediax_Resume.pdf";
+import { motion } from "framer-motion";
 
 const Work = ({ data }) => {
   const [tag, setTag] = useState({
@@ -31,7 +32,7 @@ const Work = ({ data }) => {
             <TagFilter
               data={["All", "Graphics", "Illustration", "Photography"]}
             />
-            <div style={{ maxwidth: "1400px", marginTop: "100px" }}>
+            <div style={{ maxwidth: "1400px", marginTop: "clamp(30px, 5vw, 70px)" }}>
               <ResponsiveMasonry
                 columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
               >
