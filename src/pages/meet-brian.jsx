@@ -33,7 +33,6 @@ const meetBrian = () => {
               me out and about with my trusty camera and a good cup of coffee,
               capturing the world's beautiful raw moments.
             </p>
-
             <p>
               My favorite productivity applications has to be the beautifully
               designed{" "}
@@ -145,12 +144,12 @@ const meetBrian = () => {
         <div className="pageColumnLayout sectionMaxWidth">
           <div className="pageOneColumn">
             <p>
-              As a self taught and self motivated, designer and developer, I’ve
-              had the great opportunity to compete in various competitions, one
-              being the Skills USA State and National Web Design Competition,
-              earning Gold for 2 years in a row and earning Bronze then Silver
-              in the National level competitions, against over 31 competitors
-              from around the US.
+              In my high school year of high school, I’ve had the great
+              opportunity to compete in various competitions, one being the
+              Skills USA State and National Web Design Competition, earning Gold
+              for two years (2015 & 2016) in a row and earning Bronze then
+              Silver at the National level competitions, against over 31
+              competitors from around the US.
             </p>
             <div className="pageColumnLayout" style={{ marginTop: "30px" }}>
               <StaticImage

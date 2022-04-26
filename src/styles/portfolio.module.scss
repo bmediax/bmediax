@@ -6,7 +6,7 @@
   // text-align: center;
   // place-items: flex-end center;
 
-  @include responsive("mobile") {
+  @include responsive('mobile') {
     // height: 50vh;
     height: 40vh;
   }
@@ -14,7 +14,7 @@
 
 .text {
   // @include BGTheme("lighter");
-  background: interface("secground");
+  background: interface('secground');
   text-align: center;
   // min-height: 35vh;
   min-height: 200px;
@@ -33,7 +33,7 @@
     justify-content: space-between;
     align-items: center;
 
-    @include responsive("mobile") {
+    @include responsive('mobile') {
       flex-direction: column;
     }
   }
@@ -52,7 +52,7 @@
     line-height: 25px;
   }
 
-  @include responsive("mobile") {
+  @include responsive('mobile') {
     min-height: 30vh !important;
 
     h1 {
@@ -84,17 +84,17 @@
     .caption {
       margin-top: 10px;
       margin-left: 10px;
-      color: theme(body);
+      color: interface(headline);
       font-size: $paraSize;
       text-align: center;
 
-      @include responsive("mobile") {
+      @include responsive('mobile') {
         margin-left: 0px;
       }
     }
   }
 
-  @include responsive("mobile") {
+  @include responsive('mobile') {
     grid-gap: 3em;
     grid-template-columns: 1fr !important;
   }
@@ -124,21 +124,21 @@
   }
 
   .imageGrid {
-    @include objectCorner("default-mobile");
+    @include objectCorner('default-mobile');
   }
 
   .imageGridWrap {
     position: relative;
-    @include objectCorner("default-mobile");
+    @include objectCorner('default-mobile');
     transition: box-shadow 200ms linear, transform 250ms linear;
 
     &:hover {
-      @include objectShadow("default", "snow");
+      @include objectShadow('default', 'snow');
       transform: translateY(-3px);
     }
   }
 
-  @include responsive("mobile") {
+  @include responsive('mobile') {
     flex-direction: column;
 
     div:not(:last-child) {
@@ -155,6 +155,22 @@
     }
   }
 
+  ul,
+  ol {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin: 10px 0px;
+    list-style: disc;
+    margin-left: 20px;
+    line-height: 25px;
+    color:interface(body);
+
+    li:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
   .twoColumn_2to1 {
     flex: 2;
 
@@ -165,7 +181,7 @@
       line-height: 25px;
 
       li {
-        font-family: "Inter", sans-serif;
+        font-family: 'Inter', sans-serif;
         font-weight: 400;
         color: interface(body);
         font-size: 1.6rem;
@@ -185,7 +201,7 @@
     flex: 1;
 
     h3 {
-      @include responsive("mobile") {
+      @include responsive('mobile') {
         text-align: center;
       }
     }
@@ -212,19 +228,19 @@
 }
 
 .responsiveColumn_1 {
-  @include responsive("mobile") {
+  @include responsive('mobile') {
     grid-template-columns: repeat(1, 1fr) !important;
   }
 }
 
 .responsiveColumn_2 {
-  @include responsive("mobile") {
+  @include responsive('mobile') {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
 .responsiveColumn_3 {
-  @include responsive("mobile") {
+  @include responsive('mobile') {
     grid-template-columns: repeat(3, 1fr) !important;
   }
 }
@@ -238,7 +254,7 @@
 .columnthree {
   grid-template-columns: repeat(3, 1fr);
 
-  @include responsive("mobile") {
+  @include responsive('mobile') {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
@@ -251,7 +267,7 @@
 .columnsix {
   grid-template-columns: repeat(6, 1fr);
 
-  @include responsive("mobile") {
+  @include responsive('mobile') {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
@@ -274,10 +290,10 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  @include sectionPadding("desktop-small");
+  @include sectionPadding('desktop-small');
   // padding: 40px 40px;
-  @include objectCorner("mobile");
-  @include objectShadow("hover", "snow");
+  @include objectCorner('mobile');
+  @include objectShadow('hover', 'snow');
   transition: transform 200ms ease;
 
   &:hover {
@@ -291,7 +307,7 @@
     color: $blanco;
     text-align: left;
 
-    @include responsive("mobile") {
+    @include responsive('mobile') {
       text-align: center;
       line-height: 40px;
     }
@@ -309,7 +325,7 @@
     }
   }
 
-  @include responsive("mobile") {
+  @include responsive('mobile') {
     flex-direction: column;
 
     div,
@@ -334,7 +350,7 @@
   margin: 2% 0px;
   text-transform: uppercase;
 
-  @include responsive("mobile") {
+  @include responsive('mobile') {
     margin: 5% 0;
   }
 }

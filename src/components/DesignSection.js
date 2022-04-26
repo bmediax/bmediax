@@ -1,7 +1,10 @@
-import React from 'react';
-import DesignSliceZone from '../components/designSliceZone'
-import * as portfolioStyles from '../styles/portfolio.module.scss'
+import * as portfolioStyles from '../styles/portfolio.module.scss';
+
+import DesignSliceZone from '../components/designSliceZone';
+import React from "react";
+import { RichText } from "prismic-reactjs";
 import SectionPageLayout from '../layout/SectionPageLayout';
+
 // import ColorView from './modules/ColorView';
 
 const DesignSection = (data) => {
@@ -22,7 +25,8 @@ const DesignSection = (data) => {
         <SectionPageLayout idLabel="design" title="Design" label="lighterSection" icon="Paint" sectionMaxWidth align>
             <div className={`${portfolioStyles.layoutSection} sectionMaxWidth`}>
                 <div className={portfolioStyles.twoColumn}>
-                    <p>{designData.description.text}</p>
+                    {/* <p>{designData.description.text}</p> */}
+                    <RichText render={designData.description.richText} />
                 </div>
                 {isQuote(designData)}
             </div>

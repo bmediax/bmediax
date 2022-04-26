@@ -1,8 +1,6 @@
+import PortfolioTemplate from "../../layout/portfolioTemplate";
 import React from "react";
 import { graphql } from "gatsby";
-
-import PortfolioTemplate from "../../layout/portfolioTemplate";
-
 
 const Portfolio = ({ data }) => {
   if (!data) return null;
@@ -43,6 +41,7 @@ export const query = graphql`
         design {
           description {
             text
+            richText
           }
           quote {
             text

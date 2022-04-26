@@ -692,6 +692,7 @@ nav {
     max-width: $wrapMaxWidth;
     height: $navHeight;
     padding: 0 $widthPadding;
+    transition:height 250ms ease;
 
     .logo-contain {
       flex: 1;

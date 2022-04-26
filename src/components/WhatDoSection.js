@@ -1,11 +1,11 @@
-import React from "react";
-import { Section } from "../layout/SectionLayout";
-import Button from "./modules/Button";
-import InfoCardModule from "./modules/InfoCardModule";
 import { AiOutlineAntDesign } from "react-icons/ai";
 // Icons
 import { BiCodeAlt } from "react-icons/bi";
+import Button from "./modules/Button";
+import InfoCardModule from "./modules/InfoCardModule";
 import { MdPhotoCamera } from "react-icons/md";
+import React from "react";
+import { Section } from "../layout/SectionLayout";
 
 // import * as variables from '../styles/_variables.module.scss'
 
@@ -37,7 +37,7 @@ const WhatDoSection = () => {
           icon={<MdPhotoCamera />}
         />
       </div>
-      <Button type="secondary" path="/work" btnSection={true}>
+      <Button type="primary" path="/work" btnSection={true}>
         View All Work
       </Button>
     </Section>

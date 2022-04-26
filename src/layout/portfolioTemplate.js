@@ -1,11 +1,11 @@
-import React from "react";
-import Layout from "../layout";
 import CoverTitle from "../components/CoverTitle";
 import DesignSection from "../components/DesignSection";
 import ImageSection from "../components/ImageSection";
+import Layout from "../layout";
 import NextProjectSection from "../components/NextProjectSection";
 import OverviewSection from "../components/OverviewSection";
 import PortfolioTitle from "../components/PortfolioTitle";
+import React from "react";
 import ResultsSection from "../components/ResultsSection";
 // import * as portfolioStyles from '../styles/portfolio.module.scss'
 

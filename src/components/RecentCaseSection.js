@@ -1,8 +1,8 @@
 // Components
-import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import FullTxageModule from './modules/FullTxageModule';
+import React from 'react';
 import { Section } from '../layout/SectionLayout';
 import SectionLink from './SectionLink';
 
@@ -10,7 +10,7 @@ const RecentCaseSection = () => {
   const data = useStaticQuery(graphql`
     query recentProjectsQuery(
       $filter: PrismicPortfolioFilterInput = {
-        uid: { in: ["bevy", "reikoforpcc", "horizoncme"] }
+        uid: { in: ["bevy", "reikoforpcc", "blazers"] }
       }
     ) {
       allPrismicPortfolio(filter: $filter) {
