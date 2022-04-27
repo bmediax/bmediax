@@ -9,11 +9,11 @@ div.cover {
   flex-direction: column;
   min-height: 65vh;
   margin: auto;
-  @include sectionPadding("mobile");
+  @include sectionPadding('mobile');
   // padding:30px 5%;
 
-  @include responsive("mobile") {
-    @include sectionPadding("mobile");
+  @include responsive('mobile') {
+    @include sectionPadding('mobile');
   }
 
   .head {
@@ -51,7 +51,7 @@ div.cover {
       }
     }
 
-    @include responsive("mobile") {
+    @include responsive('mobile') {
       width: 100%;
       .icons span {
         transform: scale(1);
@@ -110,7 +110,7 @@ div.cover {
     //     margin:0px 15px;
     // }
 
-    @include responsive("mobile") {
+    @include responsive('mobile') {
       //   flex-direction: column;
       grid-template-columns: 1fr !important;
       grid-row-gap: 2em;
@@ -125,7 +125,7 @@ div.cover {
       //   }
     }
 
-    @include responsive("desktopish") {
+    @include responsive('desktopish') {
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 2em;
     }
@@ -150,7 +150,7 @@ div.cover {
   max-width: $wrapMaxWidth;
   margin: auto;
 
-  @include responsive("mobile") {
+  @include responsive('mobile') {
     flex-direction: column;
 
     & > div + div {
@@ -175,7 +175,7 @@ div.cover {
     display: flex;
     gap: 3em;
 
-    @include responsive("mobile") {
+    @include responsive('mobile') {
       flex-direction: column;
     }
 
@@ -201,7 +201,7 @@ div.cover {
       p {
         margin-top: 10px;
         line-height: 35px;
-        font-size: clamp(1.6rem, 1.8vw, 20px);
+        font-size: 2rem;
         color: $color-mist;
       }
 
@@ -211,14 +211,14 @@ div.cover {
         margin-top: 25px;
         width: 100%;
 
-        @include responsive("mobile") {
+        @include responsive('mobile') {
           flex-direction: column;
         }
 
         & > a + div {
           margin-left: 15px;
 
-          @include responsive("mobile") {
+          @include responsive('mobile') {
             margin-left: 0;
           }
         }
@@ -254,7 +254,7 @@ div.cover {
     font-size: 2rem;
   }
 
-  @include responsive("mobile") {
+  @include responsive('mobile') {
     span {
       font-size: 2rem;
     }
