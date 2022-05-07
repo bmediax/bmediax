@@ -557,7 +557,9 @@ section {
     }
 
     h2 {
-      color: theme(headline);
+      letter-spacing: .5px;
+      font-weight: 600;
+      color: interface(headline);
     }
 
     h4,

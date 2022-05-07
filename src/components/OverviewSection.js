@@ -1,8 +1,9 @@
+import * as portfolioStyles from '../styles/portfolio.module.scss';
+
 import React from 'react';
-import { RichText } from 'prismic-reactjs'
-import * as portfolioStyles from '../styles/portfolio.module.scss'
+import { RichText } from 'prismic-reactjs';
 import SectionPageLayout from '../layout/SectionPageLayout';
-import SideBar from './modules/SideBar'
+import SideBar from './modules/SideBar';
 
 const OverviewSection = ({ overviewData, projectLinks }) => {
     return (
@@ -11,12 +12,20 @@ const OverviewSection = ({ overviewData, projectLinks }) => {
                 <div className={portfolioStyles.layoutSection}>
                     <div className={portfolioStyles.twoColumn_2to1}>
                         <RichText render={overviewData.description.richText} />
+                        <hr />
                         <div className={portfolioStyles.textSection}>
-                            <h3>The Problem</h3>
+                            <h3>Background</h3>
+                            {/* <RichText render={overviewData.background.richText} /> */}
                             <RichText render={overviewData.problem.richText} />
                         </div>
+                        <hr />
                         <div className={portfolioStyles.textSection}>
-                            <h3>The Solution</h3>
+                            <h3>Problem</h3>
+                            <RichText render={overviewData.problem.richText} />
+                        </div>
+                        <hr />
+                        <div className={portfolioStyles.textSection}>
+                            <h3>Solution</h3>
                             <RichText render={overviewData.solution.richText} />
                         </div>
                     </div>

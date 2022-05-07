@@ -22,7 +22,7 @@ const DesignSection = (data) => {
         }
     }
     return (
-        <SectionPageLayout idLabel="design" title="Design" label="lighterSection" icon="Paint" sectionMaxWidth align>
+        <SectionPageLayout idLabel="design" title="Design" label="lighterSection" sectionMaxWidth align>
             <div className={`${portfolioStyles.layoutSection} sectionMaxWidth`}>
                 <div className={portfolioStyles.twoColumn}>
                     {/* <p>{designData.description.text}</p> */}

@@ -35,17 +35,16 @@ const SideBar = ({ sidebarData, projectLinks }) => {
         <div className={SideBarStyles.wrapper}>
             {/* Role */}
             <div className={SideBarStyles.section}>
-                <h3>Role</h3>
+                <h3>Role(s)</h3>
                 <RichText render={sidebarData.role.richText} />
                 {/* {RichText.asText(sidebarData.role.richText)} */}
                 {/* {sidebarData.role.html} */}
             </div>
 
-            <div className={SideBarStyles.section}>
-                {/* Work */}
+            {/* <div className={SideBarStyles.section}>
                 <h3>Work</h3>
                 <RichText render={sidebarData.work.richText} />
-            </div>
+            </div> */}
            {isToolsExist(sidebarData)}
            {isTechExist (sidebarData)}
             <div className={`${SideBarStyles.section} ${SideBarStyles.sectionDeliver}`}>
