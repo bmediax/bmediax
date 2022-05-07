@@ -119,6 +119,7 @@ export const query = graphql`
             slice_type
             items {
               colour
+              text_color
             }
           }
           ... on PrismicPortfolioDataBodyDesignImageGallery {

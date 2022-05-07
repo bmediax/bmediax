@@ -296,6 +296,17 @@
                 "config": {
                   "label": "Colour"
                 }
+              },
+              "text_color": {
+                "type": "Select",
+                "config": {
+                  "options": [
+                    "White",
+                    "Black"
+                  ],
+                  "default_value": "White",
+                  "label": "Text Color"
+                }
               }
             },
             "display": "grid"
