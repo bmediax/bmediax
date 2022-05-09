@@ -1,0 +1,52 @@
+@use './variables.module.scss' as *;
+
+.learnWrapper {
+  & > img {
+    width: 100%;
+    padding: 0px;
+    margin: 0px auto;
+    transition: box-shadow 200ms linear 0s, transform 250ms linear 0s,
+      -webkit-transform 250ms linear 0s;
+    border-radius: 10px !important;
+  }
+}
+
+.learnItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1em;
+  margin-right: 0px !important;
+
+  &:not(:nth-child(2n + 1)) {
+    margin-block-end: 3em;
+    margin-block-start: 3em;
+  }
+
+  & > * {
+    color: #fff !important;
+  }
+
+  & > h3 {
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    line-height: 2;
+    // max-width:350px;
+    max-width: 32ch;
+    flex: 1;
+  }
+
+  & > p {
+    flex: 2;
+    color:$sky-600 !important;
+  }
+
+  @include responsive('mobile') {
+    flex-direction: column;
+
+    & > * {
+      text-align: left !important;
+    }
+  }
+}

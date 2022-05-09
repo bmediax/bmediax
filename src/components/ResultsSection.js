@@ -11,8 +11,9 @@ const DesignSection = (data) => {
       <SectionPageLayout
         label="lightestSection"
         idLabel="results"
-        title="Results and Takeaways"
+        title="Results"
         sectionMaxWidth
+        align
       >
         <div className={`${portfolioStyles.layoutSection} sectionMaxWidth`}>
           <div className={portfolioStyles.twoColumn}>
