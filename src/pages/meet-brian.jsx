@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import { HiArrowCircleDown, HiDocumentDownload } from "react-icons/hi";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 import Button from "../components/modules/Button";
 import ButtonWrapper from "../components/ButtonWrapper";
@@ -9,7 +10,6 @@ import Layout from "../layout/index.js";
 import { Link } from "gatsby";
 import ListRef from "../components/ListRef";
 import React from "react";
-// import * as variables from '../styles/_variables.module.scss'
 import SectionPageLayout from "../layout/SectionPageLayout";
 import { StaticImage } from "gatsby-plugin-image";
 import WebSkills from "../components/webSkills";
@@ -109,13 +109,10 @@ const meetBrian = () => {
   ];
   return (
     <Layout title="Meet Brian">
-      <SectionPageLayout
-        label="page lighterSection"
-        title="Meet Brian"
-        icon="Check Mark"
-      >
+      <SectionPageLayout label="page lighterSection" title="Meet Brian">
         <div className="pageColumnLayout sectionMaxWidth">
-          <div className="pageTwoColumn">
+          <div className="pageTwoColumn pageSections">
+            <h3>Who am I?</h3>
             <p>
               Hi there, my name is Brian Moreno and I am a Digital Designer and
               Web Developer with over 7+ years of experience designing,
@@ -123,11 +120,8 @@ const meetBrian = () => {
               websites and web applications for events, campaigns, businesses
               and organizations.
             </p>
-            <p>
-              When I am not designing or coding interfaces, you can often find
-              me out and about with my trusty camera and a good cup of coffee,
-              capturing the world's beautiful raw moments.
-            </p>
+
+            <h3>Favorite Productivity Applications</h3>
             <p>
               My favorite productivity applications has to be the beautifully
               designed{" "}
@@ -196,24 +190,54 @@ const meetBrian = () => {
           <div className="pageTwoColumn">
             <div className="gallery gallery-masonry">
               <StaticImage
-                src="../images/profile/brianScreen.jpg"
+                src="../images/profile/brianPicture.jpg"
                 alt="Image Brian"
                 imgClassName="galleryImg"
                 className="galleryImgWrap gallery-masonry-1"
               />
-              <StaticImage
-                src="../images/profile/brianNotion.png"
-                alt="Image Brian"
-                imgClassName="galleryImg"
-                className="galleryImgWrap gallery-masonry-2"
-              />
-              <StaticImage
-                src="../images/profile/brianWedding.jpg"
-                alt="Image Brian"
-                imgClassName="galleryImg"
-                className="galleryImgWrap gallery-masonry-3"
-              />
             </div>
+          </div>
+        </div>
+      </SectionPageLayout>
+      <SectionPageLayout title="" label="sectionDark">
+        <div className="pageColumnLayout sectionMaxWidth">
+          <div className="pageTwoColumn pageSections">
+            <h3>What I do in my free time.</h3>
+            <p>
+              When I am not designing or coding interfaces, you can often find
+              me out and about with my trusty camera and a good cup of coffee,
+              capturing the world's beautiful raw moments.
+            </p>
+            <ResponsiveMasonry
+              columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
+            >
+              <Masonry gutter="1em">
+                <StaticImage
+                  src="../images/profile/sharkyDog.jpg"
+                  alt="Sharky Dog"
+                />
+                <StaticImage
+                  src="../images/profile/sharkyPal.jpeg"
+                  alt="Sharky Pal"
+                />
+                <StaticImage
+                  src="../images/profile/bread.jpg"
+                  alt="Mexican Bread"
+                />
+                <StaticImage
+                  src="../images/profile/coffeeShop.jpg"
+                  alt="Coffee Shop Image"
+                />
+                <StaticImage
+                  src="../images/profile/buslight.jpg"
+                  alt="Bus Max"
+                />
+                <StaticImage
+                  src="../images/profile/matchaDrink.jpg"
+                  alt="Matcha Drink"
+                />
+              </Masonry>
+            </ResponsiveMasonry>
           </div>
         </div>
       </SectionPageLayout>
@@ -221,7 +245,7 @@ const meetBrian = () => {
         style={{
           gridArea: "1/1",
           padding: "200px 0px",
-          height: "150px",
+          maxHeight: "500px",
           display: "block",
         }}
         className="imageSection"
@@ -229,7 +253,7 @@ const meetBrian = () => {
         layout="fullWidth"
         // aspectRatio={4 / 1}
         alt=""
-        src="../images/profile/brianSitting.jpg"
+        src="../images/profile/brianScreen.jpg"
       />
       <SectionPageLayout title="Resume" label="lighterSection">
         <div className="pageColumnLayout sectionMaxWidth">
