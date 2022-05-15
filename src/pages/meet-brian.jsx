@@ -1,17 +1,112 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+
 import { HiArrowCircleDown, HiDocumentDownload } from "react-icons/hi";
 
 import Button from "../components/modules/Button";
 import ButtonWrapper from "../components/ButtonWrapper";
+import DateRef from "../components/DateRef";
 import Layout from "../layout/index.js";
 import { Link } from "gatsby";
+import ListRef from "../components/ListRef";
 import React from "react";
 // import * as variables from '../styles/_variables.module.scss'
 import SectionPageLayout from "../layout/SectionPageLayout";
 import { StaticImage } from "gatsby-plugin-image";
+import WebSkills from "../components/webSkills";
 import bmediaxPrintResume from "../assets/files/Bmediax_Resume_Print.pdf";
 import bmediaxResume from "../assets/files/Bmediax_Resume.pdf";
 
 const meetBrian = () => {
+  const experienceData = [
+    {
+      title: "Web Developer",
+      reference: "Portland Trail Blazers",
+      date: "2021 - Present",
+      location: "Portland, OR",
+      link: "/casestudy/blazers",
+    },
+    {
+      title: "Web Designer",
+      reference: "Bevy",
+      date: "August 2021",
+      location: "Remote / Palo Alto, CA",
+      link: "/casestudy/bevy",
+    },
+    {
+      title: "Community Care Specialist",
+      reference: "Swimply",
+      date: "May 2021",
+      location: "Remote / Los Angeles, CA",
+      link: "",
+    },
+    {
+      title: "Web And Digital Content Administrator",
+      reference: "Horizon CME",
+      date: "2020 - 2021",
+      location: "Clackamas, OR",
+      link: "/casestudy/horizoncme",
+    },
+    {
+      title: "Communications Director",
+      reference: "Willamette Chicano Alliance",
+      date: "2014 - 2020",
+      location: "Portland, OR",
+      link: "/casestudy/chicanoalliance",
+    },
+    {
+      title: "Seasonal Sales Associate",
+      reference: "MUJI U.S.A.",
+      date: "Oct 2019",
+      location: "Portland, OR",
+      link: "",
+    },
+  ];
+
+  const educationData = [
+    {
+      title: "Software Engineering",
+      reference: "Kenzie Academy",
+      date: "Grad. 2021",
+      location: "UX/UX Design & Front End + Backend Development",
+      link: "",
+    },
+    {
+      title: "Oregon Transfer Degree",
+      reference: "Portland Community College",
+      date: "2016 - 2020",
+      location: "",
+      list: [
+        {
+          item: "MEChA, Coordinator",
+        },
+        {
+          item: "TedxPCC 2018, Marketing Specialist/Graphic Design",
+        },
+        {
+          item: "Cascade Multicultural Center, Multimedia Specialist",
+        },
+      ],
+      link: "",
+    },
+    {
+      title: "High School Diploma",
+      reference: "Benson Polytechnic High School",
+      date: "2012 - 2016",
+      location: "",
+      list: [
+        {
+          item: "Benson Polytechnic H.S, Web Master",
+        },
+        {
+          item: "MEChA, President",
+        },
+        {
+          item: "Robotics, Programmer",
+        },
+      ],
+      link: "",
+    },
+  ];
   return (
     <Layout title="Meet Brian">
       <SectionPageLayout
@@ -136,22 +231,14 @@ const meetBrian = () => {
         alt=""
         src="../images/profile/brianSitting.jpg"
       />
-      <SectionPageLayout
-        title="Accomplishments"
-        icon="Check Mark"
-        label="lighterSection"
-      >
+      <SectionPageLayout title="Resume" label="lighterSection">
         <div className="pageColumnLayout sectionMaxWidth">
           <div className="pageOneColumn">
-            <p>
-              In my high school year of high school, I’ve had the great
-              opportunity to compete in various competitions, one being the
-              Skills USA State and National Web Design Competition, earning Gold
-              for two years (2015 & 2016) in a row and earning Bronze then
-              Silver at the National level competitions, against over 31
-              competitors from around the US.
-            </p>
-            <div className="pageColumnLayout" style={{ marginTop: "30px" }}>
+            <WebSkills />
+            <ListRef />
+            <DateRef data={experienceData} isFluid={true} title="Experience" />
+            <DateRef data={educationData} isFluid={true} title="Education" />
+            {/* <div className="pageColumnLayout" style={{ marginTop: "30px" }}>
               <StaticImage
                 src="../images/profile/skillsusa2015.jpg"
                 alt="SkillsUSA National 2015 Competition"
@@ -166,14 +253,11 @@ const meetBrian = () => {
                 className="galleryImgWrap pageTwoColumn"
                 style={{ flex: "1" }}
               />
-            </div>
-            {/* <div className="pageColumnLayout" style={{ marginTop: "30px" }}>
-                            <StaticImage src="../images/profile/brian_medalion.jpg" alt="SkillsUSA National 2015 Competition" imgClassName="galleryImg" className="galleryImgWrap pageTwoColumn" style={{ flex: "1" }} />
-                        </div> */}
+            </div> */}
           </div>
         </div>
       </SectionPageLayout>
-      <SectionPageLayout label="darkerSection" title="Portfolio">
+      <SectionPageLayout label="darkerSection">
         <div className="pageColumnLayout sectionMaxWidth">
           <div className="cardLink_wrapper">
             <h1>View my Portfolio</h1>
