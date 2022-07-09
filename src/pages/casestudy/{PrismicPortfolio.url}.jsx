@@ -1,4 +1,4 @@
-import PortfolioTemplate from "../../layout/portfolioTemplate";
+import PortfolioTemplate from "../../layout/PortfolioTemplate";
 import React from "react";
 import { graphql } from "gatsby";
 
@@ -65,6 +65,9 @@ export const query = graphql`
             richText
             html
           }
+          background {
+            richText
+          }
           problem {
             richText
           }
@@ -76,11 +79,6 @@ export const query = graphql`
           #   url
           # }
           role {
-            text
-            richText
-            html
-          }
-          work {
             text
             richText
             html

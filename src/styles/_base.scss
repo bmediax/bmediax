@@ -8,7 +8,7 @@ html {
   font-size: 62.5%;
   // font-size: 16px;
 
-  @include responsive('mobile') {
+  @include responsive("mobile") {
     //15.36px
     font-size: 65%;
   }
@@ -136,9 +136,23 @@ ul li {
 }
 
 .imageSection {
-  @include responsive('mobile') {
+  @include responsive("mobile") {
     padding: 80px 0px !important;
   }
+}
+.pageSections h3:first-child {
+  margin: 0px 0px 5px 0px;
+}
+
+.pageSections h3:not(:first-child) {
+  margin: 25px 0px 5px 0px;
+}
+
+.pageSections h3 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
 }
 
 .pageColumnLayout {
@@ -155,7 +169,7 @@ ul li {
     margin-right: 30px;
   }
 
-  @include responsive('mobile') {
+  @include responsive("mobile") {
     flex-direction: column;
 
     .pageTwoColumn:not(:last-child) {
@@ -198,11 +212,11 @@ ul li {
   justify-items: flex-start;
   align-items: flex-start;
 
-  @include responsive('desktopish') {
+  @include responsive("desktopish") {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @include responsive('mobile') {
+  @include responsive("mobile") {
     grid-template-columns: 1fr;
   }
 }
@@ -216,11 +230,11 @@ ul li {
   justify-items: flex-start;
   align-items: flex-start;
 
-  @include responsive('desktopish') {
+  @include responsive("desktopish") {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @include responsive('mobile') {
+  @include responsive("mobile") {
     grid-template-columns: 1fr;
   }
 }
@@ -234,11 +248,11 @@ ul li {
   justify-items: flex-start;
   align-items: flex-start;
 
-  @include responsive('desktopish') {
+  @include responsive("desktopish") {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @include responsive('mobile') {
+  @include responsive("mobile") {
     grid-template-columns: 1fr;
   }
 }
@@ -263,7 +277,7 @@ ul li {
     transform: translateY(0px) !important;
   }
 
-  @include responsive('mobile') {
+  @include responsive("mobile") {
     display: block !important;
     padding: 20px 0px !important;
     text-align: center !important;
@@ -288,7 +302,7 @@ ul li {
     background: $midnight-400;
     border-color: interface(border-active) !important;
     color: $global-white;
-    @include objectShadow('hover', 'snow');
+    @include objectShadow("hover", "snow");
   }
 
   &:active {
@@ -328,7 +342,7 @@ ul li {
     transform: translateY(0px) !important;
   }
 
-  @include responsive('mobile') {
+  @include responsive("mobile") {
     // display: block !important;
     padding: 20px 0px !important;
     width: 100%;
@@ -389,7 +403,7 @@ ul li {
     background: $midnight;
     // border: 2px solid $midnight !important;
     color: $blanco;
-    @include objectShadow('default', 'midnight');
+    @include objectShadow("default", "midnight");
   }
 
   &:active {
@@ -439,7 +453,7 @@ ul li {
     background: $azure;
     border-color: $azure !important;
     color: $blanco;
-    @include objectShadow('hover', 'snow');
+    @include objectShadow("hover", "snow");
   }
 }
 
@@ -447,12 +461,12 @@ ul li {
   background: $azure;
   border-color: $azure !important;
   color: $blanco;
-  @include objectShadow('default', 'azure');
+  @include objectShadow("default", "azure");
   outline: none;
 
   &:hover {
     background: lighten($azure, 3);
-    @include objectShadow('hover', 'azure');
+    @include objectShadow("hover", "azure");
   }
 
   &:focus {
@@ -463,14 +477,14 @@ ul li {
 .ghost {
   // background: getColor(lightLightBase);
   // color: getColor(lightDarkText);
-  @include cardStyle('primaryActive');
-  color: theme('body');
+  @include cardStyle("primaryActive");
+  color: theme("body");
   outline: none;
   transition: color 250ms linear;
 
   &:hover {
-    @include objectShadow('hover', 'snow');
-    color: theme('headline');
+    @include objectShadow("hover", "snow");
+    color: theme("headline");
   }
 
   &:active {
@@ -480,7 +494,7 @@ ul li {
 
   &,
   .active {
-    @include objectShadow('default', 'snow');
+    @include objectShadow("default", "snow");
   }
 
   &:focus {
@@ -492,11 +506,11 @@ ul li {
   background: getColor(lightLightBase);
   color: getColor(lightDarkText);
   outline: none;
-  @include objectShadow('minimal', 'snow');
+  @include objectShadow("minimal", "snow");
 }
 
 .navScroll {
-  @include objectShadow('default', 'snow');
+  @include objectShadow("default", "snow");
   background: interface(secground) !important;
   border-bottom: 1px solid interface(border);
 
@@ -543,7 +557,7 @@ section {
       text-decoration: none !important;
     }
 
-    @include responsive('mobile') {
+    @include responsive("mobile") {
       width: 100% !important;
     }
   }
@@ -557,7 +571,9 @@ section {
     }
 
     h2 {
-      color: theme(headline);
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      color: interface(headline);
     }
 
     h4,
@@ -579,7 +595,7 @@ section {
   }
 
   // Responsive
-  @include responsive('mobile') {
+  @include responsive("mobile") {
     // @include sectionPadding("mobile");
 
     .section-title h4 {
@@ -617,32 +633,36 @@ section {
 
 .lightSection {
   // background: theme(base);
-  @include BGTheme('light');
+  @include BGTheme("light");
 }
 
 .lighterSection {
   // background: theme(baseLight);
-  background: interface('secground');
+  background: interface("secground");
 }
 
 .lightestSection {
   // background: theme(basePrimaryLight);
-  background: interface('secground');
+  background: interface("secground");
+}
+
+.sectionDark {
+  background: interface("surfaceAlt");
 }
 
 .darkSection {
   // background: theme(borderBaseMinimal);
-  @include BGTheme('dark');
+  @include BGTheme("dark");
 }
 
 .darkerSection {
   // background: theme(surface);
-  @include BGTheme('darker');
+  @include BGTheme("darker");
 }
 
 .darkestSection {
   // background: theme(baseDark);
-  @include BGTheme('darkest');
+  @include BGTheme("darkest");
 }
 
 .darkest-section {
@@ -680,7 +700,7 @@ nav {
   z-index: 10;
   // background: getColor(lightBase);
   // @include BGTheme("lighter");
-  background: interface('secground');
+  background: interface("secground");
   transition: box-shadow 250ms linear, top 0.6s, background linear 400ms;
   font-family: $primaryFont;
 
@@ -692,7 +712,7 @@ nav {
     max-width: $wrapMaxWidth;
     height: $navHeight;
     padding: 0 $widthPadding;
-    transition:height 250ms ease;
+    transition: height 250ms ease;
 
     .logo-contain {
       flex: 1;
@@ -724,7 +744,7 @@ nav {
         text-transform: uppercase;
       }
 
-      @include responsive('desktopish') {
+      @include responsive("desktopish") {
         flex: 0.6;
       }
     }
@@ -780,7 +800,7 @@ nav {
               background: getColor(lightLightBase);
               padding: 0.9em 1.5em;
               transition: background 200ms linear, color 200ms linear;
-              @include objectShadow('default', 'snow');
+              @include objectShadow("default", "snow");
               white-space: nowrap;
 
               &:hover {
@@ -819,11 +839,11 @@ nav {
               margin-right: 0px !important;
             }
 
-            @include responsive('desktopish') {
+            @include responsive("desktopish") {
               font-size: 1.4rem;
             }
 
-            @include responsive('mobile') {
+            @include responsive("mobile") {
               font-size: 1.8rem;
             }
           }
@@ -839,13 +859,13 @@ nav {
         }
       }
 
-      @include responsive('mobile') {
+      @include responsive("mobile") {
         // border-top:1px solid getColor(lightdarkBase);
         position: absolute;
         display: none;
         // top: $navMobileHeight + 20;
         top: 0;
-        margin-top: $navMobileHeight + 20;
+        margin-top: $navMobileHeight;
         flex: 1;
         width: 100%;
         height: 92.6vh;
@@ -860,7 +880,7 @@ nav {
 
         .msocials_wrapper {
           display: flex !important;
-          position: absolute;
+          // position: absolute;
           bottom: 0;
           right: 0;
           align-items: center;
@@ -907,6 +927,7 @@ nav {
           align-items: center;
           justify-content: center;
           height: 75vh;
+          min-height: 300px;
 
           // @include objectShadow("default", "snow");
 
@@ -941,7 +962,7 @@ nav {
         }
       }
 
-      @include responsive('desktop') {
+      @include responsive("desktop") {
         display: block !important;
       }
     }
@@ -957,8 +978,8 @@ nav {
       }
 
       svg {
-        border-radius: $defaultBorder;
-        padding: 10px;
+        // border-radius: $defaultBorder;
+        // padding: 10px;
 
         &:hover {
           path {
@@ -977,7 +998,7 @@ nav {
         }
       }
 
-      @include responsive('mobile') {
+      @include responsive("mobile") {
         display: block;
       }
     }
@@ -1009,7 +1030,7 @@ nav {
         }
       }
 
-      @include responsive('mobile') {
+      @include responsive("mobile") {
         display: none;
       }
 
@@ -1020,8 +1041,8 @@ nav {
         // color: getColor(icon-lightTXT);
         color: theme(body);
         margin: auto;
-        height: 35px;
-        width: 35px;
+        height: 40px;
+        width: 40px;
         border-radius: 50%;
         line-height: 40px;
         text-align: center;
@@ -1047,7 +1068,7 @@ nav {
       }
     }
 
-    @include responsive('mobile') {
+    @include responsive("mobile") {
       height: $navMobileHeight;
       padding: 10px $widthPadding;
 
@@ -1147,12 +1168,12 @@ nav {
 }
 
 .galleryImg {
-  @include objectCorner('default');
+  @include objectCorner("default");
 }
 .galleryImgWrap {
   transition: transform 200ms linear, box-shadow 200ms linear,
     filter 200ms linear;
-  @include objectCorner('default');
+  @include objectCorner("default");
 
   &:hover {
     // @include objectShadow("default", "snow");
@@ -1162,17 +1183,16 @@ nav {
 }
 
 .gallery-masonry {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
-  grid-template-areas:
-    'masonryOne masonryThree'
-    'masonryTwo masonryThree';
-  @include responsive('mobile') {
+  // grid-template-areas:
+  //   'masonryOne masonryTwo'
+  //   'masonryOne masonryTwo';
+  @include responsive("mobile") {
     grid-template-columns: 1fr;
     grid-template-areas:
-      'masonryOne'
-      'masonryTwo'
-      'masonryThree';
+      "masonryOne"
+      "masonryTwo";
   }
 }
 
@@ -1188,10 +1208,10 @@ nav {
 
 .cardLink_wrapper {
   background: theme(baseLight);
-  @include objectShadow('default', 'snow');
+  @include objectShadow("default", "snow");
   width: min(100%, 750px);
   padding: 25px 30px;
-  @include objectCorner('default');
+  @include objectCorner("default");
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1217,7 +1237,7 @@ nav {
     max-width: 500px;
   }
 
-  @include responsive('mobile') {
+  @include responsive("mobile") {
     width: auto;
     flex-direction: column;
     gap: 2em;

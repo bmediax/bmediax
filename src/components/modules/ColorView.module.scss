@@ -20,12 +20,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 200ms linear, box-shadow 200ms linear;
+  transition: transform 200ms ease-out, box-shadow 200ms ease-out;
   @include objectCorner("default");
 
   &:hover {
     box-shadow:var(--colorBlock-shadow) !important;
-    transform: translateY(-4px);
+    transform: translateY(-4px) perspective(4cm) rotateX(2deg);
   }
 }
 

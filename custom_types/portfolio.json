@@ -88,6 +88,14 @@
               "placeholder": "Card Description"
             }
           },
+          "background": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
+              "label": "Background",
+              "placeholder": "Background Description Block"
+            }
+          },
           "problem": {
             "type": "StructuredText",
             "config": {
@@ -118,14 +126,6 @@
               "multi": "list-item",
               "label": "Role",
               "placeholder": "Roles"
-            }
-          },
-          "work": {
-            "type": "StructuredText",
-            "config": {
-              "multi": "list-item",
-              "label": "Work",
-              "placeholder": "Type of Work"
             }
           },
           "design_tools": {
@@ -243,6 +243,41 @@
           }
         },
         "label": "Results"
+      }
+    },
+    "learn_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {
+          "width": 1200,
+          "height": 500
+        },
+        "thumbnails": [],
+        "label": "Learn Image"
+      }
+    },
+    "learn_item": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "learn_title": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph,strong,em,hyperlink",
+              "allowTargetBlank": true,
+              "label": "Learn Title"
+            }
+          },
+          "learn_description": {
+            "type": "StructuredText",
+            "config": {
+              "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl",
+              "allowTargetBlank": true,
+              "label": "Learn Description"
+            }
+          }
+        },
+        "label": "learn Item"
       }
     },
     "next_project": {

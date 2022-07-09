@@ -21,19 +21,19 @@ const WhatDoSection = () => {
         <InfoCardModule
           subtitle="Technical"
           title="Web Development"
-          descr="From Ecommerce to Blog websites. I design develop and deploy any scale sites."
+          descr="Developing Ecommerce to Blog websites. I design, develop and deploy sites."
           icon={<BiCodeAlt />}
         />
         <InfoCardModule
           subtitle="Design"
           title="Digital Design"
-          descr="I create and currate online branding identities through logo, asset and social media design."
+          descr="I create and curate online branding identities through logo, asset, and social media design."
           icon={<AiOutlineAntDesign />}
         />
         <InfoCardModule
           subtitle="Technical"
           title="Photography"
-          descr="Capturing variety of photos from headshots to product photography to be displayed on sites."
+          descr="Capturing various photos from headshots to product photography to be displayed on sites."
           icon={<MdPhotoCamera />}
         />
       </div>
