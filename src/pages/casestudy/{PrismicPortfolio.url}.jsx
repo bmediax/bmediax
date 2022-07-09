@@ -1,4 +1,4 @@
-import PortfolioTemplate from "../../layout/portfolioTemplate";
+import PortfolioTemplate from "../../layout/PortfolioTemplate";
 import React from "react";
 import { graphql } from "gatsby";
 
