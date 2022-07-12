@@ -67,6 +67,7 @@
     h4 {
       font-size: 1.5rem;
       margin-bottom: 10px;
+      line-height: 1.5;
     }
 
     h3 {
@@ -89,6 +90,10 @@
       padding: 7% 5%;
       text-align: center;
 
+      h4 {
+        font-size: 1.2rem;
+      }
+
       button {
         display: block;
         width: 100%;
@@ -96,7 +101,10 @@
     }
 
     .txageImage {
-      min-height: 250px;
+      border-radius: $defaultBorder;
+      margin: 20px 20px 0px 20px;
+      min-height: 200px;
+      width: auto;
     }
   }
 }
