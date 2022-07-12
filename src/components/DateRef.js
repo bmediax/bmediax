@@ -27,7 +27,15 @@ const DateRef = ({ data, isFluid, title }) => {
       return (
         <ul>
           {list.map((listItem, index) => (
-            <li key={index}>{listItem.item}</li>
+            <>
+              {listItem.link ? (
+                <li key={index}>
+                  <Link to={listItem.link}>{listItem.item}</Link>
+                </li>
+              ) : (
+                <li key={index}>{listItem.item}</li>
+              )}
+            </>
           ))}
         </ul>
       );
