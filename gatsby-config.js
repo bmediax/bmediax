@@ -100,7 +100,7 @@ module.exports = {
         short_name: `Bmediax`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#3c86a5`,
+        theme_color: `#fff`,
         display: `standalone`,
         icon: `src/images/brian.png`,
       },
