@@ -1,0 +1,11 @@
+@use "./variables.module" as *;
+
+.meetBrian_freeTime {
+  div[data-gatsby-image-wrapper] {
+    border-radius: $radius-sm;
+  }
+}
+
+.pageHeader {
+  margin-block-end: 40px;
+}

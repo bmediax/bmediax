@@ -1,5 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import * as styles from "../styles/meetBrian.module.scss";
+
 import { HiArrowCircleDown, HiDocumentDownload } from "react-icons/hi";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
@@ -15,98 +17,10 @@ import { StaticImage } from "gatsby-plugin-image";
 import WebSkills from "../components/webSkills";
 import bmediaxPrintResume from "../assets/files/Bmediax_Resume_Print.pdf";
 import bmediaxResume from "../assets/files/Bmediax_Resume.pdf";
+import educationData from "../data/educationData";
+import experienceData from "../data/experienceData";
 
 const meetBrian = () => {
-  const experienceData = [
-    {
-      title: "Web Developer",
-      reference: "Portland Trail Blazers",
-      date: "2021 - Present",
-      location: "Portland, OR",
-      link: "/casestudy/blazers",
-    },
-    {
-      title: "Web Designer",
-      reference: "Bevy",
-      date: "August 2021",
-      location: "Remote / Palo Alto, CA",
-      link: "/casestudy/bevy",
-    },
-    {
-      title: "Community Care Specialist",
-      reference: "Swimply",
-      date: "May 2021",
-      location: "Remote / Los Angeles, CA",
-      link: "",
-    },
-    {
-      title: "Web And Digital Content Administrator",
-      reference: "Horizon CME",
-      date: "2020 - 2021",
-      location: "Clackamas, OR",
-      link: "/casestudy/horizoncme",
-    },
-    {
-      title: "Communications Director",
-      reference: "Willamette Chicano Alliance",
-      date: "2014 - 2020",
-      location: "Portland, OR",
-      link: "/casestudy/chicanoalliance",
-    },
-    {
-      title: "Seasonal Sales Associate",
-      reference: "MUJI U.S.A.",
-      date: "Oct 2019",
-      location: "Portland, OR",
-      link: "",
-    },
-  ];
-
-  const educationData = [
-    {
-      title: "Software Engineering",
-      reference: "Kenzie Academy",
-      date: "Grad. 2021",
-      location: "UX/UX Design & Front End + Backend Development",
-      link: "",
-    },
-    {
-      title: "Oregon Transfer Degree",
-      reference: "Portland Community College",
-      date: "2016 - 2020",
-      location: "",
-      list: [
-        {
-          item: "MEChA, Coordinator",
-        },
-        {
-          item: "TedxPCC 2018, Marketing Specialist/Graphic Design",
-        },
-        {
-          item: "Cascade Multicultural Center, Multimedia Specialist",
-        },
-      ],
-      link: "",
-    },
-    {
-      title: "High School Diploma",
-      reference: "Benson Polytechnic High School",
-      date: "2012 - 2016",
-      location: "",
-      list: [
-        {
-          item: "Benson Polytechnic H.S, Web Master",
-        },
-        {
-          item: "MEChA, President",
-        },
-        {
-          item: "Robotics, Programmer",
-        },
-      ],
-      link: "",
-    },
-  ];
   return (
     <Layout title="Meet Brian">
       <SectionPageLayout label="page lighterSection" title="Meet Brian">
@@ -201,13 +115,17 @@ const meetBrian = () => {
       </SectionPageLayout>
       <SectionPageLayout title="" label="sectionDark">
         <div className="pageColumnLayout sectionMaxWidth">
-          <div className="pageTwoColumn pageSections">
-            <h3>What I do in my free time.</h3>
-            <p>
-              When I am not designing or coding interfaces, you can often find
-              me out and about with my trusty camera and a good cup of coffee,
-              capturing the world's beautiful raw moments.
-            </p>
+          <div
+            className={`pageTwoColumn pageSections ${styles.meetBrian_freeTime}`}
+          >
+            <div className={styles.pageHeader}>
+              <h3>What I do in my free time.</h3>
+              <p>
+                When I am not designing or coding interfaces, you can often find
+                me out and about with my trusty camera and a good cup of coffee,
+                capturing the world's beautiful raw moments.
+              </p>
+            </div>
             <ResponsiveMasonry
               columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
             >
