@@ -85,7 +85,7 @@ const meetBrian = () => {
               >
                 Download Resume
                 <HiArrowCircleDown
-                  style={{ position: "relative", top: "2px", left: "5px" }}
+                  style={{ position: "relative", top: "-1px", left: "5px" }}
                 />
               </Button>
               <Button
@@ -96,7 +96,7 @@ const meetBrian = () => {
               >
                 Download Resume (Print)
                 <HiDocumentDownload
-                  style={{ position: "relative", top: "2px", left: "5px" }}
+                  style={{ position: "relative", top: "-1px", left: "5px" }}
                 />
               </Button>
             </ButtonWrapper>

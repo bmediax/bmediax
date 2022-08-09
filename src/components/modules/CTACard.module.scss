@@ -101,7 +101,7 @@
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding-block: 20px !important;
+  padding-block: 15px !important;
   border: 1px solid interface(border);
 
   &:hover {
@@ -125,7 +125,7 @@
 
   svg {
     position: relative;
-    top: 2px;
+    top: -1px;
     transform: scale(1.3);
     // font-size: 22px;
   }

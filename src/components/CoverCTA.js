@@ -1,11 +1,12 @@
-import React from "react";
-import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
-import { RichText } from "prismic-reactjs";
 import * as homepageStyles from "../styles/homepage.module.scss";
+
 import DropdownModule from "./modules/dropdownModule";
+import { Link } from "gatsby";
+import React from "react";
 // External
 import { RiInboxFill } from "react-icons/ri";
+import { RichText } from "prismic-reactjs";
+import { StaticImage } from "gatsby-plugin-image";
 
 const CoverCTA = ({ coverData }) => {
   return (
@@ -30,9 +31,16 @@ const CoverCTA = ({ coverData }) => {
           {/* Buttons */}
           <div className={homepageStyles.buttonWrapper}>
             {/* <Link to="mailto:hello@bmediax.dev" className="btn primary active">hello@bmediax.dev</Link> */}
-            <Link to="/casestudy" className="btn primary-active clickViewPortfolio">
+            <Link
+              to="/casestudy"
+              className="btn primary-active clickViewPortfolio"
+            >
               <RiInboxFill
-                style={{ position: "relative", top: "3px", marginRight: "5px" }}
+                style={{
+                  position: "relative",
+                  top: "-1px",
+                  marginRight: "5px",
+                }}
               />{" "}
               View Portfolio
             </Link>
