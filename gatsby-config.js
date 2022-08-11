@@ -45,6 +45,14 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sitemap",
+    {
+      resolve: "@tmttn/gatsby-plugin-hubspot-tracking",
+      options: {
+        trackingCode: "22499682",
+        respectDNT: true,
+        productionOnly: false,
+      },
+    },
     // {
     //   resolve: "gatsby-plugin-sitemap",
     //   options: {

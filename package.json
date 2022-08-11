@@ -15,8 +15,9 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@tmttn/gatsby-plugin-hubspot-tracking": "^4.2.0",
     "bootstrap": "^5.2.0",
-    "framer-motion": "^7.0.0",
+    "framer-motion": "^7.1.0",
     "gatsby": "^4.20.0",
     "gatsby-link": "^4.20.0",
     "gatsby-plugin-anchor-links": "^1.2.1",
@@ -48,7 +49,7 @@
     "react-responsive-masonry": "^2.1.5",
     "react-scroll-parallax": "^3.3.1",
     "react-toastify": "^9.0.8",
-    "sass": "^1.54.3"
+    "sass": "^1.54.4"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",

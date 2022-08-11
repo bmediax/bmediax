@@ -27,7 +27,7 @@ const DateRef = ({ data, isFluid, title }) => {
       return (
         <ul>
           {list.map((listItem, index) => (
-            <>
+            <React.Fragment key={index}>
               {listItem.link ? (
                 <li key={index}>
                   <Link to={listItem.link}>{listItem.item}</Link>
@@ -35,7 +35,7 @@ const DateRef = ({ data, isFluid, title }) => {
               ) : (
                 <li key={index}>{listItem.item}</li>
               )}
-            </>
+            </React.Fragment>
           ))}
         </ul>
       );
