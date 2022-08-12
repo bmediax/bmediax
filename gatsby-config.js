@@ -53,6 +53,25 @@ module.exports = {
         productionOnly: false,
       },
     },
+    {
+      resolve: `gatsby-plugin-gatsby-cloud`,
+      options: {
+        headers: {
+          "/*": [
+            "X-XSS-Protection: 1; mode=block",
+            "X-Content-Type-Options: nosniff",
+            "Referrer-Policy: same-origin",
+            "X-Frame-Options: SAMEORIGIN",
+            "Content-Security-Policy: frame-ancestors 'self' https://covideo.com https://*.covideo.com https://covideo.com/* https://vidmails.com https://vidmails.com/*",
+          ],
+        },
+        allPageHeaders: [],
+        // mergeSecurityHeaders: true,
+        mergeLinkHeaders: true,
+        mergeCachingHeaders: true,
+        generateMatchPathRewrites: true,
+      },
+    },
     // {
     //   resolve: "gatsby-plugin-sitemap",
     //   options: {
