@@ -1,22 +1,30 @@
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby";
 
-import { Helmet } from "react-helmet"
-import PropTypes from "prop-types"
-import React from "react"
+import { Helmet } from "react-helmet";
+import PropTypes from "prop-types";
+import React from "react";
+import defaultImage from "../images/seo.png";
 
 // Use iOS 15 Meta Custom Banner Color
-// 1. Import the variables to use 
+// 1. Import the variables to use
 // Setup the Meta
 // Connect the variables to the meta
 
-function SEO({ description, lang, meta, image: metaImage, title }) {
+function SEO({
+  description,
+  lang,
+  meta,
+  metaImage = false,
+  title,
+  pathname = false,
+}) {
   const isHome = (homes) => {
     if (homes === "Bmediax") {
-      return "Bmediax | Digital Designer & Frontend Developer"
+      return "Bmediax | Digital Designer & Frontend Developer";
     } else {
-      return `%s | ${site.siteMetadata.title}`
+      return `%s | ${site.siteMetadata.title}`;
     }
-  }
+  };
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -30,14 +38,12 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
         }
       }
     `
-  )
-  const metaDescription = description || site.siteMetadata.description
-  const image = metaImage 
-      // && metaImage.src
-      // ? `${site.siteMetadata.siteUrl}${metaImage.src}`
-      // : null
-  // console.log(metaImage);
-  // const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
+  );
+  const metaDescription = description || site.siteMetadata.description;
+  const image = metaImage ? metaImage : defaultImage;
+  const canonical = pathname
+    ? `${site.siteMetadata.siteUrl}${pathname}`
+    : site.siteMetadata.siteUrl;
   return (
     <Helmet
       htmlAttributes={{
@@ -45,6 +51,9 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
       }}
       title={title}
       titleTemplate={isHome(title)}
+      link={
+        canonical ? [{ rel: "canonical", key: canonical, href: canonical }] : []
+      }
       // link={[
       //   { rel: 'apple-touch-icon', sizes: '180x180', href: `${appleTouchIcon}`},
       //   { rel: 'icon', type: 'image/png', sizes: '32x32', href: `${favicon32}`},
@@ -75,6 +84,10 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
           content: title,
         },
         {
+          property: `og:url`,
+          content: site.siteMetadata.siteUrl,
+        },
+        {
           property: `og:description`,
           content: metaDescription,
         },
@@ -96,41 +109,41 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
         },
       ]
         .concat(
-          metaImage
-            ? [
-                {
-                  property: "og:image",
-                  content: image,
-                },
-                {
-                  property: "og:image:width",
-                  content: metaImage.width,
-                },
-                {
-                  property: "og:image:height",
-                  content: metaImage.height,
-                },
-                {
-                  name: "twitter:card",
-                  content: "summary_large_image",
-                },
-              ]
-            : [
-                {
-                  name: "twitter:card",
-                  content: "summary",
-                },
-              ]
+          // metaImage
+          [
+            {
+              property: "og:image",
+              content: image,
+            },
+            // {
+            //   property: "og:image:width",
+            //   content: metaImage.width,
+            // },
+            // {
+            //   property: "og:image:height",
+            //   content: metaImage.height,
+            // },
+            {
+              name: "twitter:card",
+              content: "summary_large_image",
+            },
+          ]
+          // : [
+          //     {
+          //       name: "twitter:card",
+          //       content: "summary",
+          //     },
+          //   ]
         )
         .concat(meta)}
     />
-  )
+  );
 }
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
-}
+};
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
@@ -141,5 +154,5 @@ SEO.propTypes = {
     height: PropTypes.number.isRequired,
     width: PropTypes.number.isRequired,
   }),
-}
-export default SEO
+};
+export default SEO;

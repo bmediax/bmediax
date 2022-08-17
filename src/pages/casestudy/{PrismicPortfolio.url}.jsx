@@ -1,4 +1,4 @@
-import PortfolioTemplate from "../../layout/PortfolioTemplate";
+import CaseTemplate from "../../layout/CaseTemplate";
 import React from "react";
 import { graphql } from "gatsby";
 
@@ -6,9 +6,10 @@ const Portfolio = ({ data }) => {
   if (!data) return null;
   const document = data.prismicPortfolio.data;
   return (
-    <PortfolioTemplate
+    <CaseTemplate
       data={document}
       pageTitle={document.cover_title[0].name.text}
+      uid={`/casestudy/${data.prismicPortfolio.uid}`}
     />
   );
 };
@@ -18,6 +19,7 @@ export default Portfolio;
 export const query = graphql`
   query AllPortfolioQuery($id: String) {
     prismicPortfolio(id: { eq: $id }) {
+      uid
       data {
         is_displayed
         cover_title {
@@ -36,6 +38,7 @@ export const query = graphql`
           background_image {
             gatsbyImageData(width: 2000, placeholder: DOMINANT_COLOR)
             alt
+            url
           }
         }
         design {
