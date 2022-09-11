@@ -7,6 +7,7 @@ import React from "react";
 const Button = ({
   as = "url",
   children,
+  onClick,
   href = undefined,
   to = undefined,
   type = false,
@@ -43,7 +44,8 @@ const Button = ({
     type,
     className,
     children,
-    state
+    state,
+    onClick
   ) => {
     if (as === "link") {
       return (
@@ -72,6 +74,19 @@ const Button = ({
           {children}
         </a>
       );
+    } else if (as === "button") {
+      return (
+        <button
+          className={`${styles.btn} ${isSection ? "section-link" : ""} ${
+            type ? typeCheck(type) : ""
+          } ${state ? styles[state] : ""} ${
+            className ? classCheck(className) : ""
+          }`}
+          onClick={onClick}
+        >
+          {children}
+        </button>
+      );
     }
   };
 
@@ -84,7 +99,8 @@ const Button = ({
     type,
     className,
     children,
-    state
+    state,
+    onClick
   );
 };
 

@@ -44,10 +44,8 @@
     "react-bootstrap": "^2.5.0",
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.2.0",
-    "react-dropdown": "^1.10.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.4.0",
-    "react-image-lightbox": "^5.1.4",
     "react-responsive": "9.0.0-beta.10",
     "react-responsive-masonry": "^2.1.5",
     "react-scroll-parallax": "^3.3.1",
@@ -57,7 +55,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.19.0",
-    "@reach/router": "^1.3.4",
     "@trivago/prettier-plugin-sort-imports": "^3.3.0"
   }
 }
