@@ -6,7 +6,7 @@
   // text-align: center;
   // place-items: flex-end center;
 
-  @include responsive('mobile') {
+  @include responsive("mobile") {
     // height: 50vh;
     height: 40vh;
   }
@@ -14,7 +14,7 @@
 
 .text {
   // @include BGTheme("lighter");
-  background: interface('secground');
+  background: interface("secground");
   text-align: center;
   // min-height: 35vh;
   min-height: 200px;
@@ -52,7 +52,7 @@
     line-height: 25px;
   }
 
-  @include responsive('mobile') {
+  @include responsive("mobile") {
     min-height: 30vh !important;
 
     h1 {
@@ -83,18 +83,37 @@
     // Image Captions
     .caption {
       margin-top: 10px;
-      margin-left: 10px;
-      color: interface(headline);
-      font-size: $paraSize;
-      text-align: center;
+      // margin-left: 10px;
+      color: interface(body);
+      font-size: 1.2rem;
+      font-weight: 100;
+      text-align: left;
+      padding: 5px 10px 5px 10px;
+      // border-left: 4px solid interface(border);
+      width: fit-content;
+      margin-inline: auto;
+      border-radius: 3px;
 
-      @include responsive('mobile') {
+      transition: background 250ms ease;
+
+      &:hover {
+        background: interface(border);
+      }
+
+      @include responsive("mobile") {
         margin-left: 0px;
       }
     }
+
+    .description {
+      color: interface(headline);
+      margin-top: 10px;
+      width: fit-content;
+      margin-inline: auto;
+    }
   }
 
-  @include responsive('mobile') {
+  @include responsive("mobile") {
     grid-gap: 3em;
     grid-template-columns: 1fr !important;
   }
@@ -119,7 +138,7 @@
       text-transform: uppercase;
       letter-spacing: 0.15em;
       margin-bottom: 10px;
-      line-height:1.5;
+      line-height: 1.5;
     }
     margin-top: 30px;
   }
@@ -133,7 +152,7 @@
       font-size: 1.6rem;
       text-transform: uppercase;
       letter-spacing: 0.15em;
-      line-height:1.5;
+      line-height: 1.5;
       text-align: center;
       margin-bottom: 30px;
     }
@@ -144,21 +163,21 @@
   }
 
   .imageGrid {
-    @include objectCorner('default-mobile');
+    @include objectCorner("default-mobile");
   }
 
   .imageGridWrap {
     position: relative;
-    @include objectCorner('default-mobile');
+    @include objectCorner("default-mobile");
     transition: box-shadow 200ms linear, transform 250ms linear;
 
     &:hover {
-      @include objectShadow('default', 'snow');
+      @include objectShadow("default", "snow");
       transform: translateY(-3px);
     }
   }
 
-  @include responsive('mobile') {
+  @include responsive("mobile") {
     flex-direction: column;
 
     div:not(:last-child) {
@@ -177,7 +196,7 @@
 
   ul,
   ol {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 1.6rem;
     font-weight: 400;
     margin: 10px 0px;
@@ -201,7 +220,7 @@
       line-height: 25px;
 
       li {
-        font-family: 'Inter', sans-serif;
+        font-family: "Inter", sans-serif;
         font-weight: 400;
         color: interface(body);
         font-size: 1.6rem;
@@ -215,11 +234,11 @@
 
   .twoColumn_1to2 {
     flex: 1;
-    flex-grow:2;
-    max-width:425px;
+    flex-grow: 2;
+    max-width: 425px;
 
     @include responsive("mobile") {
-      max-width:100%;
+      max-width: 100%;
     }
   }
 
@@ -227,7 +246,7 @@
     flex: 1;
 
     h3 {
-      @include responsive('mobile') {
+      @include responsive("mobile") {
         text-align: center;
       }
     }
@@ -254,19 +273,19 @@
 }
 
 .responsiveColumn_1 {
-  @include responsive('mobile') {
+  @include responsive("mobile") {
     grid-template-columns: repeat(1, 1fr) !important;
   }
 }
 
 .responsiveColumn_2 {
-  @include responsive('mobile') {
+  @include responsive("mobile") {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
 .responsiveColumn_3 {
-  @include responsive('mobile') {
+  @include responsive("mobile") {
     grid-template-columns: repeat(3, 1fr) !important;
   }
 }
@@ -280,7 +299,7 @@
 .columnthree {
   grid-template-columns: repeat(3, 1fr);
 
-  @include responsive('mobile') {
+  @include responsive("mobile") {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
@@ -293,7 +312,7 @@
 .columnsix {
   grid-template-columns: repeat(6, 1fr);
 
-  @include responsive('mobile') {
+  @include responsive("mobile") {
     grid-template-columns: repeat(2, 1fr) !important;
   }
 }
@@ -316,10 +335,10 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  @include sectionPadding('desktop-small');
+  @include sectionPadding("desktop-small");
   // padding: 40px 40px;
-  @include objectCorner('mobile');
-  @include objectShadow('hover', 'snow');
+  @include objectCorner("mobile");
+  @include objectShadow("hover", "snow");
   transition: transform 200ms ease;
 
   &:hover {
@@ -333,7 +352,7 @@
     color: $blanco;
     text-align: left;
 
-    @include responsive('mobile') {
+    @include responsive("mobile") {
       text-align: center;
       line-height: 40px;
     }
@@ -351,7 +370,7 @@
     }
   }
 
-  @include responsive('mobile') {
+  @include responsive("mobile") {
     flex-direction: column;
 
     div,
@@ -376,7 +395,7 @@
   margin: 2% 0px;
   text-transform: uppercase;
 
-  @include responsive('mobile') {
+  @include responsive("mobile") {
     margin: 5% 0;
   }
 }

@@ -4,8 +4,13 @@ import React from "react";
 import { RichText } from "prismic-reactjs";
 import SectionPageLayout from "../layout/SectionPageLayout";
 import SideBar from "./modules/SideBar";
+import useFieldCheck from "../utilities/useFieldCheck";
 
 const OverviewSection = ({ overviewData, projectLinks }) => {
+  const useCheckFieldEmpty = (rich_text_field) => {
+    return useFieldCheck(rich_text_field);
+  };
+  
   const isFieldEmpty = (rich_text_field) => {
     if (RichText.asText(rich_text_field).length === 0) {
       return false;
@@ -28,7 +33,7 @@ const OverviewSection = ({ overviewData, projectLinks }) => {
           <div className={portfolioStyles.twoColumn_2to1}>
             <RichText render={overviewData.description.richText} />
             <hr />
-            {isFieldEmpty(overviewData.background.richText) && (
+            {useCheckFieldEmpty(overviewData.background.richText) && (
               <>
                 <div className={portfolioStyles.textSection}>
                   <h3>Background</h3>
