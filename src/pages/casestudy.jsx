@@ -1,9 +1,8 @@
-import React from "react";
-import { graphql } from "gatsby";
-
-import Layout from "../layout";
-import SectionPageLayout from "../layout/SectionPageLayout";
 import CTACardModule from "../components/modules/CTACardModule";
+import Layout from "../layout";
+import React from "react";
+import SectionPageLayout from "../layout/SectionPageLayout";
+import { graphql } from "gatsby";
 
 const casestudy = ({ data }) => {
   if (!data) return null;
@@ -22,7 +21,7 @@ const casestudy = ({ data }) => {
                 portfolio.data.cover_title[0].background_image
                   .gatsbyImageData
               }
-              url={portfolio.uid}
+              url={`/${portfolio.uid}`}
               work={portfolio.data.overview[0].short_tags.text}
               shortDescr={
                 portfolio.data.overview[0].short_description.text

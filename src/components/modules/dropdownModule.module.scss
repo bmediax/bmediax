@@ -1,36 +1,39 @@
-@use '../../styles/variables.module' as *;
+@use "../../styles/variables.module" as *;
 
 .dropdownMenu {
-    margin-top:5px !important;
-    border:none !important;
-    // background:getColor(lightLightBase);
-    background-color:getColor(lightLightBase);
-    @include objectShadow('default', 'snow');
-    @include objectCorner('default');
+  margin-top: 5px !important;
+  border: none !important;
+  // background:getColor(lightLightBase);
+  background-color: getColor(lightLightBase);
+  @include objectShadow("default", "snow");
+  @include objectCorner("default");
 
-    div {
-        font-family:$primaryFont;
-        // font-size:1rem;
-        font-size:1.5rem;
-        font-weight:500;
-        text-align:left;
-        padding:15px 30px;
-        color:getColor(normalText);
-        background:getColor(lightLightBase);
-        transition: background 200ms linear, color 200ms linear;
+  div {
+    @include objectCorner("default");
+    font-family: $primaryFont;
+    // font-size:1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: left;
+    padding: 15px 30px;
+    color: getColor(normalText);
+    background: getColor(lightLightBase);
+    transition: background 200ms linear, color 200ms linear;
 
-        &, .is-selected {
-            background:getColor(lightLightBase) !important;
-            color:getColor(normalText) !important;
-        }
-
-        &:hover {
-            color:getColor(lightDarkText) !important;
-            background:getColor(lightLightBase2) !important;
-        }
+    &,
+    .is-selected {
+      background: getColor(lightLightBase) !important;
+      color: getColor(normalText) !important;
     }
+
+    &:hover {
+      cursor: pointer;
+      color: getColor(lightDarkText) !important;
+      background: getColor(lightLightBase2) !important;
+    }
+  }
 }
 
 .arrowDrop {
-    display:none !important;
+  display: none !important;
 }

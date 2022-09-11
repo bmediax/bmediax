@@ -1,11 +1,14 @@
-import React, { useState } from "react";
-import * as DropdownModuleStyles from "./dropdownModule.module.scss";
-// External Libs
-import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
+import "react-toastify/dist/ReactToastify.css";
+
+import * as styles from "./dropdownModule.module.scss";
+
+import React, { useState } from "react";
 // import ToastModule from './ToastModule'
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
+// External Libs
+import Dropdown from "react-dropdown";
 
 const DropdownModule = ({ primary }) => {
   const [isSelect, SetIsSelect] = useState({
@@ -62,8 +65,9 @@ const DropdownModule = ({ primary }) => {
         onChange={_onSelect}
         placeholder="hello@bmediax.dev"
         controlClassName={`btn ${primary ? "outline" : "activePrimary"}`}
-        menuClassName={DropdownModuleStyles.dropdownMenu}
-        arrowClassName={DropdownModuleStyles.arrowDrop}
+        baseClassName={styles.dropdownMenu}
+        menuClassName={styles.dropdownMenu}
+        arrowClassName={styles.arrowDrop}
       />
     </div>
   );

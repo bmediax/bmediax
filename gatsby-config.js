@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: "Bmediax",
@@ -50,7 +54,7 @@ module.exports = {
       options: {
         trackingCode: "22499682",
         respectDNT: true,
-        productionOnly: false,
+        productionOnly: true,
       },
     },
     {
@@ -110,11 +114,12 @@ module.exports = {
     {
       resolve: "gatsby-source-prismic",
       options: {
-        schemas: {
-          homepage: require("./custom_types/homepage.json"),
-          portfolio: require("./custom_types/portfolio.json"),
-          work: require("./custom_types/work.json"),
-        },
+        customTypesApiToken: process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN,
+        // schemas: {
+        //   homepage: require("./custom_types/homepage.json"),
+        //   portfolio: require("./custom_types/portfolio.json"),
+        //   work: require("./custom_types/work.json"),
+        // },
         repositoryName: "bmediax",
         linkResolver: require("./src/utils/linkResolver").linkResolver,
         // shouldNormalizeImage: () => true,

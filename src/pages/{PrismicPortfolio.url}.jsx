@@ -1,4 +1,4 @@
-import CaseTemplate from "../../layout/CaseTemplate";
+import CaseTemplate from "../layout/CaseTemplate";
 import React from "react";
 import { graphql } from "gatsby";
 
@@ -9,7 +9,7 @@ const Portfolio = ({ data }) => {
     <CaseTemplate
       data={document}
       pageTitle={document.cover_title[0].name.text}
-      uid={`/casestudy/${data.prismicPortfolio.uid}`}
+      uid={`${data.prismicPortfolio.uid}`}
     />
   );
 };

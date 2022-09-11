@@ -4,7 +4,7 @@ const experienceData = [
     reference: "Portland Trail Blazers",
     date: "2021 - 2022",
     location: "Portland, OR",
-    link: "/casestudy/blazers",
+    link: "/blazers",
   },
   {
     title: "Digital Designer",
@@ -18,7 +18,7 @@ const experienceData = [
     reference: "Bevy",
     date: "August 2021",
     location: "Remote / Palo Alto, CA",
-    link: "/casestudy/bevy",
+    link: "/bevy",
   },
   {
     title: "Community Care Specialist",
@@ -32,14 +32,14 @@ const experienceData = [
     reference: "Horizon CME",
     date: "2020 - 2021",
     location: "Clackamas, OR",
-    link: "/casestudy/horizoncme",
+    link: "/horizoncme",
   },
   {
     title: "Communications Director",
     reference: "Willamette Chicano Alliance",
     date: "2014 - 2020",
     location: "Portland, OR",
-    link: "/casestudy/chicanoalliance",
+    link: "/chicanoalliance",
   },
   {
     title: "Seasonal Sales Associate",

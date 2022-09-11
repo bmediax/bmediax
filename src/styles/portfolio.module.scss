@@ -33,9 +33,9 @@
     justify-content: space-between;
     align-items: center;
 
-    @include responsive('mobile') {
-      flex-direction: column;
-    }
+    // @include responsive('mobile') {
+    //   flex-direction: column;
+    // }
   }
 
   h1 {

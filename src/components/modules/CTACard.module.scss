@@ -95,13 +95,14 @@
 
 .button {
   background: interface("surfaceAlt");
+  color: interface(body);
   // margin-top: 20px;
   // border-top: 4px solid getColor(lightdarkBase) !important;
   display: block;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
-  padding-block: 15px !important;
+  padding-block: 17px !important;
   border: 1px solid interface(border);
 
   &:hover {
