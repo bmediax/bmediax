@@ -1,0 +1,94 @@
+@use "../../../styles/variables.module" as *;
+
+:global {
+  .section-link {
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+    display: block;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    text-decoration: none;
+
+    a {
+      text-decoration: none !important;
+    }
+
+    @include responsive("mobile") {
+      width: 100% !important;
+    }
+  }
+}
+
+.btn {
+  padding: 17px 30px;
+  font-family: $font-body;
+  font-weight: 600;
+  border-radius: $border-sm;
+  font-size: 1.6rem;
+  text-decoration: none;
+  transition: background 250ms ease-in-out, box-shadow 200ms ease-in-out,
+    transform 150ms ease-in-out, border 200ms ease-in-out,
+    color 250ms ease-in-out;
+
+  &:hover {
+    transform: translateY(-2px);
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: translateY(0px);
+  }
+
+  @include responsive("mobile") {
+    display: block;
+    padding: 20px 0px;
+    text-align: center;
+
+    &:first-child {
+      margin-bottom: 2%;
+    }
+  }
+}
+
+.primary {
+  background: interface(surfaceAlt);
+  color: interface(body);
+  border: 1px solid interface(border);
+  outline: none;
+
+  %activesStyles {
+    background: $midnight-400;
+    color: $global-white;
+  }
+
+  &:hover {
+    @extend %activesStyles;
+
+    border: 1px solid interface(border-active);
+    @include objectShadow("hover", "snow");
+  }
+
+  &:active {
+    @extend %activesStyles;
+    box-shadow: none;
+  }
+
+  &:focus {
+    @extend %activesStyles;
+  }
+}
+
+//! States
+.active {
+  color: #fff;
+  background: transparent;
+  border: 2px solid $azure-400;
+
+  &:hover {
+    background: $azure-500;
+    border: 2px solid $azure-500;
+    color: #fff;
+  }
+}

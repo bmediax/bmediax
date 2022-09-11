@@ -17,11 +17,11 @@ const educationData = [
       },
       {
         item: "TedxPCC 2018, Marketing Specialist/Graphic Design",
-        link: "/casestudy/tedxpcc2018/",
+        link: "/tedxpcc2018/",
       },
       {
         item: "Cascade Multicultural Center, Multimedia Specialist",
-        link: "/casestudy/edutainment/",
+        link: "/edutainment/",
       },
     ],
     link: "",
@@ -34,7 +34,7 @@ const educationData = [
     list: [
       {
         item: "Benson Polytechnic H.S, Web Master",
-        link: "/casestudy/bensonhs2016/",
+        link: "/bensonhs2016/",
       },
       {
         item: "MEChA, President",

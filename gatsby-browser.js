@@ -1,8 +1,8 @@
-import { AnimatePresence } from "framer-motion";
-import { KBarProvider, KBarPortal, KBarPositioner, KBarAnimator, KBarSearch, useMatches, KBarResults } from "kbar";
-import React from "react";
-import { ParallaxProvider } from "react-scroll-parallax";
+import { KBarAnimator, KBarPortal, KBarPositioner, KBarProvider, KBarResults, KBarSearch, useMatches } from "kbar";
 
+import { AnimatePresence } from "framer-motion";
+import { ParallaxProvider } from "react-scroll-parallax";
+import React from "react";
 
 const searchStyle = {
   padding: "17px 16px",
@@ -110,7 +110,7 @@ const actions = [
 
 export const wrapPageElement = ({ element }) => (
   <ParallaxProvider>
-    <AnimatePresence initial={false} exitBeforeEnter>
+    <AnimatePresence initial={false} mode="wait">
       <KBarProvider actions={actions}>
         <KBarPortal>
           <KBarPositioner

@@ -14,7 +14,7 @@ const Layout = ({ children, title, descr, darkNav, imgSrc, uid }) => {
     <div id={title}>
       <Seo title={title} description={descr} metaImage={imgSrc} pathname={uid} />
       <Nav theme={darkNav} />
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence mode="wait">
         <motion.div
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}

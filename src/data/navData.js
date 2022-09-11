@@ -9,27 +9,27 @@ export const navData = [
     sub: [
       {
         title: "Edutainment",
-        path: "/portfolio/edutainment",
+        path: "/edutainment",
       },
       {
         title: "Chicanx Shop",
-        path: "/portfolio/chicanxshop",
+        path: "/chicanxshop",
       },
       {
         title: "Reiko for PCC",
-        path: "/portfolio/reikoforpcc",
+        path: "/reikoforpcc",
       },
       {
         title: "TEDxPCC 2018",
-        path: "/portfolio/tedxpcc2018",
+        path: "/tedxpcc2018",
       },
       {
         title: "Benson HS 2016",
-        path: "/portfolio/bensonhs2016",
+        path: "/bensonhs2016",
       },
       {
         title: "Chicano Alliance",
-        path: "/portfolio/chicanoalliance",
+        path: "/chicanoalliance",
       },
     ],
   },

@@ -1,9 +1,10 @@
-import React from 'react';
+import * as homeStyles from '../styles/homepage.module.scss';
+
 import { graphql, useStaticQuery } from 'gatsby';
 
-import SectionLayout from '../layout/SectionLayout';
-import * as homeStyles from '../styles/homepage.module.scss';
 import CTACardModule from './modules/CTACardModule';
+import React from 'react';
+import SectionLayout from '../layout/SectionLayout';
 
 // import { Link } from 'gatsby'
 // import * as portfolioStyles from '../styles/portfolio.module.scss'
@@ -89,7 +90,7 @@ const NextProjectSection = ({ title }) => {
                             title={recent.data.cover_title[0].name.text}
                             shortDescr={recent.data.overview[0].short_description.text} 
                             work={recent.data.overview[0].short_tags.text}
-                            url={`/casestudy/${recent.uid}`}
+                            url={`/${recent.uid}`}
                             cover={recent.data.cover_title[0].background_image.gatsbyImageData}
                             />
                     </React.Fragment>

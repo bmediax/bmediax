@@ -1,8 +1,9 @@
-import { motion } from "framer-motion";
-import React from "react";
-import { Parallax } from "react-scroll-parallax";
-import { slowSlideUp } from "../data/motionVariants";
 import * as portfolioStyles from "../styles/portfolio.module.scss";
+
+import { Parallax } from "react-scroll-parallax";
+import React from "react";
+import { motion } from "framer-motion";
+import { slowSlideUp } from "../data/motionVariants";
 
 const PortfolioTitle = ({ coverData }) => {
   return (
@@ -28,7 +29,7 @@ const PortfolioTitle = ({ coverData }) => {
             animate="show"
             className={portfolioStyles.subtexts}
           >
-            <h5 style={{ flex: 2 }}>{coverData.client.text}</h5>
+            <h5 style={{ flex: 1 }}>{coverData.client.text}</h5>
             <h5 style={{ flex: 1 }}>{coverData.date.text}</h5>
           </motion.div>
         </Parallax>
