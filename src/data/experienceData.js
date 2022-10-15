@@ -1,17 +1,17 @@
 const experienceData = [
-  {
-    title: "Web Developer",
-    reference: "Portland Trail Blazers",
-    date: "2021 - 2022",
-    location: "Portland, OR",
-    link: "/blazers",
-  },
+  // {
+  //   title: "Web Developer",
+  //   reference: "Portland Trail Blazers",
+  //   date: "2021 - 2022",
+  //   location: "Portland, OR",
+  //   link: "",
+  // },
   {
     title: "Digital Designer",
     reference: "Covideo",
     date: "March 2021",
     location: "Remote / Indianapolis, IN",
-    link: "",
+    link: "/covideo",
   },
   {
     title: "Web Designer",

@@ -161,8 +161,7 @@ div.cover {
 
 // Cover CTA
 .coverCTA {
-  // background: getColor(medDarkBase);
-  background: $masOscuro;
+  background: getColor(medDarkBase);
 
   .coverCTA_wrapper {
     max-width: $wrapMaxWidth;
