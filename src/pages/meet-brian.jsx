@@ -2,84 +2,53 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import * as styles from "../styles/meetBrian.module.scss";
 
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import { HiArrowCircleDown, HiDocumentDownload } from "react-icons/hi";
+import { Link, graphql } from "gatsby";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import React, { useEffect } from "react";
 
 import Button from "../components/modules/Button";
 import ButtonWrapper from "../components/ButtonWrapper";
 import DateRef from "../components/DateRef";
 import Layout from "../layout/index.js";
-import { Link } from "gatsby";
 import ListRef from "../components/ListRef";
-import React from "react";
+import { PrismicRichText } from "@prismicio/react";
 import SectionPageLayout from "../layout/SectionPageLayout";
-import { StaticImage } from "gatsby-plugin-image";
 import WebSkills from "../components/webSkills";
-import bmediaxPrintResume from "../assets/files/Bmediax_Resume_Print.pdf";
-import bmediaxResume from "../assets/files/Bmediax_Resume.pdf";
 import educationData from "../data/educationData";
-import experienceData from "../data/experienceData";
+import { useState } from "react";
 
-const meetBrian = () => {
+const MeetBrian = ({ data }) => {
+  const [expData, setExpData] = useState(null);
+  const document = data.prismicAbout.data;
+
+  useEffect(() => {
+    let expArr = [];
+
+    for (let i in document.experience_item) {
+      expArr.push({
+        title: document.experience_item[i].title.text,
+        reference: document.experience_item[i].reference.text,
+        date: document.experience_item[i].date.text,
+        location: document.experience_item[i].location.text,
+        link: document.experience_item[i].link.text,
+        description: document.experience_item[i].description.text,
+      });
+    }
+    setExpData(expArr);
+  }, [document.experience_item]);
+
   return (
     <Layout title="Meet Brian">
       <SectionPageLayout label="page lighterSection" title="Meet Brian">
         <div className="pageColumnLayout sectionMaxWidth">
           <div className="pageTwoColumn pageSections">
-            <h3>Who am I?</h3>
-            <p>
-              Hi there, my name is Brian Moreno and I am a Digital Designer and
-              Web Developer with over 7+ years of experience designing,
-              prototyping, developing, and deploying large scale pixel-perfect
-              websites and web applications for events, campaigns, businesses
-              and organizations.
-            </p>
-
-            <h3>Favorite Productivity Applications</h3>
-            <p>
-              My favorite productivity applications has to be the beautifully
-              designed{" "}
-              <a
-                href="https://culturedcode.com/things/"
-                target="_blank"
-                className="azure"
-                rel="noreferrer"
-              >
-                Things 3
-              </a>
-              ,{" "}
-              <a
-                target="_blank"
-                href="https://superhuman.com/?utm_source=google&utm_medium=cpc&utm_campaign=20200918_brandedsearch&utm_term=superhuman&utm_content=a&gclid=CjwKCAjwkN6EBhBNEiwADVfya1MxNQQ8oizGrvHUyYIrIFNjLxuYvX4JcNQK7SO4an3BeejvW9s0axoCUlsQAvD_BwE"
-                className="azure"
-                rel="noreferrer"
-              >
-                Superhuman
-              </a>
-              ,{" "}
-              <a
-                href="https://todoist.com/"
-                target="_blank"
-                className="azure"
-                rel="noreferrer"
-              >
-                Todoist
-              </a>
-              , and{" "}
-              <a
-                href="https://www.craft.do/"
-                target="_blank"
-                className="azure"
-                rel="noreferrer"
-              >
-                Craft!
-              </a>{" "}
-              They all have beautiful interfaces with solid functionality!
-            </p>
+            <PrismicRichText field={document.intro_bio.richText} />
             <ButtonWrapper>
               <Button
                 type="primary"
-                link={bmediaxResume}
+                link={document.resume_button_link.url}
                 download="Bmediax_Resume"
                 className="clickDownloadResume"
               >
@@ -90,7 +59,7 @@ const meetBrian = () => {
               </Button>
               <Button
                 type="primary"
-                link={bmediaxPrintResume}
+                link={document.resume_button_link_print.url}
                 download="Bmediax_Resume_Print"
                 className="clickDownloadResumePrint"
               >
@@ -103,9 +72,9 @@ const meetBrian = () => {
           </div>
           <div className="pageTwoColumn">
             <div className="gallery gallery-masonry">
-              <StaticImage
-                src="../images/profile/brianPicture.jpg"
-                alt="Image Brian"
+              <GatsbyImage
+                image={document.headshot.gatsbyImageData}
+                alt="Brian Moreno Headshot"
                 imgClassName="galleryImg"
                 className="galleryImgWrap gallery-masonry-1"
               />
@@ -119,41 +88,21 @@ const meetBrian = () => {
             className={`pageTwoColumn pageSections ${styles.meetBrian_freeTime}`}
           >
             <div className={styles.pageHeader}>
-              <h3>What I do in my free time.</h3>
-              <p>
-                When I am not designing or coding interfaces, you can often find
-                me out and about with my trusty camera and a good cup of coffee,
-                capturing the world's beautiful raw moments.
-              </p>
+              <PrismicRichText field={document.free_time.richText} />
             </div>
             <ResponsiveMasonry
               columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
             >
               <Masonry gutter="1em">
-                <StaticImage
-                  src="../images/profile/sharkyDog.jpg"
-                  alt="Sharky Dog"
-                />
-                <StaticImage
-                  src="../images/profile/sharkyPal.jpeg"
-                  alt="Sharky Pal"
-                />
-                <StaticImage
-                  src="../images/profile/bread.jpg"
-                  alt="Mexican Bread"
-                />
-                <StaticImage
-                  src="../images/profile/coffeeShop.jpg"
-                  alt="Coffee Shop Image"
-                />
-                <StaticImage
-                  src="../images/profile/buslight.jpg"
-                  alt="Bus Max"
-                />
-                <StaticImage
-                  src="../images/profile/matchaDrink.jpg"
-                  alt="Matcha Drink"
-                />
+                {document.free_time_images.map((imageItem, index) => (
+                  <div data-caption={imageItem.images.alt}>
+                    <GatsbyImage
+                      key={index}
+                      image={imageItem.images.gatsbyImageData}
+                      alt={imageItem.images.alt}
+                    />
+                  </div>
+                ))}
               </Masonry>
             </ResponsiveMasonry>
           </div>
@@ -178,7 +127,9 @@ const meetBrian = () => {
           <div className="pageOneColumn">
             <WebSkills />
             <ListRef />
-            <DateRef data={experienceData} isFluid={true} title="Experience" />
+            {expData && (
+              <DateRef data={expData} isFluid={true} title="Experience" />
+            )}
             <DateRef data={educationData} isFluid={true} title="Education" />
             {/* <div className="pageColumnLayout" style={{ marginTop: "30px" }}>
               <StaticImage
@@ -204,7 +155,7 @@ const meetBrian = () => {
           <div className="cardLink_wrapper">
             <h1>View my Portfolio</h1>
             <Link
-              to="/bevy"
+              to="/covideo"
               className="btn outline-active clickViewPortfolioFromAbout"
             >
               View a Case Study
@@ -228,4 +179,54 @@ const meetBrian = () => {
   );
 };
 
-export default meetBrian;
+export const query = graphql`
+  query meetQuery {
+    prismicAbout {
+      data {
+        experience_item {
+          date {
+            text
+          }
+          description {
+            text
+          }
+          link {
+            text
+          }
+          location {
+            text
+          }
+          reference {
+            text
+          }
+          title {
+            text
+          }
+        }
+        headshot {
+          gatsbyImageData
+        }
+        intro_bio {
+          richText
+        }
+        resume_button_link {
+          url
+        }
+        resume_button_link_print {
+          url
+        }
+        free_time_images {
+          images {
+            gatsbyImageData
+            alt
+          }
+        }
+        free_time {
+          richText
+        }
+      }
+    }
+  }
+`;
+
+export default MeetBrian;
