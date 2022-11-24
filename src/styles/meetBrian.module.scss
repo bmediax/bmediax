@@ -9,3 +9,36 @@
 .pageHeader {
   margin-block-end: 40px;
 }
+
+[data-caption] {
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+
+  &:hover {
+    &::after {
+      bottom: 0;
+    }
+  }
+}
+
+[data-caption]::after {
+  content: attr(data-caption);
+  background: rgb(0 0 0 / 30%);
+  backdrop-filter: blur(3px);
+  color: #fff;
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+  left: 0;
+  text-align: center;
+  z-index: 1;
+  padding: 15px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: bottom 250ms ease;
+
+  @media screen and (max-width: 500px) {
+    bottom: 0px !important;
+  }
+}

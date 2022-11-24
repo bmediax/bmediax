@@ -1,13 +1,14 @@
-import React from "react";
-import { graphql } from "gatsby";
-// import RecentProjectsSection from '../components/RecentProjectsSection.js'
-import Layout from "../layout/index.js";
 import * as homepageStyles from "../styles/homepage.module.scss";
-import CoverCTA from "../components/CoverCTA.js";
-import RecentCaseSection from "../components/RecentCaseSection.js";
-import WhatDoSection from "../components/WhatDoSection";
+
 // import AwardsSection from '../components/AwardsSection.js'
 import { BsArrowDown } from "react-icons/bs";
+import CoverCTA from "../components/CoverCTA.js";
+// import RecentProjectsSection from '../components/RecentProjectsSection.js'
+import Layout from "../layout/index.js";
+import React from "react";
+import RecentCaseSection from "../components/RecentCaseSection.js";
+import WhatDoSection from "../components/WhatDoSection";
+import { graphql } from "gatsby";
 
 const IndexPage = ({ data }) => {
   if (!data) return null;

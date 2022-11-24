@@ -20,6 +20,7 @@ const Layout = ({ children, title, descr, darkNav, imgSrc, uid }) => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 100 }}
           transition={{ duration: 0.6 }}
+          style={{paddingTop:"70px"}}
         >
           {children}
         </motion.div>
