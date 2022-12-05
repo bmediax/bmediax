@@ -1075,7 +1075,7 @@ nav {
     }
 
     @include responsive("mobile") {
-      height: $navMobileHeight + 10px;
+      // height: $navMobileHeight + 10px;
       padding: 10px $widthPadding;
 
       .logoWraps svg {
