@@ -8,7 +8,6 @@ When I am not designing or coding interfaces, you can often find me out and abou
 > Live Website: [brianmoreno.dev](https://brianmoreno.dev)
 
 Follow me 👋🏽
-- [Facebook](https://facebook.com/bmediax) 📓
 - [Instagram](https://instagram.com/bmediax) 📸
 - [Twitter](https://twitter.com/bm3diax) 🐦
 
