@@ -15,9 +15,9 @@ Follow me 👋🏽
 ### :email: Contact Me
 [hello(at)bmediax.dev](mailto:hello@bmediax.dev)
 ```
-|￣￣￣￣￣￣￣ |
-| bmediax.dev |
-| ＿＿＿＿＿＿＿|
+|￣￣￣￣￣￣￣￣￣￣￣|
+| brianmoreno.dev  |
+| ＿＿＿＿＿＿＿＿＿＿|
 (\__/)  ||
 (•ㅅ•)  ||
 / 　 づ
