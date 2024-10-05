@@ -1,68 +1,24 @@
-import * as homepageStyles from "../styles/homepage.module.scss";
-
-// import AwardsSection from '../components/AwardsSection.js'
-import { BsArrowDown } from "react-icons/bs";
-import CoverCTA from "../components/CoverCTA.js";
-// import RecentProjectsSection from '../components/RecentProjectsSection.js'
-import Layout from "../layout/index.js";
+import { Helmet } from "react-helmet";
+import { MdArrowOutward } from "react-icons/md";
 import React from "react";
-import RecentCaseSection from "../components/RecentCaseSection.js";
-import WhatDoSection from "../components/WhatDoSection";
-import { graphql } from "gatsby";
 
-const IndexPage = ({ data }) => {
-  if (!data) return null;
-  const document = data.allPrismicHomepage.edges[0].node.data;
-  // const awards = data.allPrismicHomepage.edges[0].node.data.body
+const IndexPage = () => {
   return (
-    <Layout title="Bmediax" darkNav={true}>
-      <CoverCTA coverData={document.cover[0]} />
-      <a href="#firstSection" className={homepageStyles.scrollSection}>
-        <span>Scroll Down</span>
-        <BsArrowDown />
-      </a>
-      <WhatDoSection />
-      <RecentCaseSection />
-      {/* <RecentProjectsSection /> */}
-      {/* <AwardsSection awardsData={awards[1]} /> */}
-    </Layout>
+    <>
+      <Helmet title={"Brian Moreno"} />
+      <main className="flex items-center justify-center h-dvh px-4">
+        <p className="text-center text-4xl !leading-tight md:text-7xl font-semibold">
+          My Portfolio has moved to{" "}
+          <a
+            href="https://brianmoreno.dev"
+            className="flex items-center justify-center gap-2"
+          >
+            brianmoreno.dev <MdArrowOutward />
+          </a>
+        </p>
+      </main>
+    </>
   );
 };
 
 export default IndexPage;
-
-export const query = graphql`
-  query homepageQuery {
-    allPrismicHomepage {
-      edges {
-        node {
-          data {
-            cover {
-              title {
-                text
-              }
-              description {
-                text
-                richText
-                html
-              }
-            }
-            body {
-              ... on PrismicHomepageDataBodyAwardsSection {
-                items {
-                  medal
-                  sub_text {
-                    text
-                  }
-                  title {
-                    text
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`;

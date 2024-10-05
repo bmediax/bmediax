@@ -268,8 +268,11 @@ ul li {
   border-radius: $border-sm;
   font-size: 1.6rem;
   text-decoration: none;
-  transition: background 250ms ease-in-out, box-shadow 200ms ease-in-out,
-    transform 150ms ease-in-out, border 200ms ease-in-out,
+  transition:
+    background 250ms ease-in-out,
+    box-shadow 200ms ease-in-out,
+    transform 150ms ease-in-out,
+    border 200ms ease-in-out,
     color 250ms ease-in-out;
 
   &:hover {
@@ -333,8 +336,11 @@ ul li {
   border-radius: $border-sm;
   border: 1px solid interface(border);
   text-decoration: none;
-  transition: background 250ms ease-in-out, box-shadow 200ms ease-in-out,
-    transform 150ms ease-in-out, border 200ms ease-in-out,
+  transition:
+    background 250ms ease-in-out,
+    box-shadow 200ms ease-in-out,
+    transform 150ms ease-in-out,
+    border 200ms ease-in-out,
     color 250ms ease-in-out;
 
   &:hover {
@@ -384,7 +390,9 @@ ul li {
     background: $azure-500;
     color: $global-white;
     border-color: $azure-500;
-    box-shadow: 0 10px 20px rgba(#00b4ff, 0.3), 0px 3px 3px rgba(#00b4ff, 0.2);
+    box-shadow:
+      0 10px 20px rgba(#00b4ff, 0.3),
+      0px 3px 3px rgba(#00b4ff, 0.2);
   }
 
   &:active {
@@ -707,7 +715,10 @@ nav {
   // background: getColor(lightBase);
   // @include BGTheme("lighter");
   background: interface("secground");
-  transition: box-shadow 250ms linear, top 0.6s, background linear 400ms;
+  transition:
+    box-shadow 250ms linear,
+    top 0.6s,
+    background linear 400ms;
   font-family: $primaryFont;
 
   .nav-wrapper {
@@ -805,7 +816,9 @@ nav {
               text-decoration: none;
               background: getColor(lightLightBase);
               padding: 0.9em 1.5em;
-              transition: background 200ms linear, color 200ms linear;
+              transition:
+                background 200ms linear,
+                color 200ms linear;
               @include objectShadow("default", "snow");
               white-space: nowrap;
 
@@ -1052,7 +1065,9 @@ nav {
         border-radius: 50%;
         line-height: 40px;
         text-align: center;
-        transition: background 200ms linear, color 250ms linear,
+        transition:
+          background 200ms linear,
+          color 250ms linear,
           box-shadow 250ms linear;
         outline: none;
 
@@ -1177,7 +1192,9 @@ nav {
   @include objectCorner("default");
 }
 .galleryImgWrap {
-  transition: transform 200ms linear, box-shadow 200ms linear,
+  transition:
+    transform 200ms linear,
+    box-shadow 200ms linear,
     filter 200ms linear;
   @include objectCorner("default");
 
